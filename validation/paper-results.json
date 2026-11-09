@@ -1,0 +1,214 @@
+{
+  "source": "arXiv:1712.03494v3",
+  "pdf_sha256": "37a977d8039d6fc7e772dba4dfb046f102d1693846a9f7f3bc8b318d68e5b5d5",
+  "cases": [
+    {
+      "case": "square facets",
+      "expected": "4",
+      "actual": 3.999999999999994,
+      "basis": "Theorem 1.1 + planar action/area",
+      "oracle_orders": 52
+    },
+    {
+      "case": "square vertices",
+      "expected": "4",
+      "actual": 3.999999999999994,
+      "basis": "same independent polygon/area",
+      "oracle_orders": 0
+    },
+    {
+      "case": "triangle facets",
+      "expected": "10",
+      "actual": 9.999999999999995,
+      "basis": "Theorem 1.1 + planar action/area",
+      "oracle_orders": 6
+    },
+    {
+      "case": "triangle vertices",
+      "expected": "10",
+      "actual": 9.999999999999982,
+      "basis": "same independent polygon/area",
+      "oracle_orders": 0
+    },
+    {
+      "case": "asymmetric quadrilateral facets",
+      "expected": "31/2",
+      "actual": 15.499999999999991,
+      "basis": "Theorem 1.1 + planar action/area",
+      "oracle_orders": 48
+    },
+    {
+      "case": "asymmetric quadrilateral vertices",
+      "expected": "31/2",
+      "actual": 15.499999999999993,
+      "basis": "same independent polygon/area",
+      "oracle_orders": 0
+    },
+    {
+      "case": "pentagon facets",
+      "expected": "17",
+      "actual": 17.0,
+      "basis": "Theorem 1.1 + planar action/area",
+      "oracle_orders": 300
+    },
+    {
+      "case": "pentagon vertices",
+      "expected": "17",
+      "actual": 16.999999999999982,
+      "basis": "same independent polygon/area",
+      "oracle_orders": 0
+    },
+    {
+      "case": "simplex R4",
+      "expected": "25/4",
+      "actual": 6.250000000000009,
+      "basis": "Theorem 1.1 exact nullspace oracle",
+      "oracle_orders": 120
+    },
+    {
+      "case": "simplex R6",
+      "expected": "49/6",
+      "actual": 8.166666666666666,
+      "basis": "Theorem 1.1 exact nullspace oracle",
+      "oracle_orders": 5040
+    },
+    {
+      "case": "truncated R4 simplex height 1",
+      "expected": "21/4",
+      "actual": 5.249999999999994,
+      "basis": "Theorem 1.1 exact free-coordinate quadratic maximization",
+      "oracle_orders": 1542
+    },
+    {
+      "case": "truncated R4 simplex height 2",
+      "expected": "6",
+      "actual": 5.999999999999997,
+      "basis": "Theorem 1.1 exact free-coordinate quadratic maximization",
+      "oracle_orders": 1542
+    },
+    {
+      "case": "four-dimensional box",
+      "expected": "12",
+      "actual": 11.999999999999973,
+      "basis": "Corollary 1.2 exact signed-weight oracle",
+      "oracle_orders": 1024
+    },
+    {
+      "case": "upstream README product",
+      "expected": "4",
+      "actual": 3.999999999999929,
+      "basis": "Corollary 1.2 exact signed-weight oracle",
+      "oracle_orders": 1024
+    },
+    {
+      "case": "skew symmetric polytope",
+      "expected": "8",
+      "actual": 7.9999999999999485,
+      "basis": "Corollary 1.2 exact signed-weight oracle",
+      "oracle_orders": 1024
+    },
+    {
+      "case": "height scaling 1e-09",
+      "expected": "1/250000000000000000",
+      "actual": 3.999999999999994e-18,
+      "basis": "Remark 3.9 quadratic homogeneity",
+      "oracle_orders": 0
+    },
+    {
+      "case": "vertex scaling 1e-09",
+      "expected": "1/250000000000000000",
+      "actual": 3.999999999999994e-18,
+      "basis": "Remark 3.9 quadratic homogeneity",
+      "oracle_orders": 0
+    },
+    {
+      "case": "height scaling 1e-06",
+      "expected": "1/250000000000",
+      "actual": 3.9999999999999935e-12,
+      "basis": "Remark 3.9 quadratic homogeneity",
+      "oracle_orders": 0
+    },
+    {
+      "case": "vertex scaling 1e-06",
+      "expected": "1/250000000000",
+      "actual": 3.9999999999999935e-12,
+      "basis": "Remark 3.9 quadratic homogeneity",
+      "oracle_orders": 0
+    },
+    {
+      "case": "height scaling 1000000.0",
+      "expected": "4000000000000",
+      "actual": 3999999999999.9937,
+      "basis": "Remark 3.9 quadratic homogeneity",
+      "oracle_orders": 0
+    },
+    {
+      "case": "vertex scaling 1000000.0",
+      "expected": "4000000000000",
+      "actual": 3999999999999.9937,
+      "basis": "Remark 3.9 quadratic homogeneity",
+      "oracle_orders": 0
+    },
+    {
+      "case": "height scaling 1000000000.0",
+      "expected": "4000000000000000000",
+      "actual": 3.9999999999999933e+18,
+      "basis": "Remark 3.9 quadratic homogeneity",
+      "oracle_orders": 0
+    },
+    {
+      "case": "vertex scaling 1000000000.0",
+      "expected": "4000000000000000000",
+      "actual": 3.9999999999999933e+18,
+      "basis": "Remark 3.9 quadratic homogeneity",
+      "oracle_orders": 0
+    },
+    {
+      "case": "facet row scales [1e-09, 1e-09, 1e-09, 1e-09]",
+      "expected": "4",
+      "actual": 3.999999999999994,
+      "basis": "Theorem 1.1 beta/row substitution",
+      "oracle_orders": 0
+    },
+    {
+      "case": "facet row scales [0.0001, 0.0001, 0.0001, 0.0001]",
+      "expected": "4",
+      "actual": 3.999999999999994,
+      "basis": "Theorem 1.1 beta/row substitution",
+      "oracle_orders": 0
+    },
+    {
+      "case": "facet row scales [1000000000.0, 1000000000.0, 1000000000.0, 1000000000.0]",
+      "expected": "4",
+      "actual": 3.999999999999994,
+      "basis": "Theorem 1.1 beta/row substitution",
+      "oracle_orders": 0
+    },
+    {
+      "case": "facet row scales [1e-08, 100000000.0, 0.0001, 10000.0]",
+      "expected": "4",
+      "actual": 3.999999999999994,
+      "basis": "Theorem 1.1 beta/row substitution",
+      "oracle_orders": 0
+    },
+    {
+      "case": "R4 symplectic shear",
+      "expected": "25/4",
+      "actual": 6.249999999999994,
+      "basis": "Remark 3.10 + exact Theorem 1.1",
+      "oracle_orders": 120
+    },
+    {
+      "case": "unbounded full rank",
+      "expected": "reject: outside theorem domain"
+    },
+    {
+      "case": "unbounded rank deficient",
+      "expected": "reject: outside theorem domain"
+    },
+    {
+      "case": "zero normal",
+      "expected": "reject: outside theorem domain"
+    }
+  ]
+}

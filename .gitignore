@@ -1,3 +1,5 @@
+/target/
+/work/
+/.venv/
 __pycache__/
 *.py[cod]
-.venv/
