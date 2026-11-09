@@ -1,0 +1,898 @@
+                                          SYMPLECTICALLY SELF-POLAR POLYTOPES OF MINIMAL CAPACITY
+
+                                                                                    MARK BEREZOVIK
+
+                                                 Abstract. In this paper we continue the study of symplectically self-polar convex bodies
+                                                 started in [3]. We construct symplectically self-polar convex bodies of the minimal Ekeland–
+                                                 Hofer–Zehnder capacity. This in turn proves that the lower bound for the Ekeland–Hofer–
+                                                 Zehnder capacity for centrally symmetric convex bodies obtained in [1] cannot be improved.
+                                                 We also make some numerical experiments and speculations regarding the minimal volume of
+                                                 symplectically self-polar convex bodies.
+arXiv:2310.14998v2 [math.MG] 6 Aug 2025
+
+
+
+
+                                                                                    1. Introduction
+                                            Consider the standard symplectic form ω in R2n . For a convex set X ⊂ R2n define its
+                                          symplectically polar convex set as
+                                                                        X ω = {y ∈ R2n | ∀x ∈ X ω(x, y) ≤ 1}.
+                                          Now let X be a convex body with the origin in its interior. We call such a convex body X
+                                          symplectically self-polar if X = X ω . It is important to note that every such body is centrally
+                                          symmetric [3, Lemma 3.1].
+                                            The main motivation for the study of symplectically self-polar convex bodies was the con-
+                                          nection to (symmetric) Mahler’s conjecture [10], which states that
+                                                                                            4n
+                                                                                   vol K · vol K ◦ ≥
+                                                                                            n!
+                                                                                       n
+                                          for any centrally symmetric convex body K ⊂ R , where
+                                                                          K ◦ = {y ∈ Rn | ∀x ∈ K ⟨x, y⟩ ≤ 1}.
+                                          In [3] it was shown that this conjecture is equivalent to a conjecture about volumes of symplec-
+                                          tically self-polar bodies. The latter conjecture states that
+                                                                                               2n
+                                          (1.1)                                       vol X ≥
+                                                                                               n!
+                                          for any symplectically self-polar convex body X ⊂ R2n .
+                                             In dimension 2 it is true that vol X ≥ 3 for every symplectically self-polar convex body [3,
+                                          Corollary 5.2]. So the inequality (1.1) is not tight even in dimension 2. Note that this does
+                                          not contradict the tightness of Mahler’s conjecture, since the proof of equivalence of these two
+                                          conjectures uses tools of asymptotic geometric analysis. So the natural question is, “What is
+                                          the tight version of inequality (1.1)?”
+                                             We may try to formulate a stronger version of this inequality using Viterbo’s conjecture
+                                          for centrally symmetric convex bodies. A particular case of Viterbo’s conjecture [14] for the
+                                          Ekeland–Hofer–Zehnder capacity states that
+                                                                                             cEHZ (X)n
+                                                                                   vol X ≥             ,
+                                                                                                n!
+                                            2020 Mathematics Subject Classification. 52B60, 65D99.
+                                            The author was supported by Horizon Europe ERC Grant number 101045750 (HodgeGeoComb) and partially
+                                          supported by the ISF grant No. 938/22.
+                                                                                              1
+               SYMPLECTICALLY SELF-POLAR POLYTOPES OF MINIMAL CAPACITY                             2
+
+where X ⊂ R2n is a convex body and cEHZ (X) is the Ekeland–Hofer–Zehnder capacity of the
+body X. This conjecture fails for the class of all convex bodies (see [8]), however, it is still
+open for the case of centrally symmetric convex bodies. Combining this conjecture with the
+inequality
+                                                    1
+(1.2)                                   cEHZ (X) ≥ 2 +,
+                                                    n
+for a symplectically self-polar convex body X ⊂ R2n (see [3, Theorem 5.1]), we can write a
+stronger version of the inequality (1.1) as follows
+                                              (2 + 1/n)n
+(1.3)                                 vol X ≥             .
+                                                  n!
+  The proof of the inequality (1.2) is based on the following theorem:
+Theorem 1.1 (Akopyan, Karasev, [1]). For a centrally symmetric convex body X ⊂ R2n
+                                                
+                                               1
+                            cEHZ (X) ≥ 2 +         cJ (X),
+                                               n
+where
+                             cJ (X)−1 = max{|ω(x, y)| | x, y ∈ X ω }.
+   Using also the fact that cJ (X) = 1 for a symplectically self-polar body X, we obtain inequal-
+ity (1.2). A slightly weak version of Theorem 1.1 was initially proved by Gluskin and Ostrover
+in [6, Theorem 1.6]. The proof of Theorem 1.1 can also be found in Appendix of [3].
+   The authors of [1] believed that the estimate in Theorem 1.1 is not sharp. But in this paper
+we construct a sequence of symplectically self-polar polytopes P ⋉n ⊂ R2n with the following
+property (Section 3):
+Theorem 1.2. For the sequence of symplectically self-polar polytopes P ⋉n ⊂ R2n one has
+                                      cEHZ (P ⋉n ) = 2 + 1/n.
+   Numerical experiments (Section 5) suggest that inequality (1.3) is not sharp even in dimen-
+sion 4, and it seems that symplectically self-polar polytopes P ⋉n ⊂ R2n minimize the volume
+(Section 4). That is, the hypothetical sharp lower bound for the volume of symplectically
+self-polar bodies is the following:
+                                        n Γ n+ 3          1
+                                                           
+                                       2          4
+                                                       Γ  2    2n       1/4
+                                                                             
+                    vol X ≥ vol P ⋉n =   ·           ·        =    · O n       ,
+                                       n! Γ n + 12 Γ 34         n!
+where Γ(x) is the gamma function (Theorem 2.10 and Theorem 3.2).
+   To construct the sequence of polytopes P ⋉n we introduce a new operation over symplectically
+self-polar bodies, which we call a symplectic P -suspension (Section 2).
+   We mostly focus on symplectically self-polar polytopes in this paper. Some properties of
+more general self-polar polytopes were studied in [9].
+   As shown in recent paper [2], the class of symplectically self-polar convex bodies is of interest
+to the researchers working on outer billiard maps.
+
+Acknowledgments. The author expresses particular gratitude towards Roman Karasev for
+his guidance and useful comments. We thank Pazit Haim-Kislev for numerical computation of
+cEHZ (P ⋉2 ), which prompted the author to formulate and prove Theorem 1.2; Alexander Kamal,
+Alexey Balitskiy, Anastasiia Sharipova, Yaron Ostrover, Michael Fraiman, and the anonymous
+referee for useful remarks and comments.
+               SYMPLECTICALLY SELF-POLAR POLYTOPES OF MINIMAL CAPACITY                          3
+
+        2. Increasing the dimension of symplectically self-polar bodies
+  Consider the hexagon P = conv{±(1, 1), ±(1, 0), ±(0, 1)} ⊂ R2 and fix the point e = (1, 1) ∈
+P (see Figure 1). It was shown in [3] that the hexagon P has the minimal volume among all
+2-dimensional symplectically self-polar bodies.
+                                                    y
+
+                                                1             e
+
+
+                                    -1
+                                                    0         1    x
+
+
+                                                    -1
+
+
+
+
+                                    Figure 1. Hexagon P .
+
+Definition 2.1. Let X ⊂ R2n be a centrally symmetric convex body. The symplectic P -
+suspension of X is the set
+                   P ⋉ω X := {(v1 , v2 ) ∈ P × R2n | |ω(e, v1 )| + ∥v2 ∥X ≤ 1},
+where ∥ · ∥X is a norm on R2n whose unit ball is X.
+Remark 2.2. P ⋉ω X is a subset of the symplectic product R2 × R2n ∼
+                                                                  = R2n+2 . Throught the
+                               2n+2 ∼  2   2n             2n+2 ∼
+paper, when we write (a, b) ∈ R     = R × R or a ⊕ b ∈ R       = R2 × R2n , we mean that
+a ∈ R2 and b ∈ R2n .
+  Obviously, P ⋉ω X is a centrally symmetric convex body. Less obvious is the fact that the
+symplectic P -suspension preserves symplectic self-polarity.
+Theorem 2.3. If X is a symplectically self-polar convex body, then P ⋉ω X is also symplectically
+self-polar.
+  The proof of this theorem relies on the two following lemmas.
+Lemma 2.4. Let X ⊂ R2n be a centrally symmetric convex body. Then
+                                   |ω(v, w)| ≤ ∥v∥X · ∥w∥X ω
+for all v, w ∈ R2n .
+  Moreover, for any v ∈ R2n there is a point w ∈ ∂X ω such that
+                                         |ω(v, w)| = ∥v∥X .
+Proof. For the first part of the lemma, assume that v, w ̸= 0. The left hand side and the
+right hand side are homogeneous with respect to scaling of v and w. Scale v and w so that
+∥v∥X = ∥w∥X ω = 1. Then the statement follows from the definition of X ω .
+   For the second part similarly assume that ∥v∥X = 1. Then v ∈ ∂X. From the first part it
+follows that |ω(v, w)| ≤ 1 for all w ∈ X ω . If the inequality is strict, then |ω(αv, w)| ≤ 1 for
+some α > 1 and any w ∈ X ω . This contradicts the fact that (X ω )ω = X.                       □
+                SYMPLECTICALLY SELF-POLAR POLYTOPES OF MINIMAL CAPACITY                              4
+
+Lemma 2.5. Let v, w ∈ P . Let t = |ω(e, v)| and s = |ω(e, w)|. Then
+                                         |ω(v, w)| ≤ t + s − ts,
+with equality only when v, w ∈ ∂P .
+Proof. Let v = (xv , yv ) and w = (xw , yw ). Then |yv − xv | = t and |yw − xw | = s. If necessary, we
+may replace v by −v and w by −w, so that yv − xv = t and yw − xw = s. Then xv ∈ [−1, 1 − t],
+xw ∈ [−1, 1 − s] and
+                 ω(v, w) = xv yw − yv xw = xv (s + xw ) − xw (t + xv ) = xv s − xw t.
+Therefore,
+                              −s − (1 − s)t ≤ ω(v, w) ≤ (1 − t)s + t.
+                                                                                                    □
+Proof of Theorem 2.3. First, we show that the inequality |ω(v, w)| ≤ 1 holds for any points
+v, w ∈ P ⋉ω X. It will prove the inclusion P ⋉ω X ⊆ (P ⋉ω X)ω . By the definition, v = (v1 , v2 )
+and w = (w1 , w2 ), where v1 , w1 ∈ P and v2 , w2 ∈ R2n . Note that
+                  |ω(v, w)| = |ω(v1 , w1 ) + ω(v2 , w2 )| ≤ |ω(v1 , w1 )| + |ω(v2 , w2 )|.
+Let t = |ω(e, v1 )| and s = |ω(e, w1 )|. Then ∥v2 ∥X ≤ 1 − t and ∥w2 ∥X ≤ 1 − s. By Lemma 2.4
+the inequality
+                 |ω(v2 , w2 )| ≤ ∥v2 ∥X · ∥w2 ∥X ω = ∥v2 ∥X · ∥w2 ∥X ≤ (1 − t)(1 − s)
+holds. And by Lemma 2.5 the inequality
+                                        |ω(v1 , w1 )| ≤ t + s − ts
+also holds. Combining these inequalities, we obtain the desired inequality.
+   Conversely, we show that (P ⋉ω X)ω ⊆ (P ⋉ω X). To prove this, note first that P × {0} ⊂
+P ⋉ω X, and consequently, (P ⋉ω X)ω ⊂ P ×R2n . Take a point v ∈ P ×R2n \P ⋉ω X. This point
+has the representation v = (v1 , v2 ), where v1 ∈ P and ∥v2 ∥X > 1 − |ω(e, v1 )|. By Lemma 2.4
+there is a point u ∈ X such that |ω(v2 , u)| > 1 − |ω(e, v1 )|. Note that (e, ±u) ∈ P ⋉ω X, and
+                      max |ω((v1 , v2 ), (e, ±u))| = |ω(v1 , e)| + |ω(v2 , u)| > 1.
+             / (P ⋉ω X)ω .
+Therefore, v ∈                                                                                      □
+Remark 2.6. Lemma 2.5 is crucial for the proof of Theorem 2.3. It does not hold if we replace
+P by an arbitrary 2-dimensional symplectically self-polar body, for example, the Euclidean unit
+ball B, take a point ẽ on its border, and consider
+                    B ⋉ω X := {(v1 , v2 ) ∈ B × R2n | |ω(ẽ, v1 )| + ∥v2 ∥X ≤ 1}.
+A direct calculation shows that this body is not symplectically self-polar for any symplectically
+self-polar X ⊂ R2n .
+  The convex body P ⋉ω X may be represented in another way.
+Theorem 2.7. Let X ⊂ R2n be a centrally symmetric convex body. Then
+(2.1)                           P ⋉ω X = P × R2n ∩ ({±e} × X ω )ω
+and
+(2.2)                      (P ⋉ω X)ω = conv (P × {0} ∪ {±e} × X ω ) .
+                SYMPLECTICALLY SELF-POLAR POLYTOPES OF MINIMAL CAPACITY                           5
+
+Proof. By definition, P ⋉ω X ⊂ P × R2n . Let (v1 , v2 ) ∈ P ⋉ω X. We will show that (v1 , v2 )
+belongs to the set in the right-hand side of equality (2.1). Consider a point u ∈ X ω . Using
+Lemma 2.4 and the definition of P ⋉ω X, we obtain
+             |ω((v1 , v2 ), (±e, u))| ≤ |ω(v1 , e)| + |ω(v2 , u)| ≤ |ω(v1 , e)| + ∥v2 ∥X ≤ 1.
+This proves the inclusion in one direction.
+  Now let (v1 , v2 ) ∈ P × R2n ∩ ({±e} × X ω )ω . Then by Lemma 2.4 there is a point u ∈ X ω
+such that
+           |ω(v1 , e)| + ∥v2 ∥X = |ω(v1 , e)| + |ω(v2 , u)| = max |ω((v1 , v2 ), (e, ±u))| ≤ 1.
+This proves the reverse inclusion.
+  Now we prove equality (2.2). Note that for arbitrary closed centrally symmetric nonempty
+convex sets A, B, D ⊆ R2n one has (A ∩ B)ω = conv(Aω ∪ B ω ) and (Dω )ω = D. Proof of these
+facts is similar to that in the case of standard polarity, which can be found in [13, Section 1.6].
+  Let A = P × R2n and B = ({±e} × X ω )ω . It is not hard to prove that Aω = P × {0}. Since
+conv({±e} × X ω ) = [−e, e] × X ω , and the symplectic polar of the convex hull is the same as
+symplectic polar of initial set, we have that B = ({±e} × X ω )ω = ([−e, e] × X ω )ω . Now let
+D = [−e, e] × X ω . It is obvious that D is a closed centrally symmetric convex set, therefore,
+B ω = (Dω )ω = D. Thus,
+         (P ⋉ω X)ω = conv (P × {0} ∪ [−e, e] × X ω ) = conv (P × {0} ∪ {±e} × X ω ) .
+                                                                                                  □
+Corollary 2.8. Let X ⊂ R2n be a symplectically self-polar convex body. Then
+              P ⋉ω X = P × R2n ∩ ({±e} × X)ω = conv (P × {0} ∪ {±e} × X) .
+Corollary 2.9. Let K ⊂ R2n be a symplectically self-polar convex polytope and V (K) be the
+set of its vertices. Then P ⋉ω K is a polytope and
+                   V (P ⋉ω K) = ({±(1, 0), ±(0, 1)} × {0}) ∪ ({±e} × V (K)).
+Proof. By Corollary 2.8,
+                              P ⋉ω K = conv (P × {0} ∪ {±e} × K) .
+Hence,
+                   P ⋉ω K = conv({±(1, 0), ±(0, 1)} × {0} ∪ {±e} × V (K)).
+It is easy to check that the set inside the convex hull operation is in convex position.          □
+
+  We can also derive how the volume changes under the symplectic P -suspension.
+Theorem 2.10. Let X ⊂ R2n be a centrally symmetric convex body. Then
+                                                         4n + 3
+                                vol P ⋉ω X =                         vol X.
+                                                     (n + 1)(2n + 1)
+Proof.
+                                          Z      Z
+                          vol P ⋉ω X =                 χP ⋉ X (x, y, z) dx dy dz,
+                                                            ω
+                                            R2   R2n
+
+where χP ⋉ω X is the indicator function of the set P ⋉ω X; x, y are standard coordinates in R2 ;
+and z ∈ R2n .
+               SYMPLECTICALLY SELF-POLAR POLYTOPES OF MINIMAL CAPACITY                                     6
+
+  We make the change of variables y − x = t and x + y = s.
+                                                     
+                                   s−t s+t
+                 Z Z
+               1
+  vol P ⋉ω X =           χ
+               2 R2 R2n P ⋉ω X       2
+                                         ,
+                                              2
+                                                   , z dt ds dz =
+                                                     
+                                     s−t s+t
+                      Z Z
+                    1
+                  =
+                    2 R2 R2n P
+                               χ       2
+                                            ,
+                                                 2
+                                                        · χ(1−|t|)X (z) dt ds dz =
+                                                       
+                                       s−t s+t
+                             Z
+                       vol X
+                    =
+                         2
+                                 χ P
+                                           2
+                                               ,
+                                                    2
+                                                           · (1 − |t|)2n ds dt =
+                              R2
+                                     Z 1                   Z 2−t
+                                                        2n
+                             = vol X       dt (1 − t)            ds =
+                                           0                   t−2
+                                                 Z 1
+                                                                                      4n + 3
+                                     = 2 vol X         (1 − t)2n · (2 − t) dt =                   vol X.
+                                                  0                               (n + 1)(2n + 1)
+                                                                                                           □
+  Here we would also like to discuss the affine cylindrical capacity of a convex body, which
+could be defined as follows (for details, see, for example [6]).
+Definition 2.11. The affine cylindrical capacity of a convex body X ⊂ R2n is defined as
+                                    cZA (X) = inf vol π (φ(X)) ,
+                                                 φ
+
+where the infimum is taken over all linear symplectomorphisms of R2n , and the map π : R2n →
+R2 is the orthogonal projection on the first two coordinates.
+Theorem 2.12. For any centrally symmetric convex body X ⊂ R2n , the inequality cZA (P ⋉ω
+X) ≤ 3 holds. If X = X ω , then cZA (P ⋉ω X) = 3.
+Proof. Note that the orthogonal projection on the first two coordinates equals P , and vol P = 3.
+The first part of the lemma follows from this. The second part follows from [3, Theorem 6.3]
+which asserts that cZA (X) ≥ 3 if X ω ⊆ X.                                                     □
+           3. Symplectically self-polar polytopes of minimal capacity
+Definition 3.1. We inductively define the sequence of bodies P ⋉n = P ⋉ω P ⋉n−1 for any
+positive integer n > 1, where P ⋉1 = P .
+Theorem 3.2. P ⋉n is a sequence of symplectically self-polar convex polytopes
+  (1) with volume
+                                           2n Γ n + 43 Γ 12
+                                                             
+                                    ⋉n
+                              vol P =         ·        ·     ,
+                                           n! Γ n + 21 Γ 34
+      (Here Γ(x) is the gamma function)
+  (2) with number of vertices
+                               |V (P ⋉n )| = 10 · 2n−1 − 1 + 6,
+                                                          
+
+   (3) with affine cylindrical capacity
+                                           cZA (P ⋉n ) = 3.
+Proof. The fact that P ⋉n is a symplectically self-polar convex polytope follows from Theo-
+rem 2.3, Corollary 2.9, and the fact that P is a symplectically self-polar convex polytope.
+  Item (1). First, note that
+                          21 Γ 1 + 34 Γ 12
+                                              
+                                                     3/4
+                             ·        1
+                                        ·   3
+                                                =2·     = 3 = vol P.
+                          1! Γ 1 + 2 Γ 4             1/2
+                SYMPLECTICALLY SELF-POLAR POLYTOPES OF MINIMAL CAPACITY                              7
+
+Second, the statement of the induction step follows from Theorem 2.10. Indeed,
+                                                               2n Γ n + 34 Γ 21
+                                                                                   
+                     4n + 3                      4n + 3
+    vol P ⋉n+1
+               =                  · vol P =
+                                         ⋉n
+                                                             ·    ·         ·      =
+                 (n + 1)(2n + 1)             (n + 1)(2n + 1) n! Γ n + 12 Γ 43
+                            n + 43 · Γ n + 34 Γ 21                  Γ (n + 1) + 43 Γ 21
+                                                                                    
+                   2n+1                                   2n+1
+               =         ·                   ·     =           ·                ·    .
+                 (n + 1)! n + 21 · Γ n + 12 Γ 34        (n + 1)! Γ (n + 1) + 21 Γ 43
+                                   
+
+  Item (2). Since |V (P )| = 6, by Corollary 2.9
+                                  |V (P ⋉n+1 )| = 4 + 2 · |V (P ⋉n )|.
+Thus,
+               |V (P ⋉n+1 )| = 4 + 2 · 10 · 2n−1 − 1 + 6 = 10 · (2n − 1) + 6.
+                                                       
+
+  Item (3). Formula for the capacity follows from Theorem 2.12.                                     □
+Remark 3.3. A direct calculation shows that the sequence of bodies P ⋉n is an example of a
+sequence of centrally symmetric convex bodies, such that
+                                                  cZA (P ⋉n )
+                                     vol(P ⋉n ) <
+                                                      n!
+for n ≥ 2. It follows that one cannot just prove a stronger version of centrally symmetric
+Viterbo’s conjecture for the cylindrical affine capacity.
+Remark 3.4. It seems that polytopes P ⋉n for n ≥ 2 never appeared in literature before. Because,
+for example, polytope P ⋉2 has 16 vertices, 44 edges, 44 two-dimensional faces, and 16 three-
+dimensional faces and we did not find any famous 4-polytope with the same number of faces.
+  Before we start proving Theorem 1.2 we need to make several additional statements.
+Lemma 3.5. For any positive integer n there is a collection of pairwise distinct vertices
+v1 , . . . , v2n+1 of the polytope P ⋉n , which does not contain two opposite vertices, such that
+                                            ω(vi , vj ) = 1
+for all 1 ≤ i < j ≤ 2n + 1.
+Proof. We prove the theorem by induction on n. For the case n = 1, we can consider the
+following vertices v1 = (1, 0), v2 = (1, 1), v3 = (0, 1) in R2 . For the induction step, assume
+that there is such collection of vertices v1 , . . . , v2n+1 . Consider wi = e ⊕ vi for 1 ≤ i ≤ 2n + 1
+and w2n+2 = (0, 1) ⊕ 0, w2n+3 = (−1, 0) ⊕ 0. From Corollary 2.9 it follows that w1 , . . . , w2n+3
+are vertices of polytope P ⋉n+1 . It is easy to check the other properties of this collection.      □
+Remark 3.6. This property of the polytopes P ⋉n is extreme in the following sense. In R2n
+there are no 2n + 2 pairwise distinct points v1 , . . . v2n+2 such that ω(vi , vj ) = 1 for i < j.
+Indeed, assume the opposite. Every equation ω(vi , ·) = 1 defines an affine hyperplane Li .
+Let Mi = L1 ∩ . . . ∩ Li , and note that vi+1 ∈ Mi , but vi+1 ∈    / Li+1 ; hence, the inclusions
+M1 ⊃ M2 ⊃ . . . ⊃ M2n are strict and M2n contains no more than one point. It contradicts
+v2n+1 , v2n+2 ∈ M2n .
+  Consider the following theorem:
+Theorem 3.7 (Haim-Kislev, [7]). Let K ⊂ R2n be a centrally symmetric convex polytope with
+a nonempty interior, n1 , . . . , nm are different outward normal vectors to one-half of its facets
+(−n1 , . . . , −nm to the other half ). Then
+                                          (                                      )
+                             1                 X                                
+                                   = max             βσ(i) βσ(j) ω nσ(i) , nσ(j) ,
+                         cEHZ (K)            1≤i<j≤m
+                 SYMPLECTICALLY SELF-POLAR POLYTOPES OF MINIMAL CAPACITY                                 8
+
+where the maximum is taken over all permutations σ ∈ Sm and all sets of reals (βi )m
+                                                                                   i=1 such
+that
+                                   Xm
+                                       |βi |hK (ni ) = 1.
+                                            i=1
+(Here hK (ni ) = max{⟨x, ni ⟩ | x ∈ K} denotes the support function of K.)
+   It is well known that for every convex polytope K with an origin in its interior (not necessary
+centrally symmetric) there exists a one-to-one correspondence between the facets of K and the
+vertices of K ◦ . Let n be an outward normal vector to some facet in K, then the corresponding
+vertex is given by n/hK (n).
+   When K = K ω = JK ◦ , there is a one-to-one correspondence between the facets of K and
+the vertices of K. For a given facet the corresponding vertex has the form Jn/hK (n), where n
+is the outward normal vector. Using this fact and equality ω(Ja, Jb) = ω(a, b), we obtain
+Corollary 3.8. Let K ⊂ R2n be a centrally symmetric convex polytope with a nonempty interior
+such that K ω = K, v1 , . . . , vm is one-half of its vertices (the other half is −v1 , . . . , −vm ). Then
+                                           (                                       )
+                             1                  X                                 
+                                    = max              γσ(i) γσ(j) ω vσ(i) , vσ(j) ,
+                     cEHZ (K)                1≤i<j≤m
+
+where the maximum is taken over all permutations σ ∈ Sm and all sets of reals (γi )m
+                                                                                   i=1 such
+that
+                                      Xm
+                                         |γi | = 1.
+                                                  i=1
+
+Proof of Theorem 1.2. We need to show that cEHZ (P ⋉n ) = 2 + 1/n. Consider the collection of
+vertices v1 , . . . , v2n+1 of the polytope P ⋉n from Lemma 3.5. Let γi = 1/(2n + 1) for 1 ≤ i ≤
+2n + 1. Then
+                                                2n+1
+                                                X
+                                                     γi = 1
+                                                   i=1
+and
+                  X                              1        (2n + 1)2 − (2n + 1)     n
+                         γi γj ω(vi , vj ) =          2
+                                                        ·                      =        .
+              1≤i<j≤2n+1
+                                             (2n + 1)               2            2n + 1
+From Corollary 3.8 it follows that
+                                                          1
+                                           cEHZ (P ⋉n ) ≤ 2 +
+                                                            .
+                                                          n
+The opposite inequality is true for every symplectically self-polar convex body (inequality (1.2)).
+                                                                                                 □
+   In fact, we can deduce a more general statement about changing of capacity for symplectic
+P -suspension of symplectically self-polar polytope.
+Theorem 3.9. Let K ⊂ R2n be a symplectically self-polar polytope, then
+                                                      1
+(3.1)                   cEHZ (P ⋉ω K) ≤ 3 −                   .
+                                               cEHZ (K) − 1
+Proof. By Corollary 3.8,
+                                       1                X
+                                              =              βi βj ω(vi , vj ),
+                                  cEHZ (K)         1≤i<j≤m
+                 SYMPLECTICALLY SELF-POLAR POLYTOPES OF MINIMAL CAPACITY                                      9
+
+where v1 , . . . , vm is one-half of its vertices (the other is −v1 , . . . , −vm ) and {βi }m
+                                                                                             i=1 is a collection
+of nonnegative numbers such that
+                                                   Xm
+                                                      βi = 1.
+                                                  i=1
+Consider the collection of points wi = e ⊕ vi for 1 ≤ i ≤ m and wm+1 = (0, 1) ⊕ 0, wm+2 =
+(−1, 0) ⊕ 0. By Corollary 2.9 they are vertices of P ⋉ω K. Moreover, this is a collection
+of pairwise distinct points which does not contain two opposite vertices and ω(wi , wm+1 ) =
+ω(wi , wm+2 ) = ω(wm+1 , wm+2 ) = 1 for 1 ≤ i ≤ m and ω(wi , wj ) = ω(vi , vj ) for 1 ≤ i, j ≤ m.
+Introduce the following coefficient:
+                                                 cEHZ (K) − 2
+                                            α=                 ,
+                                                 3cEHZ (K) − 4
+and note that 0 < α < 1/2, because cEHZ (K) > 2. Consider the collection of coefficients
+{γi }m+2
+     i=1 defined as follows:
+                                   γi = (1 − 2α)βi
+for 1 ≤ i ≤ m, and
+                                  γm+1 = γm+2 = α.
+Then γi ≥ 0, and
+                                      m+2
+                                      X
+                                          γi = 1.
+                                                  i=1
+Also note that
+       X                                          X                                       X
+              γi γj ω(wi , wj ) = (1 − 2α)2              βi βj ω(vi , vj ) + 2α(1 − 2α)           βi + α2 =
+     1≤i<j≤m+2                                 1≤i<j≤m                                    1≤i≤m
+
+                                     (1 − 2α)2
+                                 =             + 2α(1 − 2α) + α2 .
+                                     cEHZ (K)
+Using the definition of α, we get
+                              X                                  cEHZ (K) − 1
+                                           γi γj ω(wi , wj ) =                 .
+                               1≤i<j≤m+2
+                                                                 3cEHZ (K) − 4
+Applying Corollary 3.8 to the polytope P ⋉ω K, we finish the proof.                                           □
+Question 3.10. For the polytopes P ⋉n inequality (3.1) is actually an equality. Is there a sym-
+plectically self-polar polytope such that inequality (3.1) is strict for it?
+
+                 4. Symplectically self-polar bodies of minimal volume
+   In this section we discuss the conjecture that the bodies P ⋉n have the minimal volume among
+the symplectically self-polar convex bodies.
+   Let us start with the two-dimensional case. The fact that Ekeland–Hofer–Zehnder capac-
+ity coincides with the volume of a convex body in dimension 2 and Theorem 1.1 imply that
+vol(X) ≥ 3 for a symplectically self-polar convex body X ⊂ R2 . Therefore, P has the minimal
+volume among all two-dimensional symplectically self-polar convex bodies.
+   The next theorem, motivated by the referee’s question, shows that P is the only minimizer
+(up to linear symplectomorphism).
+Theorem 4.1. Let X ⊂ R2 be a symplectically self-polar convex body such that vol(X) = 3.
+Then X is linearly symplectomorphic to P .
+  First, we prove the following lemma.
+               SYMPLECTICALLY SELF-POLAR POLYTOPES OF MINIMAL CAPACITY                          10
+
+Lemma 4.2. Let X ⊂ R2 be a symplectically self-polar hexagon. Then X is linearly symplec-
+tomorphic to P .
+Proof. Let v be some vertex of X. By Lemma 2.4 there exists a point w ∈ X such that
+ω(v, w) = 1. Since X is a convex polygone, the linear function ω(v, ·) attains its maximum on
+some vertex of X. Thus, we can assume that w is a vertex of X. Up to an appropriate linear
+symplectomorphism we can assume that v = (1, 0) ∈ R2 and w = (0, 1) ∈ R2 . Since X is a
+centrally symmetric hexagon its vertices are ±v, ±w, ±u for some u. Without loss of generality
+we can assume that u = (xu , yu ) ∈ R2 for xu , yu > 0. Since X is symplectically self-polar we
+have ω(v, u) ≤ 1 and ω(u, w) ≤ 1, hence xu , yu ≤ 1. Therefore X ⊆ P and P ω ⊆ X ω . Thus,
+X = P , since X = X ω .                                                                      □
+
+Proof of Theorem 4.1. The main ingredient of the proof of Theorem 1.1 (see [1] or [3, Appen-
+dix]) is the following inequalities
+                                  cEHZ (X)   m(X)     1
+                                           ≥      ≥2+
+                                   cJ (X)     2       n
+for a centrally symmetric convex body X ⊂ R2n with a smooth boundary. Here m(X) is the
+infimum of lengths of the centrally symmetric closed curves γ ⊆ ∂X with respect to the norm
+∥ · ∥X . The first inequality was proven by Akopyan and Karasev in [1]. The last inequality is
+essentially Theorem 13F in the book [12].
+   For a centrally symmetric convex body X with a smooth boundary of dimension 2 (n = 1)
+these inequalities reduce to
+                                     vol(X)   lX (∂X)
+(4.1)                                       ≥         ≥ 3,
+                                     cJ (X)       2
+since the Ekeland–Hofer–Zehnder capacity coincides with the volume of a convex body, and
+lX (∂X) := m(X) is the length of the boundary ∂X with respect to the norm ∥ · ∥X .
+   Note that vol(X), cJ (X), and lX (∂X) are continuous with respect to the Hausdorff distance
+on centrally symmetric convex bodies in R2 . Indeed, vol(X) and cJ (X) are continuous since
+they are 2-homogeneous with respect to scaling and monotone with respect to inclusion (the
+proof is similar to the proof of Theorem 1.8.20 in [13]). The function lX (∂X) is also continuous
+with respect to the Hausdorff distance since it continuous with respect to the Banach–Mazur
+distance [12, Theorem 13A]. Therefore, inequality (4.1) holds for every centrally symmetric
+convex body X ⊂ R2 .
+   Now let X ⊂ R2 be a symplectically self-polar convex body such that vol(X) = 3. Inequal-
+ity (4.1) implies that lX (∂X) = 6. Theorem 4K in [12] implies that X is a linear image of a
+regular hexagon. By Lemma 4.2, X is linearly symplectomorphic to P .                           □
+
+   The symplectic P -suspension defines a map from the set of 2n-dimensional symplectically
+self-polar convex bodies to the set of (2n + 2)-dimensional symplectically self-polar convex
+bodies. By Theorem 2.10, vol(P ⋉ω X) = Cn · vol(X) for every symplectically self-polar convex
+body X ⊂ R2n (the constant Cn is explicitly given in Theorem 2.10 and depends only on n).
+Therefore, in light of Theorem 4.1, the polytope P ⋉2 is the only symplectically self-polar convex
+body (up to linear symplectomorphism) of minimal volume in R4 that can be obtained using
+P -suspension.
+Question 4.3. Does P ⋉2 have the minimal volume not only among all symplectic P -suspensions
+of 2-dimensional symplectically self-polar convex bodies, but among all 4-dimensional symplec-
+tically self-polar convex bodies?
+               SYMPLECTICALLY SELF-POLAR POLYTOPES OF MINIMAL CAPACITY                           11
+
+   Suppose the answer is “yes”. Would P ⋉3 have the minimal volume among all six-dimensional
+symplectically self-polar convex bodies? And would P ⋉n , in general, have the minimal volume
+among all 2n-dimensional symplectically self-polar convex bodies? Let us contemplate this.
+   We compare this sequence with the sequence Qn ⊕2 C n , where Qn = [−1, 1]n , C n = (Qn )◦ is its
+polar cross-polytope, and ⊕2 is the Lagrangian ℓ2 -sum. These convex bodies are symplectically
+self-polar with
+                               n      n    4n (Γ( n2 + 1))2     2n
+                         vol(Q ⊕2 C ) =                      =     · O(n1/2 ).
+                                           n! Γ(n + 1)          n!
+For details see [3]. If Mahler’s conjecture is true, their volumes are minimal up to a sub-
+exponential factor.
+   This is a special case of the following construction. Let K ⊂ Rn be a centrally symmetric
+convex body, then the Lagrangian ℓ2 -sum K ⊕2 K ◦ ⊂ R2n is a symplectically self-polar convex
+body and
+                                        ◦   (Γ( n2 + 1))2
+                          vol(K ⊕2 K ) =                  · vol K · vol K ◦ .
+                                             Γ(n + 1)
+Note that the right-hand side of this equality coincides (up to a constant) with the expression
+appearing in Mahler’s conjecture. Therefore, if Mahler’s conjecture is true, the body Qn ⊕2 C n
+has the minimal volume among all bodies that can be obtained using construction K ⊕2 K ◦ .
+Lemma 4.4. For any positive integer n the following inequality holds:
+                                       vol(Qn ⊕2 C n )  π
+                                                       ≥ .
+                                          vol(P )
+                                               ⋉n       3
+For n ̸= 1 this inequality is strict. Asymptotically,
+                                                    Γ 43 1/4
+                                                        
+                                   vol(Qn ⊕2 C n )
+                                                   ∼ √ n ,
+                                      vol(P ⋉n )      2
+as n → ∞.
+  The reader may find the proof of this lemma as well as Lemma 4.7 below in Appendix 6.
+  Let us summarize several facts about the polytopes P ⋉n :
+     • They have the minimal Ekeland–Hofer–Zehnder capacity cEHZ (P ⋉n ) = 2 + 1/n among
+       all symplectically self-polar convex bodies.
+     • They have the minimal affine cylindrical capacity cZA (P ⋉n ) = 3 among all symplecti-
+       cally self-polar convex bodies.
+     • The polytope P has the minimal volume among all symplectically self-polar bodies in
+       dimension 2. The results of Section 5 with numerical experiments suggest that the
+       polytope P ⋉2 is likely to have the minimal volume in dimension 4. With more caution,
+       it seems that the polytope P ⋉3 has the minimal volume in dimension 6.
+     • Everything written in the previous bullet point also applies to the number of vertices
+       of these polytopes.
+  Taking into account all these arguments, let us formulate:
+Conjecture 4.5. Let X ⊂ R2n be a symplectically self-polar convex body. Then
+                                       vol(X) ≥ vol(P ⋉n ).
+If X is a polytope, then the number of vertices of X is no less than the number of vertices of
+P ⋉n .
+  The next conjecture is a stronger version of the previous one and is partially motivated by
+Theorem 4.1 and Lemma 4.2.
+                SYMPLECTICALLY SELF-POLAR POLYTOPES OF MINIMAL CAPACITY                        12
+
+Conjecture 4.6. Let X ⊂ R2n be a symplectically self-polar convex body. X is linearly sym-
+plectomorphic to P ⋉n if one of the following items holds.
+      • X has the minimal volume among all 2n-dimensional symplectically self-polar convex
+        bodies.
+      • X is a polytope and has the minimal number of vertices among all 2n-dimensional
+        symplectically self-polar convex polytopes of given dimension.
+  How does Conjecture 4.5 agree with Viterbo’s conjecture for centrally symmetric convex
+bodies? Recall that the latter states that for every centrally symmetric convex body X ⊆ R2n ,
+                                                cEHZ (X)n
+                                     vol(X) ≥             .
+                                                   n!
+  Substituting P ⋉n into this inequality yields
+Lemma 4.7. The ratio
+                                           n! vol(P ⋉n )
+                                         (cEHZ (P ⋉n ))n
+equals 1 for n = 1 and strictly increases with n.
+  The asymptotic formula for n → ∞ has the following form:
+                                     n! vol(P ⋉n )      Γ(1/2) 1/4
+                                                   n
+                                                     ∼ 1/2     n .
+                                    (cEHZ (P ))
+                                             ⋉n       e Γ(3/4)
+   Thus, Conjecture 4.5 does not contradict Viterbo’s conjecture but no longer directly follows
+from it.
+Remark 4.8. The upper bounds vol X ≤ π n /n! for the volume and cEHZ (X) ≤ π for the
+capacity of a symplectically self-polar convex body X ⊂ R2n have been obtained in [3]. The
+first inequality straightforwardly follows from the Blaschke–Santaló inequality [11]. Moreover,
+if vol X = π n /n!, then X is linearly symplectomorphic to the unit Euclidean ball (this is
+a consequence of the Blaschke–Santaló inequality when equality is achieved). The second
+inequality is not so straightforward and the proof is based on Clark’s variational method [4] and
+the two-dimensional Blaschke–Santaló inequality. It is known that the equality cEHZ (X) = π
+is achieved for the unit Euclidean ball. In dimension 2 it is known that the equality is achieved
+only for the images of the unit Euclidean ball under the action of linear symplectomorphisms
+since cEHZ (X) = vol(X). However, in higher dimensions it is unknown whether the equality is
+achieved for anything other than the unit Euclidean ball (up to linear symplectomorphisms).
+
+                                    5. Numerical experiments
+  This section explains the theoretical basis of numerical experiments, partially explains their
+technical implementation, and demonstrates results. A reader interested in particular program-
+ming implementation may find the code on GitHub1.
+  To continue the discussion of algorithms let us make several simple statements.
+Lemma 5.1. Let K ⊂ R2n be a centrally symmetric convex polytope. The inclusion K ⊆ K ω
+holds if and only if for every two vertices v, w of the polytope K, ω(v, w) ≤ 1.
+Proof. In one direction it follows from the definition of K ω . In the opposite direction, let
+x, y ∈ K. If we consider ω(x, y) as a function of the first variable ranging over K, then it
+attains a maximum on some vertex v. So ω(x, y) ≤ ω(v, y). Similarly, consider this function as
+a function of the second variable. Then there is a vertex w such that ω(v, y) ≤ ω(v, w) ≤ 1. □
+  1Link to the GitHub repository.
+               SYMPLECTICALLY SELF-POLAR POLYTOPES OF MINIMAL CAPACITY                           13
+
+Lemma 5.2. Let K ⊂ R2n be a centrally symmetric convex polytope such that K ⊆ K ω . Let S
+be a centrally symmetric subset of V (K ω ) such that ω(v, w) ≤ 1 for every v, w ∈ S. Then the
+polytope M = conv(K ∪ S) satisfies M ⊆ M ω .
+Proof. For a point p ∈ K ω \ K consider Rp = conv{±p} ∪ K. Then Rp ⊆ Rpω . Indeed, from the
+definition of Rp it follows that every point z ∈ Rp can be written as z = tx ± (1 − t)p, where
+x ∈ K and t ∈ [0, 1], therefore, for any two points z1 , z2 ∈ Rp ,
+                      |ω(z1 , z2 )| = |ω(t1 x1 ± (1 − t1 )p, t2 x2 ± (1 − t2 )p)| ≤
+                       ≤ t1 t2 + (1 − t1 )t2 + t1 (1 − t2 ) = t1 + t2 − t1 t2 ≤ 1.
+   Consequently, it is sufficient to show that for p ∈ S, the inclusion S ⊂ Rpω holds. Let q ∈ S
+and z = tx ± (1 − t)p, where x ∈ K and t ∈ [0, 1]. Since q ∈ K ω , then |ω(q, x)| ≤ 1, and since
+q, p ∈ S, then |ω(q, p)| ≤ 1, and, consequently, |ω(q, z)| ≤ 1. Thus, S ⊂ Rpω .                □
+
+An algorithm for generating symplectically self-polar polytopes. To start with, we
+have a centrally symmetric convex polytope K ⊂ R2n such that K ⊆ K ω .
+   (1) Construct the polytope K ω = JK ◦ .
+   (2) Choose a maximal centrally symmetric vertex subset S of the polytope K ω satisfying
+       assumptions of Lemma 5.2.
+   (3) If it happens that S equals to the vertex set of K ω , then K ω ⊆ K by Lemma 5.1.
+       Consequently, K ω = K and we halt the algorithm. Otherwise, replace the polytope K
+       by the polytope conv K ∪ S and go back to the step 1.
+Question 5.3. It is not clear whether this algorithm stops after finitely many steps. In practice,
+it turns out that it does, at least in dimension 4. Is there a way to prove this in arbitrary
+dimension? If yes, then together with Zorn’s lemma (see [3, Lemma 6.6]) this implies that the
+set of symplectically self-polar polytopes is dense among all symplectically self-polar convex
+bodies (in Hausdorff metric).
+Remark 5.4. To construct a polar polytope K ◦ , to compute volumes of various polytopes, and to
+generate random polytopes the author used the software package polymake [5]. All calculations
+were carried out using fractions, without using approximate values. Only the final volume, if
+necessary, was converted to an approximate decimal fraction for the convenience of interpreting
+the results.
+  It is sufficient to take an initial polytope K, for the algorithm, inside the Euclidean unit ball
+K ⊂ B 2n (1) = B 2n (1)ω ⊂ K ω . For this we could generate k ≥ 2n random points inside the
+ball such that together with the origin they are in the general position.
+  Using this approach in R4 for every fixed number of points k ∈ {4, 5, 6, 10}, we generated
+300 symplectically self-polar convex polytopes and computed their volume. In Figure 2 the
+histogram is drawn for each k, where the volume of the resulting polytope is indicated on the
+horizontal axis.
+Remark 5.5. In dimension 4, all volumes of randomly generated symplectically self-polar convex
+bodies were greater than vol(P ⋉2 ) = 3.5, and the numbers of vertices were strictly greater than
+|V (P ⋉2 )| = 16.
+  Note the following patterns that can be seen from these histograms. Firstly, all histograms
+are bounded by 3.5 from below. Secondly, as k increases, they shift to the right. Heuristically,
+this can be explained as follows. The greater the number k the initial polytope is closer to
+a ball. But the Euclidean unit ball is the symplectically self-polar body with the maximal
+volume [3, Remark 1.3].
+                                 SYMPLECTICALLY SELF-POLAR POLYTOPES OF MINIMAL CAPACITY                                      14
+
+            100                                                                100
+
+
+
+
+             80                                                                 80
+
+
+
+
+             60                                                                 60
+Frequency
+
+
+
+
+                                                                   Frequency
+             40                                                                 40
+
+
+
+
+             20                                                                 20
+
+
+
+
+              0                                                                  0
+                  3.5      3.6    3.7    3.8     3.9   4.0   4.1                     3.5   3.6   3.7    3.8     3.9   4.0   4.1
+
+                                        Volume                                                         Volume
+
+                                  (a) k = 4                                                      (b) k = 5
+            100                                                                100
+
+
+
+
+             80                                                                 80
+
+
+
+
+             60                                                                 60
+Frequency
+
+
+
+
+             40
+                                                                   Frequency    40
+
+
+
+
+             20                                                                 20
+
+
+
+
+              0                                                                  0
+                  3.5      3.6    3.7    3.8     3.9   4.0   4.1                     3.5   3.6   3.7    3.8     3.9   4.0   4.1
+
+                                        Volume                                                         Volume
+
+                                  (c) k = 6                                                      (d) k = 10
+
+                        Figure 2. Histograms of the volumes of the resulting polytopes for various k.
+
+Remark 5.6. In the two-dimensional case the minimal volume is attained on a symplectically
+self-polar polytope with the minimal number of vertices. From this and the discussion above,
+it seems that the minimal volume should be attained on a symplectically self-polar polytope
+with the minimum possible number of vertices.
+  For this reason in dimension 6 it reasonable to take minimally possible k = 6. But in this
+dimension, with such k, quite serious computational difficulties appear.
+Enumeration of all symplectically self-polar −1/0/1 polytopes.
+Definition 5.7. A polytope K ⊂ Rn is called −1/0/1 polytope if its vertices lie in the set
+{−1, 0, 1}n .
+   For the enumeration of all symplectically self-polar −1/0/1 polytopes in dimension 2n the
+following algorithm was used:
+    (1) Look for an inclusion-maximal set R ⊂ {−1, 0, 1}2n such that |ω(v, w)| ≤ 1 for every
+        v, w ∈ R.
+    (2) Construct the polytope KR = conv R. By Lemma 5.1 it turns out that KR ⊆ KRω .
+    (3) Move on to the polytope KRω and check the condition |ω(v, w)| ≤ 1 for its vertices. If it
+        holds, then the polytope KR is symplectically self-polar. Otherwise, the polytope KR
+        is not symplectically self-polar and we just ignore the set R.
+   If we go through all sets R from the bullet point 1, we will find all symplectically self-polar
+−1/0/1 polytopes.
+Remark 5.8. In dimension 4 it turns out that KRω = KR for all such R. In dimension 6 there
+are sets R such that KR ⊊ KRω .
+                    SYMPLECTICALLY SELF-POLAR POLYTOPES OF MINIMAL CAPACITY                    15
+
+   If we go through all symplectically self-polar −1/0/1 polytopes in dimension 4, then we can
+classify them by the volume and the number of vertices (see Table 1).
+
+                                     |V (K)| 16   20   24   24
+                                      vol K 21/6 22/6 23/6 24/6
+
+        Table 1. All possible combinations of volumes and the number of vertices of
+        symplectically self-polar −1/0/1 polytopes in dimension 4.
+
+Remark 5.9. It was checked manually that every symplectically self-polar −1/0/1 polytope in
+dimension 4 with volume 3.5 = 21/6 is linearly symplectomorphic to P ⋉2 .
+   In dimension 6, we found 45 different combinations of number of vertices and volumes of
+symplectically self-polar −1/0/1 polytopes. There might be more as we were not able to go
+through all such sets R because it is computationally hard. Meanwhile, among those 45, only the
+polytope linearly symplectomorphic to P ⋉2 had the minimal volume and the minimal number
+of vertices.
+Conclusions from the numerical experiments. P is a symplectically self-polar polytope
+with the minimal volume and the minimal number of vertices in dimension 2. In dimension
+4, taking into account the results of the experiments, it seems that the polytope P ⋉2 has the
+minimal volume and the minimal number of vertices. Note that both of them are −1/0/1
+polytopes. So in dimension 6 it seems reasonable to search polytopes of minimal volume
+among −1/0/1 polytopes. During the search the polytope linearly symplectomorphic to P ⋉2
+was found, while the others had a greater volume and greater number of vertices.
+
+                                              6. Appendix
+Proof of Lemma 4.4. Denote
+                                                          2
+                                               2n Γ n2 + 1 Γ n + 12 Γ 43
+                                                                         
+                             vol(Qn ⊕2 C n )
+                        an =                 =                              .
+                                                  Γ(n + 1)Γ n + 34 Γ 21
+                                                                       
+                                vol(P ⋉n )
+Then                            2
+                       4 n2 + 1 n + 12 n + 32
+                                                
+             an+2                                        16n3 + 64n2 + 76n + 24
+                  =                                   =                         > 1.
+                     (n + 1) (n + 2) n + 43 n + 74
+                                                   
+              an                                         16n3 + 56n2 + 61n + 21
+At the same time
+                                                   π
+                                             a1 = ,
+                                                   3
+                                                   8
+                                             a2 = .
+                                                   7
+It is easy to check that a2 > a1 , hence an > a1 for all n > 1.
+   The asymptotic formula follows directly from the Stirling approximation.                    □
+Proof of Lemma 4.7. Denote
+                                                             n
+                                                                    Γ n + 43 Γ   1
+                                                                                
+                              n! vol(P ⋉n )           2n                         2
+                         an =               =                     ·         ·      .
+                              (2 + 1/n)n            2n + 1          Γ n + 12 Γ   3
+                                                                                 4
+Then
+                            n         n+1              2          n
+       an+1         2n + 1        2n + 2      (n + 3/4)    2n + 3n + 1     (n + 1)(4n + 3)
+            =                  ·                        =      2
+                                                                                           .
+        an            2n          2n + 3      (n + 1/2)      2n + 3n      (2n + 3)(2n + 1)
+                  SYMPLECTICALLY SELF-POLAR POLYTOPES OF MINIMAL CAPACITY                                        16
+
+By the Bernoulli inequality,
+               2            n           n
+                 2n + 3n + 1          1             1      2n + 4
+                     2
+                               = 1+ 2         ≥1+        =        .
+                   2n + 3n         2n + 3n        2n + 3   2n + 3
+              an+1    (2n + 4)(n + 1)(4n + 3)     8n3 + 30n2 + 34n + 12
+                   ≥                           =                         > 1.
+                an       (2n + 3)2 (2n + 1)        8n3 + 28n2 + 30n + 9
+The asymptotic formula follows directly from the Stirling approximation.                                         □
+                                                 References
+ [1] A. Akopyan and R. Karasev. Estimating symplectic capacities from lengths of closed curves on the unit
+     spheres. 2018. arXiv:1801.00242.
+ [2] M. Berezovik and M. Bialy. Outer billiards of symplectically self-polar convex bodies. 2025.
+     arXiv:2501.12165.
+ [3] M. Berezovik and R. Karasev. Symplectic polarity and Mahler’s conjecture. Israel Journal of Mathematics,
+     to appear. arXiv:2211.14630.
+ [4] F. H. Clarke. Shorter notes: A classical variational principle for periodic Hamiltonian trajectories. Proceed-
+     ings of the American Mathematical Society, 76(1):186–188, 1979.
+ [5] E. Gawrilow and M. Joswig. polymake: a framework for analyzing convex polytopes. In Polytopes—
+     combinatorics and computation (Oberwolfach, 1997), volume 29 of DMV Sem., pages 43–73. Birkhäuser,
+     Basel, 2000.
+ [6] E. D. Gluskin and Y. Ostrover. Asymptotic equivalence of symplectic capacities. Commentarii Mathematici
+     Helvetici, 91(1):131–144, 2016.
+ [7] P. Haim-Kislev. On the symplectic size of convex polytopes. Geometric and Functional Analysis, 29(2):440–
+     463, 2019.
+ [8] P. Haim-Kislev and Y. Ostrover. A counterexample to viterbo’s conjecture. 2024. arXiv:2405.16513.
+ [9] A. Jensen. Self-polar polytopes. Polytopes and Discrete Geometry, 2019.
+[10] K. Mahler. Ein Übertragungsprinzip für konvexe körper. Časopis pro pěstovánı́ matematiky a fysiky, 068(3-
+     4):93–102, 1939.
+[11] L. Santaló. Un invariante afin para los cuerpos convexos del espacio de n dimensiones. Portugaliae mathe-
+     matica, 8(4):155–161, 1949.
+[12] J. Schäffer. Geometry of Spheres in Normed Spaces. Lecture Notes in Pure and Applied Mathematics Series.
+     Dekker, 1976.
+[13] R. Schneider. Convex Bodies: The Brunn–Minkowski Theory. Encyclopedia of Mathematics and its Appli-
+     cations. Cambridge University Press, 2 edition, 2013.
+[14] C. Viterbo. Metric and isoperimetric problems in symplectic geometry. Journal of the American Mathe-
+     matical Society, 13(2):411–431, 2000.
+
+  Mark Berezovik, School of Mathematical Sciences, Tel Aviv University, Israel, 69978
+  Email address: m.berezovik@gmail.com
+

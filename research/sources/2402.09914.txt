@@ -1,0 +1,506 @@
+                                                     COMPUTING THE EHZ CAPACITY IS NP-HARD
+
+                                                                 KARLA LEIPOLD AND FRANK VALLENTIN
+arXiv:2402.09914v3 [math.SG] 5 Oct 2024
+
+
+
+
+                                                   Abstract. The Ekeland-Hofer-Zehnder capacity (EHZ capacity) is a funda-
+                                                   mental symplectic invariant of convex bodies. We show that computing the
+                                                   EHZ capacity of polytopes is NP-hard. For this we reduce the feedback arc set
+                                                   problem in bipartite tournaments to computing the EHZ capacity of simplices.
+
+
+
+
+                                                                              1. Introduction
+                                             Sympletic capacities are fundamental tools for measuring the “symplectic size”
+                                          of subsets of the standard symplectic vector space (R2n , ω), cf. the book by Hofer,
+                                          Zehnder [4]. Many symplectic capacities, starting with the Hofer-Zehnder capacity
+                                          from [4] and the Ekeland-Hofer capacity from [1] have been proved to coincide
+                                          on convex bodies and there common value is called the Ekeland-Hofer-Zehnder
+                                          capacity and denoted as cEHZ .
+                                             Our starting point is the following combinatorial formulation of the EHZ capacity
+                                          of convex polytopes due to Haim-Kislev [3]. We assume that a 2n-dimensional
+                                          convex polytope P with k facets is given by linear inequalities
+                                                    P = P (B, c) = {x ∈ R2n : Bx ≤ c} for            B ∈ Rk×(2n) , c ∈ Rk .
+                                          Let b1 , . . . , bk ∈ R2n be the rows of B, written as column vectors, and let c1 , . . . , ck
+                                          be the components of c. So the polytope P contains exactly the points x ∈ R2n
+                                          which satisfy the linear inequalities bT    i x ≤ ci , with i = 1, . . . , k. Then the EHZ
+                                          capacity of P is
+                                                                         X
+                                                                 1
+                                               cEHZ (P ) =           max           βσ(i) βσ(j) ω(bσ(i) , bσ(j) ) :
+                                          (1)                    2                                                           −1
+                                                                           1≤j<i≤k
+                                                                                                        k     T        T
+                                                                                     σ ∈ Sk , β ∈ R+ , β c = 1, β B = 0             ,
+
+                                          where ω is the standard symplectic form on R2n ,
+                                                                                                                        
+                                                                                                                 0    In
+                                                        ω(x, y) = xT Jy     for   x, y ∈ R2n    and J =                    ,
+                                                                                                                −In    0
+                                          where In is the identity matrix with n rows and columns, where Sk denotes the
+                                          symmetric group of {1, . . . , k}, and where Rk+ is the nonnegative orthant.
+                                             Hofer, Zehnder state [4, p. 102] “It turns out that it is extremely difficult to
+                                          compute this capacity.” In this paper we give a computational justification of this
+                                          claim by showing that computing the EHZ capacity is indeed NP-hard, even for
+                                          the special case of simplices.
+
+                                              Date: October 4, 2024.
+                                                                                        1
+2                                 K. Leipold, F. Vallentin
+
+
+Theorem 1.1. The following decision problem is NP-complete: Given the rational
+inputs γ ∈ Q, a matrix B ∈ Qk×(2n) , a vector c ∈ Qk . Suppose that P (B, c) is a
+2n-dimensional convex polytope having k facets. Is the EHZ capacity of P (B, c) at
+most γ; Is cEHZ (P (B, z)) ≤ γ?
+   To prove this theorem we shall reduce the feedback arc set problem in bipartite
+tournaments to computing the EHZ capacity of a simplex, that is to 2n-dimensional
+polytopes having k = 2n + 1 facets. The feedback arc set problem in bipartite
+tournaments is known to be NP-complete; a result by Guo, Hüffner, Moser [2].
+1.1. Notation from combinatorial optimization. First we recall, for reference,
+some standard notation from combinatorial optimization. Let D = (V, A) be a
+directed graph with vertex set V and with family of arcs A, allowing for multiple
+arcs; see Schrijver [8]. Such a directed graph can be represented by its adjacency
+matrix M of size |V | × |V |, where the entry Mij equals the number of arcs from vi
+to vj .
+   As usual we define a walk in a directed graph to be a sequence of arcs a1 , . . . , ak ∈
+A so that ai = (vi−1 , vi ) with i = 1, . . . , k. A walk is closed if start vertex v0
+coincides with end vertex vk . A path is a walk in which vertices v0 , . . . , vk are
+distinct. A directed circuit is a closed walk in which all vertices are distinct except
+that the start vertex v0 coincides with the end vertex vk .
+   A directed graph is called acyclic if it does not contain any directed circuits.
+   For a subset of the vertex set U ⊆ V we define
+                      δ out (U ) = {(u, v) ∈ A : u ∈ U, v ∈ V \ U }
+the multiset of arcs of D leaving U , and similarly
+                       δ in (U ) = {(v, u) ∈ A : v ∈ V \ U, u ∈ U }
+the arcs entering U . If U consists only out of one vertex v we also write δ out (v)
+instead of δ out ({v}), and δ in (v) instead of δ in ({v}). Then, the indegree of vertex v
+is |δ in (v)| and its outdegree is |δ out (v)|, where we also count multiple arcs.
+    A walk in D is called Eulerian if each arc of D is traversed exactly once. The
+directed graph is called Eulerian whenever it has a closed Eulerian walk. A directed
+graph is Eulerian if and only if
+     (1) for any pair of vertices u, v there is a path with start vertex u and end
+           vertex v; that is, D is strongly connected,
+     (2) the indegree of every vertex coincides with its outdegree.
+   A feedback arc set of D is a subfamily of the arcs which meets all directed circuits
+of D. That is, removing these arcs from D would make D acyclic. The decision
+variant of the feedback arc set problem asks given a directed graph D = (V, A) and
+a natural number δ, does D have a feedback arc set of cardinality at most δ?
+   The maximum acyclic subgraph problem is complementary to the feedback arc
+set problem: Its optimization variant asks for the maximum cardinality (using
+multiplicities) of arcs A′ ⊆ A so that the resulting directed subgraph (V, A′ ) of D is
+acyclic. A subfamily A′ of A defines an acyclic subgraph of D if and only if A \ A′
+is a feedback arc set of D.
+   A bipartite tournament is a directed graph D = (U ∪ V, A) whose vertex set
+is the disjoint union of vertices U = {u1 , . . . , un } and V = {v1 , . . . , vm } and in
+which all of its arcs A have the property that for every pair i, j, with i = 1, . . . , n,
+                             Computing the EHZ capacity is NP-hard                             3
+
+
+j = 1, . . . , m, either (ui , vj ) ∈ A or (vj , ui ) ∈ A. So the underlying undirected
+graph is a complete bipartite graph without multiple edges.
+
+1.2. Outline of the polynomial time reduction; Proof of Theorem 1.1.
+Now we outline our polynomial time reduction, the details are provided in the
+subsequent sections. We describe a polynomial time algorithm to decide if a given
+bipartite tournament has a feedback arc set of at most δ arcs by calling an oracle to
+solve the decision variant of the EHZ-capacity of a simplex. We will demonstrate
+that the feedback arc set of a complete bipartite tournament D = (U ∪ V, A) with
+n = |U | and m = |V |, where we assume that n ≥ m can be computed by the
+formula
+                             (2n + 1)2
+                                                 
+                     1                       1
+(2)           |Ã| −                       +     + ∆ − |δ out (x2n+1 )|.
+                     2    2cEHZ (P (B̃, e)) 2
+In the following we will explain this formula in detail. In particular we shall show
+that all appearing constants can be constructed in polynomial time. Hence, after
+solving (2) for cEHZ (P (B̃, e)), by the NP-hardness of the decision variant of the
+feedback arc set problem for bipartite tournaments [2], the decision variant of the
+EHZ capacity of polytopes is also NP-hard.
+   In Section 2 we transform the complete bipartite tournament D into a simplex
+P (B̃, e) through the block matrix B ∈ Z(2n+1)×(2n) defined by
+                                                
+                                      In     0
+                              B= 0          S ,
+                                     −eT −eT S
+
+where eT = (1 . . . 1) is the all-ones (row) vector, and S ∈ {−1, 0, 1}n×n is defined
+componentwise by
+                                    
+                                    1
+                                          if (ui , vj ) ∈ A,
+(3)                          Sij = −1 if (vj , ui ) ∈ A,
+                                    
+                                      0    otherwise.
+                                    
+
+For simplicity we suppose in this outline that the matrix S has full rank n. If the
+matrix S has not full rank, then we have to perform a slight perturbation of it,
+yielding B̃; we give details about this technical issue in Section 2. It follows that
+the polytope P (B, e) is a simplex because the row vectors b1 , . . . , b2n+1 of B sum
+                     P2n+1
+up to zero; that is i=1 bi = 0. This implies that the variable β ∈ R2n+1    +    in the
+                                                           1
+maximization problem (1) is determined uniquely: β = 2n+1     e. So the computation
+of cEHZ (P (B, e)) simplifies to
+       cEHZ (P (B, e))
+                                                                                    −1
+             (2n + 1)2
+                                  
+(4)                                       X
+         =                   max                    ω(bσ(i) , bσ(j) ) : σ ∈ S2n+1          .
+                 2
+                                       1≤j<i≤2n+1
+
+   Since ω(bσ(i) , bσ(j) ) = bT
+                              σ(i) Jbσ(j) , in (4) we are interested in simultaneously
+permuting rows and columns of the matrix W = BJB T ∈ R(2n+1)×(2n+1) so that
+the sum of the entries of its lower triangular part (i > j) is maximized. The matrix
+4                                   K. Leipold, F. Vallentin
+
+
+W has the following block form
+                                                                                          
+       In      0                                                    0     ST       −S T e
+                        0    In In            0     −e
+W =    0      S                                                  =  −S      0        Se  .
+                       −In 0      0          ST    −S T e
+      −eT −eT S                                                       eT S   −eT S T     0
+
+   In Section 3 we interpret the result of computing cEHZ (P (B, e)) as given in (4)
+in terms of the feedback arc set problem. The matrix W is skew-symmetric; W T =
+−W . Take the nonnegative part of W to define the matrix M ; Mij = max{0, Wij }.
+Then W = M − M T and for any permutation matrix Pσ , with σ ∈ S2n+1 , we have
+(5)          PσT W Pσ = PσT (M − M T )Pσ = 2PσT M Pσ − PσT (M + M T )Pσ .
+Hence, maximizing the sum of the entries of the lower triangular part of PσT W Pσ
+is equivalent to maximizing the sum of the entries of the lower triangular part of
+PσT M Pσ , because M + M T is a symmetric matrix and so the sum of the entries of
+the lower triangular part of PσT (M + M T )Pσ is independent of the permutation σ.
+We denote this latter sum by ∆, a constant which appears in (2).
+   The matrix M defines the adjacency matrix of an auxiliary directed graph on
+2n + 1 vertices and |Ã| arcs (appearing in (2)), which is almost the original com-
+plete bipartite tournament D. There are two essential differences between the new
+auxiliary graph and the original graph D: A minor difference occurs when n > m,
+then the new graph has n − m isolated vertices, which simply can be ignored. A
+major difference is that there is an extra vertex x2n+1 which is connected to some
+vertices in U ∪ V by potentially multiple arcs. One feature of the extra vertex is
+that it makes the auxiliary graph Eulerian.
+   It is known, the argument is recalled in Section 3, that maximizing the sum of
+the entries of the lower triangular part of PσT M Pσ amounts to solving the maxi-
+mum acyclic subgraph problem on the auxiliary graph. Using this solution of the
+maximum acyclic subgraph problem one can determine, by complementarity, an
+optimal solution of the feedback arc set problem of the auxiliary graph.
+   Then in Section 4 we relate this optimal solution of the auxiliary graph to the
+feedback arc set problem of the original graph: For this we shall use the fact
+(Lemma 4.1) that feedback arc sets of the original graph and of the auxiliary graph
+differ by exactly |δ out (x2n+1 )| (appearing in (2)) many arcs.                  
+
+        2. From the feedback arc set problem to the EHZ capacity
+   Let D = (U ∪ V, A) be a complete bipartite tournament with n = |U | and
+m = |V |, where we assume that n ≥ m. Define the matrix S ∈ {−1, 0, 1}n×n
+componentwise as described in (3). If the matrix S is not of full rank n we perform
+a small perturbation of the row vectors of S. For this let si be the i-th row of S
+written as a column vector. Choose a rational ε > 0. Then a desired perturbation
+can be computed by the following steps, which are all easy, polynomial time, linear
+algebra computations (for the details we refer, for instance, to the book Schrijver
+[7]): Let L ⊆ Qn be the subspace spanned by s1 , . . . , sn .
+      (1) Among the vectors s1 , . . . , sn choose a basis of L. Without loss of generality
+          we may assume, after reordering, that s1 , . . . , sk is such a basis.
+      (2) Use Gram-Schmidt orthogonalization to compute an orthogonal basis of the
+          orthogonal complement L⊥ . Let tk+1 , . . . , tn ∈ Qn be such an orthogonal
+                            Computing the EHZ capacity is NP-hard                          5
+
+
+        basis normalized by ktk+1 k∞ = . . . = ktn k∞ = 1, where k · k∞ denotes the
+        ℓ∞ -norm.
+    (3) Perturb the vectors sk+1 , . . . , sn to
+                        s̃k+1 = sk+1 + εtk+1 , . . . , s̃n = sn + εtn .
+        The first k vectors stay unchanged: s̃1 = s1 , . . . , s̃k = sk .
+  In this way we get a perturbed matrix S̃ with rows s̃1 , . . . , s̃n . From this we
+construct the block matrix
+                                               
+                                    In     0
+                             B̃ =  0      S̃ 
+                                      T
+                                   −e    −eT S̃
+
+The convex hull of {b̃1 , . . . , b̃2n+1 }, where b̃i are the row vectors of B̃, is a simplex
+with the origin in its interior; by construction, the first 2n row vectors of B̃ are
+linearly independent and all 2n + 1 row vectors sum up to zero. The polar of this
+simplex is equal to P (B̃, e). Therefore, see, for instance, Ziegler [9, Chapter 2.3],
+P (B̃, e) is a simplex.
+   In the following we will consider the EHZ capacity of this simplex P (B̃, e).
+The principal computational task to determine cEHZ (P (B̃, e)) is to determine the
+maximum
+                            X                                 
+(6)                max              (PσT W̃ Pσ )ij : σ ∈ S2n+1
+                             1≤j<i≤2n+1
+
+for W̃ = B̃J B̃ T and where Pσ is the permutation matrix corresponding to the
+permutation σ ∈ S2n+1 . We have
+                                       S̃ T  −S̃ T e
+                                                   
+                                0
+                        W̃ =  −S̃      0      S̃e  .
+                                T       T T
+                               e S̃ −e S̃       0
+Later on, for interpretation of the EHZ capacity in terms of an (integral) adjacency
+matrix, it is more convenient to work with W rather than with W̃ . Since all entries
+of W̃ differ from W only by at most nε, we can choose ε = 1/n4 so that
+                                           
+                                           
+                   X
+                              T           1       X
+                          (Pσ W̃ Pσ )ij +  =            (PσT W Pσ )ij
+                                          2
+                1≤j<i≤2n+1                           1≤j<i≤2n+1
+
+for every σ ∈ S2n+1 .
+Example 2.1. We illustrate our construction for the following complete bipartite
+tournament.
+                                    u1
+                                                       v1
+                                    u2
+                                                       v2
+                                    u3
+6                                       K. Leipold, F. Vallentin
+
+
+Here
+                        s1 = (1, −1, 0), s2 = (−1, 1, 0), s3 = (1, 1, 0),
+and
+                                 s̃1 = s1 , s̃2 = s2 , s̃3 = (1, 1, ε),
+therefore
+                                                                             
+                          0  0  0                 1 −1   1                 −1
+                         0  0  0                 −1 1   1                 −1 
+                                                                             
+                         0  0  0                 0  0   ε                 −ε 
+                                                                             
+                   W̃ = 
+                         −1 1  0                 0  0   0                 0 .
+                         1 −1 0                  0  0   0                 0 
+                                                                             
+                         −1 −1 −ε                0  0   0                2+ε 
+                          1  1  ε                 0  0 −2 − ε              0
+
+                        3. Interpretation of the EHZ capacity
+    In this section we interpret the maximization problem
+                              X                               
+                                         T
+                     max              (Pσ W Pσ )ij : σ ∈ S2n+1
+                                 1≤j<i≤2n+1
+
+in terms of the feedback arc set problem.
+   We define the matrix M ∈ R(2n+1)×(2n+1) by taking the nonnegative part of W
+so that Mij = max{0, Wij }, and then W = M − M T . For any permutation matrix
+Pσ , with σ ∈ S2n+1 , we have
+              PσT W Pσ = PσT (M − M T )Pσ = 2PσT M Pσ − PσT (M + M T )Pσ .
+Hence, as noted in the introduction, maximizing the sum of the entries of the lower
+triangular part of PσT W Pσ is equivalent to maximizing the sum of the entries of the
+lower triangular part of PσT M Pσ .
+  The matrix M defines the adjacency matrix of an auxiliary directed graph D̃ on
+2n + 1 vertices, which is, as the example below illustrates, related to D by
+      (1) identifying x1 , . . . , xm with v1 , . . . , vm ,
+      (2) adding isolated vertices xm+1 , . . . , xn ,
+      (3) identifying xn+1 , . . . , x2n with u1 , . . . , un ,
+      (4) adding the extra vertex x2n+1 ,
+      (5) reversing all arcs occorring in D.
+Example 3.1. (first continuation of Example 2.1)
+                                               x1                              x4
+                                 
+          0 0 0 1 0 1 0
+        0 0 0 0 1 1 0 
+                                 
+        0 0 0 0 0 0 0                        x2                              x5
+                                 
+   M = 0 1 0 0 0 0 0 
+                                  
+        1 0 0 0 0 0 0 
+       
+        0 0 0 0 0 0 2 
+                                              x3                              x6
+          1 1 0 0 0 0 0
+                                                                          x7
+                           Computing the EHZ capacity is NP-hard                        7
+
+
+   Now we show that the maximization problem
+                         X                               
+                                    T
+(7)              max             (Pσ M Pσ )ij : σ ∈ S2n+1
+                           1≤j<i≤2n+1
+
+
+determines a maximum acyclic subgraph in D̃. This is a simple, known fact; the
+argument uses the concept of topological ordering (see, for instance, Knuth [5]).
+    Let D = (V, A) be a directed graph with V = {v1 , . . . , vn }. A topological ordering
+of D is a permutation σ ∈ Sn so that (vi , vj ) ∈ A only if σ −1 (i) < σ −1 (j), with
+i, j = 1, . . . , n. That is, the permutation σ determines a ranking of the vertices
+so that vertex vi becomes ranked at the σ −1 (i)-th position. Then there is an arc
+between vi and vj only if vertex vi is ranked before vertex vj . There exists a
+topological ordering of a directed graph if and only if the directed graph is acyclic.
+Therefore, finding a maximum acyclic subgraph of D̃ is the same as finding a
+permutation σ for which the number of arcs in D̃ respecting the topological ordering
+given by σ is maximized, which is
+                                  X                           
+                       max                Mij : σ ∈ S2n+1
+                                i,j=1,...,n
+                              σ−1 (i)<σ−1 (j)
+                                 X                                 
+                  = max                       Mσ(i),σ(j) : σ ∈ S2n+1 .
+                              1≤i<j≤2n+1
+                                 X                                 
+                  = max                    (PσT M Pσ )ij : σ ∈ S2n+1 .
+                              1≤i<j≤2n+1
+
+To maximize the sum of the lower triangular part instead of the sum of the upper
+triangular part, that is summing over indices 1 ≤ j < i ≤ 2n + 1 instead of
+1 ≤ i < j ≤ 2n + 1, we simply reverse all the arcs in D̃. This global reversing
+operation does not change the cardinality of the maximum acyclic subgraph of
+D̃. Therefore, the maximization problem (7) provides a solution of the maximum
+acyclic sugraph problem of the auxilary graph D̃.
+
+Example 3.2. (second continuation of Example 2.1) A maximum acyclic subgraph
+of the auxiliary graph D̃ is depicted by thick arcs. It has cardinality 7.
+                                         x1                x4
+
+                                         x2                x5
+
+                                         x3                x6
+
+                                                   x7
+
+
+The permutation
+                                                               
+                                  1      2 3      4 5   6 7
+                              σ=
+                                  4      2 7      1 3   5 6
+8                                      K. Leipold, F. Vallentin
+
+
+gives an optimal topological ordering with
+                                                                            
+                                    0 1 0                  0     0   0   0
+                                 0 0 1                    0     1   0   0   
+                                                                            
+                                 0 0 0                    1     0   0   0   
+                                                                            
+                    PσT M Pσ =  1 0 0                    0     1   0   0   .
+                                                                             
+                                 0 0 0                    0     0   2   0   
+                                                                            
+                                 0 1 0                    1     0   0   0   
+                                    0 0 0                  0     0   0   0
+(Note that the permutation matrix Pσ is acting on the rows.)
+
+                            4. Removing the extra vertex
+    In the last step we show how the solution of the maximization problem (7) which
+determines the value of a maximum acyclic subgraph of the auxiliary graph D̃ can
+be used to solve the feedback arc set problem for the original graph D.
+    If the extra vertex x2n+1 is isolated, then there is nothing to do, otherwise we
+will make use of the fact, that D̃ is Eulerian (after deleting the isolated vertices).
+To verify that D̃ is indeed Eulerian, one directly checks, for every vertex xi , that
+|δ in (xi )| = |δ out (xi )| holds:
+                                            2n+1
+                                             X             2n+1
+                                                            X
+           |δ out (xi )| − |δ in (xi )| =          Mij −          Mji = eT           T
+                                                                         i M e − eM ei
+                                            j=1            j=1
+
+                                      = eT       T      T
+                                         i (M − M )e = ei W e = 0,
+
+where ei is the i-th standard basis vector in R2n+1 . Moreover, since D is complete,
+it follows that D̃ is strongly connected.
+    The following argument is from Perrot, Van-Pham [6, Section 3]. We provide
+the necessary details to make this paper self-contained.
+Lemma 4.1. The minimum cardinality of a feedback arc set in D equals the min-
+imum cardinality of a feedback arc set in D̃ minus |δ out (x2n+1 )|.
+Proof. We show the complementary result for the maximum acyclic subgraph prob-
+lem.
+   Let A′ be a maximum acyclic subgraph of D. Then we can use these arcs together
+with the arcs (x2n+1 , xi ), with i = 1, . . . , 2n, in D̃ leaving the extra vertex x2n+1
+to determine an acyclic subgraph of D̃ of cardinality |A′ | + |δ out (x2n+1 )|.
+   Conversely, let A′ be a maximum acyclic subgraph of D̃. Now we describe a pro-
+cedure to determine a maximum acyclic subgraphs A′′ so that the extra vertex x2n+1
+has no incoming arc. Because A′′ is maximum it has to contain all |δ out (x2n+1 )|
+arcs leaving x2n+1 . Removing these arcs determines an acyclic subgraph of the
+original graph D of cardinality |A′ | − |δ out (x2n+1 )|.
+   The procedure works as follows. We consider all vertices R which are reachable
+by walks from start vertex x2n+1 using only in arcs in A′ . Define
+                           A′′ = A′ \ δ in (R) ∪ δ out (R).
+                                                 
+
+Then A′′ determines again a maximum acyclic subgraph of D̃ because by removing
+arcs in δ in (R) and by adding arcs from δ out (R) we do not introduce directed circuits.
+                             Computing the EHZ capacity is NP-hard                                9
+
+
+Furthermore, we have
+                             |A′′ | ≥ |A′ | − |δ in (R)| + |δ out (R)|,
+because δ out (R), by the definition of R, cannot contain arcs from A′ . The graph
+D̃ is Eulerian (ignoring the isolated vertices). So |δ in (R)| = |δ out (R)| and hence
+|A′′ | = |A′ |. The subset A′′ cannot contain edges from δ in (x2n+1 ) because A′ is
+acyclic.                                                                            
+Example 4.2. (third continuation of Example 2.1) The additional vertex x7 has
+two incoming arcs in the maximum acyclic subgraph A′ of D̃.
+  Now we apply the procedure from the proof of Lemma 4.1 to determine a maxi-
+mum acyclic subgraph in which x7 has no incoming arcs. Using only arcs in A′ the
+only vertex reachable from x7 is x7 itself. So R = {x7 } and
+      δ out ({x7 }) = {(x7 , x1 ), (x7 , x2 )}   and    δ in ({x7 }) = {(x6 , x7 ), (x6 , x7 )}
+and A′′ = (A′ \ δ in ({x7 })) ∪ δ out ({x7 }) determines the following maximum acyclic
+subgraph in which all vertices but the isolated vertex x3 are reachable from x7 .
+                                           x1                  x4
+
+                                           x2                  x5
+
+                                           x3                  x6
+
+                                                       x7
+
+
+                                    Acknowledgements
+   We like to thank Arne Heimendahl and Andreas Spomer for helpful discussions.
+We also like to thank Alberto Abbondandolo for careful reading the first version of
+this paper and for his many valuable suggestions. We thank the anonymous referee
+for the helpful comments, suggestions, and corrections. The authors are partially
+supported by the SFB/TRR 191 “Symplectic Structures in Geometry, Algebra and
+Dynamics” funded by the DFG.
+
+                                          References
+  [1] I. Ekeland, E. Zehnder, Symplectic topology and Hamiltonian dynamics, Math. Z. 200
+      (1989), 355–378.
+  [2] J. Guo, F. Hüffner, H. Moser, Feedback arc set in bipartite tournaments is NP-complete,
+      Information Processing Letters 102 (2007), 62–65.
+  [3] P. Haim-Kislev, On the symplectic size of convex polytopes, Geom. Funct. Anal. 29 (2019),
+      440–463.
+  [4] H. Hofer, E. Zehnder, Symplectic invariants and Hamiltonian dynamics, Birkhäuser, 1994.
+  [5] D.E. Knuth, The art of computer programming, volume 1: Fundamental algorithms,
+      Addison-Wesley, 1968.
+  [6] K. Perrot, T. Van-Pham, Feedback arc set problem and NP-hardness of minimum recurrent
+      configuration problem of chip-firing game on directed graphs, Ann. Comb. 19 (2015), 373–
+      396.
+  [7] A. Schrijver, Theory of linear and integer programming, Wiley, 1986.
+  [8] A. Schrijver, Combinatorial optimization, Springer, 2003.
+10                                     K. Leipold, F. Vallentin
+
+
+     [9] G.M. Ziegler, Lectures on polytopes, Springer, 1995.
+
+  Karla Leipold, Universität zu Köln, Department Mathematik/Informatik, Abteilung
+Mathematik, Weyertal 86-90, 50931 Köln, Germany
+  Email address: karla.leipold@gmail.com
+
+  Frank Vallentin, Universität zu Köln, Department Mathematik/Informatik, Abteil-
+ung Mathematik, Weyertal 86-90, 50931 Köln, Germany
+  Email address: frank.vallentin@uni-koeln.de
+

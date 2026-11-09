@@ -1,0 +1,20 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "highs": "1.8.0",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "machine": "x86_64",
+  "seed": 20261109,
+  "upstream_commit": "22dd473cc8b9b2397b44cd13acbceb763dd978e9",
+  "lp_solver": "scipy.optimize.linprog(method=\"highs\")",
+  "lp_comparison_tolerance": {
+    "rtol": 1e-09,
+    "atol": 1e-09
+  },
+  "files": {
+    "check_ordering_dp.py": "e9a79d0c3a51263a9f947f99920f60bdc8958c67daf535eac21e7b97f51e667f",
+    "check_symmetric_product.py": "a4805f00ad938bb6797a5faaa686230e4e7bf7c423edd8ee200eef22fbb3baa1",
+    "check_itinerary_lp.py": "73bf7d170ffbdcfc2f4afc33fb49ef3a1da2d0d97bc266314a3da36e53164a6f"
+  }
+}

@@ -1,0 +1,492 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/ixuC53e38MVWE61pz9bpa19UIwI</id>
+  <title>arXiv Query: search_query=ti:"Viterbo"&amp;id_list=&amp;start=0&amp;max_results=70</title>
+  <updated>2026-11-09T21:07:26Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=ti:%22Viterbo%22&amp;start=0&amp;max_results=70&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>70</opensearch:itemsPerPage>
+  <opensearch:totalResults>27</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2610.31906v1</id>
+    <title>The Pu inequality and the Viterbo conjecture with finite symmetry</title>
+    <updated>2026-10-22T21:01:06Z</updated>
+    <link href="https://arxiv.org/abs/2610.31906v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.31906v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study a construction for producing Finsler metrics on the sphere from convex bodies in $\mathbb{R}^4$ using the quaternions. Among several applications, we prove the weak Viterbo conjecture for convex bodies in $\mathbb{R}^4$ that are invariant under the natural action of the quaternion group $Q$. This is the first instance where Viterbo's systolic inequality is established for convex bodies with a finite group symmetry, addressing a question of Haim-Kislev-Ostrover. Moreover, a smooth $Q$-symmetric convex domain that achieves equality is symplectomorphic to the ball, without any assumption of strict or uniform convexity. Finally, we show that any link of minimal Reeb orbits on the boundary of a uniformly convex $Q$-symmetric convex body is transversely isotopic to a union of Hopf fibers, strengthening a result of Abbondandolo-Edtmair-Kang in the $Q$-symmetric setting.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-22T21:01:06Z</published>
+    <arxiv:comment>30 pages, 3 figures. Comments welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Julian Chaidez</name>
+    </author>
+    <author>
+      <name>Shira Tanny</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.22175v1</id>
+    <title>A counterexample to the generalized Viterbo conjecture on the spectral distance in a disc cotangent bundle</title>
+    <updated>2026-10-15T16:32:49Z</updated>
+    <link href="https://arxiv.org/abs/2610.22175v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.22175v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove the unboundedness of the spectral distance on the space of Lagrangians Hamiltonian isotopic to the zero section within the disc cotangent bundle of a closed manifold satisfying some topological assumptions. This disproves the generalization of a conjecture due to Claude Viterbo. The proof relies on a direct computation of the spectral distance between the zero section and its image by a magnetic Hamiltonian diffeomorphism via generating functions. We also classify all surfaces for which the conjecture holds over $\mathbb{Z}_2$ via a Floer-theoretic argument for covering spaces.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-15T16:32:49Z</published>
+    <arxiv:comment>20 pages, 1 figure. Comments welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Filip Broćić</name>
+    </author>
+    <author>
+      <name>Baptiste Serraille</name>
+    </author>
+    <author>
+      <name>Ibrahim Trifa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.20289v1</id>
+    <title>Spectral Viterbo isomorphism: complex-oriented versus framed</title>
+    <updated>2026-08-20T17:30:09Z</updated>
+    <link href="https://arxiv.org/abs/2608.20289v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.20289v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Viterbo isomorphism relates the symplectic cohomology of a cotangent bundle to the homology of the free loop space of its base. We lift this to a relation of modules over (1) the complex bordism spectrum MU and (2) the sphere spectrum $\mathbb{S}$. In particular, by a result of Porcelli and the present author [BP26], it is not the case that, in general, the $\mathbb{S}$-level statement recovers the MU-level statement after base-change -- even in the case the base is spin.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-20T17:30:09Z</published>
+    <arxiv:comment>30 pages</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Kenneth Blakey</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.16270v2</id>
+    <title>Lengths of Reeb chords and Viterbo restriction</title>
+    <updated>2026-07-06T00:52:32Z</updated>
+    <link href="https://arxiv.org/abs/2606.16270v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.16270v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $Λ$ be a Legendrian in the contact boundary of a Liouville domain $Ω$. We explain how the non-existence of Reeb chords with endpoints on $Λ$ of length up to $a$ enables one to embed $D_εT^{*}Λ\times D(a)$ into $Ω$ in an exact way. As in earlier work of Zhengyi Zhou, we use the Viterbo restriction map to deduce a contradiction in certain cases. In particular, we show that if $M$ admits a submersion from a product of spheres (e.g., the $n$-torus), then all compact Legendrians $Λ\subset ST^{*}M$ admit a Reeb chord for every choice of contact form $ST^{*}M$. The obstruction we use in this case is based on the idea of inverting the degree-$n$ classes in cohomology, and is similar to the notion of string point invertibility introduced by Egor Shelukhin.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-15T06:18:50Z</published>
+    <arxiv:comment>54 pages (30 pages + 21 pages appendix + 3 pages references); generalized "covered by a product of spheres" to "admits a submersion from a product of spheres"</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Filip Broćić</name>
+    </author>
+    <author>
+      <name>Dylan Cant</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.12712v1</id>
+    <title>A Classical Analysis Counterpart of Viterbo's Symplectic Geometry Proof of ABP in the Plane</title>
+    <updated>2026-05-12T20:21:20Z</updated>
+    <link href="https://arxiv.org/abs/2605.12712v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.12712v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We first provide a classical analysis proof of a version of the Alexandroff-Bakelman-Pucci inequality (ABP) for compactly supported $C^2$ functions in dimension $2$, inspired by the symplectic geometry proof method of Viterbo, which avoids convexity or contact sets. We then show how the proof may be modified to remove the compact support hypothesis and recover the usual statement of ABP, which includes a boundary term. We also discuss the possibility (and difficulties) of extending a pure classical analysis proof to dimension $3$ and above.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-12T20:21:20Z</published>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Daniel Maienshein</name>
+    </author>
+    <author>
+      <name>Juan J. Manfredi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.12495v2</id>
+    <title>Triangle covering problems and the Viterbo inequality in the plane</title>
+    <updated>2026-08-19T15:44:58Z</updated>
+    <link href="https://arxiv.org/abs/2603.12495v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.12495v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We review a certain problem on covering triangles in the plane. Equivalently, it can be viewed as a family of 'isobilliard' inequalities in convex shapes, and as a special case of Viterbo's conjecture in symplectic geometry. We give an elementary overview of these topics and, using the optics of the covering problem, we establish several new special cases of Viterbo's conjecture, provide a simple explanation of the counterexample of Haim-Kislev and Ostrover, and state a few open questions. The main novel result is a proof of Viterbo's conjecture for lagrangian products $K \times Q$, where $Q \subset \mathbb{R}^2$ is any quadrilateral and $K \subset \mathbb{R}^2$ is any convex shape.</summary>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-12T22:25:43Z</published>
+    <arxiv:comment>v2: minor changes addressing referee's comments; a bug with cleveref in texlive 2025 was also fixed. 30 pages, 14 figures</arxiv:comment>
+    <arxiv:primary_category term="math.MG"/>
+    <author>
+      <name>Alexey Balitskiy</name>
+    </author>
+    <author>
+      <name>Ivan Mitrofanov</name>
+    </author>
+    <author>
+      <name>Alexander Polyanskii</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.09396v1</id>
+    <title>The completion of the set of Lagrangians and applications to dynamics -- Based on lectures by C. Viterbo</title>
+    <updated>2026-03-10T09:10:28Z</updated>
+    <link href="https://arxiv.org/abs/2603.09396v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.09396v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The goal of these lectures is to introduce the completion of the set of Lagrangian submanifolds of a symplectic manifold with respect to the spectral metric first introduced by V. Humilière and recently revisited by C. Viterbo. We establish a number of basic properties of this completion, in particular through the notion of $γ$-support, which we develop as a refinement of Humilière's original concept. We then present an application of these notions to conformally symplectic dynamics, generalizing the notion of Birkhoff attractor as defined and studied by G.D. Birkhoff, M. Charpentier, and more recently P. Le Calvez. Finally, we briefly mention several other applications of the Humilière completion and highlight many open questions. These are notes elaborated from the lectures with the same title given by C. Viterbo at the CIME School ''Symplectic Dynamics and Topology'' held in Cetraro (CS), Italy, from 16th to 20th June 2025.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-10T09:10:28Z</published>
+    <arxiv:comment>To appear in Springer Lecture Notes in Mathematics, C.I.M.E. Foundation Subseries</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Olga Bernardi</name>
+    </author>
+    <author>
+      <name>Francesco Morabito</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.07572v2</id>
+    <title>The strong Viterbo conjecture and various flavours of duality in Lagrangian products</title>
+    <updated>2025-07-16T09:07:52Z</updated>
+    <link href="https://arxiv.org/abs/2505.07572v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.07572v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this note we analyze normalized symplectic capacities for two different notions of duality in Lagrangian products. Let $Φ$ be a $n$-tuple of Young functions with Legendre transform $n$-tuple $Φ^*$ and $K_Φ$ the unit ball for the Luxemburg metric induced by $Φ$. We can consider the ``dual functional" Lagrangian product $K_Φ\times_LK_{Φ^*}$ and the usual polar dual Lagrangian product $K_Φ\times_L K_Φ^{\circ}$. We show that for the former, all normalized symplectic capacities agree, while for the latter, we give a lower bound depending on $Φ$. In particular, under certain conditions on the $n$-tuple $Φ$, we get that $c(K_Φ\times_L K_Φ^{\circ})=4$, for any normalized symplectic capacity, that is, the strong Viterbo conjecture holds.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-12T13:53:01Z</published>
+    <arxiv:comment>13 pages, 4 figures, corrected version accepted for publication</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Alejandro Vicente</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.16513v3</id>
+    <title>A Counterexample to Viterbo's Conjecture</title>
+    <updated>2025-11-20T20:52:38Z</updated>
+    <link href="https://arxiv.org/abs/2405.16513v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.16513v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a counterexample to Viterbo's volume-capacity conjecture. This implies, in particular, that in contrast with a well-known conjecture, symplectic capacities do not coincide on the class of convex domains in the classical phase space.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-26T10:48:29Z</published>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Pazit Haim-Kislev</name>
+    </author>
+    <author>
+      <name>Yaron Ostrover</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2311.17031v2</id>
+    <title>Heegaard Floer Symplectic homology and Viterbo's isomorphism theorem in the context of multiple particles</title>
+    <updated>2025-08-11T18:38:31Z</updated>
+    <link href="https://arxiv.org/abs/2311.17031v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2311.17031v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Given a Liouville manifold $M$, we introduce an invariant of $M$ that we call the Heegaard Floer symplectic cohomology $SH^*_κ(M)$ for any $κ\ge 1$ that coincides with the symplectic cohomology for $κ=1$. Writing $\hat{M}$ for the completion of $M$, the differential counts pseudoholomorphic curves of arbitrary genus in $\mathbb{R} \times S^1 \times \hat{M}$ that are required to be branched $κ$-sheeted covers when projected to the $\mathbb{R} \times S^1$-direction; this resembles the cylindrical reformulation of Heegaard Floer homology by Lipshitz. These cohomology groups provide a closed-string analogue of higher-dimensional Heegaard Floer homology introduced by Colin, Honda, and Tian.
+  When $\hat{M}=T^*Q$ with $Q$ an orientable manifold, we introduce a Morse-theoretic analogue of Heegaard Floer symplectic cohomology, which we call the free multiloop complex of $Q$. When $Q$ has vanishing relative second Stiefel-Whitney class, we prove a generalized version of Viterbo's isomorphism theorem by showing that the cohomology groups $SH^*_κ(T^*Q)$ are isomorphic to the cohomology groups of the free multiloop complex of $Q$.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-28T18:35:08Z</published>
+    <arxiv:comment>78 pages, 14 figures. Substantially revised in response to referee report, changed significantly Section 3, and several mistakes are fixed, added Section 4.4; comments are welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Roman Krutowski</name>
+    </author>
+    <author>
+      <name>Tianyu Yuan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2203.13700v1</id>
+    <title>Viterbo's spectral bound conjecture for homogeneous spaces</title>
+    <updated>2022-03-25T15:14:49Z</updated>
+    <link href="https://arxiv.org/abs/2203.13700v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2203.13700v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove a conjecture of Viterbo about the spectral distance on the space of compact exact Lagrangian submanifolds of a cotangent bundle $T^*M$ in the case where $M$ is a compact homogeneous space: if such a Lagrangian submanifold is contained in the unit ball bundle of $T^*M$, its spectral distance to the zero section is uniformly bounded. This also holds for some immersed Lagrangian submanifolds if we take into account the length of the maximal Reeb chord.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-03-25T15:14:49Z</published>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Stéphane Guillermou</name>
+    </author>
+    <author>
+      <name>Nicolas Vichery</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2203.02294v5</id>
+    <title>Viterbo's conjecture for Lagrangian products in $\mathbb{R}^4$ and symplectomorphisms to the Euclidean ball</title>
+    <updated>2022-09-21T14:06:51Z</updated>
+    <link href="https://arxiv.org/abs/2203.02294v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2203.02294v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We use the generalized Minkowski billiard characterization of the EHZ-capacity of Lagrangian products in order to reprove that the $4$-dimensional Viterbo conjecture holds for the Lagrangian products (any triangle/parallelogram in $\mathbb{R}^2$)$\times$(any convex body in $\mathbb{R}^2$) and extend this fact to the Lagrangian products (any trapezoid in $\mathbb{R}^2$)$\times$(any convex body in $\mathbb{R}^2$). Based on this analysis, we classify equality cases of this version of Viterbo's conjecture and prove that most of them can be proven to be symplectomorphic to Euclidean balls. As a by-product, we prove sharp systolic Minkowski billiard / worm problem inequalities. Furthermore, we discuss the Lagrangian products (any convex quadrilateral in $\mathbb{R}^2$)$\times$(any convex body in $\mathbb{R}^2$) for which we show that the truth of Viterbo's conjecture would follow from the positive solution of a challenging Euclidean covering problem. Finally, we show that the flow associated to equality cases of Viterbo's conjecture for Lagrangian products in $\mathbb{R}^4$--which turn out to be convex polytopes--is not Zoll in general, but that a weaker Zoll property, namely, that every characteristic almost everywhere away from lower-dimensional faces is closed and action-minimizing, does apply.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-03-04T13:11:24Z</published>
+    <arxiv:comment>70 pages, 41 figures, updated version including an additional section on the (weak) Zoll property of equality cases</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Daniel Rudolf</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2203.02043v1</id>
+    <title>Viterbo's conjecture as a worm problem</title>
+    <updated>2022-03-03T22:29:00Z</updated>
+    <link href="https://arxiv.org/abs/2203.02043v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2203.02043v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we relate Viterbo's conjecture from symplectic geometry to Minkowski versions of worm problems which are inspired by the well-known Moser worm problem from geometry. For the special case of Lagrangian products this relation provides a connection to systolic Minkowski billiard inequalities and Mahler's conjecture from convex geometry. Moreover, we use the above relation in order to transfer Viterbo's conjecture to a conjecture for the longstanding open Wetzel problem which also can be expressed as a systolic Euclidean billiard inequality and for which we discuss an algorithmic approach in order to find a new lower bound. Finally, we point out that the above mentioned relation between Viterbo's conjecture and Minkowski worm problems has a structural similarity to the known relationship between Bellmann's lost-in-a-forest problem and the original Moser worm problem.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-03-03T22:29:00Z</published>
+    <arxiv:comment>64 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Daniel Rudolf</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2011.05536v1</id>
+    <title>Lagrangian correspondences and the generalized Viterbo restriction functor</title>
+    <updated>2020-11-11T03:57:59Z</updated>
+    <link href="https://arxiv.org/abs/2011.05536v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2011.05536v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study two kinds of functors of wrapped Fukaya categories: 1) the Viterbo restriction functor for an inclusion of a Liouville sub-domain; 2) the Lagrangian correspondence functor associated to the graph of the completion of the inclusion of the sub-domain, named the graph correspondence functor. We prove that these two functors agree on the sub-category where the Viterbo restriction functor is defined. We also extend the Viterbo restriction functor to the case of non-strongly-exact restrictions of Lagrangian submanifolds, which yields a natural object-wise deformation of the wrapped Fukaya category, constructed using another theory - linearized Legendrian homology. On the other hand, the graph correspondence functor is naturally defined on the whole wrapped Fukaya category, a priori taking values in a suitable enlargement of the wrapped Fukaya category having certain Lagrangian immersions as objects. We prove that the graph correspondence functor agrees with the extension of the Viterbo restriction functor.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-11-11T03:57:59Z</published>
+    <arxiv:comment>92 pages</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Yuan Gao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2008.04000v2</id>
+    <title>The Viterbo's capacity conjectures for convex toric domains and the product of a $1$-unconditional convex body and its polar</title>
+    <updated>2020-08-20T14:59:25Z</updated>
+    <link href="https://arxiv.org/abs/2008.04000v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2008.04000v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this note, we show that the strong Viterbo conjecture holds true on any convex toric domain, and that the Viterbo's volume-capacity conjecture holds for the product of a $1$-unconditional convex body $A\subset\mathbb{R}^{n}$ and its polar. We also give a direct calculus proof of the symmetric Mahler conjecture for $l_p$-balls.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-08-10T10:02:50Z</published>
+    <arxiv:comment>Latex, 14 pages, the title is changed, add new results and references</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Kun Shi</name>
+    </author>
+    <author>
+      <name>Guangcun Lu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2003.10854v3</id>
+    <title>Examples around the strong Viterbo conjecture</title>
+    <updated>2020-10-03T16:40:32Z</updated>
+    <link href="https://arxiv.org/abs/2003.10854v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2003.10854v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A strong version of a conjecture of Viterbo asserts that all normalized symplectic capacities agree on convex domains. We review known results showing that certain specific normalized symplectic capacities agree on convex domains. We also review why all normalized symplectic capacities agree on $S^1$-invariant convex domains. We introduce a new class of examples called "monotone toric domains", which are not necessarily convex, and which include all dynamically convex toric domains in four dimensions. We prove that for monotone toric domains in four dimensions, all normalized symplectic capacities agree. For monotone toric domains in arbitrary dimension, we prove that the Gromov width agrees with the first equivariant capacity. We also study a family of examples of non-monotone toric domains and determine when the conclusion of the strong Viterbo conjecture holds for these examples. Along the way we compute the cylindrical capacity of a large class of "weakly convex toric domains" in four dimensions.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-03-24T14:01:31Z</published>
+    <arxiv:comment>21 pages, 5 figures; v3: minor corrections</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Jean Gutt</name>
+    </author>
+    <author>
+      <name>Michael Hutchings</name>
+    </author>
+    <author>
+      <name>Vinicius G. B. Ramos</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1908.02317v1</id>
+    <title>Orlov and Viterbo functors in partially wrapped Fukaya categories</title>
+    <updated>2019-08-06T18:33:36Z</updated>
+    <link href="https://arxiv.org/abs/1908.02317v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1908.02317v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study two functors between (partially) wrapped Fukaya categories. The first is the Orlov functor from the Fukaya category of a stop to the Fukaya category of the ambient sector. We give a geometric criterion for when this functor is spherical in the sense of Anno-Logvinenko. This criterion is a generalization of the situation where the stop comes from a Landau-Ginzburg model.
+  The second functor is the Viterbo transfer map from a Liouville domain to a subdomain. We show that when the domain and subdomain are independently Weinstein, this functor is a homological epimorphism, which means that it becomes a localization after passing to module categories. This should be compared with a result of Ganatra-Pardon-Shende, which states that the Viterbo map is a genuine localization when the cobordism is Weinstein.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-08-06T18:33:36Z</published>
+    <arxiv:comment>32 pages, comments welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Zachary Sylvan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1904.06798v2</id>
+    <title>Symplectic cohomology and a conjecture of Viterbo</title>
+    <updated>2020-04-24T22:37:29Z</updated>
+    <link href="https://arxiv.org/abs/1904.06798v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1904.06798v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We identify a new class of closed smooth manifolds for which there exists a uniform bound on the Lagrangian spectral norm of Hamiltonian deformations of the zero section in a unit cotangent disk bundle, settling a well-known conjecture of Viterbo from 2007 as the special case of $T^n.$ This class of manifolds is defined in topological terms involving the Chas-Sullivan algebra and the BV-operator on the homology of the free loop space, contains spheres and is closed under products. We discuss generalizations and various applications.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-04-15T01:02:15Z</published>
+    <arxiv:comment>20 pages; improvements in the exposition, new title</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Egor Shelukhin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1812.03039v3</id>
+    <title>Viterbo's conjecture for certain Hamiltonians in classical mechanics</title>
+    <updated>2019-12-08T17:20:11Z</updated>
+    <link href="https://arxiv.org/abs/1812.03039v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1812.03039v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study some particular cases of Viterbo's conjecture relating volumes of convex bodies and actions of closed characteristics on their boundaries, focusing on the case of a Hamiltonian of classical mechanical type, splitting into summands depending on the coordinates and the momentum separately. We manage to establish the conjecture for sublevel sets of convex $2$-homogeneous Hamiltonians of this kind in several particular cases. We also discuss open cases of this conjecture.</summary>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-12-07T14:32:37Z</published>
+    <arxiv:comment>8 figures</arxiv:comment>
+    <arxiv:primary_category term="math.MG"/>
+    <arxiv:journal_ref>Arnold Mathematical Journal 5 (2019), 483-500</arxiv:journal_ref>
+    <author>
+      <name>Roman Karasev</name>
+    </author>
+    <author>
+      <name>Anastasia Sharipova</name>
+    </author>
+    <arxiv:doi>10.1007/s40598-019-00129-4</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s40598-019-00129-4" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1811.05552v1</id>
+    <title>Viterbo conjecture for Zoll symmetric spaces</title>
+    <updated>2018-11-13T22:35:49Z</updated>
+    <link href="https://arxiv.org/abs/1811.05552v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1811.05552v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove a conjecture of Viterbo from 2007 on the existence of a uniform bound on the Lagrangian spectral norm of Hamiltonian deformations of the zero section in unit cotangent disk bundles, for bases given by compact rank one symmetric spaces $S^n, \mathbb{R} P^n, \mathbb{C} P^n, \mathbb{H} P^n,$ $n\geq 1.$ We discuss generalizations and give applications, in particular to $C^0$ symplectic topology. Our key methods, which are of independent interest, consist of a reinterpretation of the spectral norm via the asymptotic behavior of a family of cones of filtered morphisms, and a quantitative deformation argument for Floer persistence modules, that allows to excise a divisor.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-11-13T22:35:49Z</published>
+    <arxiv:comment>39 pages</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Egor Shelukhin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1512.01657v3</id>
+    <title>Equality cases in Viterbo's conjecture and isoperimetric billiard inequalities</title>
+    <updated>2018-04-24T18:02:52Z</updated>
+    <link href="https://arxiv.org/abs/1512.01657v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1512.01657v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this note we apply the billiard technique to deduce some results on Viterbo's conjectured inequality between volume of a convex body and its symplectic capacity. We show that the product of a permutohedron and a simplex (properly related to each other) delivers equality in Viterbo's conjecture. Using this result as well as previously known equality cases, we prove some special cases of Viterbo's conjecture and interpret them as isoperimetric-like inequalities for billiard trajectories.</summary>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-12-05T12:37:43Z</published>
+    <arxiv:comment>15 pages, 5 figures. To appear in International Mathematics Research Notices. Former title "Equality cases in Viterbo's conjecture related to permutohedra"</arxiv:comment>
+    <arxiv:primary_category term="math.MG"/>
+    <author>
+      <name>Alexey Balitskiy</name>
+    </author>
+    <arxiv:doi>10.1093/imrn/rny076</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1093/imrn/rny076" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1510.00954v2</id>
+    <title>Viterbo's transfer morphism for symplectomorphisms</title>
+    <updated>2016-02-15T13:24:59Z</updated>
+    <link href="https://arxiv.org/abs/1510.00954v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1510.00954v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We construct an analogue of Viterbo's transfer morphism for Floer homology of an automorphism of a Liouville domain. As an application we prove that the Dehn-Seidel twist along any Lagrangian sphere in a Liouville domain of dimension $\geqslant 4$ has infinite order in the symplectic mapping class group.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-10-04T17:19:39Z</published>
+    <arxiv:comment>22 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Igor Uljarevic</name>
+    </author>
+    <arxiv:doi>10.1142/S1793525319500079</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1142/S1793525319500079" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1312.3354v2</id>
+    <title>Symplectic cohomology and Viterbo's theorem</title>
+    <updated>2014-01-25T01:59:59Z</updated>
+    <link href="https://arxiv.org/abs/1312.3354v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1312.3354v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This is a research monograph on symplectic cohomology (disguised as an advanced graduate textbook), which provides a construction of this version of Hamiltonian Floer cohomology for cotangent bundles of closed manifolds. The focus is on the aspects of the theory that have been neglected in the literature: (1) the base is not assumed to be orientable or Spin, (2) local systems on the free loop space are used to define twisted versions of Floer cohomology, (3) a (twisted) Batalin-Vilkovisky structure is constructed, and (4) the BV relation is verified. In this setting (i.e. with all the appropriate twists), a proof of Viterbo's theorem relating symplectic cohomology to the homology of the free loop space is provided, and we show that this map respects the BV structure. Viterbo's theorem is proved by constructing three different maps relating the two sides, and proving that two of the compositions are isomorphisms by using degenerations of moduli spaces of genus 0 Riemann surfaces with boundary. Two of the maps constructed are new, and use ideas inspired by a Lagrangian version of family Floer cohomology.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-12-11T21:35:46Z</published>
+    <arxiv:comment>184 pages, 26 figures. Minor corrections in version 2</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Mohammed Abouzaid</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1205.0535v1</id>
+    <title>The Viterbo-Maslov Index in Dimension Two</title>
+    <updated>2012-05-02T19:40:39Z</updated>
+    <link href="https://arxiv.org/abs/1205.0535v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1205.0535v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove a formula that expresses the Viterbo-Maslov index of a smooth strip in an oriented 2-manifold with boundary curves contained in 1-dimensional submanifolds in terms the degree function on the complement of the union of the two submanifolds.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-05-02T19:40:39Z</published>
+    <arxiv:comment>35 pages, 8 figures</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Joel Robbin</name>
+    </author>
+    <author>
+      <name>Dietmar Salamon</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0911.3714v1</id>
+    <title>Semi-Infinite Cycles in Floer Theory: Viterbo's Theorem</title>
+    <updated>2009-11-19T07:25:04Z</updated>
+    <link href="https://arxiv.org/abs/0911.3714v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0911.3714v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  This is the first of a series of papers on foundations of Floer theory. We give an axiomatic treatment of the geometric notion of a semi-infinite cycle. Using this notion, we introduce a bordism version of Floer theory for the cotangent bundle of a compact manifold M. Our construction is geometric and does not require the compactness and gluing results traditionally used to setup Floer theory. Finally, we prove a bordism version of Viterbo's theorem relating Floer bordism of the cotangent bundle to the ordinary bordism groups of the free loop space of M.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-11-19T07:25:04Z</published>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Max Lipyanskiy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0712.3177v2</id>
+    <title>An open string analogue of Viterbo functoriality</title>
+    <updated>2009-08-25T18:06:30Z</updated>
+    <link href="https://arxiv.org/abs/0712.3177v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0712.3177v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Liouville domains are a special type of symplectic manifolds with boundary (they have an everywhere defined Liouville flow, pointing outwards along the boundary). Symplectic cohomology for Liouville domains was introduced by Cieliebak-Floer-Hofer-Wysocki and Vitero. The latter constructed a restriction (or transfer) map associated to an embedding of one Liouville domain into another.
+  In this preprint, we look at exact Lagrangian submanifolds with Legendrian boundary inside a Liouville domain. The analogue of symplectic cohomology for such submanifolds is called "wrapped Floer cohomology". We construct an A_\infty-structure on the underlying wrapped Floer complex, and (under suitable assumptions) an A_\infty-homomorphism realizing the restriction to a Liouville subdomain. The construction of the A_\infty-structure relies on an implementation of homotopy direct limits, and involves some new moduli spaces which are solutions of generalized continuation map equations.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-12-19T13:01:54Z</published>
+    <arxiv:comment>71 pages, 9 figures, minor revision correcting typographical errors and clarifying the exposition following a referee's comments</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <arxiv:journal_ref>Geom. Topol. 14 (2010) 627-718</arxiv:journal_ref>
+    <author>
+      <name>Mohammed Abouzaid</name>
+    </author>
+    <author>
+      <name>Paul Seidel</name>
+    </author>
+    <arxiv:doi>10.2140/gt.2010.14.627</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.2140/gt.2010.14.627" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0712.2533v3</id>
+    <title>The Viterbo Transfer as a Map of Spectra</title>
+    <updated>2014-12-05T17:05:07Z</updated>
+    <link href="https://arxiv.org/abs/0712.2533v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0712.2533v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $L$ and $N$ be two smooth manifolds of the same dimension. Let $j\colon L\to T^*N$ be an exact Lagrange embedding. We denote the free loop space of $X$ by $ΛX$. C. Viterbo constructed a transfer map $(Λj)^! \colon H^*(ΛL) \to H^*(ΛN)$. This transfer was constructed using finite dimensional approximation of Floer homology. In this paper we define a family of finite dimensional approximations and realize this transfer as a map of Thom spectra: $(Λj)_! \colon (ΛN)^{-TN} \to (ΛL)^{-TL+η}$, where $η$ is a virtual vector bundle classified by the tangential information of $j$.</summary>
+    <category term="math.AT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-12-17T16:26:59Z</published>
+    <arxiv:comment>100 pages, 10 figures. Written in PDFLatex. The third version is an extensive rewrite of the second (including a correction of a small error on the bound of r in the new Proposition 10.1 - this appeared in the second version - but not the first version). The second version is an extensive rewrite of the first</arxiv:comment>
+    <arxiv:primary_category term="math.AT"/>
+    <author>
+      <name>Thomas Kragh</name>
+    </author>
+  </entry>
+</feed>

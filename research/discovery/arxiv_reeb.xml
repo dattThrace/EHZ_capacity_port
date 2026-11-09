@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/opdP9BayOMz3oPRAzVp3VaM/wmU</id>
+  <title>arXiv Query: search_query=all:"combinatorial Reeb"&amp;id_list=&amp;start=0&amp;max_results=70</title>
+  <updated>2026-11-09T21:07:26Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22combinatorial+Reeb%22&amp;start=0&amp;max_results=70&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>70</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2008.10111v2</id>
+    <title>Computing Reeb dynamics on 4d convex polytopes</title>
+    <updated>2021-07-26T19:05:08Z</updated>
+    <link href="https://arxiv.org/abs/2008.10111v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2008.10111v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the combinatorial Reeb flow on the boundary of a four-dimensional convex polytope. We establish a correspondence between "combinatorial Reeb orbits" for a polytope, and ordinary Reeb orbits for a smoothing of the polytope, respecting action and Conley-Zehnder index. One can then use a computer to find all combinatorial Reeb orbits up to a given action and Conley-Zehnder index. We present some results of experiments testing Viterbo's conjecture and related conjectures. In particular, we have found some new examples of polytopes with systolic ratio $1$.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-08-23T21:38:50Z</published>
+    <arxiv:comment>57 pages, 3 figures. Small edits, clarifications and revisions made throughout</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Julian Chaidez</name>
+    </author>
+    <author>
+      <name>Michael Hutchings</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2005.11428v5</id>
+    <title>Combinatorial Reeb dynamics on punctured contact 3-manifolds</title>
+    <updated>2021-10-11T12:22:47Z</updated>
+    <link href="https://arxiv.org/abs/2005.11428v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2005.11428v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $Λ^{\pm} = Λ^{+} \cup Λ^{-} \subset (\mathbb{R}^{3}, ξ_{std})$ be a contact surgery diagram determining a closed, connected contact $3$-manifold $(S^{3}_{Λ^{\pm}}, ξ_{Λ^{\pm}})$ and an open contact manifold $(\mathbb{R}^{3}_{Λ^{\pm}}, ξ_{Λ^{\pm}})$. Following arXiv:0911.0026 and arXiv:1906.07228 we demonstrate how $Λ^{\pm}$ determines a family $α_ε$ of contact forms on $(\mathbb{R}^{3}_{Λ^{\pm}}, ξ_{Λ^{\pm}})$ whose closed Reeb orbits are in one-to-one correspondence with cyclic words of composable Reeb chords on $Λ^{\pm}$. We compute the homology classes and integral Conley-Zehnder indices of these orbits diagrammatically and develop algebraic tools for studying holomorphic curves in surgery cobordisms between the $(\mathbb{R}^{3}_{Λ^{\pm}}, ξ_{Λ^{\pm}})$.
+  These new techniques are used to describe the first known examples of closed, tight contact manifolds with vanishing contact homology. They are contact $\frac{1}{k}$ surgeries along the right-handed, $tb=1$ trefoil for $k &gt; 0$, which are known to have non-zero Heegaard-Floer contact classes by arXiv:math/0404135.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-05-22T23:57:33Z</published>
+    <arxiv:comment>91 pages, 32 figures. V5: Minor updates</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <arxiv:journal_ref>Geom. Topol. 27 (2023) 953-1082</arxiv:journal_ref>
+    <author>
+      <name>Russell Avdek</name>
+    </author>
+    <arxiv:doi>10.2140/gt.2023.27.953</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.2140/gt.2023.27.953" title="doi"/>
+  </entry>
+</feed>

@@ -1,0 +1,451 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/f10eAarT+vz5tgrbiVoTqW+WuZU</id>
+  <title>arXiv Query: search_query=all:EHZ&amp;id_list=&amp;start=0&amp;max_results=70</title>
+  <updated>2026-11-09T21:08:01Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:EHZ&amp;start=0&amp;max_results=70&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>70</opensearch:itemsPerPage>
+  <opensearch:totalResults>10</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.37794v1</id>
+    <title>The Ekeland--Hofer--Zehnder Capacity of rotated $L_p$-Ellipsoid</title>
+    <updated>2026-09-29T15:21:19Z</updated>
+    <link href="https://arxiv.org/abs/2609.37794v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.37794v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We find explicit formulas for the EHZ and cylindrical capacities of rotated $L_{p}$-ellipsoids. In addition, we provide an algorithm to estimate the EHZ capacity.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-29T15:21:19Z</published>
+    <arxiv:comment>25 pages</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Vardan Oganesyan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.23787v1</id>
+    <title>Multi-peaked high-frequency gravitational waves from PBH-assisted leptogenesis</title>
+    <updated>2026-06-22T18:00:02Z</updated>
+    <link href="https://arxiv.org/abs/2606.23787v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.23787v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the possibility of probing non-thermal leptogenesis with multi-peaked high-frequency gravitational waves (GW) by considering heavy right-handed neutrino (RHN) produced from primordial black hole (PBH) evaporation to be responsible for generating the required lepton asymmetry. The decay of RHN also produces a GW spectrum due to graviton bremsstrahlung with the corresponding amplitude being enhanced for heavier RHN. The presence of an ultra-light PBH dominated epoch not only ensures sufficient production of RHNs, but also keeps the leptogenesis scenario free from strong washout problem of thermal leptogenesis at very high scale. In addition, the PBH dominated epoch also helps in generating a gravitational bremsstrahlung spectrum distinct from the stochastic GW background from the thermal bath. Finally, PBH evaporation also brings two separate sources of GW via density perturbation and graviton emission via Hawking evaporation. For the most optimistic scenario with very high scale seesaw consistent with neutrino mass and leptogenesis, this leads to a multi-peaked GW spectrum with peak frequencies lying in the MHz-EHz range.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-22T18:00:02Z</published>
+    <arxiv:comment>32 pages, 11 captioned figures</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <author>
+      <name>Debasish Borah</name>
+    </author>
+    <author>
+      <name>Nayan Das</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.07482v1</id>
+    <title>Pockels Laser Directly Driving Ultrafast Optical Metrology</title>
+    <updated>2024-10-09T23:27:35Z</updated>
+    <link href="https://arxiv.org/abs/2410.07482v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.07482v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The invention of the laser unleashed the potential of optical metrology, leading to numerous advancements in modern science and technology. This reliance on lasers, however, also sets a bottleneck for precision optical metrology which is complicated by sophisticated photonic infrastructure required for delicate laser-wave control, leading to limited metrology performance and significant system complexity. Here we make a key step towards resolving this challenge, by demonstrating a Pockels laser with multi-functional capability that advances the optical metrology to a new level. The chip-scale laser exhibits a narrow intrinsic linewidth down to 167 Hz and a broad mode-hop-free tuning range up to 24 GHz. In particular, it offers an unprecedented frequency chirping rate up to 20 EHz/s, and an enormous modulation bandwidth &gt;10 GHz, both orders of magnitude larger than any existing lasers. With this laser, we are able to successfully achieve velocimetry of 40 m/s at a short distance of 0.4 m, with a measurable velocity up to the first cosmic velocity at 1 m away, that is inaccessible by conventional ranging approaches, and distance metrology with a ranging resolution of &lt;2 cm. Moreover, for the first time to the best of our knowledge, we are able to realize a dramatically simplified architecture for laser frequency stabilization, by direct locking the laser to an external reference gas cell without any extra external light control. We successfully achieve a long-term laser stability with a frequency fluctuation of only $\pm$ 6.5 MHz over 60 minutes. The demonstrated Pockels laser combines elegantly high laser coherence with ultrafast frequency reconfigurability and superior multifunctional capability that we envision to have profound impacts on many areas including communication, sensing, autonomous driving, quantum information processing, and beyond.</summary>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-09T23:27:35Z</published>
+    <arxiv:comment>10 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="physics.optics"/>
+    <author>
+      <name>Shixin Xue</name>
+    </author>
+    <author>
+      <name>Mingxiao Li</name>
+    </author>
+    <author>
+      <name>Raymond Lopez-rios</name>
+    </author>
+    <author>
+      <name>Jingwei Ling</name>
+    </author>
+    <author>
+      <name>Zhengdong Gao</name>
+    </author>
+    <author>
+      <name>Qili Hu</name>
+    </author>
+    <author>
+      <name>Tian Qiu</name>
+    </author>
+    <author>
+      <name>Jeremy Staffa</name>
+    </author>
+    <author>
+      <name>Lin Chang</name>
+    </author>
+    <author>
+      <name>Heming Wang</name>
+    </author>
+    <author>
+      <name>Chao Xiang</name>
+    </author>
+    <author>
+      <name>John E. Bowers</name>
+    </author>
+    <author>
+      <name>Qiang Lin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.09914v3</id>
+    <title>Computing the EHZ capacity is NP-hard</title>
+    <updated>2024-10-05T08:53:26Z</updated>
+    <link href="https://arxiv.org/abs/2402.09914v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.09914v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Ekeland-Hofer-Zehnder capacity (EHZ capacity) is a fundamental symplectic invariant of convex bodies. We show that computing the EHZ capacity of polytopes is NP-hard. For this we reduce the feedback arc set problem in bipartite tournaments to computing the EHZ capacity of simplices.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-15T12:33:50Z</published>
+    <arxiv:comment>(v3) 10 pages, minor changes, Lemma 4.1 simplified, accepted in Proc. AMS</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <arxiv:journal_ref>Proc. Amer. Math. Soc. Ser. B 11 (2024), 603-611</arxiv:journal_ref>
+    <author>
+      <name>Karla Leipold</name>
+    </author>
+    <author>
+      <name>Frank Vallentin</name>
+    </author>
+    <arxiv:doi>10.1090/bproc/250</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1090/bproc/250" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2203.02294v5</id>
+    <title>Viterbo's conjecture for Lagrangian products in $\mathbb{R}^4$ and symplectomorphisms to the Euclidean ball</title>
+    <updated>2022-09-21T14:06:51Z</updated>
+    <link href="https://arxiv.org/abs/2203.02294v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2203.02294v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We use the generalized Minkowski billiard characterization of the EHZ-capacity of Lagrangian products in order to reprove that the $4$-dimensional Viterbo conjecture holds for the Lagrangian products (any triangle/parallelogram in $\mathbb{R}^2$)$\times$(any convex body in $\mathbb{R}^2$) and extend this fact to the Lagrangian products (any trapezoid in $\mathbb{R}^2$)$\times$(any convex body in $\mathbb{R}^2$). Based on this analysis, we classify equality cases of this version of Viterbo's conjecture and prove that most of them can be proven to be symplectomorphic to Euclidean balls. As a by-product, we prove sharp systolic Minkowski billiard / worm problem inequalities. Furthermore, we discuss the Lagrangian products (any convex quadrilateral in $\mathbb{R}^2$)$\times$(any convex body in $\mathbb{R}^2$) for which we show that the truth of Viterbo's conjecture would follow from the positive solution of a challenging Euclidean covering problem. Finally, we show that the flow associated to equality cases of Viterbo's conjecture for Lagrangian products in $\mathbb{R}^4$--which turn out to be convex polytopes--is not Zoll in general, but that a weaker Zoll property, namely, that every characteristic almost everywhere away from lower-dimensional faces is closed and action-minimizing, does apply.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-03-04T13:11:24Z</published>
+    <arxiv:comment>70 pages, 41 figures, updated version including an additional section on the (weak) Zoll property of equality cases</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Daniel Rudolf</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2203.01718v2</id>
+    <title>The Minkowski Billiard Characterization of the EHZ-capacity of Convex Lagrangian Products</title>
+    <updated>2022-11-17T22:15:17Z</updated>
+    <link href="https://arxiv.org/abs/2203.01718v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2203.01718v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We rigorously state the connection between the EHZ-capacity of convex Lagrangian products $K\times T\subset\mathbb{R}^n\times\mathbb{R}^n$ and the minimal length of closed $(K,T)$-Minkowski billiard trajectories. This connection was made explicit for the first time by Artstein-Avidan and Ostrover under the assumption of smoothness and strict convexity of both $K$ and $T$. We prove this connection in its full generality, i.e., without requiring any conditions on the convex bodies $K$ and $T$. This prepares the computation of the EHZ-capacity of convex Lagrangian products of two convex polytopes by using discrete computational methods.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-03-03T13:58:10Z</published>
+    <arxiv:comment>22 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <arxiv:journal_ref>Journal of Dynamics and Differential Equations, Published Online 17. November 2022</arxiv:journal_ref>
+    <author>
+      <name>Daniel Rudolf</name>
+    </author>
+    <arxiv:doi>10.1007/s10884-022-10228-0</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s10884-022-10228-0" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2101.07500v4</id>
+    <title>Large Interferometer For Exoplanets (LIFE): I. Improved exoplanet detection yield estimates for a large mid-infrared space-interferometer mission</title>
+    <updated>2022-04-20T10:03:23Z</updated>
+    <link href="https://arxiv.org/abs/2101.07500v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2101.07500v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>One of the long-term goals of exoplanet science is the atmospheric characterization of dozens of small exoplanets in order to understand their diversity and search for habitable worlds and potential biosignatures. Achieving this goal requires a space mission of sufficient scale. We seek to quantify the exoplanet detection performance of a space-based mid-infrared nulling interferometer that measures the thermal emission of exoplanets. For this, we have developed an instrument simulator that considers all major astrophysical noise sources and coupled it with Monte Carlo simulations of a synthetic exoplanet population around main-sequence stars within 20 pc. This allows us to quantify the number (and types) of exoplanets that our mission concept could detect over a certain time period. Two different scenarios to distribute the observing time among the stellar targets are discussed and different apertures sizes and wavelength ranges are considered. Within a 2.5-year initial search phase, an interferometer consisting of four 2 m apertures with a total instrument throughput of 5% covering a wavelength range between 4 and 18.5 $μ$m could detect up to ~550 exoplanets with radii between 0.5 and 6 R$_\oplus$ with an integrated SNR$\ge$7. At least ~160 of the detected exoplanets have radii $\le$1.5 R$_\oplus$. Depending on the observing scenario, ~25-45 rocky exoplanets (objects with radii between 0.5 and 1.5 $_{\oplus}$) orbiting within the empirical habitable zone (eHZ) of their host stars are among the detections. With an aperture size of 3.5 m, the total number of detections can increase to up to ~770, including ~60-80 rocky, eHZ planets. With 1 m aperture size, the maximum detection yield is ~315 exoplanets, including $\le$20 rocky, eHZ planets. In terms of predicted detection yield, such a mission can compete with large single-aperture reflected light missions. (abridged)</summary>
+    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-01-19T07:59:31Z</published>
+    <arxiv:comment>Accepted for publication by A&amp;A - some typos corrected and affiliations updated; 14 pages main text (incl. 14 figures); first paper in the LIFE paper series; papers II (arXiv:2203.00471) and III (arXiv:2112.02054) are also available</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.EP"/>
+    <arxiv:journal_ref>A&amp;A 664, A21 (2022)</arxiv:journal_ref>
+    <author>
+      <name>S. P. Quanz</name>
+    </author>
+    <author>
+      <name>M. Ottiger</name>
+    </author>
+    <author>
+      <name>E. Fontanet</name>
+    </author>
+    <author>
+      <name>J. Kammerer</name>
+    </author>
+    <author>
+      <name>F. Menti</name>
+    </author>
+    <author>
+      <name>F. Dannert</name>
+    </author>
+    <author>
+      <name>A. Gheorghe</name>
+    </author>
+    <author>
+      <name>O. Absil</name>
+    </author>
+    <author>
+      <name>V. S. Airapetian</name>
+    </author>
+    <author>
+      <name>E. Alei</name>
+    </author>
+    <author>
+      <name>R. Allart</name>
+    </author>
+    <author>
+      <name>D. Angerhausen</name>
+    </author>
+    <author>
+      <name>S. Blumenthal</name>
+    </author>
+    <author>
+      <name>L. A. Buchhave</name>
+    </author>
+    <author>
+      <name>J. Cabrera</name>
+    </author>
+    <author>
+      <name>Ó. Carrión-González</name>
+    </author>
+    <author>
+      <name>G. Chauvin</name>
+    </author>
+    <author>
+      <name>W. C. Danchi</name>
+    </author>
+    <author>
+      <name>C. Dandumont</name>
+    </author>
+    <author>
+      <name>D. Defrère</name>
+    </author>
+    <author>
+      <name>C. Dorn</name>
+    </author>
+    <author>
+      <name>D. Ehrenreich</name>
+    </author>
+    <author>
+      <name>S. Ertel</name>
+    </author>
+    <author>
+      <name>M. Fridlund</name>
+    </author>
+    <author>
+      <name>A. García Muñoz</name>
+    </author>
+    <author>
+      <name>C. Gascón</name>
+    </author>
+    <author>
+      <name>J. H. Girard</name>
+    </author>
+    <author>
+      <name>A. Glauser</name>
+    </author>
+    <author>
+      <name>J. L. Grenfell</name>
+    </author>
+    <author>
+      <name>G. Guidi</name>
+    </author>
+    <author>
+      <name>J. Hagelberg</name>
+    </author>
+    <author>
+      <name>R. Helled</name>
+    </author>
+    <author>
+      <name>M. J. Ireland</name>
+    </author>
+    <author>
+      <name>M. Janson</name>
+    </author>
+    <author>
+      <name>R. K. Kopparapu</name>
+    </author>
+    <author>
+      <name>J. Korth</name>
+    </author>
+    <author>
+      <name>T. Kozakis</name>
+    </author>
+    <author>
+      <name>S. Kraus</name>
+    </author>
+    <author>
+      <name>A. Léger</name>
+    </author>
+    <author>
+      <name>L. Leedjärv</name>
+    </author>
+    <author>
+      <name>T. Lichtenberg</name>
+    </author>
+    <author>
+      <name>J. Lillo-Box</name>
+    </author>
+    <author>
+      <name>H. Linz</name>
+    </author>
+    <author>
+      <name>R. Liseau</name>
+    </author>
+    <author>
+      <name>J. Loicq</name>
+    </author>
+    <author>
+      <name>V. Mahendra</name>
+    </author>
+    <author>
+      <name>F. Malbet</name>
+    </author>
+    <author>
+      <name>J. Mathew</name>
+    </author>
+    <author>
+      <name>B. Mennesson</name>
+    </author>
+    <author>
+      <name>M. R. Meyer</name>
+    </author>
+    <author>
+      <name>L. Mishra</name>
+    </author>
+    <author>
+      <name>K. Molaverdikhani</name>
+    </author>
+    <author>
+      <name>L. Noack</name>
+    </author>
+    <author>
+      <name>A. V. Oza</name>
+    </author>
+    <author>
+      <name>E. Pallé</name>
+    </author>
+    <author>
+      <name>H. Parviainen</name>
+    </author>
+    <author>
+      <name>A. Quirrenbach</name>
+    </author>
+    <author>
+      <name>H. Rauer</name>
+    </author>
+    <author>
+      <name>I. Ribas</name>
+    </author>
+    <author>
+      <name>M. Rice</name>
+    </author>
+    <author>
+      <name>A. Romagnolo</name>
+    </author>
+    <author>
+      <name>S. Rugheimer</name>
+    </author>
+    <author>
+      <name>E. W. Schwieterman</name>
+    </author>
+    <author>
+      <name>E. Serabyn</name>
+    </author>
+    <author>
+      <name>S. Sharma</name>
+    </author>
+    <author>
+      <name>K. G. Stassun</name>
+    </author>
+    <author>
+      <name>J. Szulágyi</name>
+    </author>
+    <author>
+      <name>H. S. Wang</name>
+    </author>
+    <author>
+      <name>F. Wunderlich</name>
+    </author>
+    <author>
+      <name>M. C. Wyatt</name>
+    </author>
+    <author>
+      <name>the LIFE collaboration</name>
+    </author>
+    <arxiv:doi>10.1051/0004-6361/202140366</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1051/0004-6361/202140366" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2001.02228v1</id>
+    <title>Habitability and Water Loss Limits on Eccentric Planets Orbiting Main Sequence Stars</title>
+    <updated>2020-01-07T18:59:20Z</updated>
+    <link href="https://arxiv.org/abs/2001.02228v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2001.02228v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A planet's climate can be strongly affected by its orbital eccentricity and obliquity. Here we use a 1-dimensional energy balance model modified to include a simple runaway greenhouse (RGH) parameterization to explore the effects of these two parameters on the climate of Earth-like aqua planets - completely ocean-covered planets - orbiting F-, G-, K-, and M-dwarf stars. We find that the range of instellations for which planets exhibit habitable surface conditions throughout an orbit decreases with increasing eccentricity. However, the appearance of temporarily habitable conditions during an orbit creates an eccentric habitable zone (EHZ) that is sensitive to orbital eccentricity and obliquity, planetary latitude, and host star spectral type. We find that the fraction of a planet's orbit over which it exhibits habitable surface conditions is larger on eccentric planets orbiting M-dwarf stars, due to the lower broadband planetary albedos of these planets. Planets with larger obliquities have smaller EHZs, but exhibit warmer climates if they do not enter a snowball state during their orbits. We also find no transient runaway greenhouse state on planets at all eccentricities. Rather, planets spend their entire orbits either in a RGH or not. For G-dwarf planets receiving 100% of the modern solar constant and with eccentricities above 0.55, an entire Earth ocean inventory can be lost in 3.6 Gyr. M-dwarf planets, due to their larger incident XUV flux, can become desiccated in only 690 Myr with eccentricities above 0.38. This work has important implications for eccentric planets that may exhibit surface habitability despite technically departing from the traditional habitable zone as they orbit their host stars.</summary>
+    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-01-07T18:59:20Z</published>
+    <arxiv:comment>22 pages, 9 figures, 2 tables, accepted for publication in the Astrophysical Journal</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.EP"/>
+    <author>
+      <name>Igor Palubski</name>
+    </author>
+    <author>
+      <name>Aomawa Shields</name>
+    </author>
+    <author>
+      <name>Russell Deitrick</name>
+    </author>
+    <arxiv:doi>10.3847/1538-4357/ab66b2</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.3847/1538-4357/ab66b2" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1404.4493v1</id>
+    <title>The Effect of Planetary Illumination on Climate Modelling of Earthlike Exomoons</title>
+    <updated>2014-04-17T11:26:49Z</updated>
+    <link href="https://arxiv.org/abs/1404.4493v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1404.4493v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>From analytical studies of tidal heating, eclipses and planetary illumination, it is clear that the exomoon habitable zone (EHZ) - the set of moon and host planet orbits that permit liquid water on an Earthlike moon's surface - is a manifold of higher dimension than the planetary HZ.
+  This paper outlines the first attempt to produce climate models of exomoons which possess all the above sources and sinks of energy. We expand on our previous 1D latitudinal energy balance models (LEBMs), which follow the evolution of the temperature on an Earthlike moon orbiting a Jupiterlike planet, by adding planetary illumination.
+  We investigate the EHZ in four dimensions, running two separate suites of simulations. The first investigates the EHZ by varying the planet's orbit, keeping the moon's orbit fixed, to compare the EHZ with planetary habitable zones. In general, planetary illumination pushes EHZs slightly further away from the star.
+  Secondly, we fix the planet's orbit and vary the moon's orbit, to investigate the circumplanetary inner habitable edge. We demonstrate that an outer edge can exist due to eclipses (rather than merely orbital stability), but this edge may be pushed outwards when the effect of the carbonate-silicate cycle is taken into account.</summary>
+    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-04-17T11:26:49Z</published>
+    <arxiv:comment>11 pages, 16 figures, accepted for publication in MNRAS</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.EP"/>
+    <author>
+      <name>Duncan Forgan</name>
+    </author>
+    <author>
+      <name>Vergil Yotov</name>
+    </author>
+    <arxiv:doi>10.1093/mnras/stu740</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1093/mnras/stu740" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1307.7038v1</id>
+    <title>The Solar Neighborhood XXIX: The Habitable Real Estate of our Nearest Stellar Neighbors</title>
+    <updated>2013-07-26T14:07:47Z</updated>
+    <link href="https://arxiv.org/abs/1307.7038v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1307.7038v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We use the sample of known stars and brown dwarfs within 5 pc of the Sun, supplemented with AFGK stars within 10 pc, to determine which stellar spectral types provide the most habitable real estate --- defined to be locations where liquid water could be present on Earth-like planets. Stellar temperatures and radii are determined by fitting model spectra to spatially resolved broad-band photometric energy distributions for stars in the sample. The locations of the HZ's are calculated using an empirical formula for planetary surface temperature and assuming the condition of liquid water, called here the empirical habitable zone, or EHZ. Systems that have dynamically disruptive companions, assuming a 5:1 separation ratios for primary/secondary pairs and either object and a planet, are considered not habitable. We then derive a simple formula to predict the location of the EHZ for main sequence stars based on V-K color. We consider EHZ widths as more useful measures of the habitable real estate around stars than areas because multiple planets are not expected to orbit stars at identical stellar distances. This EHZ provides a qualitative guide on where to expect the largest population of planets in the HZ of main sequence stars. M stars provide more EHZ real estate than other spectral types, possessing 36.5% of the habitable real estate en masse. K stars are second with 21.5%, while A, F, and G stars offer 18.5%, 6.9% and 16.6%, respectively. Our calculations show that three M dwarfs within 10 pc harbor planets in their EHZs. GJ 581 may have two planets (d with msini = 6.1 M_E; g with msini = 3.1 M_E), GJ 667 C has one (c with msini = 4.5 M_E), and GJ 876 has two (b with msini = 1.89 M_J and c with msini = 0.56 M_J). If Earth-like planets are as common around low mass stars as recent Kepler results suggest, M stars are the most likely place to find Earth-like planets in HZ's.</summary>
+    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-07-26T14:07:47Z</published>
+    <arxiv:primary_category term="astro-ph.SR"/>
+    <author>
+      <name>Justin R. Cantrell</name>
+    </author>
+    <author>
+      <name>Todd J. Henry</name>
+    </author>
+    <author>
+      <name>Russel J. White</name>
+    </author>
+    <arxiv:doi>10.1088/0004-6256/146/4/99</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/0004-6256/146/4/99" title="doi"/>
+  </entry>
+</feed>

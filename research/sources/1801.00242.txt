@@ -1,0 +1,319 @@
+                                               ESTIMATING SYMPLECTIC CAPACITIES FROM LENGTHS OF
+                                                       CLOSED CURVES ON THE UNIT SPHERES
+
+                                                                  ARSENIY AKOPYAN♠ AND ROMAN KARASEV♦
+
+                                                  Abstract. We improve the estimates for the Ekeland–Hofer–Zehnder capacity of con-
+                                                  vex bodies by Gluskin and Ostrover. In the course of our argument we show that a closed
+                                                  characteristic of minimal action on the boundary of a centrally symmetric convex body
+arXiv:1801.00242v1 [math.MG] 31 Dec 2017
+
+
+
+
+                                                  in R2n must itself be centrally symmetric, with generalizations to some other types of
+                                                  symmetry.
+
+
+
+
+                                                                                  1. Introduction
+                                              We are going to improve some results of the recent paper [9] on estimating the symplectic
+                                           capacities of convex bodies in R2n . The symplectic capacities are interesting invariants
+                                           of open domains in the symplectic R2n , which are in most cases are not easy to estimate.
+                                           Some particular results, including sharp estimates, can be found in [3, 4, 2, 1].
+                                              Following the conventions in [9], we identify R2n = Cn , that is, besides the symplectic
+                                           structure ω = dλ, we are going to use the complex structure J : Cn → Cn .
+                                              The values to estimate are the Ekeland–Hofer–Zehnder capacity of a convex body K ⊂
+                                           Cn , denoted by cEHZ (K). This capacity is known to coincide (for smooth convex bodies)
+                                           with the smallest action                     Z        T
+                                                                                  A(γ) =             γ ∗ λ dt
+                                                                                             0
+                                           of a closed characteristic γ : [0, T ] → ∂K, γ(0) = γ(T ), that is a closed curve whose
+                                           tangent vector belongs to the kernel of the restriction of ω to ∂K.
+                                              The key idea of [9] is to introduce another invariant, let us denote it by cJ (K), which
+                                           is the inverse of the norm of J considered as a linear operator acting from the space C
+                                           with the unit gauge K ◦ (the polar of K) to the same space C with the unit gauge K.
+                                           Equivalently,
+                                                                       cJ (K)−1 = max{ω(x, y) : x, y ∈ K ◦ }.
+                                           Here we use the technical assumption that the origin is in the interior of K in order to
+                                           be able to work with its polar K ◦ ; and we say gauge to insist that the body K need not
+                                           be centrally symmetric, although the particular case of centrally symmetric body will be
+                                           of interest to us. We denote the corresponding gauge function (not necessarily symmetric
+                                           norm) by gK (·), which is the 1-homogeneous function that is equal to 1 precisely on ∂K.
+                                           The value cJ (K) is not a symplectic invariant (under arbitrary symplectomorphisms), but
+                                           it is invariant under linear symplectomorphisms.
+                                              Proposition 2.2 of [9] established the estimate
+                                                                                  cEHZ (K) ≥ cJ (K),
+                                           and we are going to improve it in the following way:
+
+                                             2010 Mathematics Subject Classification. 52A21, 52A38, 52A40, 53D99.
+                                             Key words and phrases. Symplectic capacities, finite-dimensional normed spaces, length of closed
+                                           curves.
+                                             ♦
+                                                Supported by the Russian Foundation for Basic Research Grant 18-01-00036.
+                                                                                            1
+2                      ARSENIY AKOPYAN♠ AND ROMAN KARASEV♦
+
+Theorem 1.1. For arbitrary convex body K ⊂ Cn ,
+                                             
+                                            1
+                          cEHZ (K) ≥ 1 +        cJ (K);
+                                           2n
+and for centrally symmetric convex body K ⊂ Cn
+                                              
+                                             1
+                              cEHZ (K) ≥ 2 +     cJ (K).
+                                             n
+  It seems that these improved bounds are still not tight and can be further improved, in
+particular, because the equality case in Lemma 2.4 below does not seems to correspond
+to a closed characteristic on the boundary of K under a symplectic structure on Rd .
+
+Acknowledgments. The authors thank Yaron Ostrover for his interest in the results
+and useful remarks.
+
+               2. Length estimates for curves on the boundary
+   In order to prove the main theorem we are going to use the approach of Bezdek and
+Bezdek [5] and estimate the lengths of closed curves γ ∈ Rd that cannot be translated
+into the interior of K. We measure their lengths with gK and note that in the symplectic
+case closed characteristics on the boundary of K cannot be translated into the interior of
+K, this is explained in Section 3.
+   In [1] such estimates for a convex body K ⊂ Rn were used to produce lower bounds for
+the Ekeland–Hofer–Zehnder capacity of Lagrangian product K × K ◦ ⊂ R2n . This time we
+are going to use such estimates for any convex body K in the symplectic R2n .
+   In the question about closed characteristics, compared to the Bezdek–Bezdek setup,
+we have an additional property of the curve γ: it is contained in the boundary of K.
+Now we want to check if this improves the lower bound on the gK -length of such a curve,
+if it does not fit into the interior of a translate of K. We will use the general estimate
+ℓ(γ) ≥ 2+2/d from [1, Theorem 4.1] for not necessarily symmetric K, although we believe
+that this estimate is not tight. And we are going to consider a symmetric K separately
+and improve the bound ℓ(γ) ≥ 4 of [1, Theorem 3.2] in the symmetric case using the fact
+that the curve lies on the boundary.
+   It is well known (see [11]) that in dimension d = 2 (when we speak about Rd without
+symplectic structure we just denote its dimension by d) the length of the boundary of the
+unit disk of a normed plane is at least 6 in this norm; so the bound 4 that we mentioned
+above is not optimal in this dimension. But in dimensions d ≥ 3 we may consider the cube
+C = [−1, 1]d and a closed curve that is just an edge of C going forth and back. This closed
+curve on the boundary has length 4 in the norm gC (·) and does not fit into the interior of
+a translate of C; so the bound 4 cannot be improved without additional assumptions on
+the curve, which we are going to establish below in the case of action-minimizing closed
+characteristics.
+
+2.1. Action minimizers on the boundary of centrally symmetric convex bodies.
+Of course, we have not used the symplectic structure in any way, but so far we see no
+evidence why a closed characteristic (under some symplectic structure of Rd = R2n ) on
+the boundary of a smooth convex body cannot behave like in the above example. We are
+going to analyze the behavior of a closed characteristic on the boundary of a centrally
+symmetric convex K ⊆ R2n having the smallest action and giving the value of cEHZ (K).
+We will pass from convex bodies to norms k · k (as support functions of K composed with
+ω) and consider the classical (see [6]) variational problem for closed loops γ : R/Z → R2n :
+                       ESTIMATING SYMPLECTIC CAPACITIES FROM. . .                              3
+
+
+                                  Z                        Z
+(2.1)                                   kγ̇k → min,                 λ = 1,
+                                   γ                            γ
+
+where λ is a primitive of ω. The minimum in this variational problem is the Ekeland–
+Hofer–Zehnder capacity cEHZ (K) of the convex domain X up to constant, as shown
+in [6, 8]. Now we prove:
+Lemma 2.1. In the variational problem (2.1), for centrally symmetric k · k, one of the
+minima is attained at a curve γ centrally symmetric with respect to the origin. For smooth
+and strictly convex norms we can say more: All minima of (2.1) are centrally symmetric
+with respect to some center.
+  In [7, Corollary 2] the existence of some symmetric closed characteristics was proved,
+but here we need more, that a minimal symmetric closed characteristic has no greater
+action than the minimal action of an arbitrary closed characteristic.
+Proof. Assume γ is the minimal curve, split it into two curves
+                                                             P γ1 and γ2 of equal k · k-
+lengths. We are going to use the particular primitive λ = i pi dqi , which is invariant
+under the central symmetry of R2n .
+   Since the problem is invariant under translations of γ, we may translate it so that γ1
+passes from −x to x and γ2 passes from x to −x. Let σ be the straight line segment from
+x to −x and −σ be its opposite. Then the concatenations β1 = γ1 ∪ σ and β2 = γ2 ∪ (−σ)
+are the closed loops such that
+                                Z       Z       Z
+                                    λ+     λ = λ = 1.
+                                      β1      β2            γ
+                                                   R
+Then without loss of generality we assume          β1
+                                                           λ ≥ 1/2. Then the centrally symmetric
+curve γ ′ = γ1 ∪ (−γ1 ) has   Z      Z                 Z
+                                        λ=        λ+                λ ≥ 1,
+                                   γ′        β1         −β1
+                                                                                     R
+and the length of γ ′ is the same as the length of γ. Scaling γ ′ to obtain γ ′′ with γ ′′ λ = 1
+we will have centrally symmetric γ ′′ with length no greater than the length of the original
+γ.
+   In case the original body K is smooth and strictly convex (and so is the norm k · k)
+the proof shows that any minimal closed curve must be centrally symmetric. Indeed, we
+have presented a process that symmetrizes the minimal curve keeping a half of it the
+same. From the standard facts about the variational problems with everything smooth
+it follows that the minimum of the variational problem must be a smooth solution to a
+certain ODE, so the symmetrized curve must actually remain the same by the uniqueness
+of the solutions to ODEs. Therefore it must already be centrally symmetric.                   
+  Using the correspondence [6] between the optimization problem (2.1) and the closed
+characteristics on the boundary of a smooth and strictly convex K we may rephrase the
+previous lemma:
+Corollary 2.2. If K ⊂ R2n is a smooth and strictly convex centrally symmetric body
+then any closed characteristic of minimal action on the boundary ∂K is itself centrally
+symmetric.
+Proof. In [6] the problem (2.1) was actually stated not for the length, but for the integral
+of kγ̇k2 , this is needed to ensure an appropriate parameterization of γ, while the length
+version is invariant under reparameterizing γ and therefore has some indeterminacy.
+4                        ARSENIY AKOPYAN♠ AND ROMAN KARASEV♦
+
+   Lemma 2.1 ensures that the optimal γ is centrally symmetric after a translation; and
+we need to check that the corresponding closed characteristic in the boundary of K is
+also centrally symmetric. In [6, Page 187, 3rd line from the bottom] the curve γ is
+translated (note that the problem (2.1) is translation-invariant), but after this translation
+γ is expressed as the gradient of kγ̇k2 composed with the complex structure J. Since the
+derivative γ̇ remains centrally symmetric under translations of γ, therefore the resulting
+translation of γ in [6, Page 187, 3rd line from the bottom] is also centrally symmetric.
+The rest of the argument in [6] shows that after such transformations γ becomes a closed
+characteristic on the boundary of a homothet of K.                                          
+   In fact, it is possible to extend the results of Lemma 2.1 and Corollary 2.2 to other
+classes of symmetry:
+Theorem 2.3. Let K ⊂ Cn be a smooth and strictly convex body such that wK = K for
+the primitive mth root of unity w ∈ C. Then any closed characteristic of minimal action
+on the boundary ∂K is invariant under the multiplication by w.
+   Compare this theorem with the result of [7] showing (as a particular case) the existence
+of such closed geodesics without proving their minimality.
+Proof. Like above we consider Clarke’s optimization problem (2.1) with the (not neces-
+sarily symmetric) norm k · k invariant under the multiplication by w. Let γ be a solution
+to this problem. Split γ into m segments γ1 , . . . , γm of equal k · k-length and let for any
+i = 1, . . . , m the vector vi go from the beginning of γi to its end. The action of γ can be
+expressed as the sum                   Z
+                                A(γ) = λ = A + A1 + · · · + Am ,
+                                        γ
+where A is the action of the polygon composed of the vectors vi and Ai is the action of
+the loop obtained by concatenation of γi and −vi .
+  Now we try to replace γ with the closed curve made by concatenation of appropriately
+translated γi , wγi , . . . , w m−1 γi . We indeed can arrange them into a closed loop because
+we have
+                                         1 + w + · · · + w m−1 = 0.
+This new loop, after an appropriate translation, will be invariant under the multiplication
+by w. The action of this new loop will be
+                                            mAi + Si ,
+where Si is the Riemannian area of the regular m-gon with side vectors vi , wvi , . . . , w m−1 vi
+inscribed into this loop. This m-gon lies in a single complex line, which is a real two-
+dimensional subspace where the Riemannian area coincides with the symplectic action of
+its contour.
+   In fact, there is a constant (we do not need its precise value) αm such that the area of
+a regular m-gon is expressed through its side length ℓ as αm ℓ2 . Hence Si = αm |vi |2 , here
+we use the Euclidean norm, not k · k. Now assume that this attempt to build a no worse
+w-invariant solution to Clarke’s variational problem fails and we have
+                                                      X
+                                mAi + αm |vi |2 < A +     Ai .
+                                                          i
+
+Moreover, assume this attempt fails for all i = 1, . . . , m. Then summing such inequalities
+we obtain
+                                      X
+(2.2)                             αm       |vi |2 < mA,
+                                            i
+                        ESTIMATING SYMPLECTIC CAPACITIES FROM. . .                               5
+
+and from the quadratic-arithmetic mean inequality
+                                       !2
+                         αm X                X
+                                  |vi | ≤ αm      |vi |2 < mA.
+                          m    i               i
+
+Note that we can fill the polygonal loop composed of v1 , . . . , vm by a 2-chain F of triangles
+T1 , . . . , Tm−2 and note that by the calibration property [10, Section I] the Riemannian area
+of every such Ti is no less than its symplectic action, hence for the area SF of the whole
+2-chain F we have                                    !2
+                                      αm X
+                                                |vi | < mSF .
+                                      m      i
+This looks like the inverse isoperimetric inequality. Moreover, we can rotate T2 , T3 , . . . , Tm−2
+into the same 2-plane one by one and see that this inequality is the opposite to the stan-
+dard isoperimetric inequality for m-gons in the plane, thus obtaining a contradiction.
+   Therefore, for some i the attempt to produce no worse solution with the required
+symmetry must succeed. From the existence and uniqueness theorem for the ODE for
+this variational problem we see that in the smooth case this modification of γ must in
+fact give the same loop, just because the segment γi remains at its place.
+   An alternative way to deduce (2.2): Note that the action of a loop is the sum of actions
+of its projections to the coordinate complex lines. At the same time the Euclidean square
+of a vector is the sum of the Euclidean squares of its projection to the same complex lines.
+Therefore it is sufficient to prove the opposite to (2.2) in the plane, where it again follows
+from the standard isoperimetry for m-gons.                                                       
+
+2.2. Length estimates for centrally symmetric curves on the spheres. In view of
+the previous symmetry results we need to investigate the length of centrally symmetric
+curves on the boundary of K measured in the norm with unit ball K ⊂ Rd .
+  The following result is essentially [12, Theorems 13E and 13F]:
+Lemma 2.4 (Schaffer, 1976). If K ⊂ Rd is convex and centrally symmetric and γ ⊂ ∂K
+is a centrally symmetric closed curve then the length of γ in the norm whose unit ball is
+K is at least 4 + 4/d. For odd d the bound can be improved to 4 + 4/(d − 1).
+  The example in [12, Theorem 10E] shows that this bound is tight for even d, in the
+case if interest to us.
+
+                                3. Proof of Theorem 1.1
+  Now we turn to the estimates of the Ekeland–Hofer–Zehnder capacity. Following [9] we
+consider a closed characteristic γ : [0, T ] → ∂K as given by the equation:
+(3.1)                                    γ̇ = J∇gK (γ);
+in this case the action A(γ) equals T /2. Integrating the equation (3.1) we see that the
+gradients ∇gK (that is the outer normals to ∂K) along the curve γ non-negatively combine
+to give zero. This implies (see [1] or [2]) that the curve γ cannot be translated to the
+interior of K.
+   Now in the not necessarily symmetric case we just invoke the estimates [1, Theorem 4.1]
+(going back to [5]) for such closed curves that cannot be covered by a smaller homothets
+of K:                              Z T
+                                                       1
+                                       gK (γ̇) dt ≥ 2 + .
+                                    0                  n
+6                          ARSENIY AKOPYAN♠ AND ROMAN KARASEV♦
+
+   In the centrally symmetric case we have
+                                   Z T
+                                                        2
+                                       gK (γ̇) dt ≥ 4 +
+                                    0                   n
+in view of Lemma 2.4, because in the case of centrally symmetric K we have a centrally
+symmetric curve by Lemma 2.1 (or Corollary 2.2).
+   We conclude the proof as in [9]:
+        Z T              Z T                     Z T
+                                                                       T     2A(γ)
+            gK (γ̇) dt ≤     gK (J∇gK (γ)) dt ≤      kJkK ◦ →K dt =        =        ,
+         0                0                       0                 cJ (K)   cJ (K)
+which gives the required estimates.
+                                             References
+ [1] A. Akopyan, A. Balitskiy, R. Karasev, and A. Sharipova. Elementary approach to closed bil-
+     liard trajectories in asymmetric normed spaces. Proceedings of the American Mathematical Society,
+     144(10):4501–4513, 2016. arXiv:1401.0442.
+ [2] S. Artstein-Avidan, R. Karasev, and Y. Ostrover. From symplectic measurements to the Mahler
+     conjecture. Duke Mathematical Journal, 163(11):2003–2022, 2014. arXiv:1303.4197.
+ [3] S. Artstein-Avidan and Y. Ostrover. A Brunn–Minkowski inequality for symplectic capacities of
+     convex domains. International Mathematics Research Notices, 2008. arXiv:0712.2631.
+ [4] S. Artstein-Avidan and Y. Ostrover. Bounds for Minkowski billiard trajectories in convex bodies.
+     International Mathematics Research Notices, 2012. arXiv:1111.2353.
+ [5] D. Bezdek and K. Bezdek. Shortest billiard trajectories. Geometriae Dedicata, 141:197–206, 2009.
+ [6] F. Clarke. A classical variational principle for periodic Hamiltonian trajectories. Proceedings of the
+     American Mathematical Society, 76:186–188, 1979.
+ [7] F. Clarke. On Hamiltonian flows and symplectic transformations. SIAM Journal of Control and
+     Optimization, 20(3):355–359, 1982.
+ [8] I. Ekeland and H. Hofer. Symplectic topology and Hamiltonian dynamics. Mathematische Zeitschrift,
+     200(3):355–378, 1989.
+ [9] E. D. Gluskin and Y. Ostrover. Asymptotic equivalence of symplectic capacities. 2015.
+     arXiv:1509.01797.
+[10] R. Harvey and H. B. Lawson Jr. Calibrated geometries. Acta Mathematica, 148(1):47–157, 1982.
+[11] Y. G. Reshetnyak. An extremal problem from the theory of convex curves. Uspehi Matem. Nauk
+     (N.S.), 8(6(58)):125–126, 1953.
+[12] J. J. Schaffer. Geometry of Spheres in Normed Spaces. Lecture Notes in Pure and Applied Mathe-
+     matics. Marcel Dekker Inc, 1976.
+   E-mail address: akopjan@gmail.com
+
+    E-mail address: r n karasev@mail.ru
+    URL: http://www.rkarasev.ru/en/
+    ♠
+    Institute of Science and Technology Austria (IST Austria), Am Campus 1, 3400
+Klosterneuburg, Austria
+    ♦
+   Moscow Institute of Physics and Technology, Institutskiy per. 9, Dolgoprudny,
+Russia 141700
+    ♦
+   Institute for Information Transmission Problems RAS, Bolshoy Karetny per. 19,
+Moscow, Russia 127994
+

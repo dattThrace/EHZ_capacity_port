@@ -1,0 +1,886 @@
+                                              From Symplectic Measurements to the Mahler Conjecture
+
+                                                          Shiri Artstein-Avidan, Roman Karasev, Yaron Ostrover
+arXiv:1303.4197v2 [math.MG] 31 Oct 2013
+
+
+
+
+                                                                                      Abstract
+
+                                                    In this note we link symplectic and convex geometry by relating two seemingly dif-
+                                                ferent open conjectures: a symplectic isoperimetric-type inequality for convex domains,
+                                                and Mahler’s conjecture on the volume product of centrally symmetric convex bodies.
+                                                More precisely, we show that if for convex bodies of fixed volume in the classical phase
+                                                space the Hofer–Zehnder capacity is maximized by the Euclidean ball, then a hypercube
+                                                is a minimizer for the volume product among centrally symmetric convex bodies.
+
+
+
+                                          1     Introduction and Main Results
+
+                                          The purpose of this note is to relate a symplectic isoperimetric-type conjecture for sym-
+                                          plectic capacities of convex domains in the classical phase space with the renowned Mahler
+                                          conjecture regarding the volume product of symmetric convex bodies. The main ingredient
+                                          in the proof, which is of independent interest in the context of symplectic geometry, is the
+                                          fact that in a centrally symmetric and strictly convex body K ⊆ Rn the shortest (measured
+                                          with respect to k · kK ) periodic K ◦ -billiard trajectory is a 2-bouncing trajectory. In par-
+                                          ticular, this implies that for any centrally symmetric convex body K the Hofer–Zendher
+                                          capacity of the configuration K × K ◦ in the classical phase space R2n equals 4.
+                                             Before we state our main results more precisely, we first recall some relevant background
+                                          and definitions from convex and symplectic geometry.
+
+
+                                          1.1   Mahler Conjecture
+
+                                          Let (X, k · k) be an n-dimensional normed space and let (X ∗ , k · k∗ ) be its dual space.
+                                          The product space X × X ∗ carries a canonical symplectic structure, given by the skew-
+                                                                                       
+                                          symmetric bilinear form ω (x, ξ), (x′ , ξ ′ ) = ξ(x′ ) − ξ ′ (x), and a canonical volume form, the
+                                          Liouville volume, given by ω n /n!. A fundamental question in the field of convex geometry,
+                                          raised by Mahler in [18], is to find upper and lower bounds for the Liouville volume of
+                                          B × B ◦ ⊂ X × X ∗ , where B and B ◦ are the unit balls of X and X ∗ respectively. In what
+                                          follows we shall denote this volume by ν(X). Note that ν(X) is an affine invariant of X
+                                          i.e., it is invariant under invertible linear transformations. We remark that in the context
+                                          of convex geometry ν(X) is also known as the Mahler volume or the volume product of X.
+                                             The Blaschke–Santaló inequality asserts that the maximum of ν(X) is attained if and
+                                          only if X is a Euclidean space. This was proved by Blaschke [3] for dimensions two and
+
+                                                                                           1
+three, and generalized by Santaló [27] for higher dimensions. The following sharp lower
+bound for ν(X) was conjectured by Mahler [18] in 1939:
+Mahler Conjecture: For an n-dimensional normed space X one has ν(X) ≥ 4n /n!
+    The conjecture has been verified by Mahler [18] in the two-dimensional case. In higher
+dimensions it is proved only in some very special cases, namely, when the unit ball of X is
+a zonoid [9, 24], when X has a 1-unconditional basis [20, 26, 25], and when the unit ball of
+X is sufficiently close to the unit cube in the Banach–Mazur distance [22].
+    The first major breakthrough towards answering Mahler’s conjecture was a result due to
+Bourgain and Milman [4], who used sophisticated tools from functional analysis to show that
+the conjecture holds asymptotically, i.e., up to a factor γ n , where γ is a universal constant.
+This result has been re-proved later on, by entirely different methods, by Kuperberg [17],
+using differential geometry, and independently by Nazarov [21], using the theory of functions
+of several complex variables. A new proof using simpler asymptotic geometric analysis tools
+has been recently discovered by Giannopoulos, Paouris, and Vritsiou [8]. The best known
+constant nowadays, γ = π/4, is due to Kuperberg [17]. Despite great efforts to deal with
+the general case, a proof of Mahler’s conjecture has been insistently elusive thus far, and is
+currently the subject of intensive research efforts. We remark that in contrast with the above
+mentioned Blaschke–Santaló inequality, the equality case in Mahler’s conjecture, which is
+obtained for example for the space l∞  n of bounded sequences with the standard maximum
+
+norm, is not unique.
+
+
+1.2    Symplectic Capacities
+
+Consider the 2n-dimensional Euclidean space R2n = Rnq × Rnp , equipped with the linear
+                                                                                         P
+coordinates (q1 , . . . , qn , p1 , . . . , pn ), the standard symplectic structure ωst = i dqi ∧ dpi ,
+and the standard inner product gst = h·, ·i. In what follows we use this inner product to
+identify the tangent space Tx R2n , at a point x ∈ R2n , with the cotangent space Tx∗ R2n at
+the same point in the usual way. Note that under the identification of R2n with Cn , these
+two structures are the real and the imaginary parts of the standard Hermitian inner product
+in Cn , and ωst (v, Jv) = hv, vi, where J is the standard complex structure on R2n ≃ Cn .
+Recall that a symplectomorphism of R2n is a diffeomorphism which preserves the symplectic
+structure i.e., ψ ∈ Diff(R2n ) such that ψ ∗ ω = ω.
+    A fundamental result in symplectic geometry states that symplectic manifolds – in a
+sharp contrast to Riemannian manifolds – have no local invariants (except, of course, the
+dimension). The first examples of global symplectic invariants were introduced by Gromov
+in his seminal paper [10], where he used pseudoholomorphic curves techniques to prove a
+striking symplectic rigidity result, which is nowadays known as Gromov’s “non-squeezing
+theorem”. This result paved the way to the introduction of global symplectic invariants,
+called symplectic capacities, which roughly speaking measure the symplectic size of sets in
+R2n . More precisely, let B 2k (r) be the open 2k-dimensional ball of radius r.
+
+Definition 1.1. A symplectic capacity on (R2n , ωst ) associates to each subset U ⊂ R2n a
+
+
+                                                  2
+number c(U ) ∈ [0, ∞], such that the following three properties hold:
+(P1) c(U ) ≤ c(V ) for U ⊆ V (monotonicity),
+             
+(P2) c ψ(U ) = |α| c(U ) for ψ ∈ Diff(R2n ) such that ψ ∗ ωst = α ωst (conformality),
+                                 
+(P3) c B 2n (r) = c B 2 (r) × Cn−1 = πr 2 (nontriviality and normalization).
+
+   Note that the third property disqualifies any volume-related invariant, while the first two
+imply that for U, V ⊂ R2n , a necessary condition for the existence of a symplectomorphism
+ψ with ψ(U ) = V is that c(U ) = c(V ) for any symplectic capacity c.
+    It is a priori unclear that symplectic capacities exist. The above mentioned non-
+squeezing result naturally leads to the definition of two symplectic capacites: the Gro-
+                                                     s
+mov width, defined by c(U ) = sup{πr 2 | B 2n (r) ֒→ U }; and the cylindrical capacity, de-
+                                s                  s
+fined by c(U ) = inf{πr 2 | U ֒→ Z 2n (r)}, where ֒→ stands for symplectic embedding, and
+Z 2n (r) = B 2 (r)×Cn−1 is the standard symplectic cylinder of radius r. These two capacities
+are known to be the largest and the smallest possible symplectic capacities, respectively.
+   Since Gromov’s work, several other symplectic capacities were constructed, such as the
+Hofer–Zehnder capacity [15], Ekeland–Hofer capacities [6], the displacement energy [14],
+spectral capacities [7, 23, 28], and Hutchings’ embedded contact homology capacities [16].
+Moreover, there has been a great progress in understanding their properties, interrelations,
+and applications to symplectic topology and Hamiltonian dynamics. We note that usually
+computing these capacities, even for relatively simple sets, is notoriously difficult. We refer
+the reader to [5] for a detailed survey on the theory of symplectic capacities.
+
+
+1.3   A Symplectic Isoperimetric Conjecture
+
+Let K2n be the class of convex domains in R2n . The following isoperimetric-type conjecture
+for symplectic capacities of convex bodies was raised by Viterbo in [29].
+
+Conjecture 1.2. (Symplectic isomperimetric conjecture): For any symplectic capacity c
+and any convex body Σ ∈ K2n ,
+                      c(Σ)  Vol(Σ) 1/n
+                            ≤            , where B = B 2n (1).                (1.3.1)
+                      c(B)    Vol(B)
+
+   In other words, the symplectic isoperimetric conjecture states that among the convex
+domains in R2n with a given volume, the Euclidean ball has the maximal symplectic capacity.
+The conjecture is known to hold for certain classes of convex bodies, including ellipsoids and
+convex Reinhardt domains (see [12]). Moreover, up to a universal constant, Conjecture 1.2
+holds for any symplectic capacity. More precisely, the following theorem was proved in [1].
+
+Theorem 1.3. There is a universal constant A0 , such that for any n, any Σ ∈ K(R2n ),
+and any symplectic capacity c,
+                      c(Σ)       Vol(Σ) 1/n
+                           ≤ A0               , where B = B 2n (1).           (1.3.2)
+                      c(B)        Vol(B)
+
+                                              3
+   This theorem improves a previous result of Viterbo in [29], where inequality (1.3.2) was
+proved up to a factor depending linearly on the dimension.
+
+Remark 1.4. It is a long standing open question (see, e.g., [12, 13, 29]) whether all sym-
+plectic capacities coincide on the class of convex domains in R2n . Note that an affirmative
+answer to this question would immediately prove Conjecture 1.2 above, as it is not hard to
+check that inequality (1.3.1) trivially holds for the Gromov width capacity.
+
+
+1.4   Main Results
+
+Consider the classical phase space R2n = Rnq × Rnp equipped with the standard symplectic
+structure ωst . Let Ks (Rnq ) be the class of centrally symmetric convex bodies in Rnq i.e.,
+bounded convex domains which are symmetric with respect to the origin and with non-
+empty interior. For K ∈ Ks (Rnq ), we define its polar body K ◦ ∈ Ks (Rnp ) to be
+
+                        K ◦ = {p ∈ Rnp | p(q) ≤ 1, for every q ∈ K}.
+
+Here we identified Rnp with the dual space (Rnq )∗ . Note that if K is considered to be the
+unit ball of a certain norm k · k on Rnq , then K ◦ can be interpreted as the unit ball of the
+dual space Rnp ≃ (Rnq )∗ equipped with the dual norm k · k∗ . In these notations, letting Vol
+denote the standard volume in R2n = Rnq × Rnp , the Mahler conjecture reads:
+
+Conjecture 1.5 (Mahler). For every K ∈ Ks (Rnq ), one has Vol(K × K ◦ ) ≥ 4n /n!.
+
+    Note that, by the continuity of volume and the denseness of smooth bodies in Ks (Rnq )
+(say, with respect to the Hausdorff metric), it is enough to prove Conjecture 1.5 for smooth
+K. We are finally in a position to state our main result:
+
+Theorem 1.6. The symplectic isoperimetric conjecture implies the Mahler conjecture.
+
+    The proof of Theorem 1.6 follows immediatly from the following estimate of the sym-
+plectic size of the configuration K ×K ◦ ⊂ Rnq ×Rnp , for K ∈ Ks (Rnq ), which is of independent
+interest for symplectic geometry. Let cHZ denote the Hofer–Zehnder capacity, which we shall
+define in detail in Section 2. It is known (see, e.g., §3.5 in [15], and Section 2 below), that
+on the class of convex domains in R2n the capacity cHZ (Σ) is given by the minimal action
+of closed characteristics on the boundary ∂Σ.
+
+Theorem 1.7. For every centrally symmetric convex body K ∈ Ks (Rnq ),
+
+                                      cHZ (K × K ◦ ) = 4.
+
+   In fact, Theorem 1.7 can be strengthened to show that for any two centrally symmetric
+convex bodies K ⊂ Rnq , and T ⊂ Rnp , one has
+
+                          cHZ (K × T ) = c(K × T ) = 4 inradT ◦ (K),                     (1.4.3)
+
+where inradT ◦ (K) = max{r > 0 | rT ◦ ⊂ K}. See Remark 4.2 in Section 4 for the explanation
+of this fact.
+
+                                               4
+   The proof of Theorem 1.7 is based on the relation established in [2] between the Hofer–
+Zehnder capacity of certain convex Lagrangian products in the classical phase space, and the
+minimal length of periodic Minkowski billiard trajectories associated with these products.
+The precise details of this relation will be given in Section 2 below. We shall prove
+
+Theorem 1.8. Let K ⊂ Rnq be a centrally symmetric strictly convex body. The shortest
+(with respect to k · kK ) periodic K ◦ -billiard trajectory in K is attained exclusively by two-
+bouncing orbits. In particular, the minimal k · kK -length of a periodic K ◦ -billiard trajectory
+in K is 4.
+
+    We now turn to showing that Theorem 1.6 follows from Theorem 1.7.
+
+Proof of Theorem 1.6. Assume that the symplectic isoperimetric conjecture holds. Then,
+from inequality (1.3.1) and Theorem 1.7 it follows that
+
+                  4n   cnHZ (K × K ◦ )   Vol(K × K ◦ )   n! Vol(K × K ◦ )
+                     =                 ≤               =                  ,
+                  πn          πn          Vol(B 2n )            πn
+
+which is exactly the lower bound for Vol(K × K ◦ ) required by Mahler’s conjecture.
+
+Remark 1.9. It is clear from the above argument that we do not require the full strength of
+the symplectic isoperimetric conjecture to deduce Mahler’s conjecture. Namely, it is enough
+to know that the symplectic isoperimetric conjecture holds for the Hofer–Zehnder capacity,
+and for the special class of convex domains in R2n of the form K × K ◦ , where K ∈ Ks (Rnq ).
+
+Structure of the paper: In Section 2 we explain the relation between the Hofer–Zehnder
+capacity and the minimum length of periodic billiard orbits. In Section 3 we provide the
+main geometric ingredients of the proof of Theorem 1.7 and Theorem 1.8, which are given
+in Section 4.
+Acknowledgments: We thank the referees for their useful comments. The first named
+author was partially supported by ISF grant No. 247/11. The second named author was
+supported by the Dynasty Foundation, the President’s of Russian Federation grant MD-
+352.2012.1, and the Russian government project 11.G34.31.0053. The third named author
+was partially supported by a Reintegration Grant SSGHD-268274 within the 7th European
+community framework programme, and by the ISF grant No. 1057/10.
+
+
+2    The Hofer-Zehnder Capacity and Minkowski Billiards
+
+In this section we describe the relation established in [2] between the Hofer–Zehnder ca-
+pacity [15], restricted to the class of convex domains, and the minimal length of periodic
+Minkowski billiard trajectories. For the reader’s convenience, we recall first some of the
+relevant definitions and notations. For a detailed exposition and proofs, see [2].
+   The restriction of the symplectic form ωst to a smooth closed connected hypersurface
+Σ ⊂ R2n defines a 1-dimensional subbundle ker(ωst |Σ) whose integral curves comprise the
+
+                                               5
+characteristic foliation of Σ. In other words, a closed characteristic γ on ∂Σ is an embedded
+circle in ∂Σ tangent to the characteristic line bundle
+
+                   SΣ = {(x, ξ) ∈ T ∂Σ | ωst (ξ, η) = 0 for all η ∈ Tx ∂Σ}.
+
+The classical geometric problem of finding a closed characteristic has a well-known dy-
+namical interpretation: if the boundary ∂Σ is represented as a regular energy surface
+{x ∈ R2n | H(x) = const} of a smooth Hamiltonian function H : R2n → R, then the
+restriction to ∂Σ of the Hamiltonian vector field XH , defined by iXH ωst = −dH, is a sec-
+tion of SΣ . Thus, the image of the periodic solutions of the classical Hamiltonian equation
+ẋ = XH (x) = J∇H(x) on ∂Σ are precisely the closed characteristics of ∂Σ. Recall that the
+                                                  R
+action of a closed curve γ is defined by A(γ) = γ λ, where λ = pdq is the Liouville 1-form,
+whose differential is dλ = ωst . Also, the action spectrum of Σ is defined as
+
+                     L(Σ) = { | A(γ) | ; γ closed characteristic on ∂Σ} .
+
+   The following theorem, which serves here also as the definition of the Hofer–Zehnder
+capacity for the class of smooth convex bodies, can be found, e.g., in [15].
+Theorem 2.1. Let Σ ⊆ R2n be a convex bounded domain with smooth boundary ∂Σ. Then
+there exists at least one closed characteristic γ ∗ ⊂ ∂Σ satisfying
+
+                                cHZ (Σ) = A(γ ∗ ) = min L(Σ).
+
+   We remark that although the above definition of closed characteristics, as well as The-
+orem 2.1, were given only for the class of convex bodies with smooth boundary, they can
+naturally be generalised to the class of convex sets in R2n with non-empty interior (see [2]).
+   We now switch gears and turn to mathematical billiards in Minkowski geometry. The
+general study of billiard dynamics in Finsler and Minkowski geometries was initiated in [11].
+From the point of view of geometric optics, Minkowski billiard trajectories describe the prop-
+agation of waves in a homogeneous, anisotropic medium that contains perfectly reflecting
+mirrors (see [11]). Below, we focus on the special case of Minkowski billiards in a smooth
+convex body K ⊂ Rn . Roughly speaking, we equip K with a metric given by a certain
+norm k · k, and consider billiards in K with respect to the geometry induced by k · k.
+   More precisely, let K ⊂ Rnq , and T ⊂ Rnp be two convex bodies with smooth boundary,
+and consider the unit cotangent bundle
+
+           UT∗ K := K × T = {(q, p) | q ∈ K, and gT (p) ≤ 1} ⊂ T ∗ Rnq = Rnq × Rnp .
+
+Here gT is the gauge function of T i.e., gT (x) = inf{r | x ∈ rT }, and in particular when T is
+centrally symmetric i.e., T = −T , one has gT (x) = kxkT . For p ∈ ∂T , the gradient vector
+∇gT (p) is the outer normal to ∂T at the point p, and is naturally considered to be in Rnq .
+   Motivated by the classical correspondence between closed geodesics in a Riemannian
+manifold and closed characteristics of its unit cotangent bundle, the following definition of
+(K, T )-billiard trajectories, which are essentially closed billiard trajectories in K when the
+bouncing rule is determined by the geometry induced from the body T , was given in [2].
+
+                                              6
+                                            w1 = ∇kq1 kK
+
+                                      q1
+                                                                                        v1 = ∇kp1 kT
+                                                             p2                  p1
+
+                                       q0
+w2 = ∇kq2 kK                K                                          T
+               q2
+
+
+
+                                                                            p0
+
+
+                                                                             v0 = ∇kp0 kT
+
+
+                       Figure 1: A proper (K, T )-Billiard trajectory.
+
+
+
+Definition 2.2. A closed (K, T )-billiard trajectory is the image of a piecewise smooth map
+γ : S 1 → ∂(K × T ) such that for every t ∈
+                                          / Bγ := {t ∈ S 1 | γ(t) ∈ ∂K × ∂T } one has
+
+                                       γ̇(t) = d X(γ(t)),
+
+for some positive constant d and the vector field X given by
+                              (
+                                (−∇gT (p), 0), (q, p) ∈ int(K) × ∂T,
+                    X(q, p) =
+                                (0, ∇gK (q)),    (q, p) ∈ ∂K × int(T ).
+
+Moreover, for any t ∈ Bγ , the left and right derivatives of γ(t) exists, and
+
+            γ̇ ± (t) ∈ {α(−∇gT (p), 0) + β(0, ∇gK (q)) | α, β ≥ 0, (α, β) 6= (0, 0)}.       (2.1)
+
+Remark 2.3. Although in Definition 2.2 there is a natural symmetry between the bodies
+K and T , in what follows K shall play the role of the billiard table, while T induces the
+geometry that governs the billiard dynamics in K. It will be useful to introduce the following
+notation: for a (K, T )-billiard trajectory γ, the curve πq (γ), where πq : R2n → Rnq is the
+natural projection, shall be called a T -billiard trajectory in K.
+
+Definition 2.4. A closed (K, T )-billiard trajectory γ is said to be proper if the set Bγ is
+finite, i.e., γ is a broken characteristic that enters, and instantly exits, the product ∂K × ∂T
+at the reflection points. In the case where Bγ = S 1 , i.e., γ is traveling solely along the
+product ∂K × ∂T , we say that γ is a gliding trajectory.
+
+   For a proper billiard trajectory, when we follow the flow of the vector field X, we move
+in K × ∂T from (q0 , p0 ) to (q1 , p0 ) following the opposite of the outer normal to ∂T at p0 .
+When we hit the boundary ∂K at the point q1 , the vector field changes, and we start to
+move in ∂K × T from (q1 , p0 ) to (q1 , p1 ) following the outer normal to ∂K at the point q1 .
+
+                                                  7
+Next, we move from (q1 , p1 ) to (q2 , p1 ) following the opposite of the normal to ∂T at p1 , and
+so forth (see Figure 1). Note that this reflection law is a natural variation of the classical one
+(i.e., equal impact and reflection angles) when the Euclidean structure on Rnq is replaced by
+the metric induced by the norm k · kT . Moreover, it is not hard to check that when T is the
+Euclidean unit ball, the bouncing rule described above is the classical one. Also, similarly
+to the Euclidean case, one can check that (K, T )-billiards correspond to critical points of
+the length functional given by the support function hT , where hT (u) = sup{hx, ui ; x ∈ T }.
+   We remark that in [2] is was proved that every (K, T )-billiard trajectory is either a
+proper trajectory or a gliding one, and that the following holds:
+
+Theorem 2.5 ([2]). Let K ∈ K(Rnq ) and T ∈ K(Rnp ) be two smooth strictly convex bodies.
+Then the Hofer–Zehnder capacity cHZ (K × T ) equals the length, with respect to the support
+function hT , of the shortest periodic T -billiard trajectory in K.
+
+
+3     Two Geometric Facts
+
+Here we provide the geometric ingredients needed for the proof of Theorem 1.7, which may
+be of independent interest in the realm of convex geometry. Throughout this section, we
+assume that K ⊂ Rn is a centrally symmetric convex body. Moreover, it will be convenient
+to use the following notation. For a set of points X, we denote by Conv(X) the convex hull of
+X; and for a closed oriented polygonal path P ⊂ Rn , specified by vertices x1 , . . . , xm ∈ Rn ,
+we set
+                                                                      m−1
+                                                                      X
+         LengthK (P) := LengthK (x1 x2 · · · xm ) := kx1 − xm kK +           kxi+1 − xi kK .
+                                                                       i=1
+
+
+3.1    First Geometric Fact
+
+Theorem 3.1. Let K ⊂ Rn be a centrally symmetric convex body, and consider points
+{x1 , . . . , xm } ⊂ Rn \ int(K) with m ≥ 2, xi 6= xi+1 for i = 1, . . . , m − 1 and x1 6= xm , such
+that 0 ∈ Conv{xi }m    i=1 . Then,
+
+                                   LengthK (x1 x2 · · · xm ) ≥ 4.
+
+Moreover, this minimium is attained for m = 2 and x1 = −x2 ∈ ∂K, and when the body K
+is strictly convex, this is the only equality case.
+
+    In order to prove Theorem 3.1 we shall need the following lemmas.
+
+Lemma 3.2. Let K be a centrally symmetric convex body, and let P be an oriented polygonal
+closed path in R2n which satisfies the following two properties:
+
+    • It passes through two points, x, y, outside K i.e., kxkK ≥ 1, kykK ≥ 1,
+
+
+                                                 8
+   • It passes through two points z, −z, such that x and y do not lie in the same connected
+     component of P \ {−z, z}.
+
+Then, LengthK (P) ≥ 4.
+
+Proof of Lemma 3.2. We will show that each of the two parts of the polygonal path,
+between the points z and −z, has length at least 2. Indeed, call one of these paths P ′ , then
+consider the new path P ′ ∪ −P ′ , which is a closed path that joins x and −x. By the triangle
+inequality, the length of each part between x and −x is at least kx − (−x)kK ≥ 2. Since we
+have doubled the path P ′ , we get that LengthK (P ′ ) ≥ 2. In a similar way, the other part of
+the path P joining −z and z has length at least 2, and we conclude that LengthK (P) ≥ 4
+as claimed, and the proof of the lemma is complete.
+
+Lemma 3.3. Let x1 , . . . , xm be points in Rn , and let z ∈ Conv{x1 , . . . , xm }. Then
+
+                            LengthK (x1 x2 · · · xm ) ≥ LengthK (x1 zxm ).
+
+                                                                              xk
+                       x3
+
+                                                                                          xk−1
+
+                                                                                z
+
+                        z
+                                                                                    d
+                                                                                          x2
+      x1                               x2
+                       d                                     x1
+
+
+        Figure 2: The 2-dimensional case (left), and the k-dimensional case (right).
+
+
+
+Proof of Lemma 3.3. We proceed by induction on the number m. The case m = 2 is
+trivial. Next, we assume that the claim holds for m − 1. Since z ∈ Conv{x1 , . . . , xm }, it
+can be written as a convex combination of the form
+                               m
+                               X                     m
+                                                     X
+                        z=           λj xj , where           λj = 1 and λj ≥ 0.
+                               j=1                       j
+
+             Pm−1   λj
+We put d =     j=1 1−λm xj . Thus, z = λm xm + (1 − λm )d (see Figure 2). In particular, one
+has
+                              kxm − dkK = kxm − zkK + kd − zkK .                               (3.1.1)
+By the inductive hypothesis, LengthK (x1 dxm−1 ) ≤ LengthK (x1 x2 · · · xm−1 ). Equivalently,
+                                                                  m−2
+                                                                  X
+                       kd − x1 kK + kxm−1 − dkK ≤                       kxj+1 − xj kK .        (3.1.2)
+                                                                  j=1
+
+
+                                                     9
+Combining (3.1.2) and (3.1.2), we conclude that
+
+    LengthK (x1 zxm ) = kz − x1 kK + kxm − zkK + kx1 − xm kK
+                         ≤ kd − x1 kK + kz − dkK + kxm − zkK + kx1 − xm kK
+                         = kd − x1 kK + kxm − dkK + kx1 − xm kK
+                         ≤ kd − x1 kK + kxm−1 − dkK + kxm − xm−1 kK + kx1 − xm kK
+                           m−2
+                           X
+                         ≤     kxj+1 − xj kK + kxm − xm−1 kK + kx1 − xm kK
+                             j=1
+                         = LengthK (x1 x2 · · · xm ).
+
+The proof of Lemma 3.3 is thus complete.
+
+Remark: In the next lemma we denote the indices j = j(mod(m)), so that m + 1 = 1.
+Also, by {xk }ik=j , where i < j, we mean {x1 , . . . , xi } ∪ {xj , . . . , xm }.
+
+Lemma 3.4. Let x1 , . . . , xm ∈ Rn , where m ≥ 3, such that 0 ∈ Conv({xi }m
+                                                                           i=1 ). Then there
+exist two indices i0 < j0 for which
+                                             \
+                          Conv({xk }jk=i
+                                      0
+                                         0
+                                           )              i0 −1
+                                               −Conv({xk }k=j 0
+                                                                ) 6= ∅.              (3.1.3)
+
+Proof of Lemma 3.4. Since 0 ∈ Conv({xi }m
+                                        i=1 ), there are ηi ≥ 0 such that
+
+                                   m
+                                   X                        m
+                                                            X
+                                          ηi xi = 0 and           ηi = 1.            (3.1.4)
+                                    i=1                     i=1
+
+We assume, without loss of generality, that η1 , ηm < 1/2, and we shall show that the claim
+                                                                          Pj−1
+holds with i0 = 1. We choose j to be the maximal possible index so that i=1    ηi ≤ 1/2. In
+           Pj
+particular, i=1 ηi > 1/2. Further, since ηm < 1/2, we know that j 6= m. Let ηj = ηj′ + ηj′′
+           Pj−1
+such that i=1   ηi + ηj′ = 1/2. Of course in this case
+                                           m
+                                           X
+                                                  ηi + ηj′′ = 1/2.
+                                          i=j+1
+        Pm
+Since    i=1 ηi xi = 0, one has
+
+                           j−1
+                           X                           X
+                                                        m                      
+                                  ηi xi + ηj′ xj = −            ηi xi + ηj′′ xj .
+                           i=1                          i=j+1
+
+On both sides the coefficients sum to 1/2, so that letting
+
+                                                   j−1
+                                                    X        
+                                             ′
+                                      p = 2 ηj xj +     ηi xi ,
+                                                          i=1
+
+we get p ∈ Conv({xi }ji=1 ) and −p ∈ Conv({xi }m
+                                               i=j ), and the claim is proved.
+
+
+
+                                                     10
+Remark 3.5. Note that in fact we proved something slightly stronger, namely, that in each
+of the subsets {xi0 , . . . , xj0 }, {xj0 , . . . , xi0 −1 } there are at least 2 points.
+
+Proof of Theorem 3.1. Let {x1 , . . . , xm } ⊂ Rn \ int(K) with m ≥ 2, and such that
+0 ∈ Conv({xi }m                                                        n
+              i=1 ). We use Lemma 3.4 to find 1 ≤ i0 < j0 ≤ m and p ∈ R such that
+
+                           p ∈ Conv({xk }jk=i
+                                           0
+                                              0
+                                                                      i0 −1
+                                                ) and − p ∈ Conv({xk }k=j 0
+                                                                            ).
+
+From Lemma 3.3 it follows that
+                       0 −i0
+                      jX
+                               kxi0 +k − xi0 +k−1 kK ≥ kp − xi0 kK + kxj0 − pkK .
+                        k=1
+                             i0 −1
+Note that −p is in Conv({xk }k=j 0
+                                   ) and therefore evidently in Conv({xk }ik=j
+                                                                            0
+                                                                               0
+                                                                                 ). Hence,
+                   0 −j0
+                  iX
+                           kxj0 +k − xj0 +k−1 kK ≥ k − p − xj0 kK + kxi0 − (−p)kK .
+                  k=1
+
+Combining the last two inequalities yields,
+      m
+      X
+            kxk − xk−1 kK ≥ kp − xi0 kK + kxj0 − pkK + k − p − xj0 kK + kxi0 − (−p)kK .
+      k=1
+
+We thus bound from below the length we are considering by the length of the closed path
+between (xi0 , p, xj0 , −p), where kxi0 kK ≥ 1 and kxj0 kK ≥ 1. By Lemma 3.2, the length of
+this latter path, with respect to k · kK , is at least 4.
+    In the strictly convex case, where triangle inequalities are sharp unless the points are
+on the same line, going through the proof one may easily analyse the equality case, which
+is when there are only two points, on ∂K, which are antipodal.
+
+
+
+
+3.2    Second Geometric Fact
+
+Theorem 3.6. Let K ⊂ Rn be a smooth centrally symmetric convex body, and consider
+points {q1 , . . . , qm } ⊂ ∂K with m ≥ 2, such that 0 ∈ Conv{nK (qi )}m
+                                                                       i=1 , where nK (qi ) =
+∇gK (qi ) is the outer normal to K at qi . Then,
+
+                                        LengthK (q1 q2 · · · qm ) ≥ 4.
+
+   The proof shall make use of Theorem 3.1. We shall construct a new polygonal trajectory,
+                ′ ) at most as long as the original one, such that 0 ∈ Conv{q ′ }m′ .
+(q1′ q2′ · · · qm ′                                                          i i=1
+
+   We need the following simple lemma about simplices:
+Lemma 3.7. Let S denote a non-degenerate simplex in Rk with vertices {xi }k+1           i=1 , and let
+{qi }k+1
+     i=1 ⊂ R k such that q ∈ Conv({x }
+                              i            j j6=i ). Assume  0 ∈  Conv({x    }k+1
+                                                                            i i=1 ). Then, for some
+subset I ∈ {1, . . . , n + 1} of cardinality at least 1, the origin 0 lies in the convex hull of the
+union {qi }i∈I ∪ {xj }j6∈I .
+
+                                                     11
+Remark 3.8. It is easy to check that the cardinality of I is at least 2, whenever the
+origin 0 is in the interior of S. Indeed, for I = {i0 } we have that Conv(qi0 ∪ {xj }j6=i0 ) =
+Conv({xj }j6=i0 ) is a facet of S.
+
+Proof of Lemma 3.7. Let SI be the possibly degenerate simplex given by the convex
+hull Conv ({qi }i∈I ∪ {xj }j6∈I ). If we add the “forbidden” simplex S∅ (= S) to the collection
+{SI : I ⊂ {1, . . . , k + 1}, |I| ≥ 1}, then these simplices together can be viewed as a piecewise
+linear image of the boundary of a (k + 1)-dimensional combinatorial cross-polytope C.
+    More precisely, we consider an abstract cross-polytope C spanned by ±e1 , . . . , ±ek+1 ∈
+Rk+1 and map its vertices to Rk so that f (−ei ) = xi and f (+ei ) = qi . Then we extend
+the map f to the boundary ∂C piecewise linearly. This boundary ∂C is a piecewise linear
+sphere of dimension k and the degree of this piecewise linear map f : ∂C → Rk is well
+defined and equal to zero. Hence, as any point in the interior of S is covered by S∅ =
+f (Conv{−e1 , . . . , −ek+1 }) (which is equal to S), it must also be covered by some other
+SI = f (Conv ({+ei }i∈I ∪ {−ej }j6∈I )) with |I| ≥ 1.
+
+Proof of Theorem 3.6. We are given a set of points {qi }m
+                                                        i=1 ∈ ∂K such that 0 is in the
+convex hull of their normals nK (qi ) = ∇gK (qi ).
+    First, we invoke the Carathéodory theorem and reduce to the subset {qi }i∈J ∈ ∂K of
+size |J| ≤ n + 1, such that 0 is still in the convex hull of {nK (qi )}i∈J . Moreover, we consider
+the inclusion minimal J with this property, so that 0 is in the relative interior of the convex
+hull of {nK (qi )}i∈J . It is clear that the closed polygonal line through this subset {qi }i∈J in
+the same cyclic order is not longer than the original one, by the triangle inequality. So we
+                                           ′
+consider this new relabeled set {qi }m   i=1 .
+                                                                                                ′
+    Next, we claim that there is no loss of generality in assuming that the vectors {nK (qi )}m
+                                                                                              i=1
+positively span Rn . Indeed, if not, then we may project onto the quotient by the annihilator
+                                                        ′
+of the subspace spanned by the normals {nK (qi )}m    i=1 . Under this projection, the length of
+the closed polygonal line cannot increase, if we use the induced norm on the quotient. The
+projections of qi remain on the boundary, since the respective normals are still norming
+functionals. This all means that we may assume without loss of generality that m′ = n + 1.
+We thus conclude that, considering the half-spaces supporting K at qi , we may assume that
+their intersection is an n-dimensional simplex. We denote its vertices by {xi }n+1i=1 , in such a
+way that qi ∈ Conv({xj }j6=i ).
+    We claim that the length LengthK (q1 q2 · · · qn+1 ) is at least 4. To this end we shall
+replace this polygonal path q1 q2 · · · qn+1 by a shorter one as follows. By Lemma 3.7, there
+is a subset I of size at least 2 such that 0 is in the convex hull of {qi }i∈I and {xj }j6∈I .
+Note that if no xj ’s participate, we are done by Theorem 3.1. We may thus assume that
+|I| < n + 1.
+    In particular, there exists a convex combination x of {xj }j6∈I and a convex combination
+q of {qi }i∈I such that 0 = (1 − λ)q + λx for some λ ∈ (0, 1).
+   We shall first consider the shorter trajectory, which passes only through {qi }i∈I (in the
+
+
+                                               12
+same order as before). By the triangle inequality, it is not longer than the original trajectory.
+Then, consider the new trajectory passing through the new points qi′ = (1 − λ)qi + λx. Note
+that 0 is in the convex hull of qi′ . Further, note that qi′ is a convex combination of two points
+which are on the facet of S that is opposite to xi , since x is composed of xj with j 6∈ I
+and in particular j 6= i. Therefore, by convexity, we see that qi′ belongs to the hyperplane
+supporting K via qi and in particular qi′ 6∈ int(K). The length of the new path is of course
+(1 − λ) times the length of the path via qi , and at the same time, by Theorem 3.1, this
+length is at least 4, and the proof of Theorem 3.6 is now complete.
+
+Remark 3.9. It is not difficult to check that the equality case in Theorem 3.6 is exactly
+the same as in Theorem 3.1 above.
+
+
+4    Proof of the Main Results
+
+It is well known that the Hofer–Zehnder capacity cHZ is continuous with respect to the
+Hausdorff metric on the class of convex domains (see e.g., [19], Exercise 12.7). Hence, we
+can assume without loss of generality that K ∈ Ks (Rnq ) is smooth, and strictly convex.
+    We shall make use of the following simple lemma regarding (K, T )-billiard trajectories.
+Lemma 4.1. Let γ : S 1 → ∂(K × T ) be a (K, T )-billiard trajectory and let γq = πq (γ(S 1 ))
+denote its projection to Rnq . Then
+                                                       
+                                  0 ∈ Conv nK (γq ∩ ∂K) ,
+
+In other words, the origin lies in the convex hull of the set of outer normals at those points
+where the trajectory meets the boundary of K.
+
+Proof of Lemma 4.1. For a proper billiard trajectory, the reflection rule at qi connects
+the normal and the momenta before and after qi via:
+
+                                     λi nK (qi ) = pi−1 − pi ,
+
+for some nonnegative λi . This follows from the definition of (K, T )-billiard trajectories, and
+also can be easily seen from the variational characterization of the trajectory. Indeed, apply
+the Lagrange multipliers to optimizing hT (qi − qi−1 ) + hT (qi+1 − qi ) under the constraint
+gK (qi ) = 1. The multiplier λi is nonnegative, since otherwise the trajectory would increase
+its length while moving qi in the direction of an interior point of the segment [qi−1 , qi+1 ],
+which is impossible by the triangle inequality. Summing up, and using the fact that the
+trajectory is closed, we obtain the required combination
+                                       m
+                                       X
+                                             λi nK (qi ) = 0.
+                                       i=1
+
+For a gliding trajectory, it is known (see Proposition 2.2 in [2]) that there exist an equation
+connecting the momentum and the outer normal of the form:
+                                     d
+                                        p(t) = λ(t)nK (q(t)),
+                                     dt
+
+                                                 13
+for some smooth positive function λ : S 1 → R. As in the case of a proper trajectory, this
+gives the required convex combination after integration.
+
+Proof of Theorem 1.7. We shall use Theorem 3.6, in order to show that any periodic
+K ◦ -billiard trajectory in K has length (with respect to hK ◦ = k · kK ) at least 4, and that
+this bound is actually attained. Combining this with Theorem 2.5 will prove Theorem 1.7.
+    The fact that cHZ (K × K ◦ ) is at most 4 follows from the easily verified fact that for any
+q ∈ ∂K, the path [−q, q] is a K ◦ -billiard trajectory in K (called a “bouncing orbit”). This
+in turn follows from the fact that for a strictly convex body K one has
+
+                      nK (q)                                nK ◦ (p)
+               p=               ∈ ∂K ◦ if and only if q =             ∈ ∂K.                  (4.1)
+                    knK (q)kK ◦                           knK ◦ (p)kK
+
+The lengths of these bouncing orbits are exactly 4, and so cHZ (K × K ◦ ) ≤ 4.
+    To show that any K ◦ -billiard trajectory in K has length at least 4 (again, with re-
+spect to k · kK ), we consider such a trajectory γq = πq (γ(S 1 )) and use Lemma 4.1 to-
+gether with Carathéodory’s theorem to find n + 1 points qj ∈ γq ∩ ∂K, which satisfy
+0 ∈ Conv({nK (qi )}n+1
+                    i=1 ). By the triangle inequality, the length of γq is at least the length
+of the closed polygonal line (q1 · · · qn+1 ). By Theorem 3.6, this length is at least 4, and the
+proof of Theorem 1.7 is complete.
+
+Proof of Theorem 1.8. Note that in the proof of Theorem 1.7 above we already showed
+that the k·kK -length of any periodic K ◦ -billiard trajectory in K is at least 4, and this bound
+is clearly attained on 2-bouncing orbits. Moreover, as remarked after its proof, the equality
+conditions in Theorem 3.6 in the strictly convex case are precisely those of Theorem 3.1.
+Namely, equality is attained if and only if the trajectory is composed of two antipodal points
+in ∂K, which is precisely 2-bouncing orbits.
+
+Remark 4.2. It follows from Theorem 1.7 that for any centrally symmetric convex bodies
+K ⊂ Rnq , and T ⊂ Rnp , one has
+
+                           cHZ (K × T ) = c(K × T ) = 4 inradT ◦ (K),                        (4.2)
+
+where inradA (B) = max{r | rA ⊂ B}. As before, since the above expressions are continuous
+with respect to the Hausdorff metric, one may assume that both K and T are smooth. To
+establish (4.2), we first use Theorem 1.7, the monotonicity property of symplectic capacities,
+and the fact that c is the largest possible symplectic capacity: if rT ◦ ⊂ K then T ⊃ rK ◦ ,
+and hence
+                        c(K × T ) ≥ cHZ (K × T ) ≥ cHZ (K × rK ◦ ) = 4r.
+Next, we use the conformality property of symplectic capacities to assume without loss of
+generality that inradT ◦ (K) = 1. Let q0 ∈ ∂K ⊂ Rnq be a tangency point of K and T ◦ , and
+set p0 ∈ ∂K ◦ ⊂ Rnp to be the point defined as in (4.1) above. Note that p0 is also a tangency
+point of K ◦ and T . Moreover, as in the proof of Theorem 1.8, the 2-bouncing trajectory
+[−q0 , q0 ] is not only a K ◦ -billiard trajectory in K, but also a T -billiard trajectory in K, as
+
+
+                                                14
+K and T ◦ share the same normals at the points ±q0 , and K ◦ and T share the same normals
+at ±p0 . Now, by definition, the cylinder
+
+                       Ze = {(p, q) ∈ R2n : |q0 (p)| ≤ 1 and |p0 (q)| ≤ 1},
+
+contains the body K × T . Moreover, its Hofer-Zehnder capacity satisfies cHZ (Z)     e ≤ 4 since
+the above 2-bouncing trajectory is a closed characteristic on the boundary ∂ Z,    e of action 4.
+Finally, since q0 (p0 ) = p0 (q0 ) = 1, the interior of 
+                                                        the
+                                                         q cylinder
+                                                                   Ze is symplectomorphic to the
+interior of the standard symplectic cylinder B 2      × Cn−1 , over which all symplectic
+                                                        4
+                                                        π
+                                                         e = c (Z)
+capacities coincide. Thus we conclude that c(K × T ) ≤ c(Z)        e ≤ 4. Thus we have
+                                                                      HZ
+
+established (4.2).
+
+
+References
+
+[1] Artstein-Avidan, S., Milman, V., Ostrover, Y. The M-ellipsoid, symplectic capacities
+   and volume, Comment. Math. Helv. 83, (2008) no.2, 359–369.
+
+[2] Artstein-Avidan, S., Ostrover Y. Bounds for Minkowski billiard trajectories in convex
+   bodies, Intern. Math. Res. Not. (IMRN) (2012) doi:10.1093/imrn/rns216.
+
+[3] Blaschke, W. Über affine Geometrie VII: Neue Extremeigenschaften von Ellipse und
+   Ellipsoid, Ber. Verh. Sächs. Akad. Wiss. Leipzig, Math.-Phys. Kl 69 (1917) 306–318,
+   Ges. Werke 3 246–258.
+
+[4] Bourgain, J., Milman, V. D. New volume ratio properties for convex symmetric bodies
+   in Rn , Invent. Math. 88 (1987), no. 2, 319–340.
+
+[5] Cieliebak, K., Hofer, H., Latschev, J., Schlenk F. Quantitative symplectic geometry, in:
+   Dynamics, ergodic theory, and geometry, 1–44, Math. Sci. Res. Inst. Publ., 54, Cambridge
+   Univ. Press, Cambridge, 2007.
+
+[6] Ekeland, I., Hofer, H. Symplectic topology and Hamiltonian dynamics I & II, Math. Z.
+   200 (1989), no. 3, 355–378, and Math. Z. 203 (1990), no.4, 553–567.
+
+[7] Frauenfelder, U., Ginzburg, V., Schlenk, F. Energy capacity inequalities via an action
+   selector, Geometry, spectral theory, groups, and dynamics, 129–152, Contemp. Math.,
+   387, Amer. Math. Soc., Providence, RI, 2005.
+
+[8] Giannopoulos, A., Paouris, G., Vritsiou, B. The isotropic position and the reverse San-
+   taló inequality, to appear in Israel J. Math.
+
+[9] Gordon, Y., Meyer, M., Reisner, S. Zonoids with minimal volume product – a new proof,
+   Proc. Amer. Math. Soc. 104 (1988), no. 1, 273–276.
+
+[10] Gromov, M. Pseudoholomorphic curves in symplectic manifolds, Invent. Math. 82
+   (1985), no. 2, 307–347.
+
+
+                                               15
+[11] Gutkin, E., Tabachnikov, S. Billiards in Finsler and Minkowski geometries, J. Geom.
+   Phys. 40 (2002), no. 3–4, 277–301.
+
+[12] Hermann, D. Non-equivalence of symplectic capacities for open sets with restricted
+   contact type boundary. Prépublication d’Orsay numéro 32 (29/4/1998).
+
+[13] Hofer, H. Symplectic capacities. in: Geometry of low-dimensional manifolds, 2
+   (Durham, 1989), 15–34, London Math. Soc. Lect. Note Ser., 151, Cambridge Univ. Press,
+   1990.
+
+[14] Hofer, H. On the topological properties of symplectic maps, Proc. Roy. Soc. Edinburgh
+   Sect. A 115, 25–38 (1990).
+
+[15] Hofer, H., Zehnder, E. Symplectic Invariants and Hamiltonian Dynamics, Birkhäuser,
+   Basel (1994).
+
+[16] Hutchings, M. Quantitative embedded contact homology, J. Differential Geom. 88
+   (2011), no. 2, 231–266.
+
+[17] Kuperberg, G. From the Mahler conjecture to Gauss linking integrals, Geom. Funct.
+   Anal., 18, no. 3, (2008), 870–892.
+
+[18] Mahler, K. Ein Übertragungsprinzip für konvexe Korper, Casopis Pyest. Mat. Fys. 68,
+   (1939), 93–102.
+
+[19] McDuff, D., Salamon, D. Introduction to Symplectic Topology, Oxford Mathematical
+   Monographs. The Clarendon Press, Oxford University Press, New York, 1998.
+
+[20] Meyer, M. Une caractérisation volumique de certains espaces normés de dimension
+   finie, Israel J. Math. 55 (1986), no. 3, 317–326.
+
+[21] Nazarov, F. The Hörmander proof of the Bourgain-Milman theorem, in: Geometric as-
+   pects of functional analysis, 335–343, Lecture Notes in Math., 2050, Springer, Heidelberg,
+   2012.
+
+[22] Nazarov, F., Petrov, F., Ryabogin, D. and Zvavitch, A. A remark on the Mahler
+   conjecture: local minimality of the unit cube, Duke Math. J. 154 (2010), no. 3, 419–430.
+
+[23] Oh, Y-G. Chain level Floer theory and Hofer’s geometry of the Hamiltonian diffeomor-
+   phism group, Asian J. Math. 6 (2002), no. 4, 579–624.
+
+[24] Reisner, S. Zonoids with minimal volume product, Math. Z. 192 (1986), no. 3, 339–346.
+
+[25] Reisner, S. Minimal volume-product in Banach spaces with a 1-unconditional basis, J.
+   London Math. Soc. 36 (1987), no.1, 126–136.
+
+[26] Saint Raymond, J. Sur le volume des corps convexes symétriques, Initiation Seminar
+   on Analysis: G. Choquet–M. Rogalski–J. Saint-Raymond, 20th Year: 1980/1981, Exp.
+   No. 11, 25 pp., Publ. Math. Univ. Pierre et Marie Curie, 46, Univ. Paris VI, Paris, 1981.
+
+
+                                             16
+[27] Santaló, L.A. Un invariante afin para los cuerpos convexos de espacio de n dimensiones,
+   Portugal. Math 8 (1949) 155–161.
+
+[28] Viterbo, C. Symplectic topology as the geometry of generating functions, Math. Ann.
+   292, no. 4, 685–710 (1992).
+
+[29] Viterbo, C. Metric and isoperimetric problems in symplectic geometry, J. Amer. Math.
+   Soc. 13 (2000), no. 2, 411–431.
+
+
+
+Shiri Artstein-Avidan,
+School of Mathematical Science, Tel Aviv University, Tel Aviv, Israel.
+e-mail: shiri@post.tau.ac.il
+
+Roman Karasev, Dept. of Mathematics, Moscow Institute of Physics and Technology,
+Institutskiy per. 9, Dolgoprudny, Russia 141700
+Roman Karasev, Institute for Information Transmission Problems RAS, Bolshoy Karetny
+per. 19, Moscow, Russia 127994
+Roman Karasev, Laboratory of Discrete and Computational Geometry, Yaroslavl’ State
+University, Sovetskaya st. 14, Yaroslavl’, Russia 150000
+e-mail: r n karasev@mail.ru
+
+Yaron Ostrover,
+School of Mathematical Science, Tel Aviv University, Tel Aviv, Israel.
+e-mail: ostrover@post.tau.ac.il
+
+
+
+
+                                             17
+

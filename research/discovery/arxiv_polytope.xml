@@ -1,0 +1,1471 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/rIiM8c4897QoPXSuVn7X7dDwQw4</id>
+  <title>arXiv Query: search_query=(all:polytope OR all:polytopes) AND (all:capacity OR all:capacities OR all:symplectic)&amp;id_list=&amp;start=0&amp;max_results=70</title>
+  <updated>2026-11-09T21:07:27Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(all:polytope+OR+all:polytopes)+AND+(all:capacity+OR+(all:capacities+OR+all:symplectic))&amp;start=0&amp;max_results=70&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>70</opensearch:itemsPerPage>
+  <opensearch:totalResults>374</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2611.04934v1</id>
+    <title>The Complexity of Continuous Contract Design over Polymatroids</title>
+    <updated>2026-11-03T14:04:32Z</updated>
+    <link href="https://arxiv.org/abs/2611.04934v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.04934v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study optimal contracts when an agent allocates continuous effort subject to polymatroid capacity constraints. Effort produces a linear expected reward and incurs a cost. With binary outcomes and limited liability, the principal chooses a single reward share. For linear costs, an optimal contract can be computed in polynomial time. For quadratic costs, the agent has a unique best response computable by polynomially many submodular minimizations, yet optimizing the principal's share is NP-hard even for explicitly represented cut-based rank functions. With $n$ activities, the best-response path can have $2^{n-O(\log n)}$ breakpoints even when each reward coefficient and each rank value is an integer representable in $O(n\log n)$ bits. The construction also answers a question of Allman, Lo, and McCormick on polynomial bit length for source-sink monotone two-parameter minimum cuts. Despite this complexity, an optimal contract for quadratic costs always exists with a share of at most $1/2$. Consequently, $O(1/\varepsilon)$ best-response computations suffice for a $(1-\varepsilon)$-approximation. For rational quadratic costs on explicitly described rational polytopes containing zero, this gives a fully polynomial-time approximation scheme. More generally, a share of at most $1/p$ suffices for continuous convex costs homogeneous of degree $p&gt;1$, on any compact convex action set containing zero. For general convex costs with an exact value and bounded-subgradient oracle, we obtain an oracle approximation scheme using approximate best responses and a supplied lower bound on positive welfare.</summary>
+    <category term="cs.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-11-03T14:04:32Z</published>
+    <arxiv:comment>89 pages, 6 figures. The Lean 4 formalization is at https://github.com/philippwarode/contract-design-polymatroids-lean</arxiv:comment>
+    <arxiv:primary_category term="cs.GT"/>
+    <author>
+      <name>Max Klimm</name>
+    </author>
+    <author>
+      <name>Paul Lippke</name>
+    </author>
+    <author>
+      <name>Philipp Warode</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2611.00569v1</id>
+    <title>Promotion and Extension of General Escape-Covering Duality Relationship</title>
+    <updated>2026-10-31T02:55:11Z</updated>
+    <link href="https://arxiv.org/abs/2611.00569v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2611.00569v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Bellman's lost-in-a-forest problem, Moser's worm problem, Lebesgue's universal covering problems, and the classical 'fits and covers' questions can be organized by a common obstruction principle: an object fits a region if some admissible group action places it in the region, whereas an escape object is one for which every placement fails to remain in the interior.
+  In this paper, we develop a general theory of escape-covering duality for any dimension and explore several applications. For convex translation covers of all closed planar curves of Euclidean length one, we prove $
+  W \ge f(\sqrt3/9)+c_1&gt;0.15545785378555,c_1=0.000009944944227372... $ Here $f(\sqrt3/9)$ is Wetzel's classical lower bound.
+  For a rational polytopal Minkowski gauge and prescribed rational facet directions, we express universal closed-loop cover feasibility as a rational polyhedron in the facet offsets. After removing translations, minimum volume is attained at a vertex. Refining the facet directions gives explicit two-sided rational bounds for the unrestricted fixed-gauge worm constant. Four exact benchmarks recover known sharp values. The construction uses an elementary circuit--circumradius form of the established non-fitting-polygon and capacity theory. We supply its support and ledger derivation, the finite complete test family in arbitrary dimension, a cover vertex bound, and the resulting algebraicity statement.
+  The surrounding escape--covering framework includes endpoint placement, attainment, gauge stability, and finite-to-continuum error bounds. For nonsymmetric gauges the objects are parametrized closed curves, so orientation-dependent length is retained. Through the published capacity identity, the improved Wetzel estimate gives a product volume--capacity factor below $1.023781939711102$ for every planar ellipsoidal gauge.</summary>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-31T02:55:11Z</published>
+    <arxiv:comment>83 pages including formalized proofs in Lean</arxiv:comment>
+    <arxiv:primary_category term="math.MG"/>
+    <author>
+      <name>Zhipeng Deng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.37724v1</id>
+    <title>Moment Polyptychs and the Equivariant Quantisation of Hypertoric Varieties</title>
+    <updated>2026-10-27T11:31:17Z</updated>
+    <link href="https://arxiv.org/abs/2610.37724v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.37724v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the equivariant geometric quantisation of a non-compact hypertoric variety of complex dimension $2n$ using symplectic cutting. When the defining arrangement is cooriented so that its base region is non-empty and bounded, fibre rotation has proper moment map and produces compact Kähler orbifold cuts carrying the residual torus action. We introduce the moment polyptych of such a cut, a polytopal complex assembled from truncated arrangement regions, and show that its vertices and local lattice data determine the fixed points, tangent weights, and finite orbifold groups required for equivariant orbifold Riemann-Roch localisation. Even for a smooth hypertoric manifold, a reducible core forces every cut in the outer cut chamber to have non-trivial cyclic isotropy, while the cuts are smooth if and only if the manifold is the cotangent bundle of its distinguished compact toric subvariety, which is then a product of projective spaces. For a positive regular integral level $d$ in the outer cut chamber, algebraic cutting identifies the cut's quantisation with a finite filtration piece of the circle-graded quantisation of the original hypertoric variety, whose successive quotients recover the individual circle-weight spaces. We prove that the higher cohomology of the pre-quantum line orbibundle vanishes at every such level, so that the localised index is the character of the actual space of sections. Finally, a residual weight $x$ occurs at level $d$ if and only if $\mathcal{S}(x) \leq d$, where $\mathcal{S}$ is the arrangement slack function, with multiplicity $\binom{d - \mathcal{S}(x) + n}{n}$. Thus, each finite stage admits a weighted lattice-point description whose multiplicity function is supported on the lattice points in the support of the level-$d$ moment polyptych.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-27T11:31:17Z</published>
+    <arxiv:comment>57 pages, 14 figures</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Benjamin C. W. Brown</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.35815v1</id>
+    <title>Security Region Compression via Hybrid Vertex Pruning for Enhanced Computational Efficiency</title>
+    <updated>2026-10-26T17:43:40Z</updated>
+    <link href="https://arxiv.org/abs/2610.35815v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.35815v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The security region (SR) specifies a joint feasible region in the operational space involving various installations within the power system. It enables dynamic allocation of capacity among these energy units, thereby unlocking additional grid potential for power delivery and mitigating congestion. By constructing a convex hull from a set of vertices to form a polytope, the SR can be effectively represented with an acceptable accuracy loss. However, the SR computation inevitably generates many low-quality vertices, which contribute little to the overall hypervolume and can be discarded. By introducing SR compression, the SR data size can be reduced, which in turn facilitates the memory-efficient computation of SR and time-efficient solution of SR-related optimization problems. Accordingly, this paper proposes a vertex pruning approach that mixes local and backward search policies to achieve effective SR compression. In particular, the backward search strategy allows previously pruned vertices to be recycled when they are re-identified as critical. Subsequently, we incorporate this approach to enhance computational efficiency in the aforementioned applications. Numerical validations are conducted on two realistic medium-voltage Dutch grid cases. The results demonstrate at most 1.65% hypervolume loss with over 96.0\% SR data size reduction after applying the proposed compression approach. Empowered by this compression, the 8-dimensional (8D) SR becomes computationally tractable. Moreover, in relevant grid-aware computation challenges, the solving time can be reduced by at least 52.9% with at most an 1.36% optimality loss. All above validate both the efficacy and values of the proposed SR compression approach.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-26T17:43:40Z</published>
+    <arxiv:comment>10 pages, 14 figures</arxiv:comment>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Sicheng Gong</name>
+    </author>
+    <author>
+      <name>Zeyu Liu</name>
+    </author>
+    <author>
+      <name>Danyang Xu</name>
+    </author>
+    <author>
+      <name>Hongjie Jia</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.35433v2</id>
+    <title>Population Capacity and the Geometry of Thermomajorization</title>
+    <updated>2026-11-05T14:28:20Z</updated>
+    <link href="https://arxiv.org/abs/2610.35433v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.35433v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We characterize finite-dimensional quasiclassical state conversion under thermal operations through population capacities: the maximum population that thermal operations can concentrate on each subset of energy levels. We show that these capacities form a normalized, nondecreasing submodular rank function whose base polytope coincides with the thermally reachable population region. This representation provides complete accessibility constraints and a greedy construction of states maximizing the expectation value of any system observable. For a prescribed target, exact conversion can be certified by the optimized responses of at most $n-1$ target-adapted binary work-extraction probes. For approximate conversion, we exploit the Lorenz-curve structure of population capacities to construct, in $O(n^2\log n)$ arithmetic and comparison operations, a reachable state that simultaneously minimizes every convex separable residual error at fixed positive comparison weights. This state also realizes a common first contact with the corresponding target-centered smoothing regions. Finally, the optimal trace-distance error equals the largest capacity advantage of the target over the initial state, attained at a target thermomajorization prefix and determined by the same optimized binary-probe responses. Thus population capacities provide a unified, constructive framework for thermal accessibility, observable optimization, conversion certification, and universal approximation.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-26T13:36:57Z</published>
+    <arxiv:comment>improved and extended version; 15 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>F. Meroi</name>
+    </author>
+    <author>
+      <name>C. Massri</name>
+    </author>
+    <author>
+      <name>M. Losada</name>
+    </author>
+    <author>
+      <name>G. Bellomo</name>
+    </author>
+    <author>
+      <name>G. M. Bosyk</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.32759v2</id>
+    <title>G-ORACLE: A Fast Geometric Method To Explore All Near-Optimal Designs for Energy Systems</title>
+    <updated>2026-11-05T16:14:11Z</updated>
+    <link href="https://arxiv.org/abs/2610.32759v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.32759v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modeling to Generate Alternatives (MGA) methods explore the near-optimal solutions of energy system optimization models (ESOMs), i.e., alternative planning pathways whose cost lies within a small predefined slack of the optimum but which can differ substantially in technology composition, regional distribution, and environmental impacts. Among MGA methods, ORACLE uniquely guarantees convergence to the near-optimal set within a targeted tolerance by iteratively refining inner and outer polytope approximations. At each iteration, given a trial point, it solves a problem as hard as the ESOM to find the nearest near-optimal solution to it. However, the trial point is obtained by solving a bilevel problem whose solution time grows rapidly with the number of iterations and eventually dominates the computational cost of the method.
+  To eliminate this bottleneck, we present G-ORACLE, which exploits the fact that an optimal solution of the bilevel problem is always attained at a vertex of the outer approximation. G-ORACLE therefore replaces the bilevel problem with incremental vertex enumeration and one convex projection per vertex, while retaining the convergence guarantee of ORACLE. A supporting-hyperplane check further avoids unnecessary recomputation of these projections as the inner approximation grows.
+  We evaluate G-ORACLE on an electricity-only PyPSA-Eur model, exploring the near-optimal space of the installed capacities of six generation and two storage technologies. While ORACLE's bilevel problem exceeds 8 hours at iteration 94, G-ORACLE with the beneath-and-beyond method performs the trial-point search in at most 7 seconds throughout 247 iterations, leaving the ESOM solves as the only significant computational cost.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-23T15:02:24Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Sina Hajikazemi</name>
+    </author>
+    <author>
+      <name>Florian Steinke</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.28469v1</id>
+    <title>On the stability of displacement energy in toric manifolds</title>
+    <updated>2026-10-20T16:21:42Z</updated>
+    <link href="https://arxiv.org/abs/2610.28469v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.28469v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a quantitative exploration of the behaviour of displacement energy of Lagrangians under stabilization. In particular, we completely characterize the displacement behaviour of toric fibres in Fano 4-manifolds. Our approach relates the geometry of the moment polytope's caustic to the structure of the (bulk-deformed) superpotential and to the presence of symmetric probes.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-20T16:21:42Z</published>
+    <arxiv:comment>30 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Jean-Philippe Chassé</name>
+    </author>
+    <author>
+      <name>Ipsita Datta</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.23631v2</id>
+    <title>Certifying information flow in multi-agent behaviours</title>
+    <updated>2026-11-03T06:35:01Z</updated>
+    <link href="https://arxiv.org/abs/2610.23631v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.23631v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study which input-output behaviours of several agents can be produced by a declared communication schedule, that is, a fixed sequence of senders, recipients, message alphabets, and output times, together with shared randomness. Since a schedule admits only finitely many deterministic protocols, membership is a linear program, and an infeasible target is excluded by a separating inequality. Under explicit operational assumptions, we prove that the affine hull of the achievable behaviours is described exactly by the equalities stating that each joint output statistic depends only on the inputs that can reach the agents involved, so that a violated equality identifies both the statistic and the missing input. One binary message per event already attains this affine hull, so message capacity restricts which behaviours are achievable without being visible to any equality. We apply the result to one-bit broadcast and relay hierarchies for two and three agents, and to low-order projections of the local polytope.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-16T15:35:52Z</published>
+    <arxiv:comment>15 pages</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>M. Haider Akbar</name>
+    </author>
+    <author>
+      <name>Onur Pusuluk</name>
+    </author>
+    <author>
+      <name>Özgür E. Müstecaplıoğlu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.15829v2</id>
+    <title>Guarded Block Transfers for Polytope Distance: Linear Convergence with Explicit Constants and Gap-Certified Screening for SVM Training</title>
+    <updated>2026-10-16T04:25:00Z</updated>
+    <link href="https://arxiv.org/abs/2610.15829v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.15829v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Hard-margin SVM training is the distance problem between two convex hulls, which the Triangle Algorithm (TA) solves with a certified duality gap. We propose \emph{guarded block transfers}: $k$ Mitchell--Demyanov--Malozemov (MDM) transfers per scan are aggregated into one exact line search, guarded by a comparison with the single best transfer at a cost independent of the number of points $n$, and replaced by an away step when the leading transfer is capacity-clipped. On the Minkowski-difference polytope, where the objective is $1$-strongly convex, we prove global linear convergence with explicit constants and no combinatorial swap-step bounds; the per-step contraction is $k$-independent and only the drop-count bound grows with $k$, so aggregation is provably safe while the saving in scans is measured, not proved. Since the TA certificate is the Frank--Wolfe gap divided by the current distance, gap-safe screening applies, and we bound the iteration after which it has removed every zero-weight point off the optimal faces by $O\!\left(\tfrac{k}ρ\log\tfrac{1}τ\right)$ up to logarithmic factors in the geometry, $ρ$ the rate constant and $τ$ the optimal-face margin. On five LIBSVM benchmarks, with fairer baselines than our submission, the solver matches the baselines to four or five digits wherever both converge, ties LIBSVM on sparse-support hard margins and beats our blended pairwise conditional gradients (BPCG). But our full-cache sequential minimal optimisation (SMO) code ties or beats it on kernel $L_2$ margins, LIBLINEAR's dual solver is up to $4.5\times$ faster on the separable $L_2$ margin, and our solver is one to three orders of magnitude slower than LIBLINEAR's Newton solver on dense-support $L_2$ margins and than LIBSVM on a nearly touching kernel hull. Its edge is the certificate, not speed.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-11T18:32:40Z</published>
+    <arxiv:comment>Accepted as a poster at OPT 2026: 18th Annual Workshop on Optimization for Machine Learning (NeurIPS 2026 workshop). 19 pages (6 pages main text), 3 figures. Code: https://github.com/iammayankg/triangle-algorithm-sv</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Mayank Gupta</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.12279v1</id>
+    <title>Invariant sets and spectral rigidity of Hamiltonian diffeomorphisms</title>
+    <updated>2026-10-08T16:38:20Z</updated>
+    <link href="https://arxiv.org/abs/2610.12279v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.12279v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We solve a well-known question of Polterovich from 2002 regarding the rigidity of Hamiltonian diffeomorphisms in Hofer's metric in dimension two: every non-trivial Hamiltonian diffeomorphism of a surface of genus at least one has all positive iterations separated from the identity in Hofer's metric. In higher dimensions, we make progress on the case of autonomous Hamiltonian flows: we prove Hofer non-recurrence for symplectically hyperbolic manifolds, and completely characterize Hofer recurrence for functions of the moment polytope on monotone toric manifolds. These results apply equally well to Viterbo's spectral metric, settling cases of the $γ$-rigidity conjecture, and therefore in many cases also to the $C^0$-metric. Our approach relies on the philosophy that symplectically visible invariant sets govern symplectic non-recurrence phenomena. In dimension two, we use invariant annuli provided by low-dimensional dynamics, and apply methods of $C^0$ symplectic topology to approximately invariant Lagrangian submanifolds. For symplectically hyperbolic manifolds, the invariant sets are provided by sublevel and superlevel sets of autonomous Hamiltonians, while in the toric case, they comprise Lagrangian torus fibers. Across the arguments, we use quantitative Lagrangian Floer theory and its relation to notions of classical dynamics.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-08T16:38:20Z</published>
+    <arxiv:comment>99 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Habib Alizadeh</name>
+    </author>
+    <author>
+      <name>Egor Shelukhin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.12000v1</id>
+    <title>On the separability of Bell-diagonal states with absolutely positive partial transposition</title>
+    <updated>2026-10-08T14:06:15Z</updated>
+    <link href="https://arxiv.org/abs/2610.12000v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.12000v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Absolutely positive partial transpose (APPT) states, which remain PPT under every global unitary, provide a spectral relaxation of absolutely separable states, which remain separable under every such transformation. Despite substantial progress, whether these two notions coincide beyond qubit-qudit systems remains unresolved, motivating the study of structured state families in which the APPT spectral constraints and separability can be analyzed exactly. We study this problem for Bell-diagonal states in two settings: the standard two-qutrit Weyl-Heisenberg basis and the two-ququart lattice basis generated by two-qubit Pauli operators. In the two-qutrit case, we show that a linearized necessary condition for APPT defines a polytope of spectra in which every associated Weyl-Heisenberg Bell-diagonal state admits an exact decomposition into explicitly separable states. This yields a separability criterion that applies to a region even larger than the APPT set itself. In the two-ququart lattice Bell-diagonal setting, we show that a state remains PPT under every permutation of its Bell coefficients if and only if its six largest Bell coefficients sum to at most 1/2, and we prove that all such states are separable. Equivalently, every entangled lattice Bell-diagonal state becomes NPT after a suitable coefficient permutation and is therefore not APPT. The proofs combine convex-polytope analysis, affine and symplectic orbit reductions, and exact rational decompositions into separable states supported on affine Lagrangian subsets. Our results rule out entangled APPT states in both Bell-diagonal families, and provide simple spectral inequalities as sufficient criteria for separability in both cases. Being basis-specific, however, they do not by themselves settle whether APPT and absolute separability coincide.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-08T14:06:15Z</published>
+    <arxiv:comment>13 + 9 pages, no figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Ayan Patra</name>
+    </author>
+    <author>
+      <name>Beatrix C. Hiesmayr</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.08348v1</id>
+    <title>Can one hear the shape of a lattice random walk?</title>
+    <updated>2026-10-06T13:40:28Z</updated>
+    <link href="https://arxiv.org/abs/2610.08348v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.08348v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We construct distinct high-dimensional mean-zero finite range lattice random walks having pairwise-equal return probabilities for all step counts. The same examples provide pairwise-distinct shapes of discretizations of the standard Laplacian with pairwise-equal density state functions.
+  The main contribution is a reconstruction theorem: to a colored trivalent graph one associates a quantum Clebsch--Gordan polytope, and this association is a full functor, in particular from the polytope one can uniquely recover the original graph. These polytopes appear as moment polytopes of toric degenerations of character varieties (moduli spaces of rank-2 bundles on curves), yielding a combinatorial non-abelian Torelli theorem. In symplectic geometry, the reconstruction theorem implies that monotone Lagrangian tori on odd character varieties associated with these degenerations are pairwise non-Hamiltonian isotopic. These results, and some of the applications, arose from the study of mirror symmetry for moduli spaces of vector bundles, and of the related Laurent phenomenon for mutations of graph potentials.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-06T13:40:28Z</published>
+    <arxiv:comment>25 pages, all comments welcome</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Pieter Belmans</name>
+    </author>
+    <author>
+      <name>Sergey Galkin</name>
+    </author>
+    <author>
+      <name>Swarnava Mukhopadhyay</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.04279v1</id>
+    <title>Computing Equilibria in Integer Programming Games with Shared Constraints</title>
+    <updated>2026-10-03T04:18:37Z</updated>
+    <link href="https://arxiv.org/abs/2610.04279v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.04279v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We develop a cutting-plane algorithm for computing pure Nash equilibria in finite integer games with shared constraints, where a deviation may be feasible against one opponent profile and infeasible against another. Conditional equilibrium inequalities capture this dependence through an explicit activation term. We give affine encodings of costs and activation conditions and prove that the resulting inequalities characterize the equilibrium set exactly. Embedded as lazy constraints in branch-and-cut, they yield the Generalized Zero-Regret algorithm for optimizing a linear objective over exact or approximate equilibria; a bisection procedure maintains certified bounds on the smallest achievable approximation factor. We also prove that, when the conditional polytopes have integral vertices, a concave cost is constant on the minimal face containing an equilibrium strategy, so strict concavity forces vertex strategies; for uniform integer-splittable bin packing, a cost-preserving transformation yields vertex equilibria even without strict concavity. We give formulations for bin packing, network formation, and knapsack games with shared capacities and evaluate the algorithm on 3,300 instances, computing a socially optimal equilibrium on all but 43, certifying nonexistence on 16, and certifying approximation factors within a few percent where no exact equilibrium exists.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-03T04:18:37Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Bainian Hao</name>
+    </author>
+    <author>
+      <name>Hyunwoo Lee</name>
+    </author>
+    <author>
+      <name>Robert Hildebrand</name>
+    </author>
+    <author>
+      <name>Carla Michini</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.39917v1</id>
+    <title>Log-concavity and Approximate Counting for Totally Unimodular Polytopes</title>
+    <updated>2026-09-30T15:08:19Z</updated>
+    <link href="https://arxiv.org/abs/2609.39917v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.39917v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a new lower bound on the number of lattice points of all totally unimodular polytopes, generalizing previous lower bounds on contingency tables, integer flows, and beyond. Our bound is based on the Gurvits capacity convex optimization problem, and thus our result implies an efficient deterministic algorithm for approximate counting of the lattice points up to an explicit exponential factor. We achieve our bounds by showing that the associated generating polynomials fit into a new general class of log-concave polynomials called VLC ("variable-wise log-concavity''). This also implies a conjecture of Ferroni and Higashitani on the evaluations of the Ehrhart polynomials of unimodular polytopes. The essential ingredient for these results is the resolution of Barvinok's log-concavity conjecture for contingency tables on lines, which was proven using ChatGPT 6 Astra. We conjecture a generalization of Barvinok's conjecture, which we believe will lead to stronger and more general bounds.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-30T15:08:19Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Jonathan Leake</name>
+    </author>
+    <author>
+      <name>Maryam Mohammadi Yekta</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.30146v1</id>
+    <title>On the chamber decomposition of a Hamiltonian torus action</title>
+    <updated>2026-09-24T17:11:21Z</updated>
+    <link href="https://arxiv.org/abs/2609.30146v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.30146v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For a compact connected Hamiltonian $T$-space (with $T$ a torus), the components of the set of (relative) regular values of the momentum map are open convex polytopes, whose closures (called the chambers) form a polyhedral decomposition of the momentum polytope. In a previous paper we showed that there is a canonical affine stratification of the momentum polytope with the property that, while varying through a stratum, the fibers of the momentum map do not change as $T$-spaces. In this paper we show that the strata of this stratification are the relative interiors of the faces of the chambers. In doing so, we also give a proof of the fact that these faces form a polyhedral complex, which (it seems) was missing from the literature. We further extend the above to Hamiltonian $T$-spaces whose momentum map is proper as map into a convex set and, in the compact Kähler case, we point out a description of the above strata in terms of the $T_\mathbb{C}$-orbit closure polytopes.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-24T17:11:21Z</published>
+    <arxiv:comment>Comments welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Maarten Mol</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.27738v1</id>
+    <title>Ehrhart theorem for integral-integral affine manifolds with corners</title>
+    <updated>2026-09-23T11:53:45Z</updated>
+    <link href="https://arxiv.org/abs/2609.27738v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.27738v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study lattice-counting functions on compact integral-integral affine manifolds with corners, which generalize integral unimodular polytopes. We prove analogues of Ehrhart's theorem and Ehrhart-Macdonald reciprocity in this setting.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-23T11:53:45Z</published>
+    <arxiv:primary_category term="math.DG"/>
+    <author>
+      <name>Oded Elisha</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.25316v1</id>
+    <title>A Polytopal Realization of Higher-Categorical Associahedra</title>
+    <updated>2026-09-21T19:04:23Z</updated>
+    <link href="https://arxiv.org/abs/2609.25316v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.25316v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We describe a polytopal realization of categorical $n$-associahedra. The normal fan of this polytopal realization is a modification of the authors' velocity fan and was found by OpenAI's Astra model.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-21T19:04:23Z</published>
+    <arxiv:comment>9 pages, 7 fugures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Spencer Backman</name>
+    </author>
+    <author>
+      <name>Nathaniel Bottman</name>
+    </author>
+    <author>
+      <name>Daria Poliakova</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.24078v1</id>
+    <title>Determinantal capacity and $L^\infty$-Estimates</title>
+    <updated>2026-09-21T04:04:33Z</updated>
+    <link href="https://arxiv.org/abs/2609.24078v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.24078v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce determinantal ellipticity, or det-ellipticity, a quantitative structural condition for fully nonlinear elliptic operators on compact Kähler manifolds that provides the link between the $L^\infty$-estimates and algebraic/combinatorial properties of a large class of Hessian elliptic operators.
+  On the analytic side, we introduce $\mathcal D$-subsolutions extending the determinant sublevel condition of Sui--Sun. Using the auxiliary comparison method of Guo--Phong--Tong and pluripotential theory for complex Monge--Ampère equations, we obtain relative $L^\infty$-estimates in big cohomology classes under a determinant-entropy bound for viscosity supersolutions and singular reference potentials. Det-ellipticity provides a systematic construction of such subsolutions.
+  On the algebraic side, we study Gårding elliptic polynomial operators of degree $d$. We characterize the determinant increment bound with exponent $d/n$ by positivity of the determinantal capacity of the top homogeneous part. This is equivalent to balanced-point conditions for the Newton polytopes of rank-one scalarizations and to slope semistability of an associated subspace polymatroid. Together with the analytic hypotheses, these criteria yield relative $L^\infty$ estimates for the corresponding fully nonlinear equations.</summary>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-21T04:04:33Z</published>
+    <arxiv:comment>41 pages. Comments Welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.AP"/>
+    <author>
+      <name>Hao Fang</name>
+    </author>
+    <author>
+      <name>Biao Ma</name>
+    </author>
+    <author>
+      <name>Jinyang Wu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.21497v1</id>
+    <title>FORTE: Task-Adaptive Force Capability Optimization for Mobile Manipulators</title>
+    <updated>2026-09-18T08:48:56Z</updated>
+    <link href="https://arxiv.org/abs/2609.21497v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.21497v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Effective physical interaction control in robotic manipulation requires not only kinematically feasible motion but also sufficient force-interaction capability. Existing redundancy resolution methods often ignore task-specific force demands or maximize the force capability indiscriminately, sacrificing dexterity when large force margins are unnecessary. We propose a task-oriented force capability optimization framework for redundant mobile manipulators. A Vision-Language Model (VLM) infers object physical properties from an RGB image and a task description, generating a desired task-force sequence that captures gravitational and inertial demands. We then define a task-oriented force capability metric as the signed distance between a task-force uncertainty ball and the dynamic residual force polytope (RFP), quantifying compatibility between task demands and the robot's remaining actuation capacity. This metric is incorporated, alongside manipulability, joint-limit avoidance, trajectory smoothness, and base-oscillation suppression, into a whole-body multi-objective trajectory-optimization problem. Experiments on a mobile manipulator performing lifting and single-point-holding tasks under varying payload conditions demonstrate that the proposed method provides sufficient force capability for heavy loads while preserving high manipulability for light loads. This yields a task-adaptive balance that fixed capability-maximizing baselines (RFP inscribed radius, RFP cone) and manipulability-only optimization fail to achieve. The core implementation is publicly available at https://github.com/yeying256/FORTE.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-18T08:48:56Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Xiao Wang</name>
+    </author>
+    <author>
+      <name>Heng Zhang</name>
+    </author>
+    <author>
+      <name>Gokhan Solak</name>
+    </author>
+    <author>
+      <name>Fei Zhao</name>
+    </author>
+    <author>
+      <name>Arash Ajoudani</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.17932v1</id>
+    <title>A Better-Than-$3$ Approximation Algorithm for Demand Matching via Knapsack Intersection LP and Contention Resolution</title>
+    <updated>2026-09-15T23:44:53Z</updated>
+    <link href="https://arxiv.org/abs/2609.17932v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.17932v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The demand matching problem generalizes both the knapsack problem and the $b$-matching problem. In this problem, each edge of a graph has a demand and a weight, and each vertex has a capacity. The goal is to find a maximum weight subset of edges such that, at each vertex, the total demand of the incident selected edges does not exceed the vertex capacity. Parekh [IPCO 2011] proved that, if each edge is individually feasible, the natural LP relaxation for demand matching has integrality gap at most $3$, yielding a $3$-approximation algorithm. This bound is tight for the natural LP relaxation, matching the lower bound of Shepherd and Vetta [Math. Oper. Res. 2007].
+  We present a randomized $(3/2 + \sqrt{2} + \varepsilon) \approx (2.914 + \varepsilon)$-approximation algorithm for the demand matching problem for every $\varepsilon &gt; 0$, giving the first approximation ratio strictly better than $3$. For bipartite graphs, we obtain a randomized $(2 + \varepsilon)$-approximation algorithm for every $\varepsilon &gt; 0$. Both algorithms run in time polynomial in $1/\varepsilon$ and the input length. Our algorithms use a strengthened LP relaxation based on intersecting the integral knapsack polytopes associated with the vertices, together with a multiple-choice generalization. As a key ingredient, we prove the existence of a $(q, 1/(1+q))$-balanced contention resolution scheme for the integral knapsack polytope for every $q \in [0, 1]$, which may be of independent interest. The balance guarantee $1/(1+q)$ is tight in the worst case over all knapsack instances.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-15T23:44:53Z</published>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Michel X. Goemans</name>
+    </author>
+    <author>
+      <name>Yuchong Pan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.10402v2</id>
+    <title>A Topological Figiel-Lindenstrauss-Milman Theorem and its Applications</title>
+    <updated>2026-10-23T14:44:58Z</updated>
+    <link href="https://arxiv.org/abs/2609.10402v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.10402v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove a topological generalization of the Figiel--Lindenstrauss--Milman inequality, answering a recent question of Frick, Hosseini, and Vasileuski: every nonempty strongly regular CW complex with $v$ vertices, $f$ maximal cells, and a free involution that permutes its cells has $\mathbb Z/2$-index at most $4\log v\log f$. The classical inequality for centrally symmetric polytopes is the special case of polytope boundaries.
+  As an application, we show that every finite simplicial complex homotopy equivalent to $\mathbb RP^d$ has at least $\exp(Ω(\sqrt d))$ vertices. The previous best lower bound was $Ω(d^2)$. We also construct triangulations with $\exp(O(\sqrt d))$ vertices. Using the same method, we prove a low-dimensional Postnikov factorization theorem, which gives similar vertex lower bounds for several classical families, such as complex and quaternionic projective spaces, the $d$-torus, closed symplectic and aspherical manifolds, Grassmannians, classical Lie groups, and spherical space forms. Further applications include results in learning theory, convex geometry, computational topology, and topological bounds for chromatic numbers and Vietoris--Rips complexes.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-09T16:22:33Z</published>
+    <arxiv:comment>42 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Florian Frick</name>
+    </author>
+    <author>
+      <name>Kaave Hosseini</name>
+    </author>
+    <author>
+      <name>Eric Myzelev</name>
+    </author>
+    <author>
+      <name>Arya Narnapatti</name>
+    </author>
+    <author>
+      <name>Aliaksei Vasileuski</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.02630v1</id>
+    <title>An Affine Semigroup from Orbifold Boundary Conditions: cut, phylogenetic and hierarchical models in the unit-weight sector, and weighted configurations beyond them</title>
+    <updated>2026-09-02T14:08:25Z</updated>
+    <link href="https://arxiv.org/abs/2609.02630v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.02630v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The equivalence classes of boundary conditions of a gauge theory on a two-dimensional orbifold are the fibres of a marginal map, indexed by an affine semigroup: one generator per alphabet label, graded by weight, embedded by its local data at the fixed points. This note identifies that semigroup. Without weights the configuration has a name and a literature, whose results about our cases are attributed here: over $\mathbb{Z}_2$ it is the cut configuration of an explicit graph in the sense of Sturmfels-Sullivant --- the four-cycle for $T^2/\mathbb{Z}_2$, the wheel $W_4$ for $S^1/\mathbb{Z}_2\times S^1/\mathbb{Z}_2$ --- verified as an equality of configurations; over $\mathbb{Z}_m$ with equal cone orders, the group-based phylogenetic model on a claw tree; with unequal orders, a mixed-order variant we do not find in the literature; for higher products, the binary hierarchical model of a cross-polytope boundary complex. The product orbifold's ring is a row of a 2008 table --- codimension, degree, minimal generators, normality --- every invariant of which our machinery reproduced without knowing of it. What none of the three covers is the alphabet with weights, which arise from induction to higher-dimensional irreducibles of a non-abelian space group and from conjugate-pair recombination over real or quaternionic ground. That sector is adjacent to, but not identified with, the non-abelian direction Sturmfels and Sullivant raised in 2005, and is where our contributions sit: gluing trees for the weighted alphabets and the orthogonal and symplectic columns, and the group-based model on the tripod, a complete intersection exactly when the finite abelian group has order at most three. The first group beyond $\mathbb{Z}_3$ separates local from global: the $\mathbb{Z}_4$ tripod is a complete intersection on the Zariski-open set the phylogenetics literature works in, and not globally.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-02T14:08:25Z</published>
+    <arxiv:comment>16 pages, 3 figures. Companion to Part IX-A, "The Alphabet of Orbifold Boundary Conditions", which determines the alphabet whose relations are computed here: https://doi.org/10.5281/zenodo.22254861 . This note's record, with every ancillary script and its archived receipt: https://doi.org/10.5281/zenodo.22254863</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Carles Marín</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.00439v2</id>
+    <title>Models and Algorithms for Reserve Deliverability in Cross-Zonal Balancing Capacity Markets</title>
+    <updated>2026-09-21T11:42:27Z</updated>
+    <link href="https://arxiv.org/abs/2609.00439v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.00439v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In power markets where the physics of the transmission grid is closely represented in market clearing models, certain cross-zonal power exchanges can take place only if other exchanges occur concurrently. This leads to challenges in cross-zonal balancing capacity markets, where the activation of reserves in real time remains uncertain. Ensuring reserve deliverability in all activation scenarios is naturally modeled as a stochastic programming (SP) problem, whose size grows exponentially with the number of locations in the network. This formulation scales poorly in real-world applications. We first show that activation scenarios can be expressed in an order-book-agnostic way, reducing the challenge to a network modeling problem and improving computational performance. We then introduce a general inner approximation principle that we use to derive two scalable inner approximations and one column generation algorithm for tackling one of the approximations. The first inner approximation is well known to practitioners, and relates to a basic result for describing boxes in a polytope, while the second model, its associated column generation algorithm and finite-dimensional reformulation are based on semi-infinite linear programming and robust linear optimization. We compare the inner approximations to the exact SP formulation, which we also solve via a Dantzig-Wolfe decomposition for comparison purposes. Numerical results show that these inner approximations are much more scalable than the stochastic programming formulation, while reaping most of the benefits of cross-zonal exchanges. The approaches are of particular interest for future pan-European cross-zonal balancing capacity markets, and can also accommodate co-optimization of energy and balancing capacity products.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-31T22:24:45Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Mehdi Madani</name>
+    </author>
+    <author>
+      <name>Zejun Ruan</name>
+    </author>
+    <author>
+      <name>Anthony Papavasiliou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.31026v1</id>
+    <title>Toric Constructions via Integral Transversality</title>
+    <updated>2026-08-31T16:08:38Z</updated>
+    <link href="https://arxiv.org/abs/2608.31026v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.31026v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the Delzant world, symplectic toric manifolds correspond to unimodular polytopes, and unimodularity-preserving polytope constructions correspond to geometric constructions on the manifold side. We treat, in a unified framework, constructions such as taking a face, taking a slice, and polytope intersections, identifying each with its geometric counterpart, namely invariant submanifolds, symplectic reduction, and reduction of a product (a full list appears in Table 1). The key tool is "integral transversality", a lattice-refined transversality condition that provides a uniform criterion for preserving unimodularity, ensuring smoothness on the manifold side. To keep every construction within a single ambient vector space -- the dual of the Lie algebra of a fixed torus -- we allow the torus actions involved to have nontrivial, but connected kernels.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-31T16:08:38Z</published>
+    <arxiv:comment>54 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Ana Cannas da Silva</name>
+    </author>
+    <author>
+      <name>Reto Kaufmann</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.23436v1</id>
+    <title>Limits of quantization from mixed to real polarizations on toric varieties</title>
+    <updated>2026-08-24T16:10:41Z</updated>
+    <link href="https://arxiv.org/abs/2608.23436v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.23436v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $(M, ω, J)$ be a $2n$-dimensional toric variety determined by a Delzant polytope $P$, whose $T^{n}$-symmetry determines a real polarization $\mathcal{P}_{\mathbb{R}}$. Let $K \subset T^{n}$ be a subtorus. By a construction due to Leung and the first author, the $K$-action induces a mixed polarization $\mathcal{P}_{K}$.
+  This paper investigates the relationship between the quantum Hilbert spaces $\mathcal{H}_{K}$ and $\mathcal{H}_{\mathbb{R}}$ associated with the polarizations $\mathcal{P}_{K}$ and $\mathcal{P}_{\mathbb{R}}$. Starting from $\mathcal{P}_{K}$, we use an imaginary-time flow to construct a one-parameter family of mixed polarizations $\mathcal{P}_{K,t}$ on $M$ interpolating between $\mathcal{P}_{K}$ and $\mathcal{P}_{\mathbb{R}}$, with $\mathcal{P}_{K,0}=\mathcal{P}_{K}$ and $\lim_{t\to\infty}\mathcal{P}_{K,t}=\mathcal{P}_{\mathbb{R}}$. For the corresponding quantum Hilbert spaces $\mathcal{H}_{K,t}$, we lift the imaginary-time flow to the prequantum line bundle to obtain a $T^{n}$-equivariant isomorphism $\mathcal{H}_{K}\cong\mathcal{H}_{K,t}$. We finally show that $\mathcal{H}_{K,t}$ converges to $\mathcal{H}_{\mathbb{R}}$ as $t\to\infty$.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-24T16:10:41Z</published>
+    <arxiv:comment>24 pages. Comments are welcome</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Dan Wang</name>
+    </author>
+    <author>
+      <name>Yutung Yau</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.23431v1</id>
+    <title>Makhlin polytopes are Demazure string polytopes</title>
+    <updated>2026-08-24T16:06:19Z</updated>
+    <link href="https://arxiv.org/abs/2608.23431v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.23431v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that Makhlin's polytopes in type $B_n$ are unimodularly equivalent to string polytopes for Demazure modules in type $B_{2n-1}$. The proof passes through type $C$, combining Makhlin's diagonal comparison with symplectic FFLV polytopes and the $B/C$ similarity for string cones.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-24T16:06:19Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Ghislain Fourier</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.10370v9</id>
+    <title>Eventual polynomiality and dualities of relative Ehrhart functions</title>
+    <updated>2026-10-29T14:32:59Z</updated>
+    <link href="https://arxiv.org/abs/2608.10370v9" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.10370v9" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Classical Ehrhart theory measures the discrete capacity of a convex rational (or integral) polytope $P$ by counting the number of lattice points in the $t$-th dilate $tP$ of $P$. In this paper, we extend this paradigm by replacing a lattice point with a geometric object $Q$ of dimension at most $\dim P$. We show that the counting function $\mathrm{ehr}(P,Q;t)$ of such valid translations of $Q$ into $tP$ inherits eventual quasi-polynomiality (or eventual polynomiality) with leading term $\mathrm{vol}(P)t^d$, where $d = \dim P$. This result is naturally derived by induction on the dimension, based on the classical quasi-polynomiality (or polynomiality) of Ehrhart functions. Similarly, replacing $P$ with its relative interior $P^\circ$ defines $\mathrm{ehr}^\circ(P,Q;t)$, which is also shown to be an eventual quasi-polynomial (or eventual polynomial). Furthermore, we prove several formulas for relative Ehrhart functions under the condition that $P = kP_0$ and $Q = lQ_0$ for some integers $k$, $l &gt; 0$, and polytopes $P_0$ and $Q_0$ with $\dim Q_0 &gt; 0$ such that $Q_0$ is inscribed in $P_0$. In particular, we prove that under this condition, $\mathrm{ehr}(P,Q;-t) = (-1)^{d}\mathrm{ehr}^\circ (P,Q;t+ρ)$ $(t \gg 0)$ holds for some integer $ρ&gt; 0$ if and only if $k \mid 2l$ via the classical Ehrhart--Macdonald reciprocity law. We also prove that under the same condition, $\mathrm{ehr}(P,Q;t) = \mathrm{ehr}^\circ (P,Q;t+σ)$ $(t \gg 0)$ holds for some integer $σ&gt; 0$ if and only if $\mathrm{ehr}^\circ (P_0;\mathrm{codeg}\,P_0) = 1$ and $k \mid \mathrm{codeg}\,P_0$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-11T02:01:30Z</published>
+    <arxiv:comment>15 pages, 8 figures; Corrected misprints</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Takashi Hirotsu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.08918v1</id>
+    <title>Toric real loci via moment polytopes</title>
+    <updated>2026-08-09T21:14:34Z</updated>
+    <link href="https://arxiv.org/abs/2608.08918v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.08918v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Toric real loci are distinguished lagrangian submanifolds of toric symplectic manifolds. We develop a polyhedral model for toric real loci, called a kaleidoscope, based on the restriction of the moment map. This construction provides a direct geometric description of the topology of toric real loci and leads to simple criteria for orientability, together with transparent formulas for the Euler characteristic. We illustrate the theory with numerous examples and count, in every complex dimension up to 9, the smooth toric Fano varieties whose real loci are orientable. The kaleidoscope construction offers a simple, visual, and effective framework for understanding the topology of toric real loci through the combinatorics of their moment polytopes.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-09T21:14:34Z</published>
+    <arxiv:comment>49 pages, 16 figures</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>João Camarneiro</name>
+    </author>
+    <author>
+      <name>Ana Cannas da Silva</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.00810v1</id>
+    <title>New Results Towards the Characterization of Service Rate Region of Reed-Muller Codes</title>
+    <updated>2026-08-01T18:25:16Z</updated>
+    <link href="https://arxiv.org/abs/2608.00810v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.00810v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Service Rate Region (SRR) serves as a critical metric for evaluating the concurrent service capacity of distributed storage systems. While several works have characterized the SRR for MDS codes and first order Reed-Muller codes, for high-order Reed-Muller codes the problem becomes way more complicated and only partial results were given by Ly, Soljanin, and Lalitha [IEEE ISIT 2025]. In this paper, we refine the SRR analysis by explicitly characterizing the intersection patterns of recovery sets for high-order Reed-Muller codes, deriving the exact region for the case m=r+1 and providing new types of strictly tighter constraints to bridge the gap between existing approximations and the exact SRR polytope.</summary>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-01T18:25:16Z</published>
+    <arxiv:comment>6 pages, 3 figures, accepted by IEEE International Symposium on Information Theory 2026 (ISIT 2026)</arxiv:comment>
+    <arxiv:primary_category term="cs.IT"/>
+    <author>
+      <name>Chenyang Yu</name>
+    </author>
+    <author>
+      <name>Luopeng Sun</name>
+    </author>
+    <author>
+      <name>Yiwei Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.20281v1</id>
+    <title>Contextual Fraction Beyond Satisfiability: Pure NAE Completeness, Exact Orbit Packings, and Width Barriers</title>
+    <updated>2026-07-29T13:57:21Z</updated>
+    <link href="https://arxiv.org/abs/2609.20281v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.20281v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The contextual fraction measures how much globally consistent probability can be packed beneath prescribed local event probabilities. We study the quantitative regime in which supported global assignments exist but the contextual fraction is nontrivial.
+  For balanced relational lifts, we identify the noncontextual fraction with a capacity-constrained packing of global homomorphisms and prove an exact orbit-capacity quotient under finite group symmetries. For the uniform Boolean relation $\NAE_3$, this becomes a minority-position congestion game on proper hypergraph two-colourings: \[ \NCF(e_H)=\frac{1}{3β(H)}. \] We also obtain a minimax dual, a cut-polytope formulation, and explicit values $2/3$ and $1/2$.
+  For exact hardness, we map a graph $G$ to an always-two-colourable anchor hypergraph $A(G)$ with \[ \NCF(e_{A(G)})=1 \Longleftrightarrow χ_f(G)\le3. \] We prove quantitative stability in terms of $χ_f(G)$ and construct a six-edge pure-$\NAE_3$ equality gadget that preserves the full noncontextual fraction under bounded-occurrence compilation. Thus deciding $\CF=0$ is NP-complete for simple $3$-uniform hypergraphs of maximum degree seven, even with a supplied proper two-colouring.
+  We further prove \[ \NCF(\widehat e^{\,\vartheta}) =\vartheta+(1-\vartheta)\NCF(e). \] This yields NP-hardness of distinguishing $\NCF=1/2$ from $\NCF\ge2/3$ on an always-satisfiable fixed five-ary switch template, and additive hardness below $1/12$. A gated colouring construction gives hardness within $1/2-\varepsilon$ for every $\varepsilon&gt;0$. Finally, bounded-treewidth instances admit exact compact extended formulations, while explicit families have extension complexity $2^{Ω(\sqrt N)}$ via cut-polytope projections.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-29T13:57:21Z</published>
+    <arxiv:comment>20 pages, 3 Tables, 0 Figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>Ronald Katende</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.26154v1</id>
+    <title>Graph Theoretic Approach to Quantum Nonstabilizerness</title>
+    <updated>2026-07-28T18:01:16Z</updated>
+    <link href="https://arxiv.org/abs/2607.26154v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.26154v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Detecting nonstabilizerness requires full tomography and an optimization over exponentially many stabilizer states. A limited Pauli measurement set promises resource-efficient magic certification, yet the resulting reduced stabilizer polytope is generally difficult to characterize. We trace this difficulty into two coupled obstructions: the simultaneous measurability of measurements captured by their frustration graph structure, and the consistency of sign dependencies from stabilizer formalism. We show that the sign dependencies can be discarded exactly whenever active dependencies are absent, and that perfect frustration graphs then make this reduced polytope efficiently solvable. This solvable regime derives a closed form bounded by the clique number of the frustration graph, revealing a tradeoff between witness capacity and simultaneous measurability. Clifford covariance allows rotated measurement sets to enlarge the detectable state space without raising the capacity. Graph structure therefore emerges as both a certificate of tractability and a design principle for scalable magic resource detection.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-28T18:01:16Z</published>
+    <arxiv:comment>14 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Yingjian Liu</name>
+    </author>
+    <author>
+      <name>Albert Gasull</name>
+    </author>
+    <author>
+      <name>Mengyao Hu</name>
+    </author>
+    <author>
+      <name>Ruiyun Zhang</name>
+    </author>
+    <author>
+      <name>Flavio Baccari</name>
+    </author>
+    <author>
+      <name>Jordi Tura</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.14010v2</id>
+    <title>The spread construction and non-uniqueness of visible Lagrangians</title>
+    <updated>2026-08-19T12:36:01Z</updated>
+    <link href="https://arxiv.org/abs/2607.14010v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.14010v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Every even symplectic Hirzebruch surface contains a Lagrangian torus and every odd symplectic Hirzebruch surface contains a Lagrangian Klein bottle as their respective real locus. From a toric point of view, this is a visible Lagrangian which surjects to the full moment polytope under the moment map. In this paper, we prove that every Hirzebruch surface contains both a Lagrangian torus and a Lagrangian Klein bottle with this property. An interesting consequence is that the topology of visible Lagrangian submanifolds is not determined by their image under the moment map. The proof is based on a new construction, which we call the spread of a family of Hamiltonian diffeomorphisms.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-15T16:39:27Z</published>
+    <arxiv:comment>21 pages, 5 figures, 1 table, minor changes</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Joé Brendel</name>
+    </author>
+    <author>
+      <name>Reto Kaufmann</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.08570v1</id>
+    <title>Newton--Okounkov bodies of partial flag varieties via cluster algebras</title>
+    <updated>2026-06-07T10:52:30Z</updated>
+    <link href="https://arxiv.org/abs/2606.08570v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.08570v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We construct Newton--Okounkov polytopes of Schubert varieties in partial flag varieties of arbitrary type using the cluster structure on a unipotent cell. When the governing cluster algebra is of infinite type, we prove that for any very ample homogeneous line bundle over a simply laced partial flag variety, the resulting family of Newton--Okounkov polytopes contains infinitely many pairwise nonequivalent polytopes up to integral affine transformation. As an application to symplectic geometry, we construct infinitely many distinct monotone Lagrangian tori in a broad class of simply laced partial flag varieties.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-07T10:52:30Z</published>
+    <arxiv:comment>45 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Yunhyung Cho</name>
+    </author>
+    <author>
+      <name>Myungho Kim</name>
+    </author>
+    <author>
+      <name>Yoosik Kim</name>
+    </author>
+    <author>
+      <name>Euiyong Park</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.06816v1</id>
+    <title>Seshadri constants and Gromov widths of toric varieties associated with generalized permutohedra</title>
+    <updated>2026-06-05T01:40:07Z</updated>
+    <link href="https://arxiv.org/abs/2606.06816v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.06816v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we study the Seshadri constants and Gromov widths of polarized toric varieties whose moment polytopes are generalized permutohedra. We show that both invariants coincide with the lattice width of the moment polytope, and provide an explicit formula for them in terms of the defining submodular function.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-05T01:40:07Z</published>
+    <arxiv:comment>13 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Atsushi Ito</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.26740v1</id>
+    <title>A Unified Theory of Ownership Concentration, Overlap, and Dependence</title>
+    <updated>2026-05-26T09:13:19Z</updated>
+    <link href="https://arxiv.org/abs/2605.26740v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.26740v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ownership concentration is not a scalar. For a normalized investor-stock matrix $A$, it has three irreducible layers: concentration across investors, concentration across stocks, and dependence in the joint assignment of investors to stocks. This paper develops a unified quadratic framework for those layers and shows that the same residual operator that measures static overlap also governs linearized market transmission. Raw micro concentration $M(A) = \sum_{i,j} A_{ij}^2$ admits exact row and column decompositions, support bounds, and fixed-marginal extremal characterizations on the transportation polytope. Benchmark-adjusted dependence $\mathcal{X}(A) = \sum_{i,j} (A_{ij} - p_i s_j)^2 / (p_i s_j)$ admits two exact decompositions: it is a size-weighted average of investor-level deviations from the market portfolio and, symmetrically, of stock-level deviations from the investor base. The paper also proves a multiscale aggregation law: under any partition of investors, total dependence splits exactly into between-group dependence and within-group heterogeneity. Spectrally, $\mathcal{X}(A)$ equals the sum of squared nontrivial singular values of the whitened matrix $D_p^{-1/2} A D_s^{-1/2}$. The residual operator $L$ then yields two dynamic consequences: idiosyncratic fire-sale vulnerability is bounded by the dominant overlap mode $ρ(A)$, while aggregate benchmark-relative alpha variance has worst-case capacity $ρ(A)^2$ and isotropic average-case capacity $\mathcal{X}(A)$. The fixed-marginal geometry also motivates a feasible-range sparsity score that benchmarks observed micro concentration against the sharp minimum and maximum implied by the marginals. The resulting framework separates scale concentration, feasible sparsity, overlap, and linear transmission in a way that is mathematically transparent and empirically usable for work on crowding, fragility, and systemic risk.</summary>
+    <category term="q-fin.PM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-26T09:13:19Z</published>
+    <arxiv:primary_category term="q-fin.PM"/>
+    <author>
+      <name>Miquel Noguer i Alonso</name>
+    </author>
+    <author>
+      <name>Iro Tasitsiomi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.25699v2</id>
+    <title>Volume-Refined Achievability and Converse Approximations for Noisy Permutation Channels</title>
+    <updated>2026-06-14T13:39:15Z</updated>
+    <link href="https://arxiv.org/abs/2605.25699v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.25699v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study volume-refined achievability and converse bounds for noisy permutation channels generated by strictly positive DMCs, allowing the reachable output polytope to have arbitrary affine dimension $d\ge 1$. The reachable output polytope may be lower-dimensional than the output simplex, whereas existing refined achievability analyses and fixed-error converses are not adapted to this intrinsic affine geometry. On the achievability side, we develop an affine-coordinate simplex-lattice construction adapted to the reachable output polytope, together with a nearest-neighbor decoder and a geometric error-reduction argument in the same coordinate space. This yields a Gaussian achievability approximation with an $o(1)$ remainder. On the converse side, we first use a meta-converse combined with a KL covering and a local testing estimate to obtain a fixed-error converse with a bounded remainder, which implies the logarithmic $ε$-capacity $d/2$. We then apply the meta-converse with a stratified Jeffreys-mixture auxiliary output distribution. Using a local Laplace approximation and a local likelihood-ratio approximation, this choice identifies the Fisher-volume term and an explicit Gaussian testing constant, yielding a constant-order converse approximation with an $o(1)$ remainder. The achievability and converse constants arise from different constructions and are not claimed to match in general.</summary>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-25T10:57:35Z</published>
+    <arxiv:comment>47 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.IT"/>
+    <author>
+      <name>Lugaoze Feng</name>
+    </author>
+    <author>
+      <name>Guocheng Lv</name>
+    </author>
+    <author>
+      <name>Xunan Li.</name>
+    </author>
+    <author>
+      <name>Ye Jin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.12800v1</id>
+    <title>Resolution Information: Limits of Ambiguity Resolution for Generative Communication</title>
+    <updated>2026-05-12T22:38:15Z</updated>
+    <link href="https://arxiv.org/abs/2605.12800v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.12800v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In generative communication, the transmitter sends a compact generative description, such as model parameters or a latent representation, rather than raw data. The receiver uses this description to form a posterior belief over the underlying state and to resolve semantic ambiguity: which interpretation, decision, or action is supported by the received representation? Inspired by Shannon's geometric view of communication as uncertainty resolution, we introduce resolution information as the minimum information update, measured in nats, required to move the receiver's posterior belief into a low-ambiguity semantic region. Our work yields three main results. First, when the receiver can form any posterior belief, corresponding to the ideal unconstrained case, resolution information reduces to a binary divergence that depends only on each region's prior probability. In this case, the shape of the regions is irrelevant. Under repeated sampling, ambiguity decays exponentially with an exponent equal to the resolution information, giving it an operational meaning as an ambiguity exponent. Second, when the generative representation constrains the posterior family, as in practice, geometry becomes operational and can create irreducible ambiguity floors: half-spaces remain resolvable, whereas polytope-type regions can exhibit residual ambiguity that no amount of additional information can remove. These results reveal a fundamental departure from classical channel coding. In Shannon theory, codes can be designed so that decoding regions separate messages and error probability vanishes below capacity. In generative communication, the model itself induces a constrained posterior geometry that may prevent asymptotic ambiguity resolution. The resulting limit is not on rate, but on resolvability itself.</summary>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-12T22:38:15Z</published>
+    <arxiv:comment>First draft, 8 pages, 3 figurs</arxiv:comment>
+    <arxiv:primary_category term="cs.IT"/>
+    <author>
+      <name>Angeles Vazquez-Castro</name>
+    </author>
+    <author>
+      <name>Faheem Dustin Quazi</name>
+    </author>
+    <author>
+      <name>Zhu Han</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.01275v2</id>
+    <title>Symplectic small covers in dimension four</title>
+    <updated>2026-05-05T04:49:24Z</updated>
+    <link href="https://arxiv.org/abs/2605.01275v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.01275v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study symplectic structures on four-dimensional small covers. Our main result shows that every symplectic four-dimensional small cover is aspherical. We then classify symplectic small covers over products of two polygons, proving that symplecticity is equivalent to factor-compatibility. We also classify them up to diffeomorphism. Finally, we construct a symplectic four-dimensional small cover whose orbit polytope is not combinatorially equivalent to a product of two polygons.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-02T06:22:12Z</published>
+    <arxiv:comment>25 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Suyoung Choi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.23848v1</id>
+    <title>Contact flexibility and rigidity for toric Gorenstein prequantizations and Ehrhart theory of toric diagrams</title>
+    <updated>2026-04-26T19:37:00Z</updated>
+    <link href="https://arxiv.org/abs/2604.23848v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.23848v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Gorenstein toric contact manifolds are good toric contact manifolds with zero first Chern class that are completely determined by certain integral convex polytopes called toric diagrams. The Ehrhart polynomial of these toric diagrams determines and is determined by the contact Betti numbers of the corresponding contact manifolds, i.e. the dimension of their cylindrical contact homology in eachdegree. In this paper we look into the following natural question: to what extent do these contact invariants determine the Gorenstein toric contact manifold? Flexibility is the norm and we illustrate it with the family of Gorenstein toric contact manifolds that arise as the prequantization of monotone iterated ${\mathbb P}^1$-bundles, i.e. monotone Bott manifolds. In each dimension, the Ehrhart polynomial of their toric diagrams is equal to the Ehrhart polynomial of the cross-polytope, corresponding to the monotone prequantization of ${\mathbb P}^1 \times \cdots \times {\mathbb P}^1$, and we describe the unimodular classification of these toric diagrams. On the rigidity side, we will show that the primitive prequantization of ${\mathbb P}^1 \times \cdots \times {\mathbb P}^1$ is rigid, i.e. completely determined as a Gorenstein toric contact manifold by its contact Betti numbers. More precisely, in each dimension, we show that its toric diagram, which we name small cross-polytope, is the unique toric diagram with its particular Ehrhart polynomial. We will also prove a rigidity result for a family of Gorenstein toric contact manifolds that arise as the primitive prequantization of monotone ${\mathbb P}^1$-bundles over ${\mathbb P}^{n-1}$.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-26T19:37:00Z</published>
+    <arxiv:comment>36 pages, 13 figures</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Miguel Abreu</name>
+    </author>
+    <author>
+      <name>Leonardo Macarini</name>
+    </author>
+    <author>
+      <name>António Rocha-Neves</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.18023v2</id>
+    <title>Spherical singularities in compactified Ruijsenaars--Schneider systems</title>
+    <updated>2026-05-06T10:32:01Z</updated>
+    <link href="https://arxiv.org/abs/2604.18023v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.18023v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate certain Liouville integrable systems constructed earlier via reduction of the quasi-Hamiltonian double of $\mathrm{SU}(n)$. These systems live on compact connected symplectic manifolds of dimension $2(n-1)$ and can be interpreted as compactified trigonometric Ruijsenaars--Schneider systems. Depending on the value of a parameter $0&lt;y&lt; π$, they arise in two drastically different forms: in type (i) these are toric systems, while in the type (ii) cases they possess globally continuous action variables that generate a Hamiltonian torus action (only) on a dense open subset of the phase space. The principal goal of the paper is to study those fibers of the action map (alias the $\mathbb{T}^{n-1}$ momentum map) which are contained in the complement of the domain of the densely defined torus action occurring in the type (ii) cases. We demonstrate that all such `singular fibers' are smooth connected isotropic submanifolds. We also work out a model of the fibers as quotient spaces of certain subgroups of $\mathrm{SU}(n)$ with respect to an action of another subgroup. The general results are exemplified by determining the vertices of the polytope filled by the action variables in the simplest type (ii) cases that appear for any $n\geq 4$ with $π/(n-1) &lt;y &lt; π/(n-2)$, and proving that the fibers over the `singular vertices' are diffeomorphic to $S^3 \simeq \mathrm{SU}(2)$ in these cases. In this way, our findings enrich the set of examples of Liouville integrable systems with spherical singularities.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-20T09:48:39Z</published>
+    <arxiv:comment>35 pages, 2 figures, v2: small correction in Section 6</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>L. Feher</name>
+    </author>
+    <author>
+      <name>H. R. Dullin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.14727v2</id>
+    <title>Geometric Capacity of Transformers: A Tropical Geometry Perspective</title>
+    <updated>2026-07-21T03:42:26Z</updated>
+    <link href="https://arxiv.org/abs/2604.14727v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.14727v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>To quantify the geometric capacity of transformers, we develop a tropical-geometric framework for analyzing the spatial partitions induced by conditioned self-attention. In the zero-temperature limit, we show that fixed-key top-$1$ routing is exactly represented by a power diagram in query space, while an auxiliary log-lifted value parameterization yields a vector-valued tropical rational representation. For Multi-Head Self-Attention (MHSA) with sequence length $N$ and $H$ attention heads, the joint routing geometry is encoded by Minkowski sums of headwise Newton polytopes, giving an $\mathcal{O}(N^H)$ universal bound that sharpens to $\mathcal{O}((HN)^{d_{\mathrm{model}}-1})$ once the number of heads reaches the intrinsic dimension $d_{\mathrm{model}}$. Extending this analysis across depth $L$, we derive the first tight asymptotic bounds on the number of linear regions in transformers ($Θ\!\left(N^{\min\{H,d_{\mathrm{model}}-1\}L}\right)$). We further show that finite-temperature softmax preserves the top-$1$ routing structure and admits exponentially decaying local approximation and differential bounds away from routing boundaries.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-16T07:39:00Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Ye Su</name>
+    </author>
+    <author>
+      <name>Yong Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.13507v1</id>
+    <title>Exploiting Scheduling Flexibility via State-Based Scheduling When Guaranteeing Worst-Case Services</title>
+    <updated>2026-04-15T05:52:20Z</updated>
+    <link href="https://arxiv.org/abs/2604.13507v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.13507v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Even when providing long-run, worst-case guarantees to competing flows of unit-sized tasks, a slot-timed, constant-capacity server's scheduler may retain significant, short-run, scheduling flexibility. Existing worst-case scheduling frameworks offer only limited opportunities to characterize and exploit this flexibility. We introduce a state-based framework that overcomes these limitations. Each flow's guarantee is modeled as a worst-case service that can be updated as tasks arrive and are served. Taking all flows' worst-case services as a collective state, a state-based scheduler ensures, from slot to slot, transitions between schedulable states. This constrains its scheduling flexibility to a polytope consisting of all feasible schedules that preserve schedulability.
+  We fully characterize this polytope, enabling scheduling flexibility to be fully exploited. But, as our framework is general, full exploitation is computationally complex. To reduce complexity, we show: that when feasible schedules exist, at least one can be efficiently identified by simply maximizing the server's capacity slack; that a special class of worst-case services, min-plus services, can be efficiently specified and updated using the min-plus algebra; and that efficiency can be further improved by restricting attention to a min-plus service subclass, dual-curve services. This last specialization turns out to be a dynamic extension of service curves that approaches near practical viability while maintaining all features essential to our framework.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PF" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-15T05:52:20Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Yike Xu</name>
+    </author>
+    <author>
+      <name>Mark S. Andersland</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.05499v1</id>
+    <title>MARS-Dragonfly: Agile and Robust Flight Control of Modular Aerial Robot Systems</title>
+    <updated>2026-04-07T06:43:08Z</updated>
+    <link href="https://arxiv.org/abs/2604.05499v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.05499v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modular Aerial Robot Systems (MARS) comprise multiple drone units with reconfigurable connected formations, providing high adaptability to diverse mission scenarios, fault conditions, and payload capacities. However, existing control algorithms for MARS rely on simplified quasi-static models and rule-based allocation, which generate discontinuous and unbounded motor commands. This leads to attitude error accumulation as the number of drone units scales, ultimately causing severe oscillations during docking, separation, and waypoint tracking. To address these limitations, we first design a compact mechanical system that enables passive docking, detection-free passive locking, and magnetic-assisted separation using a single micro servo. Second, we introduce a force-torque-equivalent and polytope-constraint virtual quadrotor that explicitly models feasible wrench sets. Together, these abstractions capture the full MARS dynamics and enable existing quadrotor controllers to be applied across different configurations. We further optimize the yaw angle that maximizes control authority to enhance agility. Third, building on this abstraction, we design a two-stage predictive-allocation pipeline: a constrained predictive tracker computes virtual inputs while respecting force/torque bounds, and a dynamic allocator maps these inputs to individual modules with balanced objectives to produce smooth, trackable motor commands. Simulations across over 10 configurations and real-world experiments demonstrate stable docking, locking, and separation, as well as effective control performance. To our knowledge, this is the first real-world demonstration of MARS achieving agile flight and transport with 40 deg peak pitch while maintaining an average position error of 0.0896 m. The video is available at: https://youtu.be/yqjccrIpz5o</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-07T06:43:08Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Rui Huang</name>
+    </author>
+    <author>
+      <name>Zhiqian Cai</name>
+    </author>
+    <author>
+      <name>Siyu Tang</name>
+    </author>
+    <author>
+      <name>Pengxuan Wei</name>
+    </author>
+    <author>
+      <name>Lidong Li</name>
+    </author>
+    <author>
+      <name>Xin Chen</name>
+    </author>
+    <author>
+      <name>Wenhan Cao</name>
+    </author>
+    <author>
+      <name>Zhenyu Zhang</name>
+    </author>
+    <author>
+      <name>Lin Zhao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.04729v3</id>
+    <title>A Complete Characterization of Convexity in Flow Games</title>
+    <updated>2026-10-20T13:00:51Z</updated>
+    <link href="https://arxiv.org/abs/2604.04729v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.04729v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Flow games coincide precisely with non-negative totally balanced games. We give a complete characterization of convexity for flow games with one arc per player. We prove that such a game is convex if and only if all simple source-to-sink paths can simultaneously carry their full path capacities. Equivalently, after deleting null arcs, the topology is a funnel network, and every arc can meet the combined demand of the paths through it. We provide polyhedral characterizations of convexity. In primal form, the game is convex if and only if the path-flow polytope is a box, allowing each path flow to vary independently up to its capacity. In dual form, convexity is equivalent to the existence of a minimum source-to-sink cut consisting entirely of private arcs. An arc is private if it belongs to exactly one simple source-to-sink path. We also give a polynomial-time algorithm that tests whether a given flow game is convex.</summary>
+    <category term="cs.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-06T14:54:53Z</published>
+    <arxiv:primary_category term="cs.GT"/>
+    <author>
+      <name>Han Xiao</name>
+    </author>
+    <author>
+      <name>Luying Zhang</name>
+    </author>
+    <author>
+      <name>Qizhi Fang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.02309v1</id>
+    <title>go-$m$HC: Direct Parameterization of Manifold-Constrained Hyper-Connections via Generalized Orthostochastic Matrices</title>
+    <updated>2026-04-02T17:51:19Z</updated>
+    <link href="https://arxiv.org/abs/2604.02309v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.02309v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Doubly stochastic matrices enable learned mixing across residual streams, but parameterizing the set of doubly stochastic matrices (the Birkhoff polytope) exactly and efficiently remains an open challenge. Existing exact methods scale factorially with the number of streams ($d$), while Kronecker-factorized approaches are efficient but expressivity-limited. We introduce a novel exact parameterization grounded in the theory of generalized orthostochastic matrices, which scales as $\mathcal{O}(d^3)$ and exposes a single hyperparameter $s$ which continuously interpolates between a computationally efficient boundary and the fully expressive Birkhoff polytope. Building on Manifold-Constrained Hyper-Connections ($m$HC), a framework for learned dynamic layer connectivity, we instantiate this parameterization in go-$m$HC. Our method composes naturally with Kronecker-factorized methods, substantially recovering expressivity at similar FLOP costs. Spectral analysis indicates that go-$m$HC fills the Birkhoff polytope far more completely than Kronecker-factorized baselines. On synthetic stream-mixing tasks, go-$m$HC achieves the minimum theoretical loss while converging up to $10\times$ faster. We validate our approach in a 30M parameter GPT-style language model. The expressivity, efficiency, and exactness of go-$m$HC offer a practical avenue for scaling $d$ as a new dimension of model capacity.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-02T17:51:19Z</published>
+    <arxiv:comment>29 pages, 30 figures, 9 tables. Includes supplementary material</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Torque Dandachi</name>
+    </author>
+    <author>
+      <name>Sophia Diggs-Galligan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.27812v2</id>
+    <title>LP-Based Algorithms for Scheduling in a Quantum Switch</title>
+    <updated>2026-06-16T12:27:14Z</updated>
+    <link href="https://arxiv.org/abs/2603.27812v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.27812v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider scheduling in a quantum switch with stochastic entanglement generation, finite quantum memories, and decoherence. The objective is to design a scheduling algorithm with polynomial-time computational complexity that stabilizes a nontrivial fraction of the capacity region. Scheduling in such a switch corresponds to finding a matching in a graph subject to additional constraints. We propose an LP-based policy, which finds a point in the matching polytope, which is further implemented using a randomized decomposition into matchings. The main challenge is that service over an edge is feasible only when entanglement is simultaneously available at both endpoint memories, so the effective service rates depend on the steady-state availability induced by the scheduling rule. To address this, we introduce a single-node reference Markov chain and derive lower bounds on achievable service rates in terms of the steady-state nonemptiness probabilities. We then use a Lyapunov drift argument to show that, whenever the request arrival rates lie within the resulting throughput region, the proposed algorithm stabilizes the request queues. We further analyze how the achievable throughput depends on entanglement generation rates, decoherence probabilities, and buffer sizes, and show that the throughput lower bound converges exponentially fast to its infinite-buffer limit as the memory size increases. Numerical results illustrate that the guaranteed throughput fraction is substantial for parameter regimes relevant to near-term quantum networking systems.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-29T18:49:41Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>R. Srikant</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.20517v1</id>
+    <title>A positive formula for volumes of moduli spaces of flat unitary connections on compact surfaces</title>
+    <updated>2026-03-20T21:35:33Z</updated>
+    <link href="https://arxiv.org/abs/2603.20517v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.20517v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We provide a manifestly positive expression for the volume of the moduli spaces of flat $\mathrm{U}(n)$-valued connections on punctured compact oriented surfaces. This volume is obtained by summing volumes of explicit polytopes describing coloured honeycombs on a polygon, in the spirit of the work of Knutson and Tao describing the spectrum of the sum of two hermitian matrices. As a corollary, we also provide a positive formula for marginals of the $\mathrm{U}(n)$-valued Yang-Mills measure on a compact oriented surface in terms of the probability distribution of an explicit path process.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-20T21:35:33Z</published>
+    <arxiv:comment>33 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Quentin François</name>
+    </author>
+    <author>
+      <name>David García-Zelada</name>
+    </author>
+    <author>
+      <name>Thierry Lévy</name>
+    </author>
+    <author>
+      <name>Pierre Tarrago</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.21751v1</id>
+    <title>Cohomology of symplectic $T^n$ - reductions and compactifications of $\mathcal{M}_{0, n}$</title>
+    <updated>2026-02-25T10:06:58Z</updated>
+    <link href="https://arxiv.org/abs/2602.21751v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.21751v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A symplectic $T^n$ - reduction on a complex Grassmann manifold $G_{n,2}$ for the canonical action of the maximal compact torus depends on the $S_n$ - orbit of a maximal chamber in a hypersimplex $Δ_{n,2}$. The chamber decomposition of $Δ_{n,2}$ is defined by the admissible polytopes, which can be realized as matroids. In our previous work we described this chamber decomposition by means of the hyperplane arrangement. It is important to note that to any chamber it corresponds the compact space, which is a smooth compact manifold for a chamber of maximal dimension. In this paper we obtain explicit description of the cohomology rings of the symplectic $T^n$ - reductions on $G_{n,2}$ for the standard moment map in terms of the chamber decomposition of $Δ_{n,2}$ and the well known results of Kirwan and Goldin.
+  We recently introduced the Hassett category whose objects are special compactifications of the space $\mathcal{M}_{0, n}$. The initial object in this category is the Deligne-Mumford compactification $\overline{\mathcal{M}}_{0, n}$. In this paper we describe the cohomology rings of various compactifications for $\mathcal{M}_{0, n}$, which correspond to the objects of the Hassett category. Our results show that even in the case $n=5$ there are objects in the Hassett category with different cohomology rings.</summary>
+    <category term="math.AT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-25T10:06:58Z</published>
+    <arxiv:comment>32 pages</arxiv:comment>
+    <arxiv:primary_category term="math.AT"/>
+    <author>
+      <name>Victor M. Buchstaber</name>
+    </author>
+    <author>
+      <name>Svjetlana Terzić</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.08521v2</id>
+    <title>Polytopes and $C^0$-Riemannian metrics with positive $h_{\rm top}$</title>
+    <updated>2026-05-08T08:10:03Z</updated>
+    <link href="https://arxiv.org/abs/2602.08521v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.08521v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study Reeb dynamics on starshaped hypersurfaces in $\mathbb{R}^4$ arising as smoothings of starshaped polytopes. Using the $C^0$--stability of positive topological entropy for Reeb flows in dimension three from our joint work with Dahinden and Pirnapasov, we show that there exist starshaped polytopes $P$ such that for any starshaped smoothing of $\partial P$ the associated Reeb flows have positive topological entropy. This answers a question of Ostrover and Ginzburg.
+  Similarly, we show that given a closed surface $M$ and a number $C&gt;0$, there exist continuous and non-differentiable Riemannian metrics $g$ on $S$ with $h_{\rm top}&gt;C$ in the sense that for any smoothing of $g$ the associated geodesic flows have $h_{\rm top}&gt;C$.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-09T11:08:54Z</published>
+    <arxiv:comment>10 pages. Minor changes. Submitted for publication</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Marcelo R. R. Alves</name>
+    </author>
+    <author>
+      <name>Matthias Meiwes</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.20844v3</id>
+    <title>$\mathbb{R}^{2k}$ is Theoretically Large Enough for Embedding-based Top-$k$ Retrieval</title>
+    <updated>2026-06-02T03:19:04Z</updated>
+    <link href="https://arxiv.org/abs/2601.20844v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.20844v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper studies the Minimal Embeddable Dimension (MED): the least dimension in which there exists a configuration of $m$ object vectors so that every subset of size at most $k$ is exactly retrieved by score comparison. Our result shows MED is $Θ(k)$, independent of $m$, for inner product, Euclidean distance, and cosine similarity. We then consider Robust MED (RMED), where all vectors are unit normed and an $ε$ gap of scores is required. We derive the $m$-dependent feasibility ceiling $ε_\star(m,k)=m/\sqrt{k(m-1)(m-k)}$, which approaches $1/\sqrt{k}$ when $m\gg k$, and a Gaussian centroid construction gives a robust witness upper bound in the feasible margin regime. Numerical simulation on synthetic top-$2$ retrieval with cyclic polytope and centroid query optimization confirmed our theoretical claims. Experiments on LIMIT and LIMIT-small datasets also show that simple embedding-based retrieval baselines can overfit and outperform the reported single-vector LLM embedding baseline. Both theoretical and empirical findings rule out the lack of exact geometric capacity as the obstruction.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-28T18:45:43Z</published>
+    <arxiv:comment>v2: fix broken citation. v3: ICML 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Zihao Wang</name>
+    </author>
+    <author>
+      <name>Hang Yin</name>
+    </author>
+    <author>
+      <name>Lihui Liu</name>
+    </author>
+    <author>
+      <name>Hanghang Tong</name>
+    </author>
+    <author>
+      <name>Yangqiu Song</name>
+    </author>
+    <author>
+      <name>Ginny Wong</name>
+    </author>
+    <author>
+      <name>Simon See</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.04835v1</id>
+    <title>A Mathematical Theory of Payment Channel Networks</title>
+    <updated>2026-01-08T11:12:58Z</updated>
+    <link href="https://arxiv.org/abs/2601.04835v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.04835v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce a geometric theory of payment channel networks that centers the polytope $W_G$ of feasible wealth distributions; liquidity states $L_G$ project onto $W_G$ via strict circulations. A payment is feasible iff the post-transfer wealth stays in $W_G$. This yields a simple throughput law: if $ζ$ is on-chain settlement bandwidth and $ρ$ the expected fraction of infeasible payments, the sustainable off-chain bandwidth satisfies $S = ζ/ ρ$.
+  Feasibility admits a cut-interval view: for any node set S, the wealth of S must lie in an interval whose width equals the cut capacity $C(δ(S))$. Using this, we show how multi-party channels (coinpools / channel factories) expand $W_G$. Modeling a k-party channel as a k-uniform hyperedge widens every cut in expectation, so $W_G$ grows monotonically with k; for single nodes the expected accessible wealth scales linearly with $k/n$.
+  We also analyze depletion. Under linear, asymmetric fees, cost-minimizing flow within a wealth fiber pushes cycles to the boundary, generically depleting channels except for a residual spanning forest. Three mitigation levers follow: (i) symmetric fees per direction, (ii) convex/tiered fees (effective flow control but at odds with source routing without liquidity disclosure), and (iii) coordinated replenishment (choose an optimal circulation within a fiber).
+  Together, these results explain why two-party meshes struggle to scale and why multi-party primitives are more capital-efficient, yielding higher expected payment bandwidth. They also show how fee design and coordination keep operation inside the feasible region, improving reliability.</summary>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-08T11:12:58Z</published>
+    <arxiv:comment>21 pages (23 with appendix), 15 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.NI"/>
+    <author>
+      <name>Rene Pickhardt</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.02176v2</id>
+    <title>Hilbert Polynomials of Calabi Yau Hypersurfaces in Toric Varieties and Lattice Points in Polytope Boundaries</title>
+    <updated>2026-01-18T21:05:26Z</updated>
+    <link href="https://arxiv.org/abs/2601.02176v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.02176v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that the Hilbert polynomial of a Calabi-Yau hypersurface $Z$ in a smooth toric variety $M$ associated to a convex polytope $Δ$ is given by a lattice point count in the polytope boundary $\partial Δ,$ just as the Hilbert polynomial of $M$ is known to be given by a lattice point count in the convex polytope $Δ.$ Our main tool is a computation of the Euler class in $K$-theory of the normal line bundle to the hypersurface $Z,$ in terms of the Euler classes of the divisors corresponding to the facets of the moment polytope. We observe a remarkable parallel between our expression for the Euler class and the inclusion-exclusion principle in combinatorics. To obtain our result we combine these facts with the known relation between lattice point counts in the facets of $Δ$ and the Hilbert polynomials of the smooth toric varieties corresponding to these facets.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.KT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-05T14:54:48Z</published>
+    <arxiv:comment>Sharpened statement of Lemma 4.1 and simplified proof of Lemma 4.2. Corrected minor typographical errors in Section 5</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Jonathan Weitsman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.19158v1</id>
+    <title>Kirwan polytopes in the real setting</title>
+    <updated>2025-12-22T08:54:23Z</updated>
+    <link href="https://arxiv.org/abs/2512.19158v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.19158v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This is a monograph devoted to the study of Kirwan's real polytopes, i.e., in the context where there are involutions on the group and on the symplectic manifold. This work brings together and completes the two preprints I had already written on this subject (arXiv:2012.08837, arXiv:2111.13399).</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-22T08:54:23Z</published>
+    <arxiv:comment>in French language</arxiv:comment>
+    <arxiv:primary_category term="math.DG"/>
+    <author>
+      <name>Paul-Emile Paradan</name>
+      <arxiv:affiliation>IMAG</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.12747v1</id>
+    <title>Two-dimensional equivariant symplectic submanifolds in toric manifolds</title>
+    <updated>2025-12-14T15:56:05Z</updated>
+    <link href="https://arxiv.org/abs/2512.12747v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.12747v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>To find all two-dimensional equivariant symplectic submanifolds in symplectic toric manifolds, we combine the convex geometry of Delzant polytopes with local equivariant symplectic models and obtain a criterion for determining when a two-dimensional submanifold is an equivariant symplectic submanifold in a toric manifold.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-14T15:56:05Z</published>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Shiyun Wen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.20779v2</id>
+    <title>Diffusive Scaling limit of stochastic Box-Ball systems and PushTASEP</title>
+    <updated>2025-10-30T05:09:17Z</updated>
+    <link href="https://arxiv.org/abs/2509.20779v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.20779v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce the Stochastic Box-Ball System (SBBS), a probabilistic cellular automaton that generalizes the classic Takahashi-Satsuma Box-Ball System. In SBBS, particles are transported by a carrier with a fixed capacity that may fail to pick up any given particle with a fixed probability $ε$. This model interpolates between two known integrable systems: the Box-Ball System (as $ε\rightarrow 0$) and the PushTASEP (as $ε\rightarrow 1$). We show that the long-term behavior of SBBS is governed by isolated particles and the occasional emergence of short solitons, which can form longer solitons but are more likely to fall apart. More precisely, we first show that all particles are isolated except for a $1/\sqrt{n}$-fraction of times in any given $n$ steps, and solitons keep forming for this fraction of times. We then show that under diffusive scaling, both SBBS (for any carrier capacity) and PushTASEP converge weakly to semimartingale reflecting Brownian Motions (SRBMs) on the Weyl chamber with explicit covariance and reflection matrices, which are consistent with the microscale relations between these systems. The reflection matrix for SBBS is determined by how 2-solitons behave and exhibit ``solitonic bias'' visible in the diffusive scale. Our proof relies on a new, extended SRBM invariance principle that we develop in this work. This principle can handle processes with complex boundary behavior that can be written as "overdetermined" Skorokhod decompositions, which is crucial for analyzing the complex solitonic interaction in SBBS. We believe this tool may be of independent interest.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.CG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-25T06:05:39Z</published>
+    <arxiv:comment>33 pages, 4 figures. Updates: This version establishes the diffusive scaling limit of the full process (extending results from the gap process) and proves an extended invariance principle for SRBM on a convex polytope</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>David Keating</name>
+    </author>
+    <author>
+      <name>Minjun Kim</name>
+    </author>
+    <author>
+      <name>Eva Loeser</name>
+    </author>
+    <author>
+      <name>Hanbaek Lyu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.19083v2</id>
+    <title>A Bound on the Symplectic Systolic Ratio of Polytopes in Even-Dimensional Euclidean Space</title>
+    <updated>2025-09-30T13:30:28Z</updated>
+    <link href="https://arxiv.org/abs/2509.19083v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.19083v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Symplectic capacities are invariants in symplectic geometry that are used to obstruct symplectic embeddings. From a certain symplectic capacity, the Ekeland-Hofer-Zehnder capacity, one can construct the systolic ratio, which measures the difference in the capacity and the Euclidean volume. The systolic ratio of a unit ball is always 1. It was conjectured by Viterbo that the systolic ratio is bounded by 1. This conjecture was disproven by Haim-Kislev recently, and now it is open to determine what bounds one may obtain on the systolic ratio if not 1. In this paper, the author investigates bounds on the systolic ratio of polytopes. In particular, a sharp bound on the systolic ratio of simplices in any dimension is obtained, with the dependence on dimension made explicit.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-23T14:38:43Z</published>
+    <arxiv:comment>A possible counterexample in R^6 due to Haim-Kislev to Theorem 1.1 was brought to my attention. The rest of the new results are based on this theorem, so this paper should be withdrawn until the error is found and resolved and the theorem modified</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Matthew Zediker</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.18896v1</id>
+    <title>A Simple and Robust Weak Galerkin Method for the Brinkman Equations on Non-Convex Polytopal Meshes</title>
+    <updated>2025-07-25T02:36:33Z</updated>
+    <link href="https://arxiv.org/abs/2507.18896v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.18896v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper presents a novel Stabilizer-Free weak Galerkin (WG) finite element method for solving the Brinkman equations without the need for conventional stabilization techniques. The Brinkman model, which mathematically blends features of both the Stokes and Darcy equations, describes fluid flow in multi-physics environments, particularly in heterogeneous porous media characterized by spatially varying permeability. In such settings, flow behavior may be governed predominantly by Darcy dynamics in certain regions and by Stokes dynamics in others. A central difficulty in this context arises from the incompatibility of standard finite element spaces: elements stable for the Stokes equations typically perform poorly for Darcy flows, and vice versa. The primary challenge addressed in this study is the development of a unified numerical scheme that maintains stability and accuracy across both flow regimes. To this end, the proposed WG method demonstrates a robust capacity to resolve both Stokes- and Darcy-dominated flows through a unified framework. The method supports general finite element partitions consisting of convex and non-convex polytopal elements, and employs bubble functions as a critical analytical component to achieve stability and convergence. Optimal-order error estimates are rigorously derived for the WG finite element solutions. Additionally, a series of numerical experiments is conducted to validate the theoretical findings, illustrating the method's robustness, reliability, flexibility, and accuracy in solving the Brinkman equations.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-25T02:36:33Z</published>
+    <arxiv:comment>32 pages, 9 tables, 9 figures. arXiv admin note: text overlap with arXiv:2507.05953</arxiv:comment>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Chunmei Wang</name>
+    </author>
+    <author>
+      <name>Shangyou Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.11728v1</id>
+    <title>Symplectic Hecke eigenbases from Ehrhart polynomials</title>
+    <updated>2025-07-15T20:56:13Z</updated>
+    <link href="https://arxiv.org/abs/2507.11728v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.11728v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For $n\in\mathbb{N}$ and $\ell\in\{0,1,\dots,n\}$, we consider the function extracting the $\ell$th coefficient of the Ehrhart polynomials of lattice polytopes in $\mathbb{R}^n$. These functions form a basis of the space of unimodular invariant valuations. We show that, in even dimensions, these functions are in fact simultaneous symplectic Hecke eigenfunctions. We leverage this and apply the theory of spherical functions and their associated zeta functions to prove analytic, asymptotic, and combinatorial results about the arithmetic functions averaging $\ell$th Ehrhart coefficients.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-15T20:56:13Z</published>
+    <arxiv:comment>28 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Claudia Alfes</name>
+    </author>
+    <author>
+      <name>Joshua Maglione</name>
+    </author>
+    <author>
+      <name>Christopher Voll</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.11392v1</id>
+    <title>Inverse Optimal Control with Constraint Relaxation</title>
+    <updated>2025-07-15T15:03:00Z</updated>
+    <link href="https://arxiv.org/abs/2507.11392v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.11392v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Inverse optimal control (IOC) is a promising paradigm for learning and mimicking optimal control strategies from capable demonstrators, or gaining a deeper understanding of their intentions, by estimating an unknown objective function from one or more corresponding optimal control sequences. When computing estimates from demonstrations in environments with safety-preserving inequality constraints, acknowledging their presence in the chosen IOC method is crucial given their strong influence on the final control strategy. However, solution strategies capable of considering inequality constraints, such as the inverse Karush-Kuhn-Tucker approach, rely on their correct activation and fulfillment; a restrictive assumption when dealing with noisy demonstrations. To overcome this problem, we leverage the concept of exact penalty functions for IOC and show preservation of estimation accuracy. Considering noisy demonstrations, we then illustrate how the usage of penalty functions reduces the number of unknown variables and how their approximations enhance the estimation method's capacity to account for wrong constraint activations within a polytopic-constrained environment. The proposed method is evaluated for three systems in simulation, outperforming traditional relaxation approaches for noisy demonstrations.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-15T15:03:00Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <arxiv:journal_ref>IEEE Control Systems Letters, vol. 9, pp. 2055-2060, 2025</arxiv:journal_ref>
+    <author>
+      <name>Rahel Rickenbach</name>
+    </author>
+    <author>
+      <name>Amon Lahr</name>
+    </author>
+    <author>
+      <name>Melanie N. Zeilinger</name>
+    </author>
+    <arxiv:doi>10.1109/LCSYS.2025.3590879</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/LCSYS.2025.3590879" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.23498v2</id>
+    <title>Curvy points, the perimeter, and the complexity of convex toric domains</title>
+    <updated>2026-07-01T21:15:45Z</updated>
+    <link href="https://arxiv.org/abs/2506.23498v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.23498v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the related notions of curvature and perimeter for toric boundaries and their implications for symplectic packing problems in dimension 4; a natural setting for this is a generalized version of convex toric domain which we also study, where there are no conditions on the moment polytope at all aside from convexity.
+  We show that the subleading asymptotics of the ECH and elementary ECH capacities recover the perimeter of such domains in their liminf, without any genericity required, and hence the perimeter is an obstruction to a full filling. As an application, we give the first examples of the failure of packing stability by open subsets of compact manifolds with smooth boundary or with no boundary at all; this has implications for long-term super-recurrence. We also show that a single smooth point of positive curvature on the toric boundary obstructs the existence of an infinite staircase, and we build on this to completely classify smooth (generalized) convex toric domains which have an infinite staircase. We also extend a number of theorems to generalized convex toric domains, in particular the "concave to convex", embedding theorem and the "accumulation point theorem". A curvy point forces "infinite complexity"; we raise the question of whether an infinitely complex domain can ever have an infinite staircase and we give examples with infinite staircases and arbitrarily high finite complexity.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-30T03:44:10Z</published>
+    <arxiv:comment>v2: 75 pages, with minor corrections and additional explanations added throughout. Comments welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Dan Cristofaro-Gardiner</name>
+    </author>
+    <author>
+      <name>Nicki Magill</name>
+    </author>
+    <author>
+      <name>Dusa McDuff</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.16983v3</id>
+    <title>Maximal Achievable Service Rates of Codes and Connections to Combinatorial Designs</title>
+    <updated>2025-09-28T20:21:59Z</updated>
+    <link href="https://arxiv.org/abs/2506.16983v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.16983v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the service-rate region (SRR) of distributed storage systems that employ linear codes. We focus on systems where each server stores one code symbol, and a user recovers a data symbol by accessing any of its recovery groups, subject to per-server capacity limits. The SRR--the convex polytope of simultaneously achievable request rates--captures system throughput and scalability. We first derive upper and lower bounds on the maximum request rate of each data object. These bounds hold for all linear codes and depend only on the number of parity checks orthogonal to a particular set of codeword coordinates associated with that object, i.e., the equations used in majority-logic decoding, and on code parameters. We then check the bound saturation for 1) all non-systematic codes whose SRRs are already known and 2) systematic codes. For the former, we prove the bounds are tight. For systematic codes, we show that the upper bound is achieved whenever the supports of minimum-weight dual codewords form a 2-design. As an application, we determine the exact per-object demand limits for binary Hamming codes. Our framework provides a new lens to address the SRR problem through combinatorial design theory.</summary>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-20T13:24:51Z</published>
+    <arxiv:comment>Appeared in Allerton 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.IT"/>
+    <author>
+      <name>Hoang Ly</name>
+    </author>
+    <author>
+      <name>Emina Soljanin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.22847v1</id>
+    <title>Sampling Finite Unit Norm Tight Frames Using Symplectic Geometry</title>
+    <updated>2025-05-28T20:29:03Z</updated>
+    <link href="https://arxiv.org/abs/2505.22847v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.22847v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Unit-norm tight frames in finite-dimensional Hilbert spaces (FUNTFs) are fundamental in signal processing, offering optimal robustness to noise and measurement loss. In this paper we introduce the Eigenlift algorithm for sampling random FUNTFs. Our approach exploits the symplectic geometry of the FUNTF space, which we characterize as a symplectic reduction of frame space by a symmetry group. We then define a Hamiltonian torus action on this reduced space whose momentum map induces a fiber bundle structure. The algorithm proceeds by sampling a point from the base space, which is a convex polytope, lifting it deterministically to a point on the corresponding fiber, then acting on this point by a random element of the torus to obtain a random FUNTF. We implement the method in Python and validate it in low-dimensional settings where it is computationally feasible to sample the base polytope via rejection sampling.</summary>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-28T20:29:03Z</published>
+    <arxiv:comment>23 page, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="math.FA"/>
+    <author>
+      <name>Mason Faldet</name>
+    </author>
+    <author>
+      <name>Clayton Shonkwiler</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.07006v1</id>
+    <title>A structure theorem along fibers of extreme points of the momentum polytope</title>
+    <updated>2025-05-11T15:05:47Z</updated>
+    <link href="https://arxiv.org/abs/2505.07006v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.07006v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let G be a complex reductive Lie group acting on a compact Kähler manifold X and assume that the action of a maximal compact subgroup K of G is Hamiltonian. For each extreme point of the convex hull of the momentum map image, there is an associated open dense subset of X, which is invariant under a parabolic subgroup Q of G. We prove a Q-equivariant product decomposition for the Q-action on this subset and discuss some applications of the result. We show a similar statement for real reductive subgroups of G for the restricted momentum map.</summary>
+    <category term="math.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-11T15:05:47Z</published>
+    <arxiv:primary_category term="math.CV"/>
+    <author>
+      <name>Peter Heinzner</name>
+    </author>
+    <author>
+      <name>Christian Zöller</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.05012v1</id>
+    <title>Contact isotopies in the coherent-constructible correspondence</title>
+    <updated>2025-05-08T07:34:58Z</updated>
+    <link href="https://arxiv.org/abs/2505.05012v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.05012v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The coherent-constructible correspondence is a realization of toric mirror symmetry in which the A-side is modeled by constructible sheaves on $T^n$. This paper provides a geometric realization of the mirror Picard group action in this correspondence, characterizing it in terms of quantized contact isotopies and providing a sheaf-theoretic counterpart to work of Hanlon in the Fukaya-Seidel setting. Given a toric Cartier divisor $D$, we consider a family of homogeneous Hamiltonians $H_\varepsilon$ on $T^* T^n$. Their flows act on sheaves via a family of kernels $K_\varepsilon$ on $T^n \times T^n$. The nearby cycles kernel $K_0$ corresponds heuristically to the Hamiltonian flow of the non-differentiable function $\lim_{\varepsilon \to 0} H_\varepsilon$, which is the pullback of the support function of $D$ along the cofiber projection. We show that the action of $K_0$ coincides with the convolution action of the associated twisted polytope sheaf, hence mirrors the action of $\mathcal{O}(D)$ on coherent sheaves.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-08T07:34:58Z</published>
+    <arxiv:comment>26 pages</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Jishnu Bose</name>
+    </author>
+    <author>
+      <name>Harold Williams</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.19775v3</id>
+    <title>Lattice points in polytope boundaries and formal geometric quantization of singular Calabi Yau hypersurfaces in toric varieties</title>
+    <updated>2026-01-06T20:13:57Z</updated>
+    <link href="https://arxiv.org/abs/2504.19775v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.19775v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that the number of lattice points in the boundary of a positive integer dilate of a Delzant integral polytope is a polynomial in the dilation parameter, analogous to the Ehrhart polynomial giving the number of lattice points in a lattice polytope. We give an explicit formula for this polynomial, analogous to the formula of Khovanskii-Pukhlikov for the Ehrhart polynomial. These counting polynomials satisfy a lacunarity principle, the vanishing of alternate coefficients, quite unlike the Ehrhart polynomial. We show that formal geometric quantization of singular Calabi Yau hypersurfaces in smooth toric varieties gives this polynomial, in analogy with the relation of the Khovanskii-Pukhlikov formula to the geometric quantization of toric varieties. The Atiyah-Singer theorem for the index of the Dirac operator gives a moral argument for the lacunarity of the counting polynomial. We conjecture that similar formulas should hold for arbitrary simple integral polytope boundaries.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-28T13:19:30Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Journal of Geometry and Physics Volume 222, April 2026, 105762</arxiv:journal_ref>
+    <author>
+      <name>Jonathan Weitsman</name>
+    </author>
+    <arxiv:doi>10.1016/j.geomphys.2026.105762</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.geomphys.2026.105762" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.00484v1</id>
+    <title>Aggregate Flexibility of Thermostatically Controlled Loads using Generalized Polymatroids</title>
+    <updated>2025-04-01T07:16:12Z</updated>
+    <link href="https://arxiv.org/abs/2504.00484v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.00484v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Leveraging populations of thermostatically controlled loads could provide vast storage capacity to the grid. To realize this potential, their flexibility must be accurately aggregated and represented to the system operator as a single, controllable virtual device. Mathematically this is computed by calculating the Minkowski sum of the individual flexibility of each of the devices. Previous work showed how to exactly characterize the flexibility of lossless storage devices as generalized polymatroids-a family of polytope that enable an efficient computation of the Minkowski sum. In this paper we build on these results to encompass devices with dissipative storage dynamics. In doing so we are able to provide tractable methods of accurately characterizing the flexibility in populations consisting of a variety of heterogeneous devices. Numerical results demonstrate that the proposed characterizations are tight.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-01T07:16:12Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Karan Mukhi</name>
+    </author>
+    <author>
+      <name>Alessandro Abate</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.22650v1</id>
+    <title>Explicit non-free tensors</title>
+    <updated>2025-03-28T17:38:44Z</updated>
+    <link href="https://arxiv.org/abs/2503.22650v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.22650v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Free tensors are tensors which, after a change of bases, have free support: any two distinct elements of its support differ in at least two coordinates. They play a distinguished role in the theory of bilinear complexity, in particular in Strassen's duality theory for asymptotic rank. Within the context of quantum information theory, where tensors are interpreted as multiparticle quantum states, freeness corresponds to a type of multiparticle Schmidt decomposition. In particular, if a state is free in a given basis, the reduced density matrices are diagonal. Although generic tensors in $\mathbb{C}^n \otimes \mathbb{C}^n \otimes \mathbb{C}^n$ are non-free for $n \geq 4$ by parameter counting, no explicit non-free tensors were known until now. We solve this hay in a haystack problem by constructing explicit tensors that are non-free for every $n \geq 3$. In particular, this establishes that non-free tensors exist in $\mathbb{C}^n \otimes \mathbb{C}^n \otimes \mathbb{C}^n$, where they are not generic.
+  To establish non-freeness, we use results from geometric invariant theory and the theory of moment polytopes. In particular, we show that if a tensor $T$ is free, then there is a tensor $S$ in the GL-orbit closure of $T$, whose support is free and whose moment map image is the minimum-norm point of the moment polytope of $T$. This implies a reduction for checking non-freeness from arbitrary basis changes of $T$ to unitary basis changes of $S$. The unitary equivariance of the moment map can then be combined with the fact that tensors with free support have diagonal moment map image, in order to further restrict the set of relevant basis changes.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-28T17:38:44Z</published>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Maxim van den Berg</name>
+    </author>
+    <author>
+      <name>Matthias Christandl</name>
+    </author>
+    <author>
+      <name>Vladimir Lysikov</name>
+    </author>
+    <author>
+      <name>Harold Nieuwboer</name>
+    </author>
+    <author>
+      <name>Michael Walter</name>
+    </author>
+    <author>
+      <name>Jeroen Zuiddam</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.22633v1</id>
+    <title>The moment polytope of matrix multiplication is not maximal</title>
+    <updated>2025-03-28T17:25:06Z</updated>
+    <link href="https://arxiv.org/abs/2503.22633v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.22633v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Moment polytopes of tensors, the study of which is deeply rooted in invariant theory, representation theory and symplectic geometry, have found relevance in numerous places, from quantum information (entanglement polytopes) and algebraic complexity theory (GCT program and the complexity of matrix multiplication) to optimization (scaling algorithms). Towards an open problem in algebraic complexity theory, we prove separations between the moment polytopes of matrix multiplication tensors and unit tensors. As a consequence, we find that matrix multiplication moment polytopes are not maximal, i.e. are strictly contained in the corresponding Kronecker polytope. As another consequence, we obtain a no-go result for a natural operational characterization of moment polytope inclusion in terms of asymptotic restriction. We generalize the separation and non-maximality to moment polytopes of iterated matrix multiplication tensors. Our result implies that tensor networks where multipartite entanglement structures beyond two-party entanglement are allowed can go beyond projected entangled-pair states (PEPS) in terms of expressivity.
+  Our proof characterizes membership of uniform points in moment polytopes of tensors, and establishes a connection to polynomial multiplication tensors via the minrank of matrix subspaces. As a result of independent interest, we extend these techniques to obtain a new proof of the optimal border subrank bound for matrix multiplication.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-28T17:25:06Z</published>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>Maxim van den Berg</name>
+    </author>
+    <author>
+      <name>Matthias Christandl</name>
+    </author>
+    <author>
+      <name>Vladimir Lysikov</name>
+    </author>
+    <author>
+      <name>Harold Nieuwboer</name>
+    </author>
+    <author>
+      <name>Michael Walter</name>
+    </author>
+    <author>
+      <name>Jeroen Zuiddam</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.22385v1</id>
+    <title>Approximating Dispatchable Regions in Three-Phase Radial Networks with Conditions for Exact SDP Relaxation</title>
+    <updated>2025-03-28T12:43:51Z</updated>
+    <link href="https://arxiv.org/abs/2503.22385v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.22385v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The concept of dispatchable region plays a pivotal role in quantifying the capacity of power systems to accommodate renewable generation. In this paper, we extend the previous approximations of the dispatchable regions on direct current (DC), linearized, and nonlinear single-phase alternating current (AC) models to unbalanced three-phase radial (tree) networks and provide improved outer and inner approximations of dispatchable regions. Based on the nonlinear bus injection model (BIM), we relax the non-convex problem that defines the dispatchable region to a solvable semidefinite program (SDP) and derive its strong dual problem (which is also an SDP). Utilizing the special mathematical structure of the dual problem, an SDP-based projection algorithm is developed to construct a convex polytopic outer approximation to the SDP-relaxed dispatchable region. Moreover, we provide sufficient conditions to guarantee the exact SDP relaxation by adding the power loss as a penalty term, thereby providing a theoretical guarantee for determining an inner approximation of the dispatchable region. Through numerical simulations, we validate the accuracy of our approximation of the dispatchable region and verify the conditions for exact SDP relaxation.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-28T12:43:51Z</published>
+    <arxiv:comment>10 pages, 6 figures, 4 tables, submitted to IEEE Transactions on Power Systems</arxiv:comment>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Bohang Fang</name>
+    </author>
+    <author>
+      <name>Yue Chen</name>
+    </author>
+    <author>
+      <name>Changhong Zhao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.04304v3</id>
+    <title>Almost toric fibrations on K3 surfaces via degenerations</title>
+    <updated>2026-05-28T11:08:34Z</updated>
+    <link href="https://arxiv.org/abs/2502.04304v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.04304v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For Kähler K3 surfaces we consider Kulikov models of type III tamed by a symplectic form. Our main result shows that the generic smooth fiber admits an almost toric fibration over the intersection complex, which inherits a natural nodal integral affine structure from almost toric fibrations of the boundary divisors. We prove that a smooth anti-canonical hypersurface in a smooth toric Fano threefold, equipped with a toric Kähler form, admits a symplectic Kulikov model. Moreover, we demonstrate that the induced integral affine structure on the intersection complex is integral affine isomorphic (up to nodal slides) nodal integral affine structure considered by Gross and Siebert on the boundary of the moment polytope.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-06T18:44:42Z</published>
+    <arxiv:comment>Changes made after referee process. Changes made to the title and to the proof of Lemma 2.13</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Pranav Chakravarthy</name>
+    </author>
+    <author>
+      <name>Yoel Groman</name>
+    </author>
+  </entry>
+</feed>

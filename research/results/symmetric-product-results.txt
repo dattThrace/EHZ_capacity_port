@@ -1,0 +1,2 @@
+PASS: README cube x polar, diamond x diamond, and interval x interval.
+PASS: 20 seeded rational symmetric products; exact containment, closure, and action witnesses.

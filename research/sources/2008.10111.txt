@@ -1,0 +1,2577 @@
+                                           Computing Reeb dynamics on 4d convex polytopes
+                                                               Julian Chaidez∗ and Michael Hutchings†
+arXiv:2008.10111v2 [math.SG] 26 Jul 2021
+
+
+
+
+                                                                                July 28, 2021
+
+
+                                                                                   Abstract
+                                                      We study the combinatorial Reeb flow on the boundary of a four-dimensional
+                                                   convex polytope. We establish a correspondence between “combinatorial Reeb
+                                                   orbits” for a polytope, and ordinary Reeb orbits for a smoothing of the poly-
+                                                   tope, respecting action and Conley-Zehnder index. One can then use a com-
+                                                   puter to find all combinatorial Reeb orbits up to a given action and Conley-
+                                                   Zehnder index. We present some results of experiments testing Viterbo’s
+                                                   conjecture and related conjectures. In particular, we have found some new
+                                                   examples of polytopes with systolic ratio 1.
+
+
+                                           1       Introduction And main results
+                                           This paper is about computational methods for testing Viterbo’s conjecture and
+                                           related conjectures, via combinatorial Reeb dynamics.
+
+                                           1.1      Review of Viterbo’s conjecture
+                                           We first recall two different√versions of Viterbo’s conjecture. Consider R2n = Cn
+                                           with coordinates zi = xi + −1yi for i = 1, . . . , n. Define the standard Liouville
+                                           form                                  n
+                                                                              1X
+                                                                        λ0 =        (xi dyi − yi dxi ) .
+                                                                              2 i=1
+                                           Let X be a compact domain in R2n with smooth boundary Y . Assume that X is
+                                           “star-shaped”, by which we mean that Y is transverse to the radial vector field.
+                                               ∗
+                                               Partially supported by an NSF Graduate Research Fellowship.
+                                               †
+                                               Partially supported by NSF grant DMS-1708899, a Simons Fellowship, and a Humboldt Re-
+                                           search Award.
+
+
+                                                                                        1
+Then the 1-form λ = λ0 |Y is a contact form on Y . Associated to λ are the contact
+structure ξ = Ker(λ) ⊂ T Y and the Reeb vector field R on Y , characterized by
+dλ(R, ·) = 0 and λ(R) = 1. A Reeb orbit is a periodic orbit of R, i.e. a map
+γ : R/T Z → Y for some T > 0 such that γ 0 (t) = R(γ(t)), modulo reparametrization.
+The symplectic action of a Reeb orbit γ, denoted by A(γ), is the period of γ, or
+equivalently                            Z
+                                A(γ) =         γ ∗ λ0 .                       (1.1)
+                                               R/T Z
+
+    Reeb orbits on Y always exist. This was first proved by Rabinowitz [22] and is a
+special case of the Weinstein conjecture; see [17] for a survey. We are interested here
+in the minimal period of a Reeb orbit on Y , which we denote by Amin (X) ∈ (0, ∞),
+and its relation to the volume vol(X) of X with respect to the Lebesgue measure.
+For this purpose, define the systolic ratio
+
+                                               Amin (X)n
+                                   sys(X) =              .
+                                               n! vol(X)
+
+The exponent ensures that the systolic ratio of X is invariant under scaling of X;
+and the constant factor is chosen so that if X is a ball then sys(X) = 1.
+
+Conjecture 1.1 (weak Viterbo conjecture). Let X ⊂ R2n be a compact convex
+domain with smooth boundary such that 0 ∈ int(X). Then sys(X) ≤ 1.
+
+    Conjecture 1.1 asserts that among compact convex domains with the same vol-
+ume, Amin is largest for a ball. Although the role of the convexity hypothesis is
+somewhat mysterious, some hypothesis beyond the star-shaped condition is neces-
+sary: it is shown in [1] that there exist star-shaped domains in R4 with arbitrarily
+large systolic ratio1 . One motivation for studying Conjecture 1.1 is that it implies
+the Mahler conjecture in convex geometry [4].
+    To put Conjecture 1.1 in more context, recall2 that a symplectic capacity is
+a function c mapping some class of 2n-dimensional symplectic manifolds to [0, ∞],
+such that:
+
+       • (Monotonicity) If there exists a symplectic embedding ϕ : (X, ω) → (X 0 , ω 0 ),
+         then c(X, ω) ≤ c(X 0 , ω 0 ).
+
+       • (Conformality) If r > 0 then c(X, rω) = rc(X, ω).
+   1
+     It is further shown in [2] that there are star-shaped domains in R4 which are dynamically
+convex (meaning that every Reeb orbit on the boundary has rotation number greater than 1, see
+Proposition 1.10(a) below) and have systolic ratio 2 − ε for ε > 0 arbitrarily small.
+   2
+     The precise definition of “symplectic capacity” varies in the literature. For an older but
+extensive survey of symplectic capacities see [7].
+
+
+                                              2
+Of course we can regard (open) domains in R2n as  Pnsymplectic manifolds with the
+restriction of the standard symplectic form ω = i=1 dxi dyi . Conformality for a
+domain X ⊂ R2n means that c(rX) = r2 c(X).
+    Following the usual convention in symplectic geometry, for r > 0 define the ball
+
+                            B(r) = z ∈ Cn π|z|2 ≤ r
+                                   
+
+and the cylinder
+                              Z(r) = z ∈ Cn π|z1 |2 ≤ r .
+                                    
+
+We say that a symplectic capacity c is normalized if it is defined at least for all
+compact convex domains in R2n and if
+
+                                   c(B(r)) = c(Z(r)) = r.
+
+Note that the symplectic capacity c(Z(r)) is defined as the limit of c(Ei ), where
+Ei ⊂ R2n is a sequence of ellipsoids exausting Z(r).
+    An example of a normalized symplectic capacity is the Gromov width cGr ,
+where cGr (X, ω) is defined to be the supremum over r such that there exists a
+symplectic embedding B(r) → (X, ω). It is immediate from the definition that cGr
+is monotone and conformal. Since symplectomorphisms preserve volume, we have
+cGr (B(r)) = r; and the Gromov nonsqueezing theorem asserts that cGr (Z(r)) = r.
+    Another example of a normalized symplectic capacity is the Ekeland-Hofer-
+Zehnder capacity, denoted by cEHZ . If X is a compact convex domain with smooth
+boundary such that 0 ∈ int(X), then3
+
+                                    cEHZ (X) = Amin (X).                                   (1.2)
+
+This is explained in [5, Thm. 2.2], combining results from [8, 15].
+   Any symplectic capacity which is defined for compact convex domains in R2n
+with smooth boundary is a C 0 continuous function of the domain (i.e., continuous
+with respect to the Hausdorff distance between compact sets), and thus extends
+uniquely to a C 0 continuous function of all compact convex sets in R2n .
+Conjecture 1.2 (strong Viterbo conjecture4 ). All normalized symplectic capacities
+agree on compact convex sets in R2n .
+   3
+      Since translations act by symplectomorphism on R2n , the symplectic capacities of X are in-
+variant under translation. However, we will often assume that 0 ∈ int(X) so that we can sensibly
+discuss the Reeb flow on ∂X.
+    4
+      The original version of Viterbo’s conjecture from [25] asserts that a normalized symplectic
+capacity, restricted to convex sets in R2n of a given volume, takes its maximum on a ball. (This
+follows from what we are calling the “strong Viterbo conjecture” and implies what we are calling
+the “weak Viterbo conjecture”.) Viterbo further conjectured that the maximum is achieved only
+if the interior of the convex set is symplectomorphic to an open ball; cf. Question 1.23 below.
+
+
+                                               3
+Remark 1.3. Convexity is a key hypothesis in both the weak and strong versions
+of the Viterbo conjecture. For star-shaped domains that are not convex, counterex-
+amples to the conclusion of the strong Viterbo conjecture were given in [13, Thm.
+1.12], and counterexamples to the conclusion of the weak Viterbo conjecture were
+given later in [1, Thm. 2]. In [11, Cor. 5.2], it is shown exactly where the conclu-
+sions of the strong and original Viterbo conjectures start to fail in a certain family
+of non-convex examples.
+    Conjecture 1.2 implies Conjecture 1.1, because if Conjecture 1.2 holds, and if X
+is a compact convex domain with smooth boundary and 0 ∈ int(X), then
+
+                   Amin (X)n = cEHZ (X)n = cGr (X)n ≤ n! vol(X).
+
+Here the second equality holds by Conjecture 1.2; and the inequality on the right
+holds because if there exists a symplectic embedding B(r) → X, then rn /n! =
+vol(B(r)) ≤ vol(X).
+    There are also interesting families of non-normalized symplectic capacities. For
+example, there are the Ekeland-Hofer capacities defined in [9]; more recently, and
+conjecturally equivalently, positive S 1 -equivariant symplectic homology was used in
+                                           1
+[10] to define a symplectic capacity cSk for each integer k ≥ 1. Each equivariant
+            1
+capacity cSk (X) is the symplectic action of some Reeb orbit, which when X is generic
+(so that λ is nondegenerate) has Conley-Zehnder index n − 1 + 2k (see §1.3 below).
+Some other symplectic capacities give the total action of a finite set of Reeb orbits,
+such as the ECH capacities in the four-dimensional case [18], or the symplectic
+capacities defined by Siegel using rational symplectic field theory [24].
+    Conjectures 1.1 and 1.2 are known for some special examples such as S 1 -invariant
+convex domains [11], but they have not been well tested more generally. To test
+Conjecture 1.1, and as a first step towards computing other symplectic capacities
+and testing conjectures about them, we need good methods for computing Reeb
+orbits, their actions, and their Conley-Zehnder indices. The plan in this paper is
+to understand Reeb orbits on a smooth convex domain in terms of “combinatorial
+Reeb orbits” on convex polytopes approximating the domain.
+
+1.2    Combinatorial Reeb orbits
+Let X be any compact convex set in R2n with 0 ∈ int(X), and let y ∈ ∂X. The
+tangent cone, which we denote by Ty+ X, is the closure of the set of vectors v such
+y + εv ∈ X for some ε > 0. For example, if ∂X is smooth at y, then Ty+ X is a closed
+half-space whose boundary is the usual tangent space Ty ∂X.
+    Also define the positive normal cone
+
+                    Ny+ X = v ∈ R2n hx − y, vi ≤ 0 ∀x ∈ X .
+                            
+
+
+                                          4
+If ∂X is smooth at y, then Ny+ X is a one-dimensional ray and consists of the outward
+pointing normal vectors to ∂X at y.
+    Finally, define the Reeb cone
+
+                               Ry+ X = Ty+ X ∩ iNy+ X
+
+where i denotes the standard complex structure on Cn = R2n . We show that Ry+ X
+is nonempty in the cases of interest for this paper in Lemma 3.4. If ∂X is smooth
+near y, then Ry+ X is the ray consisting of nonnegative multiples of the Reeb vector
+field on ∂X at y. Indeed, in this case we can write
+
+                           Ty ∂X = v ∈ R2n hν, vi = 0
+                                    
+
+
+where ν is the outward unit normal vector to ∂X at y; and the Reeb vector field at
+y is given by
+                                           iν
+                                 Ry = 2         .                            (1.3)
+                                         hν, yi
+
+
+
+
+Figure 1: We depict the tangent, normal and Reeb cones for two points p, q ∈ X in
+a polytope X ⊂ R2 .
+
+    Suppose now that X is a convex polytope (i.e. a compact set given by the
+intersection of a finite set of closed half-spaces) in R2n with 0 ∈ int(X). Our
+convention is that a k-face of X is a k-dimensional subset F ⊂ ∂X which is the
+interior of the intersection with ∂X of some set of the hyperplanes defining X. For
+a given k-face F , the tangent cone Ty+ X, the positive normal cone Ny+ X, and the
+Reeb cone Ry+ X are the same for all y ∈ F . Thus we can denote these cones by
+TF+ X, NF+ X, and RF+ X respectively.
+    We will usually restrict attention to polytopes of the following type:
+
+Definition 1.4. A symplectic polytope in R4 is a convex polytope X in R4 such
+      ∈ int(X) and no 2-face of X is Lagrangian, i.e., the standard symplectic form
+that 0P
+ω0 = 2i=1 dxi dyi restricts to a nonzero 2-form on each 2-face.
+
+                                         5
+   Symplectic polytopes are generic, in the sense that in the space of polytopes in
+ 4
+R with a given number of 3-faces, the set of non-symplectic polytopes is a proper
+subvariety. Moreover, the boundary of a symplectic polytope in R4 has a well-posed
+“combinatorial Reeb flow” in the following sense5 .
+Proposition 1.5 (Lemma 3.4). If X is a symplectic polytope in R4 , then the Reeb
+cone RF+ X is one-dimensional for each face F .
+Definition 1.6. Let X be a symplectic polytope in R4 . A combinatorial Reeb
+orbit for X is a finite sequence γ = (Γ1 , . . . , Γk ) of oriented line segments in ∂X,
+modulo cyclic permutations, such that for each i = 1, . . . , k:
+         • The final endpoint of Γi agrees with the initial endpoint of Γi+1 mod k .
+
+         • There is a face F of X such that int(Γi ) ⊂ F , the endpoints of Γi are on the
+           boundary of (the closure of) F , and Γi points in the direction of RF+ X.
+The combinatorial symplectic action of a combinatorial Reeb orbit as above is
+defined by
+                                     Xk Z
+                         Acomb (γ) =        λ0 .
+                                                    i=1   Γi
+
+    To give a better idea of what combinatorial Reeb orbits look like, we have the
+following lemma.
+Lemma 1.7. (proved in §3.3) Let X be a symplectic polytope in R4 . Then the Reeb
+cones of the faces of X satisfy the following:
+         • If E is a 3-face, then RE
+                                   +
+                                     X consists of all nonnegative multiples of the Reeb
+           vector field on E.
+
+         • If F is a 2-face, then RF+ X points into a 3-face E adjacent to F , and agrees
+                  +
+           with RE  X.
+
+         • If L is a 1-face, then one of the following possibilities holds:
+
+              – RL+ X points into a 3-face E adjacent to L and agrees with RE
+                                                                            +
+                                                                              X. In this
+                case we say that L is a good 1-face.
+              – RL+ X is tangent to L, and does not agree with RE
+                                                                +
+                                                                  X for any of the 3-faces
+                E adjacent to L. In this case we say that L is a bad 1-face.
+     5
+    There is also a more general notion of “generalized Reeb trajectory” on the boundary of a
+compact convex convex set in R2n whose interior contains the origin; see Definition 1.17 below. We
+do not know whether the generalized Reeb flow on the boundary of a four-dimensional symplectic
+polytope is well posed.
+
+
+                                                6
+   • If P is a 0-face, then RP+ X points into a 3-face E or bad 1-face L adjacent to
+                           +
+     F and agrees with RE    X or RL+ X respectively.
+
+Remark 1.8. The reason we assume that X has no Lagrangian 2-faces in Defi-
+nition 1.4 is that if F is a Lagrangian 2-face, then RF+ X is two-dimensional and
+tangent to F . In fact, ∂RF+ X = RE
+                                  +
+                                    1
+                                           +
+                                      X ∪ RE2
+                                              X where E1 and E2 are the two 3-faces
+adjacent to F . In this case we do not have a well-posed “combinatorial Reeb flow”
+on ∂X.
+
+Definition 1.9. A combinatorial Reeb orbit as above is:
+
+   • Type 1 if it does not intersect the 1-skeleton of X;
+
+   • Type 2 if it intersects the 1-skeleton of X, but only in finitely many points
+     which are some of the endpoints of the line segments Γi ;
+
+   • Type 3 if it contains a bad 1-face.
+
+
+
+
+Figure 2: We depict sub-trajectories of the three types of orbits, in red. Each cube
+above represents a 3-face of a hypothetical 4-polytope.
+
+    It follows from the definitions that each combinatorial Reeb orbit is of one of the
+above three types. Type 1 Reeb orbits are the most important for our computations.
+We expect that Type 2 combinatorial Reeb orbits do not exist for generic polytopes;
+see Conjecture 1.26 below. Type 3 combinatorial Reeb orbits generally cannot be
+eliminated by perturbing the polytope; but we will see in Theorem 1.12(iii) below
+that they do not contribute to the symplectic capacities that we are interested in.
+See Remark 5.8 for some intuition for this.
+
+1.3    Rotation numbers and the Conley-Zehnder index
+Let X be a compact star-shaped domain in R4 with smooth boundary Y . Let
+Φt : Y → Y denote the time t flow of the Reeb vector field R. The derivative
+
+                                           7
+of Φt preserves the contact form λ and so defines a map on the contact structure
+ξ = Ker(λ), namely
+                                dΦt : ξy −→ ξΦt (y)
+for each y ∈ Y . The map dΦt is symplectic with respect to the symplectic form dλ|ξ
+on ξ.
+    We say that a Reeb orbit γ : R/T Z → Y is nondegenerate if the “linearized
+return map”
+                                dΦT : ξγ(0) −→ ξγ(0)                          (1.4)
+does not have 1 as an eigenvalue. The contact form λ is called nondegenerate if all
+Reeb orbits are nondegenerate.
+   Now fix a symplectic trivialization τ : ξ → Y × R2 . If γ is a Reeb orbit as
+above, then the trivialization τ allows us to regard the map (1.4) as an element of
+the 2-dimensional symplectic group Sp(2). Moreover, the family of maps
+                                −1
+                        n                               o
+                            2 τ        dΦt       τ    2
+                          R −→ ξγ(0) −→ ξγ(t) −→ R                            (1.5)
+                                                       t∈[0,T ]
+
+defines a path φτ in Sp(2) from the identity to the map (1.4), and thus an element
+of the universal cover Sp(2)
+                       f     of Sp(2). As we review in Appendix A, any element of
+Sp(2)
+f      has a well-defined rotation number. We denote the rotation number of φτ
+by
+                                     ρ(γ) ∈ R.
+    Note that the rotation number ρ(γ) does not depend on the choice of symplectic
+trivialization τ of ξ. Since Y ≃ S 3 , any two such trivializations are homotopic,
+giving rise to a homotopy of paths (1.5) whose final endpoints are conjugate in
+Sp(2). Invariance of the rotation number then follows from Lemma A.8.
+    If γ is nondegenerate (which holds automatically when ρ(γ) is not an integer),
+then the Conley-Zehnder index of γ is defined by
+
+                          CZ(γ) = bρ(γ)c + dρ(γ)e ∈ Z.                         (1.6)
+
+Proposition 1.10. Let X be a compact strictly convex domain in R4 with smooth
+boundary Y and with 0 ∈ int(X). Then:
+ (a) Every Reeb orbit γ in Y has ρ(γ) > 1. In particular, if γ is nondegenerate
+     then CZ(γ) ≥ 3.
+ (b) There exists a Reeb orbit γ which is action minimizing, i.e. A(γ) = Amin (X),
+     with
+                                       ρ(γ) ≤ 2.
+     If γ is also nondegenerate then the inequality is strict, so that CZ(γ) = 3.
+
+                                         8
+Proof. (a) was proved by Hofer-Wysocki-Zehnder [14].
+   (b) follows from the construction of the Ekeland-Hofer-Zehnder capacity and an
+index calculation of Hu-Long [16]. In fact, it was recently shown by Abbondandolo-
+Kang [3] and Irie [20] that cEHZ (X) agrees with a capacity defined from symplectic
+homology, which by construction is the action of some Reeb orbit γ with ρ(γ) ≤ 2,
+with equality only if γ is degenerate.
+    Suppose now that X is a symplectic polytope in R4 . As we explain in Defini-
+tion 2.23, each Type 1 combinatorial Reeb orbit γ has a well-defined combinatorial
+rotation number, which we denote by ρcomb (γ) ∈ R. There is also a combinato-
+rial notion of nondegeneracy for γ, which automatically holds when ρcomb (γ) ∈/ Z.
+When γ is a nondegenerate Type 1 combinatorial Reeb orbit, we can then define its
+combinatorial Conley-Zehnder index by analogy with (1.6) as
+
+                       CZcomb (γ) = bρcomb (γ)c + dρcomb (γ)e .                  (1.7)
+
+The combinatorial rotation number and combinatorial Conley-Zehnder index of a
+Type 2 combinatorial Reeb orbit are not defined; and although we do not need this,
+it would be natural to define the combinatorial rotation number and combinatorial
+Conley-Zehnder index of a Type 3 combinatorial Reeb orbit to be +∞.
+
+1.4    Smooth-combinatorial correspondence
+Let X be a convex polytope in R2n . If ε > 0, define the ε-smoothing of X by
+
+                       Xε = z ∈ R2n dist(z, X) ≤ ε .
+                             
+                                                                           (1.8)
+
+The domain Xε is convex and has C 1 -smooth boundary. The boundary is C ∞
+smooth except along strata arising from the boundaries of the faces of X; see §5.1
+for a detailed description.
+    Our main results are the following two theorems, giving a correspondence be-
+tween combinatorial Reeb dynamics on a symplectic polytope in R4 , and ordinary
+Reeb dynamics on ε-smoothings of the polytope.
+    There is a slight technical issue here: since ∂Xε is only C 1 smooth, the Reeb
+vector field on ∂Xε is only C 0 , so that for a Reeb orbit γ, the linearized Reeb flow
+(1.4) might not be defined. If γ is transverse to the strata where ∂Xε is not C ∞
+(which is presumably true for all γ if X and ε are generic), then the Reeb flow in a
+neighborhood of γ has a well-defined linearization; we call such orbits linearizable.
+It turns out that a non-linearizable Reeb orbit γ on ∂Xε still has a well-defined
+rotation number ρ(γ), defined in §5.4.
+    The following theorem describes how combinatorial Reeb orbits give rise to Reeb
+orbits on smoothings. See Lemma 6.1 for a more precise statement.
+
+                                          9
+Theorem 1.11. (proved in §6.1) Let X be a symplectic polytope in R4 , and let
+γ be a nondegenerate Type 1 combinatorial Reeb orbit for X. Then for all ε > 0
+sufficiently small, there is a distinguished Reeb orbit γε on ∂Xε such that:
+
+  (i) γε converges in C 0 to γ as ε → 0.
+
+ (ii) limε→0 A(γε ) = Acomb (γ).
+
+(iii) γε is linearizable and nondegenerate, ρ(γε ) = ρcomb (γ), and CZ(γε ) = CZcomb (γ).
+
+   The following theorem describes how Reeb orbits on smoothings give rise to
+combinatorial Reeb orbits.
+
+Theorem 1.12. (proved in §6.2) Let X be a symplectic polytope in R4 . Then there
+are constants cF > 0 for each 0-, 1-, or 2-face F of X with the following property.
+    Let {(εi , γi )}i=1,... be a sequence of pairs such that εi > 0; γi is a Reeb orbit on
+∂Xεi ; and εi → 0 as i → ∞. Suppose that ρ(γi ) < R where R does not depend on
+i. Then after passing to a subsequence, there is a combinatorial Reeb orbit γ for X
+such that:
+
+  (i) γi converges in C 0 to γ as i → ∞.
+
+  (i) limi→∞ A(γi ) = Acomb (γ).
+
+(iii) γ is either Type 1 or Type 2.
+
+ (iv) If γ is Type 1, then for i sufficiently large, γi is linearizable and ρ(γi ) =
+      ρcomb (γ). If γ is also nondegenerate, then for i sufficiently large, γi is nonde-
+      generate and CZ(γi ) = CZcomb (γ).
+
+ (v) Let F1 , . . . , Fk denote the faces containing the endpoints of the segments of the
+     combinatorial Reeb orbit γ. Then
+                                         k
+                                         X
+                                                cFi ≤ R.                            (1.9)
+                                          i=1
+
+
+Remark 1.13. One can compute explicit constants cF – see §6.2 for the details – and
+the resulting bound (1.9) is crucial in enabling finite computations. For example,
+combinatorial Reeb orbits with a given action bound could have arbitrarily many
+segments winding in a “helix” around a bad 1-face. However the bound (1.9) ensures
+that combinatorial Reeb orbits with too many segments will not arise as limits of
+sequences of smooth Reeb orbits with bounded rotation number.
+
+
+                                           10
+Remark 1.14. The methods of this paper can be used to prove a version of Theorem
+1.11 (omitting the condition (c) on the rotation number and Conley-Zehnder index)
+for polytopes X ⊂ R2n for 2n > 4, under the hypothesis that the (2n − 2)-faces of
+X are symplectic. Generalizing Theorem 1.12 to higher dimensions would be less
+straightforward, as its proof in four dimensions depends crucially on estimates on
+the rotation number in §5. Higher dimensional analogues of these estimates are an
+interesting topic for future work.
+   Theorem 1.12 allows one to compute the EHZ capacity of a four-dimensional
+polytope as follows:
+Corollary 1.15. Let X be a symplectic polytope in R4 . Then
+
+                             cEHZ (X) = min{Acomb (γ)}                         (1.10)
+                                                                P
+where the minimum is over combinatorial Reeb orbits γ with        i cFi ≤ 2 which are
+either Type 1 with ρcomb (γ) ≤ 2 or Type 2.
+Remark 1.16. If the coordinates of the vertices of X are rational, then the com-
+binatorial action of every combinatorial Reeb orbit is rational. It follows from
+Theorem 1.12 that in this case, cEHZ (X), as well as the other symplectic capacities
+mentioned in §1.1 determined by actions of Reeb orbits, are all rational.
+   To explain why Corollary 1.15 follows from Theorem 1.12, we need to recall a
+result of Künzle [21] as explained by Artstein-Avidan and Ostrover [5].
+Definition 1.17. If X is any compact convex set in R2n with 0 ∈ int(X), a gener-
+alized Reeb orbit for X is a map γ : R/T Z → ∂X for some T > 0 such that γ is
+continuous and has left and right derivatives at every point, which agree for almost
+                                                         +
+every t, and the left and right derivatives at t are in Rγ(t) X. If γ is a generalized
+Reeb orbit, define its symplectic action by (1.1).
+Proposition 1.18. [5, Prop. 2.7] If X is a compact convex set in R2n with 0 ∈
+int(X), then
+                           cEHZ (X) = min{A(γ)}
+where the minimum is taken over all generalized Reeb orbits.
+Proof of Corollary 1.15. Pick a sequence of positive numbers εi with limi→∞ εi = 0.
+For each i, by equation (1.2), we can find a Reeb orbit γi on ∂Xεi with A(γi ) =
+cEHZ (Xεi ). By Proposition 1.10(b), we can assume that ρ(γi ) ≤ 2. By Theorem 1.12,
+it follows that after passing to a subsequence, there is a combinatorial Reeb orbit γ
+for X, satisying the conditions in Corollary 1.15, such that
+
+                Acomb (γ) = lim A(γi ) = lim cEHZ (Xεi ) = cEHZ (X).
+                            i→∞           k→∞
+
+
+                                         11
+Here the last equality holds by the C 0 continuity of cEHZ . We conclude that
+                                  cEHZ (X) ≥ min{Acomb (γ)}
+where the minimum is over combinatorial Reeb orbits γ satisfying the conditions in
+Corollary 1.15.
+    The reverse inequality follows from Proposition 1.18, because by Definitions 1.6
+and 1.17, every combinatorial Reeb orbit is a generalized Reeb orbit. (For a sym-
+plectic polytope in R4 , a “generalized Reeb orbit” is equivalent to a generalization
+of a “combinatorial Reeb orbit” in which there may be infinitely many line seg-
+ments.)
+Remark 1.19. Haim-Kislev [12, Thm. 1.1] gives a different formula for cEHZ of a
+convex polytope, which is valid in R2n for all n. That formula implies that in the
+minimum (1.10), we can also assume that γ has at most one segment in each 3-face.
+
+1.5     Experiments testing Viterbo’s conjecture
+If X is a convex polytope in R2n , define its systolic ratio by
+                                                 cEHZ (X)n
+                                     sys(X) =              .
+                                                 n! vol(X)
+Note that cEHZ is translation invariant, so we can make this definition without
+assuming that 0 ∈ int(X).
+    Since every compact convex domain in R2n can be C 0 approximated by convex
+polytopes, it follows that the weak version of Viterbo’s conjecture, namely Conjec-
+ture 1.1, is true if and only if every convex polytope X has systolic ratio sys(X) ≤ 1.
+The combinatorial formula for the systolic ratio given by Corollary 1.15 allows us
+to test this conjecture by computer when n = 2. In particular, we ran optimization
+algorithms over the space of k-vertex convex polytopes in R4 to find local max-
+ima of the systolic ratio6 . In the results below, when listing the vertices of specific
+polytopes, we use Lagrangian coordinates (x1 , x2 , y1 , y2 ).
+
+5-vertex polytopes (4-simplices).
+Experimentally7 , every 4-simplex X has systolic ratio
+                                         sys(X) ≤ 3/4.
+   6
+      This is a somewhat involved process; convergence to a local maximum becomes very slow once
+one is close. It helps to mod out the space of polytopes by the 15-dimensional symmetry group
+generated by translations, linear symplectomorphisms, and scaling. To find exact local maxima,
+one can look at symplectic invariants, such as areas of 2-faces, and guess what these are converging
+to.
+    7
+      Perhaps this could be proved analytically using the formula in [12, Thm. 1.1].
+
+
+                                                12
+The apparent maximum of 3/4 is achieved by the “standard simplex” with vertices
+
+                 (0, 0, 0, 0), (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1).
+
+Remark 1.20. Corollary 1.15 does not directly apply to (a translate of) this poly-
+tope because it has some Lagrangian 2-faces. For examples like these, we find
+numerically that a slight perturbation of the polytope to a symplectic polytope (to
+which Corollary 1.15 does apply) has systolic ratio very close to the claimed value.
+One can compute the systolic ratio of a polytope with Lagrangian 2-faces rigorously
+using a generalization of Corollary 1.15. For the particular example above, one can
+also compute the systolic ratio by hand using [12, Thm. 1.1].
+
+    We have found families of other examples of 4-simplices with systolic ratio 3/4,
+including some with no Lagrangian 2-faces. An example is the simplex with vertices
+
+       (0, 0, 0, 0), (1, −1/3, 0, 0), (0, −1/3, 1, 0), (−2/3, −1, 2/3, 0), (0, 0, 0, 1).
+
+6-vertex polytopes.
+We found families of 6-vertex polytopes with systolic ratio equal to 1. An example
+is the polytope with vertices
+
+       (0, 0, 0, 0), (1, 0, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1), (0, −1, 1, 0), (−1, −1, 0, 1).
+
+(Apparently the previous minimum number of vertices of a known example with
+systolic ratio 1 was 12, given by the Lagrangian product of a triangle and a square
+[23, Lem. 5.3.1]. Some more examples of Lagrangian products with systolic ratio 1
+are presented in [6].)
+
+7-vertex polytopes.
+We also found families of 7-vertex polytopes with systolic ratio 1. One example has
+vertices
+
+                       (0, 0, 0, 0), (1, 0, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1),
+                 (1/3, −2/3, 2/3, 0), (−1, −1, 0, 1/2), (0, 0, 1/3, −1/3).
+
+Presumably there exist k-vertex polytopes in R4 with systolic ratio equal to 1 for
+every k ≥ 6.
+
+
+
+
+                                                 13
+The 24-cell.
+We also found a special example of a polytope with systolic ratio 1: a rotation of
+the 24-cell (one of the six regular polytopes in four dimensions). See §2.4 for details.
+   We have heavily searched the spaces of polytopes with 7 or fewer vertices and
+have not found any counterexamples to Viterbo’s conjecture. For polytopes with 8
+vertices, our computer program starts becoming slower (taking seconds to minutes
+per polytope on a standard laptop), and we have not yet searched as extensively.
+
+Towards a proof of the weak Viterbo conjecture?
+Let X be a star-shaped domain in R4 with smooth boundary Y . Following [1], we
+say that X is Zoll if every point on Y is contained in a Reeb orbit with minimal
+action. Note that:
+
+ (a) If X is strictly convex and a local maximizer for the systolic ratio of convex
+     domains in the C 0 topology, then X is Zoll.
+
+ (b) If X is Zoll, then X has systolic ratio sys(X) = 1.
+
+Part (a) holds because if X is strictly convex and if y ∈ Y is not on an action mimiz-
+ing Reeb orbit, then one can shave some volume off of X near y without creating
+any new Reeb orbits of small action. Part (b) holds by a topological argument going
+back to [26]. (In fact one can further show that X is symplectomorphic to a closed
+ball; see [1, Prop. 4.3].) Of course, these observations are not enough to prove Con-
+jecture 1.1, since we do not know that the systolic ratio for convex domains takes a
+maximum, let alone on a strictly convex domain. But this does suggest the following
+strategy for proving Conjecture 1.1 via convex polytopes.
+
+Definition 1.21. Let X be a convex polytope in R4 with 0 ∈ int(X). We say that X
+is combinatorially Zoll if there is an open dense subset U of ∂X such that every
+point in U is contained in a combinatorial Reeb orbit (avoiding any Lagrangian
+2-faces of X) with combinatorial action equal to cEHZ (X).
+
+    We have checked by hand that the above examples of polytopes with systolic
+ratio equal to 1 are combinatorially Zoll. This suggests:
+
+Conjecture 1.22. Let X be a convex polytope in R4 with 0 ∈ int(X). Then:
+
+ (a) If X is combinatorially Zoll, then sys(X) = 1.
+
+ (b) If k is sufficiently large (k ≥ 6 might suffice) and if X maximizes systolic ratio
+     over convex polytopes with ≤ k vertices, then X is combinatorially Zoll.
+
+
+                                          14
+    Part (a) of this conjecture can probably be proved following the argument in
+the smooth case. Part (b) might be much harder. But both parts of the conjecture
+together would imply the weak Viterbo conjecture (using a compactness argument
+to show that for each k the systolic ratio takes a maximum on the space of convex
+polytopes with ≤ k vertices).
+
+Question 1.23. If a convex polytope X in R4 is combinatorially Zoll, then is int(X)
+symplectomorphic to an open ball?
+
+1.6    Experiments testing other conjectures
+One can also use Theorems 1.11 and 1.12 to test conjectures about Reeb orbits that
+do not have minimal action. For example, if X is a convex domain with smooth
+boundary and 0 ∈ int(X) such that λ0 |∂X is nondegenerate, and if k is a positive
+integer, define
+                     Ak (X) = min{A(γ) | CZ(γ) = 2k + 1},                   (1.11)
+where the minimum is over Reeb orbits γ on ∂X. In particular A1 (X) = Amin (X)
+by Proposition 1.10(b).
+
+Conjecture 1.24. For X as above we have A2 (X) ≤ 2A1 (X).
+
+    This conjecture has nontrivial content when every action-minimizing Reeb orbit
+has rotation number at least 3/2. (If an action-minimizing Reeb orbit has rotation
+number less than 3/2, then its double cover has Conley-Zehnder index 5 and thus
+verifies the conjectured inequality.) To explain how to test this, we need the following
+definitions.
+
+Definition 1.25. Let X be a symplectic polytope in R4 . Let L > 0. We say that
+X is L-nondegenerate if:
+
+   • X does not have any Type 2 combinatorial Reeb orbit γ with Acomb (γ) ≤ L.
+
+   • Every Type 1 combinatorial Reeb orbit γ with Acomb (γ) ≤ L is nondegenerate,
+     see Definition 2.23.
+
+    It follows from Theorem 1.12 that if a symplectic polytope X is L-nondegenerate,
+then for all ε > 0 sufficiently small, all Reeb orbits on ∂Xε with action less than L
+are nondegenerate.
+
+Conjecture 1.26. For any integer k and any real number L, the set of L-nondegenerate
+symplectic polytopes with k vertices is dense in the set of all k-vertex convex polytopes
+containing 0, topologized as an open subset of R4k .
+
+
+                                          15
+Definition 1.27. Let k be a positive integer and let X be a symplectic polytope in
+R4 . Suppose that X is L-nondegenerate and has a combinatorial Reeb orbit γ with
+A(γ) < L and CZcomb (γ) = 2k + 1. By analogy with (1.11), define
+
+                    Acomb
+                     k    (X) = min {Acomb (γ) | CZcomb (γ) = 2k + 1}
+
+where the minimum is over combinatorial Reeb orbits γ with combinatorial action
+less than L.
+       Conjecture 1.24 is now equivalent8 to the following:
+Conjecture 1.28. Let X be a symplectic polytope in R4 . Assume that Acomb
+                                                                     1    (X)
+and Acomb
+     2    (X) are defined. Then
+
+                                  Acomb
+                                   2    (X) ≤ 2Acomb
+                                                1    (X).
+
+    One can use Theorems 1.11 and 1.12 to compute Acomb   k   (X). One can then
+test Conjecture 1.28 by using optimization algorithms to try to maximize the ratio
+Acomb
+  2   (X)/(2Acomb
+               1   (X)). So far we have not found any example where this ratio is
+greater than 1.
+
+The rest of the paper
+In §2, we investigate Type 1 combinatorial Reeb orbits in detail, we define the
+combinatorial rotation number, and we work out the example of the 24-cell. In §3,
+we establish foundational facts about the combinatorial Reeb flow on a symplectic
+polytope. In §4 we review a symplectic trivialization of the contact structure on
+a star-shaped hypersurface in R4 defined using the quaternions. We explain a key
+curvature identity due to Hryniewicz and Salomão which implies that in the convex
+case, the rotation number of a Reeb trajectory increases monotonically as it evolves.
+In §5 we study the Reeb flow on a smoothing of a polytope. In §6 we use this work to
+prove the smooth-combinatorial correspondence of Theorems 1.11 and 1.12. In the
+appendix, we review basic facts about rotation numbers that we need throughout.
+
+Acknowledgments.
+We thank A. Abbondandolo, P. Haim-Kislev, U. Hryniewicz, and Y. Ostrover for
+helpful conversations, and A. Balitskiy for pointing out some additional references.
+   8
+    More precisely, by Theorem 1.11, if X is a polytope as above for which Acomb
+                                                                            1    (X) and Acomb
+                                                                                          2    (X)
+are defined, and if A2 (X) > 2A1 (X), then Conjecture 1.24 fails for (nondegenerate C ∞
+                      comb            comb
+
+perturbations of) ε-smoothings of X for ε sufficiently small. Thus Conjecture 1.24 implies Con-
+jecture 1.28. If Conjecture 1.26 is true, then one can conversely show, by approximating smooth
+domains by L-nondegenerate symplectic polytopes, that Conjecture 1.28 implies Conjecture 1.24.
+
+
+                                               16
+JC was partially supported by an NSF Graduate Research Fellowship. MH was par-
+tially supported by NSF grant DMS-1708899, a Simons Fellowship, and a Humboldt
+Research Award.
+
+
+2     Type 1 combinatorial Reeb orbits
+Let X be a symplectic polytope in R4 . In this section we give what amounts to an
+algorithm for finding the Type 1 combinatorial Reeb orbits and their combinatorial
+symplectic actions, see Proposition 2.14. (Our actual computer implementation uses
+various optimizations not discussed here.) We also define combinatorial rotation
+numbers and work out the example of the 24-cell.
+
+2.1    Symplectic flow graphs
+We start by defining “symplectic flow graphs” in any even dimension. In the next
+subsection (§2.2), we will specialize to certain 2-dimensional flow graphs that keep
+track of the combinatorics needed to find Type 1 Reeb orbits on the boundary of a
+symplectic polytope in R4 .
+
+Definition 2.1. A linear domain is an intersection of a finite number of open or
+closed half-spaces in an affine space, or an affine space itself.
+
+Definition 2.2. The tangent space T A of a linear domain A is the tangent space
+Tx A for any x ∈ A; the tangent spaces for different x are canonically isomorphic to
+each other via translations.
+
+Definition 2.3. Let A and B be linear domains. An affine map φ : A → B is the
+restriction of an affine map between affine spaces containing A and B. Such a map
+induces a map on tangent spaces which we denote by T φ : T A → T B.
+
+Definition 2.4. Let A and B be linear domains. A linear flow from A to B is a
+triple Φ = (D, φ, f ) consisting of:
+
+    • the domain of definition: a linear domain D ⊂ A.
+
+    • the flow map: an affine map φ : D → B.
+
+    • the action function: an affine function f : D → R.
+
+We sometimes write Φ : A → B. In the examples of interest for us, φ is injective,
+and f ≥ 0.
+
+
+
+                                        17
+Definition 2.5. Let Φ = (D, φ, f ) be a linear flow from A to B and let Ψ = (E, ψ, g)
+be a linear flow from B to C. Their composition is the linear flow Ψ ◦ Φ : A → C
+defined by
+                        Ψ ◦ Φ = (φ−1 (E), ψ ◦ φ, f + g ◦ φ).
+Remark 2.6. Composition of linear flows is associative, and there is an identity
+linear flow ιA : A → A given by ιA = (A, idA , 0). If Φi = (Di , φi , fi ) is a linear flow
+from Ai−1 to Ai for i = 1, . . . , k, and if Φ = (D, φ, f ) is the composition Φk ◦ · · · ◦ Φ1 ,
+then for x ∈ D, we have
+                                      k
+                                      X
+                            f (x) =         fi ((φi−1 ◦ · · · ◦ φ1 )(x)).                 (2.1)
+                                      i=1
+
+Definition 2.7. A linear flow graph G is a triple G = (Γ, A, Φ) consisting of:
+   • A directed graph Γ with vertex set V (Γ) and edge set E(Γ).
+   • For each vertex v of Γ, an open linear domain Av .
+   • For each edge e of Γ from u to v, a linear flow Φe = (De , φe , fe ) : Au → Av .
+
+
+
+
+Figure 3: An example of a flow graph with 4 nodes and 4 edges. The linear domains
+and flows are depicted above their corresponding nodes and edges.
+
+    Let G = (Γ, A, Φ) be a linear flow graph. If p = e1 . . . ek is a path in Γ from u
+to v, we define an associated linear flow
+                               Φp = (Dp , φp , fp ) : Au −→ Av
+
+                                                 18
+by
+                                 Φp = Φek ◦ · · · ◦ Φe1 .
+Definition 2.8. A trajectory γ of G is a pair γ = (p, x), where p is a path in Γ
+and x ∈ Dp .
+Definition 2.9. A periodic orbit of G is an equivalence class of trajectories γ =
+(p, x) where p is a cycle in Γ and x is a fixed point of φp , i.e. φp (x) = x. Two such
+trajectories γ = (p, x) and η = (q, y) are equivalent if there are paths r and s in Γ
+such that p = rs, q = sr, and φr (x) = y. We often abuse notation and denote the
+periodic orbit by γ = (p, x), instead of by the equivalence class thereof.
+Definition 2.10. The action of a periodic orbit γ = (p, x) is defined by f (γ) =
+fp (x).
+Definition 2.11. A periodic orbit γ = (p, x), where p is a cycle based at u, is
+degenerate if the induced map on tangent spaces T φp : T Du → T Du has 1 as an
+eigenvalue. Otherwise we say that γ is nondegenerate.
+Definition 2.12. An 2n-dimensional symplectic flow graph G is a quadruple
+G = (Γ, A, ω, Φ) where:
+     • (Γ, A, Φ) is a linear flow graph in which each linear domain Av has dimension
+       2n.
+     • ω assigns to each vertex v of Γ a linear symplectic form ωv on T Av .
+We require that if e is an edge from u to v, then φ∗e ωv = ωu .
+
+2.2     The symplectic flow graph of a 4d symplectic polytope
+Definition 2.13. Let X be a symplectic polytope in R4 . We associate to X the
+two-dimensional symplectic flow graph G(X) = (Γ, A, ω, Φ) defined as follows:
+     • The vertex set of Γ is the set of 2-faces of X. The linear domain associated
+       to a vertex is simply the corresponding 2-face, regarded as a linear domain in
+       R4 . If F is a 2-face, then the symplectic form ωF on T F is the restriction of
+       the standard symplectic form ω0 on R4 .
+     • If F1 and F2 are 2-faces, then there is an edge e in Γ from F1 to F2 if and
+       only if there is a 3-face E adjacent to F1 and F2 , and a trajectory of the Reeb
+       vector field RE on E from some point in F1 to some point in F2 . In this case,
+       the linear flow
+                                  Φe = (De , φe , fe ) : F1 −→ F2
+       is defined as follows:
+
+                                           19
+         – The domain De is the set of x ∈ F1 such that there exists a trajectory of
+           RE from x to some point y ∈ F2 .
+         – For x as above, φe (x) = y, and fe (x) is the time it takes to flow along
+           the vector field RE from x to y, or equivalently the integral of λ0 along
+           the line segment from x to y.
+
+   In the above definition, note that φe and fe are affine, because the vector field
+RE on E is constant by equation (1.3). A simple calculation as in [14, Eq. (5.10)]
+shows that the map φe is symplectic.
+
+Proposition 2.14. Let X be a symplectic polytope in R4 . Then there is a canonical
+bijection
+
+       {periodic orbits of G(X)} ←→ {Type 1 combinatorial Reeb orbits of X}.
+
+If (p, x) is a periodic orbit of G(X), and if γ is the corresponding combinatorial
+Reeb orbit, then
+                                 f (p, x) = Acomb (γ).                       (2.2)
+
+Proof. Suppose (p = e1 · · · ek , x) is a periodic orbit of G(X). Let Ei denote the 3-face
+of X associated to ei . There is then a combinatorial Reeb orbit γ = (L1 , . . . , Lk ),
+where Li is the line segment in Ei from φe−1 ◦ · · · ◦ φe1 (x) to φei ◦ · · · ◦ φe1 (x). It
+follows from Definitions 1.6 and 2.13 that this construction defines a bijection from
+periodic orbits of G(X) to combinatorial Reeb orbits of X. The identification of
+actions (2.2) follows from equation (2.1).
+    By Proposition 2.14, to find the Type 1 Reeb orbits9 of X, one can compute
+the symplectic flow graph G(X) = (Γ, A, ω, Φ), enumerate the cycles in the graph
+Γ, and for each cycle p, compute the fixed points of the map φp in the domain Dp .
+In order to avoid searching for arbitrarily long cycles in the graph Γ in the cases of
+interest, we now need to discuss combinatorial rotation numbers.
+
+2.3     Combinatorial rotation numbers
+Definition 2.15. A trivialization of a 2n-dimensional symplectic flow graph G =
+(Γ, A, ω, Φ) is a pair (τ, φ)
+                           e consisting of:
+   9
+    When testing Viterbo’s conjecture and related conjectures, although all Type 1 orbits of X are
+detected by the flow graph G(X), in view of Corollary 1.13 we must also account for Type 2 orbits.
+One can do this by either (1) extending G(X) to a flow graph that includes the lower-dimensional
+faces of X or (2) working with a flow graph G(X) whose linear domains AF are the closures of the
+2-faces, rather than 2-faces themselves. We use the first strategy in our computer program.
+
+
+
+                                               20
+   • For each vertex u of Γ, an isomorphism of symplectic vector spaces
+                                                     ≃
+                                τu : (T Au , ωu ) −→ (R2n , ω0 ).
+
+   • For each edge e in Γ from u to v, a lift φee,τ ∈ Sp(2n)
+                                                      f      of the symplectic matrix
+
+                                   τv ◦ T φe ◦ τu−1 ∈ Sp(2n).
+
+Here ω0 denotes the standard symplectic form on R2n , and Sp(2n)
+                                                             f      denotes the
+universal cover of the symplectic group Sp(2n). We sometimes abuse notation and
+denote the trivialization (τ, φ)
+                              e simply by τ .
+
+   If p = e1 . . . en is a path in Γ from u to v, we define
+
+                          φep,τ = φeen ,τ ◦ · · · ◦ φee1 ,τ ∈ Sp(2n).
+                                                              f
+
+Definition 2.16. Let G = (Γ, A, ω, Φ) be a 2-dimensional symplectic flow graph,
+let τ be a trivialization of G, and let p be a path in Γ. Define the rotation number
+of p with respect to τ by
+                                  ρτ (p) = ρ(φep,τ ) ∈ R,
+where the right hand side is the rotation number on Sp(2)
+                                                    f     reviewed in Appendix A.
+
+    Suppose now that X is a symplectic polytope in R4 . We now define a canonical
+trivialization τ of the symplectic flow graph G(X) which has the useful property
+that if (p, x) is a periodic orbit of G(X), and if γ is the corresponding combinatorial
+Reeb orbit on X from Proposition 2.14, then the rotation number ρτ (p) is the limit
+of the rotation numbers of Reeb orbits on smoothings of X that converge to γ.
+    Fix matrices i, j, k ∈ SO(4) which represent the quaternion algebra, such that i
+is the standard almost complex structure. It follows from the formula ω0 (V, W ) =
+hiV, W i, together with the quaternion relations, that the matrices i, j, and k are
+symplectic. In examples below, in the coordinates x1 , x2 , y1 , y2 , we use the choice
+                                                                             
+                   −1                     −1                                   −1
+                       −1 , j = 1
+                                                                         1     
+     i=                                              , k =                     .
+         1                                        1               −1         
+               1                               −1                  1
+
+Definition 2.17. Let X be a symplectic polytope in R4 . We define the quater-
+nionic trivialization (τ, φ)
+                          e of the symplectic flow graph G(X) as follows.
+
+
+
+
+                                              21
+   • Let F be a 2-face of X. We define the isomorphism
+                                                ≃
+                                      τF : T F −→ R2
+
+     as follows. By Lemma 1.7, there is a unique 3-face E adjacent to F such that
+     the Reeb cone RF+ consists of the nonnegative multiples of the Reeb vector
+     field RE , and the latter points into E from F . Let ν denote the outward unit
+     normal vector to E. If V ∈ T F , define
+
+                                τF (V ) = (hV, jνi, hV, kνi).                     (2.3)
+
+   • If e is an edge from F1 to F2 , define φee,τ ∈ Sp(2)
+                                                    f      to be the unique lift of the
+     symplectic matrix
+                                τF2 ◦ T φe ◦ τF−11
+                                                   ∈ Sp(2)                        (2.4)
+     that has rotation number in the interval (−1/2, 1/2].
+   The following lemma verifies that this is a legitimate trivialization.
+Lemma 2.18. Let X be a symplectic polytope in R4 . If F is a 2-face of X, then
+the linear map τF in (2.3) is an isomorphism of symplectic vector spaces.
+Proof. Let E and ν be as in the definition of τF . Then {iν, jν, kν} is an orthonormal
+basis for T E. We have ω0 (iν, jν) = ω0 (iν, kν) = 0 and ω0 (jν, kν) = 1. If V and W
+are any two vectors in T F ⊂ T E, then expanding them in this basis, we find that
+ω0 (V, W ) = ω0 (τF (V ), τF (W )).
+Remark 2.19. An alternate convention for the quaternionic trivialization would
+be to define an isomorphism
+                                        ≃
+                             τF0 : T F −→ R2
+as follows. Let E 0 be the other 3-face adjacent to F (so that the Reeb vector field
+RE 0 points out of E along F ), and let ν 0 denote the outward unit normal vector to
+E 0 . Define
+                             τF0 (V ) = (hV, jν 0 i, hV, kν 0 i).
+This is also an isomorphism of symplectic vector spaces by the same argument as
+in Lemma 2.18.
+Definition 2.20. If X is a symplectic polytope in R4 and F is a 2-face of X, define
+the transition matrix
+                            ψF = τF ◦ (τF0 )−1 ∈ Sp(2).
+Lemma 2.21. If X is a symplectic polytope in R4 and F is a 2-face of X, then the
+transition matrix ψF is positive elliptic (see Definition A.7).
+
+                                          22
+Proof. We compute that
+
+                                           hjν 0 , νi 0         hkν 0 , νi 0
+                                                                            
+                     (τF0 )−1 =         0
+                                      jν −                   0
+                                                      iν , kν −            iν .             (2.5)
+                                           hiν 0 , νi           hiν 0 , νi
+
+To simplify notation, write a1 = hν 0 , νi, a2 = hiν 0 , νi, a3 = hjν 0 , νi, and a4 = hkν 0 , νi.
+It then follows from (2.3) and (2.5) that
+                                                                  
+                               1 a1 a2 − a3 a4 −a22 − a24
+                        ψF =
+                              a2        a22 + a23   a1 a2 + a3 a4
+
+Then Tr(ψF ) = 2hν 0 , νi ∈ (−2, 2), so ψF is elliptic. Moreover a2 > 0 by Lemma 3.9
+below, so ψF is positive elliptic.
+
+Corollary 2.22. If E is a 3-face of X, if F1 and F2 are 2-faces of X, and if there
+is a trajectory of the Reeb vector field on E from some point in F1 to some point in
+F2 , then φee,τ has rotation number in the interval (0, 1/2).
+
+Proof. It follows from the definitions that the map (2.4) agrees with the transition
+matrix ψF2 . By Lemma 2.21, this matrix is positive elliptic. It then follows from
+Lemma A.8 that its mod Z rotation number is in the interval (0, 1/2).
+
+Definition 2.23. Let X be a symplectic polytope in R4 . Let γ be a Type 1 com-
+binatorial Reeb orbit for X.
+
+    • We define the combinatorial rotation number of γ by
+
+                                             ρcomb (γ) = ρτ (p),
+
+      where (p, x) is the periodic orbit of G(X) corresponding to γ in Proposi-
+      tion 2.14, and τ is the quaternionic trivialization of X.
+
+    • We say that γ is nondegenerate if the periodic orbit (p, x) is nondegenerate
+      as in Definition 2.11. In this case we define the combinatorial Conley-
+      Zehnder index of γ by equation (1.7).
+
+Remark 2.24. By Corollary 2.22, the combinatorial rotation number is the rotation
+number of a product of elements of Sp(2)
+                                   f     each with rotation number in the interval
+(0, 1/2). A formula for computing the rotation number of such a product is given
+by Proposition A.9.
+
+
+
+
+                                                  23
+2.4    Example: the 24-cell
+We now compute the symplectic flow graph G(X) = (Γ, A, ω, Φ) and the quater-
+nionic trivialization τ for the example where X is the 24-cell with vertices
+
+   (±1, 0, 0, 0), (0, ±1, 0, 0), (0, 0, ±1, 0), (0, 0, 0, ±1), (±1/2, ±1/2, ±1/2, ±1/2).
+
+    The polytope X has 24 three-faces, each of which is an octahedron. The 3-faces
+are contained in the hyperplaces
+
+±x1 ±x2 = 1, ±x1 ±y1 = 1, ±x1 ±y2 = 1, ±x2 ±y1 = 1, ±x2 ±y2 = 1, ±y1 ±y2 = 1.
+
+There are 96 two-faces, each of which is a triangle; thus the graph Γ has 96 vertices.
+It follows from the calculations below that none of the 2-faces is Lagrangian, so that
+X is a symplectic polytope.
+    To understand the edges of the graph Γ, consider for example the 3-face E
+contained in the hyperplane x1 + y1 = 1. The vertices of this 3-face are
+
+                     (1, 0, 0, 0), (1/2, ±1/2, 1/2, ±1/2), (0, 0, 1, 0).
+
+The unit normal vector to this face is
+                                        1
+                                    ν = √ (1, 0, 1, 0).
+                                         2
+The Reeb vector field on E is
+                                                         
+                                          ∂   ∂
+                                RE = 2 −    +                 .
+                                         ∂x1 ∂y1
+
+Thus the Reeb flow on E flows from the vertex (1, 0, 0, 0) to the vertex (0, 0, 1, 0)
+in time 1/2. Each of the four 2-faces of E adjacent to (1, 0, 0, 0) flows to one of the
+four 2-faces of E adjacent to (0, 0, 1, 0), by an affine linear isomorphism.
+    For example, let F1 be the 2-face with vertices (1, 0, 0, 0), (1/2, 1/2, 1/2, ±1/2),
+and let F2 be the 2-face with vertices (0, 0, 1, 0), (1/2, 1/2, 1/2, ±1/2). Then F1 flows
+to F2 , so there is an edge e in the graph Γ from F1 to F2 . More explicitly, we can
+parametrize F1 as
+                                                  
+                  t1 + t2 t1 + t2 t1 + t2 t1 − t2
+             1−          ,       ,       ,            , t1 , t2 > 0, t1 + t2 < 1,
+                     2       2       2        2
+and we can parametrize F2 as
+                                               
+           t1 + t2 t1 + t2      t1 + t2 t1 − t2
+                  ,        ,1 −        ,          ,       t1 , t2 > 0, t1 + t2 < 1.
+              2       2            2       2
+
+                                             24
+With respect to these parametrizations, the flow map φe is simply
+                                    φe (t1 , t2 ) = (t1 , t2 ).
+The domain De of φe is all of F1 , and the action function is
+                                                   1 − t1 − t2
+                                 fe (t1 , t2 ) =               .
+                                                        2
+   It turns out that for every other 3-face E 0 , there is a linear symplectomorphism
+A of R4 such that AX = X and AE = E 0 . In fact, we can take A to be right
+multiplication by an appropriate unit quaternion. It follows from this symplectic
+symmetry that the Reeb flow on each 3-face behaves analogously. Putting these
+Reeb flows together, one finds that the graph Γ consists of 8 disjoint 12-cycles.
+(This example is highly non-generic!) Further calculations show that for each 12-
+cycle p, the map φp is the identity, so that every point in the interior of a 2-face is
+on a Type 1 combinatorial Reeb orbit. Moreover, the action of each such orbit is
+equal to 2. In particular, X is “combinatorially Zoll” in the sense of Definition 1.21.
+Also, the volume of X is 2, so X has systolic ratio 1.
+   To see how the quaternionic trivialization works, let us compute φee,τ for the edge
+e above. For the 2-face F1 above, the isomorphism τF1 is given in terms of the unit
+normal vector ν to E. We compute that
+                          1                                1
+                     jν = √ (0, 1, 0, −1),            kν = √ (0, 1, 0, 1).
+                           2                                2
+It follows that in terms of the basis (∂t1 , ∂t2 ) for T F1 , we have
+                                                     
+                                          1 0 1
+                                 τF1 = √                 .
+                                            2 1 0
+For the 2-face F2 above, the isomorphism τF2 is given in terms of the unit normal
+vector to the other 3-face adjacent to F2 . This other 3-face is in the hyperplane
+x2 + y1 = 1 and so has unit normal vector
+                                          1
+                                    ν 0 = √ (0, 1, 1, 0).
+                                           2
+We then similarly compute that in terms of the basis (∂t1 , ∂t2 ) for T F2 , we have
+                                               
+                                     1 −1 0
+                              τF2 = √
+                                      2 1 1
+Therefore the matrix (2.4) for the edge e is
+                                              −1     
+                             −1     −1 0     0 1      0 −1
+               τF2 ◦ T φe ◦ τF1 =                   =       .
+                                     1 1     1 0      1 1
+
+                                               25
+This matrix is positive elliptic and has eigenvalues e±iπ/3 . It follows that its lift φee,τ
+in Sp(2)
+    f      has rotation number 1/6.
+     For one of the other three edges associated to E, the matrix (2.4) is thesame as
+                                                                         1 −1
+above, and for the other two edges associated to E, the matrix is                 , whose
+                                                                         1 0
+lift also has rotation number 1/6. It then follows from the quaternionic symmetry of
+X mentioned earlier that for every edge e0 of the graph Γ, the lift φee0 ,τ is one of the
+above two matrices with rotation number 1/6. One can further check that for each
+12-cycle in the graph, one obtains just one of the above two matrices repeated 12
+times, so each corresponding Type 1 combinatorial Reeb orbit has rotation number
+equal to 2.
+
+
+3     Reeb dynamics on symplectic polytopes
+The goal of this section is to prove Proposition 1.5 and Lemma 1.7, describing the
+Reeb dynamics on the boundary of a symplectic polytope in R4 .
+
+3.1    Preliminaries on tangent and normal cones
+We now prove some lemmas about tangent and normal cones which we will need;
+see §1.2 for the definitions.
+    Recall that if C is a cone in Rm , its polar dual is defined by
+
+                          C o = {y ∈ Rm | hx, yi ≤ 0 ∀x ∈ C}.
+
+Lemma 3.1. Let X be a convex set in Rm and let y ∈ ∂X. Then
+
+                        Ny+ X = (Ty+ X)o ,        Ty+ X = (Ny+ X)o .
+
+Proof. If C is a closed cone then (C o )o = C, so it suffices to prove that Ny+ X =
+(Ty+ X)o .
+    To show that Ny+ X ⊂ (Ty+ X)◦ , let v ∈ Ny+ X and w ∈ Ty+ X; we need to show
+that hv, wi ≤ 0. By the definition of Ty+ X, there exist a sequence of vectors {wi }
+and a sequence of positive real numbers {εi } such that y + εi wi ∈ X for each i and
+limi→∞ wi = w. By the definition of Ny+ X we have hv, wi i ≤ 0, and so hv, wi ≤ 0.
+    To prove the reverse inclusion, if v ∈ (Tx+ X)o , then for any x ∈ X we have
+x − y ∈ Ty+ X, so hv, x − yi ≤ 0. It follows that v ∈ Ny+ X.
+   If X is a convex polytope in Rm and if E is an (m − 1)-face of X, let νE denote
+the outward unit normal vector to E.
+
+
+                                             26
+Lemma 3.2. Let X be a convex polytope in Rm and let F be a face of X. Let
+E1 , . . . , Ek denote the (m − 1)-faces whose closures contain F . Then
+
+                   TF+ X = {w ∈ Rm | hw, νEi i ≤ 0 ∀i = 1, . . . , k} ,                (3.1)
+                   NF+ X = Cone (νE1 , . . . , νEk ) .                                 (3.2)
+
+Proof. Let y ∈ F , and let B be a small ball around y. Then B ∩ X = ∩i (B ∩ Hi )
+where {Hi } is the set of all defining half-spaces for X whose boundaries contain F .
+The boundaries of the half-spaces Hi are the hyperplanes that contain the (m − 1)-
+faces E1 , . . . , Ek . It follows that B∩X is the set of x ∈ B such that hx−y, νEi i ≤ 0 for
+each i = 1, . . . , k. Equation (3.1) follows. Taking polar duals and using Lemma 3.1
+then proves (3.2).
+Lemma 3.3. Let X be a convex polytope in Rm and let F be a face of X. Let
+v ∈ NF+ X \ {0} and let w ∈ TF+ X \ {0}. Then hv, wi = 0 if and only if there is a
+face E of X with F ⊂ E such that v ∈ NE+ X and w ∈ TF+ E.
+   Here if E 6= F then TF+ E denotes the tangent cone of the polytope E at the face
+F of E; if E = F , then we interpret TF+ E = T F .
+Proof of Lemma 3.3. As in Lemma 3.2, let E1 , . . . , Ek denote the (m − 1)-faces
+adjacent to F .
+    (⇒) By the definitions of NF+ X and TF+ X, if v ∈ NF+ X and w ∈ TF+ X then
+hv, wi ≤ 0. Assume also that v and w are both nonzero and hv, wi = 0. Then we
+must have v ∈ ∂NF+ X and w ∈ ∂TF+ X; otherwise we could perturb v or w to make
+the inner product positive, which would be a contradiction.
+    Since w ∈ ∂TF+ X, it follows from (3.1) that hw, νEi i = 0 for some i. By renum-
+bering we can arrange that hw, νEi i = 0 if and only if i ≤ l where 1 ≤ l ≤ k. Let
+E = ∩li=1 Ei . Then E is a face of X adjacent to F , and w ∈ TF+ E.
+    We now want to show that v ∈ NE+ X. By (3.2), we can write v = ki=1 ai νEi
+                                                                           P
+with ai ≥ 0. Since hv, wi = 0 and hw, νEi i = 0 for i ≤ l and hw, νEi i < 0 for i > l,
+we must have ai = 0 for i > l. Thus v ∈ Cone(νE1 , . . . , νEl ), so by (3.2) again,
+v ∈ NF+ X.
+    (⇐) Assume that there is a face E adjacent to X such that v ∈ NE+ X and
+w ∈ TF+ E. We can renumber so that E = ∩li=1 Ei where 1 ≤ l ≤ k. Then v ∈
+Cone(νE1 , . . . , νEl ), and hw, νEi i = 0 for i ≤ l, so hv, wi = 0.
+
+3.2     The combinatorial Reeb flow is locally well-posed
+We now prove Proposition 1.5, asserting that the “combinatorial Reeb flow” on the
+boundary of a symplectic polytope in R4 is locally well-posed. This is a consequence
+of the following two lemmas:
+
+                                             27
+Lemma 3.4. Let X be a convex polytope in R4 , and let F be a face of X. Then the
+Reeb cone
+                          RF+ X = iNF+ X ∩ TF+ X
+has dimension at least 1.
+
+   Note that there is no need to assume that 0 ∈ int(X) in the above lemma,
+because the Reeb cone is invariant under translation of X.
+
+Lemma 3.5. Let X be a symplectic polytope in R4 and let F be a face of X. Then
+the Reeb cone RF+ X has dimension at most 1.
+
+Proof of Lemma 3.4. The proof has four steps.
+   Step 1. We need to show that there exists a unit vector in RF+ X. We first
+rephrase this statement in a way that can be studied topologically.
+   Define
+
+            B = (v, w) ∈ NF+ X × TF+ X kvk = kwk = 1, hv, wi = 0 .
+                 
+
+
+Define a fiber bundle π : Z → B with fiber S 2 by setting
+
+                     Z(v,w) = u ∈ R4 kuk = 1, hu, vi = 0 .
+                             
+
+
+Define two sections
+                                  s0 , s1 : B −→ Z
+by
+
+                                   s0 (v, w) = iv,
+                                   s1 (v, w) = w.
+
+To show that there exists a unit vector in RF+ X, we need to show that there exists
+a point (v, w) ∈ B with s0 (v, w) = s1 (v, w).
+   Step 2. Let
+                          B0 = w ∈ ∂TF+ X kwk = 1 .
+                                 
+
+The space B0 is the set of unit vectors on the boundary of a nondegenerate cone, and
+thus is homeomorphic to S 2 . Recall from the proof of Lemma 3.3 that if (v, w) ∈ B
+then w ∈ B0 . We now show that the projection B → B0 sending (v, w) 7→ w is a
+homotopy equivalence.
+   To do so, observe that by Lemma 3.3, we have
+                  [ 
+                        v ∈ NE+ X kvk = 1 × w ∈ TF+ E kwk = 1 .
+                                                 
+            B=                                                                 (3.3)
+                 F ⊂E
+
+
+                                         28
+    If F is a 3-face, then in the union (3.3), we only have E = F ; there is a unique
+unit vector v ∈ NE+ X, and so the projection B → B0 is a homeomorphism.
+    If F is a 2-face, then in (3.3), E can be either F itself, or one of the two three-
+faces adjacent to F , call them E1 and E2 . The contribution from E = F is a
+cylinder, while the contributions from E = E1 and E2 are disks which are glued to
+the cylinder along its boundary. The projection B → B0 collapses the cylinder to a
+circle, which again is a homotopy equivalence.
+    If F is a 1-face, with k adjacent 3-faces, then the contribution to (3.3) from E =
+F consists of two disjoint closed k-gons. Each 2-face E adjacent to F contributes a
+square with opposite edges glued to one edge of each k-gon. Each 3-face E adjacent
+to F contributes a bigon filling in the gap between two consecutive squares. The
+projection B → B0 collapses each k-gon to a point and each bigon to an interval,
+which again is a homotopy equivalence.
+    Finally, suppose that F is a 0-face. Then E = F makes no contribution to
+(3.3), since T F = {0} contains no unit vectors. Now B0 has a cell decomposition
+consisting of a k-cell for each (k + 1)-face adjacent to F . The space B is obtained
+from B0 by thickening each 0-cell to a closed polygon, and thickening each 1-cell to
+a square. Again, this is a homotopy equivalence.
+    Step 3. The S 2 -bundle Z → B is trivial. To see this, observe that Z is the
+pullback of a bundle over NF+ X \ {0}, whose fiber over v is the set of unit vectors
+orthogonal to v. Since NF+ X \{0} is contractible, the latter bundle is trivial, and thus
+so is Z. In particular, the bundle Z has two homotopy classes of trivialization, which
+differ only in the orientation of the fiber. We now show that, using a trivialization
+to regard s0 and s1 as maps B → S 2 , the mod 2 degrees of these maps are given by
+deg(s0 ) = 0 and deg(s1 ) = 1.
+    It follows from the triviality of the bundle Z that deg(s0 ) = 0.
+    To prove that deg(s1 ) = 1, we need to pick an explicit trivialization of Z. To do
+so, fix a vector v0 ∈ int(TF+ X). Let S denote the set of unit vectors in the orthogonal
+complement v0⊥ . Let P : R4 → v0⊥ denote the orthogonal projection. We then have
+a trivialization
+                                          ≃
+                                      Z −→ B × S
+sending
+                          ((v, w), u) 7−→ ((v, w), P u/kP uk).
+Note here that for every (v, w) ∈ B, the restriction of P to v ⊥ is an isomorphism,
+because otherwise v would be orthogonal to v0 , but in fact we have hv, v0 i < 0.
+   With respect to this trivialization, the section s1 is a map B → S which is the
+composition of the projection B → B0 with the map B0 → S sending
+
+                                  w 7−→ P w/kP wk.
+
+
+                                           29
+The former map is a homotopy equivalence by Step 2, and the latter map is a
+homeomorphism because v0 is not parallel to any vector in ∂TF+ X. Thus deg(s1 ) = 1.
+    Step 4. We now complete the proof of the lemma. Suppose to get a contradiction
+that there does not exist a point p ∈ B with s0 (p) = s1 (p). It follows, using a
+trivialization of Z to regard s0 and s1 as maps B → S 2 , that s1 is homotopic to
+the composition of s0 with the antipodal map. Then deg(s1 ) = − deg(s0 ). This
+contradicts Step 3.
+
+Remark 3.6. It might be possible to generalize Lemma 3.4 to show that if X is
+any convex set in R2n with nonempty interior and if z ∈ ∂X, then the Reeb cone
+Rz+ X is at least one dimensional.
+
+   We now prepare for the proof of Lemma 3.5.
+
+Lemma 3.7. Let X be a convex polytope in R2n . Then for every face F of X, there
+exists a face E with F ⊂ E such that
+
+                                   RF+ X ⊂ TF+ Ē.
+
+Proof. Let {Ei }N
+                i=1 denote the set of faces whose closures contain F . By Lemma 3.3,
+we have
+                                           [N
+                                    +
+                                  RF X ⊂      TF+ Ēi .                        (3.4)
+                                          i=1
+
+    Let V denote the subspace of R2n spanned by RF+ X. Note that since the latter
+set is a cone, it has a nonempty interior in V . We claim now that V ⊂ T Ei for some
+i. If not, then V ∩ T Ei is a proper subspace of V for each i. But by (3.4), we have
+
+                       RF+ X = ∪i TF+ Ēi ∩ RF+ X ⊂ (∪i T Ei ) ∩ V.
+                                         
+
+
+This is a contradiction, since the left hand side has a nonempty interior in V , while
+the right hand side is a union of proper subspaces of V .
+   Since V ⊂ T Ei , it follows that RF+ X ⊂ TF+ Ēi , because by (3.4) again,
+
+                         RF+ X = RF+ X ∩ V = RF+ X ∩ T Ei
+                                  [         
+                         ⊂ T Ei ∩        +
+                                       TF Ēj = TF Ēi ,                            2
+                                      j
+
+Lemma 3.8. Let X be a convex polytope in R2n , and let F be a face of X. Let
+v ∈ RF+ X. Suppose that v ∈ int(TF+ E) for some (2n − 1)-face E whose closure
+contains F . Then v is a positive multiple of iνE .
+
+
+                                          30
+Proof. Let E = E1 , . . . , EN denote the (2n − 1)-faces whose closures contain F , and
+let νi denote the outward unit normal vector to E. Since v ∈ int(TF+ E), we have
+hv, ν1 i = 0 and hv, νi i < 0 for i > 1. Since −iv ∈ NF+ X, it follows from Lemma 3.2
+that we can write
+                                             XN
+                                      −iv =     ai ν i
+                                             i=1
+
+with ai ≥ 0. Since hv, ivi = 0, we conclude that ai = 0 for i > 1. Thus −iv = a1 ν1 ,
+and a1 > 0.
+Proof of Lemma 3.5. Suppose v0 , v1 are distinct unit vectors in RF+ X. By Lemma 3.7,
+there is a 3-face E such that v0 and v1 are both in TF+ Ē. In particular, v1 and v2
+are linearly independent.
+    Since v0 and v1 are both in the cone RF+ X, it follows that if t ∈ [0, 1] then the
+affine linear combination (1−t)v0 +tv1 is also in this cone. Since v0 and v1 are linearly
+independent, these affine linear combinations cannot be in the interior of TF+ E, or
+else this would contradict the projective uniqueness in Lemma 3.8. Consequently
+v0 and v1 are both contained in TF+ E 0 for some 2-face E 0 on the boundary of E.
+    We now have
+                             ω(v0 , v1 ) = hv0 , −iv1 i ≤ 0,
+where the inequality holds since v0 ∈ TF+ X and −iv1 ∈ NF+ X. By a symmetric
+calculation, ω(v1 , v0 ) ≤ 0. It follows that ω(v0 , v1 ) = 0. Since v0 and v1 are linearly
+independent vectors in T E 0 , this contradicts the hypothesis that ω|T E 0 is nondegen-
+erate.
+
+3.3    Description of the Reeb cone
+We now prove Lemma 1.7, describing the possibilities for the Reeb cone of a face of
+a symplectic polytope in R4 .
+
+Lemma 3.9. Let X be a convex polytope in R4 and let F be a 2-face of X. Let E1
+and E2 denote the 3-faces adjacent to F , and let νi denote the outward unit normal
+vector to Ei .
+                                                                       +
+ (a) If hiν1 , ν2 i < 0, then every nonzero vector w in the Reeb cone RE1
+                                                                          points into
+                                      +
+     E1 from F , that is w ∈ int(TF E1 ).
+                                                                       +
+ (b) If hiν1 , ν2 i > 0, then every nonzero vector w in the Reeb cone RE1
+                                                                          points out
+                                          +
+     of E1 from F , that is w ∈ int(−TF E1 ).
+
+ (c) If hiν1 , ν2 i = 0, then F is Lagrangian.
+
+
+                                            31
+Proof. Let η denote the unit normal vector to F in T E1 pointing into E1 . The
+vector η must be a linear combination of ν1 and ν2 (since it is normal to F ), it
+must be orthogonal to ν1 (since it is tangent to E1 ), and it must have negative inner
+product with ν2 (since it points into E1 ). It follows that
+                                      −ν2 + hν1 , ν2 iν1
+                               η=                           .                      (3.5)
+                                    k − ν2 + hν1 , ν2 iν1 k
+    The vector w points into E1 if and only if hη, wi > 0, and the vector w points
+out of E1 if and only if hη, wi < 0. For w in the Reeb cone of E1 , we know that w
+is a positive multiple of iν1 . By equation (3.5), we have
+                                               −hiν1 , ν2 i
+                            hη, iν1 i =                           .
+                                          k − ν2 + hν1 , ν2 iν1 k
+Thus if hiν1 , ν2 i is nonzero, then it has opposite sign from hη, wi. This proves (a)
+and (b).
+   If hiν1 , ν2 i = 0, then ω(iν1 , iν2 ) = 0, but iν1 and iν2 are linearly independent
+tangent vectors to F , so F is Lagrangian. This proves (c).
+Lemma 3.10. Let X be a convex polytope in R4 and let F be a 2-face of X. If
+T F ∩ RF+ X 6= {0}, then F is Lagrangian.
+Proof. If w ∈ T F ∩ RF+ X, then for any other vector u ∈ T F , we have
+
+                                 ω(w, u) = hiw, ui = 0
+
+since −iw ∈ NF+ X. If we also have w 6= 0, then it follows that F is Lagrangian.
+Proof of Lemma 1.7. If F is a 3-face, then by the definition of the Reeb cone, RF+ X
+consists of all nonnegative multiples of iνF ; and iνF is a positive multiple of the
+Reeb vector field on F by equation (1.3).
+    Suppose now that F is a k-face with k < 3, and that w is a nonzero vector in
+the Reeb cone RF+ X. Applying Lemma 3.3 to v = −iw and w, we deduce that there
+is a face E of X with F ⊂ E such that −iw ∈ NE+ X and w ∈ TF+ E. In particular,
+                                               +
+                                    w ∈ T E ∩ RE X.                                (3.6)
+
+    By Lemma 3.10 and our hypothesis that X is a symplectic polytope, E is not a
+2-face.
+                                                                    +
+    If F is a 2-face, we conclude that w is in the Reeb cone RE       X for one of the
+3-faces E adjacent to F . By Lemma 3.9, w must point into E.
+    If F is a 1-face, then E is either a 3-face adjacent to F , or F itself. In the case
+when E = F , the vector w cannot be in the Reeb cone of any 3-face F3 adjacent
+
+                                              32
+to F . The reason is that if F2 is one of the two 2-faces with F ⊂ F2 ⊂ F3 , then
+by Lemma 3.9, the Reeb cone of F3 is not tangent to F2 , so it certainly cannot be
+tangent to F .
+    If F is a 0-face, then E is adjacent to F and is either a 3-face or a 1-face. If E
+is a 1-face, then it is a bad 1-face by (3.6).
+
+
+4     The quaternionic trivialization
+In this section let Y ⊂ R4 be a smooth star-shaped hypersurface with the contact
+form λ = λ0 |Y and contact structure ξ = Ker(λ). We now define a special trivializa-
+tion τ of the contact structure ξ, and we prove a key property of this trivialization.
+
+4.1    Definition of the quaternionic trivialization
+The following definition is a smooth analogue of Definition 2.17.
+
+Definition 4.1. Define the quaternionic trivialization
+                                         ≃
+                                   τ : ξ −→ Y × R2                                 (4.1)
+
+as follows. If y ∈ Y and V ∈ Ty Y , let ν denote the outward unit normal to Y at y,
+and define
+                           τ (V ) = (y, hV, jνi, hV, kνi) .
+                                                        ≃
+By abuse of notation, for fixed y ∈ Y we write τ : ξy −→ R2 to denote the restriction
+of (4.1) to ξy followed by projection to R2 .
+
+   From now on we always use the quaternionic trivialization τ for smooth star-
+shaped hypersurfaces in R4 .
+
+Lemma 4.2. The quaternionic trivialization τ is a symplectic trivialization of ξ.
+
+Proof. Same calculation as the proof of Lemma 2.18(a).
+
+Remark 4.3. The inverse
+                                                 ≃
+                                 τ −1 : Y × R2 −→ ξ
+is described as follows. Recall from (1.3) that the Reeb vector field at y is a positive
+multiple of iν. Then τ −1 (y, (1, 0)) is obtained by projecting jν to ξy along the Reeb
+vector field, while τ −1 (y, (0, 1)) is obtained by projecting kν to ξy along the Reeb
+vector field.
+
+
+
+                                          33
+4.2      Linearized Reeb flow
+We now make some definitions which we will need in order to bound the rotation
+numbers of Reeb orbits and Reeb trajectories.
+Definition 4.4. If y ∈ Y and t ≥ 0, define the linearized Reeb flow φ(y, t) ∈
+Sp(2) to be the composition
+                                 τ −1      dΦ            τ
+                              R2 −→ ξy −→
+                                        t
+                                          ξΦt (y) −→ R2                         (4.2)
+where Φt : Y → Y denotes the time t flow of the Reeb vector field, and τ is the
+                                                                    e t) ∈ Sp(2)
+quaternionic trivialization. Define the lifted linearized Reeb flow φ(y,   f
+to be the arc
+                               e t) = {φ(y, s)}s∈[0,t] .
+                               φ(y,                                         (4.3)
+      Note that we have the composition property
+                         φ(y,          e t (y), t2 ) ◦ φ(y,
+                         e t2 + t1 ) = φ(φ             e t1 ).
+                                           1
+
+
+      Next, let Pξ denote the “projectivized” contact structure
+                                   Pξ = (ξ \ Z)/ ∼
+where Z denotes the zero section, and two vectors are declared equivalent if they
+differ by multiplication by a positive scalar. Thus Pξ is an S 1 -bundle over Y . The
+Reeb vector field R on Y canonically lifts, via the linearized Reeb flow, to a vector
+field R
+      e on Pξ.
+    The quaternionic trivialization τ defines a diffeomorphism
+                                            ≃
+                                  τ : Pξ −→ Y × S 1 .
+Let
+                                        σ : Pξ −→ S 1
+denote the composition of τ with the projection Y × S 1 → S 1 .
+Definition 4.5. Define the rotation rate
+                                        r : Pξ −→ R
+to be the derivative of σ with respect to the lifted linearized Reeb flow,
+                                          r = Rσ.
+                                              e
+
+Define the minimum rotation rate
+                                        rmin : Y −→ R
+by
+                                  rmin (y) = min r(e
+                                                   y ).
+                                                ye∈Pξy
+
+
+                                             34
+   It follows from (A.6) and (A.7) that we have the following lower bound on the
+rotation number of the lifted linearized flow of a Reeb trajectory.
+
+Lemma 4.6. Let y be a smooth star-shaped hypersurface in R4 , let y ∈ Y , and let
+t ≥ 0. Then                         Z t
+                       ρ(φ(y, t)) ≥
+                         e              rmin (Φs (y))ds.
+                                          0
+
+
+4.3    The curvature identity
+We now prove a key identity which relates the linearized Reeb flow, with respect to
+the quaternionic trivialization τ , to the curvature of Y . This identity (in different
+notation) is due to U. Hryniewicz and P. Salomão [19]. Below, let S : T Y ⊗T Y → R
+denote the second fundamental form defined by
+
+                                 S(u, w) = h∇u ν, wi,
+
+where ν denotes the outward unit normal vector to Y , and ∇ denotes the trivial
+connection on the restriction of T R4 to Y . Also write S(u) = S(u, u).
+
+Proposition 4.7. Let Y be a smooth star-shaped hypersurface in R4 , let y ∈ Y , let
+θ ∈ R/2πZ, and write σ = θ/2π ∈ R/Z. Then at the point τ −1 (y, σ) ∈ Pξ, we have
+                           1
+                  Rσ
+                  e =            (S(iν) + S(cos(θ)jν + sin(θ)kν)) .               (4.4)
+                         πhν, yi
+
+Proof. It follows from the definitions that
+                 e = hLR ((cos θ)jν + (sin θ)kν), (sin θ)jν − (cos θ)kνi
+              2π Rσ
+                    = − (cos2 θ)hLR jν, kνi + (sin2 θ)hLR kν, jνi                 (4.5)
+                      + (sin θ cos θ)(hLR jν, jνi − hLR kν, kνi).
+
+We compute
+
+                   hLR jν, kνi = h∇R jν − ∇jν R, kνi
+                                   2
+                               =        (h∇iν jν, kνi − h∇jν iν, kνi)
+                                 hν, yi
+                                   2
+                               =        (−h∇iν ν, iνi − h∇jν ν, jνi)
+                                 hν, yi
+                                   2
+                               =        (−S(iν) − S(jν)) .                        (4.6)
+                                 hν, yi
+
+
+                                          35
+Here in the second to third lines we have used the fact that multiplication on the
+left by a constant unit quaternion is an isometry. Similar calculations show that
+                                               2
+                                hLR kν, jνi =       (S(iν) + S(kν)) ,             (4.7)
+                                             hν, yi
+                                               2
+                hLR jν, jνi = −hLR kν, kνi =        S(jν, kν).                    (4.8)
+                                             hν, yi
+Plugging (4.6), (4.7) and (4.8) into (4.5) proves the curvature identity (4.5).
+Remark 4.8. Since the second fundamental form is positive definite when Y is
+strictly convex, and positive semidefinite when Y is convex, by Lemma 4.6 we obtain
+the following corollary: If Y is a convex star-shaped hypersurface in R4 then Rσ
+                                                                              e ≥0
+                 e t) has nonnegative rotation number for all y ∈ Y and t ≥ 0. If
+everywhere, so φ(y,
+Y is a strictly convex star-shaped hypersurface in R4 then Rσ e > 0 everywhere, so
+φ(y, t) has positive rotation number for all y ∈ Y and t > 0.
+e
+
+
+5     Reeb dynamics on smoothings of polytopes
+In §5.1 and §5.2 we study the Reeb flow on the boundary of a smoothing of a
+symplectic polytope in R4 . In §5.3 and §5.4 we explain some more technical issues
+arising from the fact that the smoothing is only C 1 , and in particular how to make
+sense of the “rotation number” of Reeb trajectories. In §5.5 we derive important
+lower bounds on this rotation number.
+
+5.1    Smoothings of polytopes
+If X ⊂ Rm is a compact convex set and ε > 0, define the ε-smoothing Xε of X by
+equation (1.8). Observe that Xε is convex. Denote its boundary by Yε = ∂Xε . We
+now describe Yε more explicitly, in a way which mostly does not depend on ε. We
+first have:
+Lemma 5.1. If X is a compact convex set then
+
+                          Yε = {y ∈ Rm | dist(y, X) = ε}.
+
+Proof. The left hand side is contained in the right hand side because distance to X
+is a continuous function on Rm . The reverse inclusion holds because given y ∈ Rm
+with dist(y, X) = ε, since X is compact and convex, there is a unique point x ∈ X
+which is closest to y. By convexity again, X is contained in the closed half-space
+{z ∈ Rm | hz, y − xi ≤ 0}. It follows that dist(t(y − x), X) = εt for t > 0, so that
+y ∈ ∂Xε .
+
+                                         36
+Definition 5.2. If X ⊂ Rm is a compact convex set, define the “blown-up bound-
+ary”
+           Y0 = (y, v) y ∈ ∂X, v ∈ Ny+ X, |v| = 1 ⊂ ∂X × S m−1 .
+                 
+
+   We then have the following lemma, which is proved by similar arguments to
+Lemma 5.1:
+Lemma 5.3. Let X ⊂ Rm be a compact convex set and let ε > 0. Then:
+ (a) There is a homeomorphism
+                                                   ≃
+                                            Y0 −→ Yε
+         sending (y, v) 7→ y + εv.
+ (b) The inverse homeomorphism sends y 7→ (x, ε−1 (y − x)) where x is the unique
+     closest point in X to y.
+ (c) For y ∈ Yε , if x is the closest point in X to y, then the positive normal cone
+     Ny+ Xε is the ray consisting of nonnegative multiples of y − x.
+       Suppose now that X ⊂ Rm is a convex polytope and ε > 0.
+Definition 5.4. If F is a face of X, define the ε-smoothed face
+                              Fε = {x ∈ Yε | dist(x, F ) = ε}.
+       By Lemma 5.3, we have                   G
+                                        Yε =       Fε
+                                               F
+and
+                             Fε = F + {v ∈ NF+ X | |v| = ε}.
+Note that each Fε is a C ∞ smooth hypersurface, and where the closure of one Fε
+meets another, the outward unit normal vectors agree. It follows that Yε is a C 1
+smooth hypersurface, and it is C ∞ except along strata10 of the form ∂F + {v ∈
+NF+ X | |v| = ε}.
+
+5.2       The Reeb flow on a smoothed symplectic polytope
+Suppose now that X is a symplectic polytope in R4 and ε > 0. As noted above,
+Yε = ∂Xε is a C 1 convex hypersurface, and as such it has a well-defined C 0 Reeb
+vector field, which is smooth except along the strata of Yε arising from the boundaries
+of the faces of X. We now investigate the Reeb flow on Yε in more detail, as well as
+the lifted linearized Reeb flow φe from Definition 4.4.
+  10
+    We do not also need to mention strata of the form F + ∂{v ∈ NF+ X | |v| = ε}, because any
+point in ∂NF+ X is contained in NE+ X where E is a face with F ⊂ ∂E.
+
+
+                                             37
+General remarks.
+By Lemma 5.3, a point in Yε lives in an ε-smoothed face Fε for a unique face F of
+X, and thus has the form y + εv where y ∈ F and v ∈ NF+ X is a unit vector. By
+equation (1.3) and Lemma 5.3(c), the Reeb vector field at y + εv is given by
+
+                                               2iv
+                                 Ry+εv =              .                           (5.1)
+                                           hv, yi + ε
+
+Lemma 5.5. The Reeb vector field (5.1) on the ε-smoothed face Fε , regarded as a
+map Fε → R4 , depends only v ∈ NF+ X and not on the choice of y ∈ F .
+
+Proof. This follows from equation (5.1), because for fixed v ∈ NF+ X and for two
+points y, y 0 ∈ F , by the definition of positive normal cone we have hv, y −y 0 i = 0.
+
+Smoothed 3-faces.
+The Reeb flow on a smoothed 3-face is very simple.
+
+Lemma 5.6. Let X ⊂ R4 be a symplectic polytope, let ε > 0, and let E be a 3-face
+of X with outward unit normal vector ν.
+
+ (a) The Reeb vector field on Eε , regarded as a map Eε → R4 , agrees with the Reeb
+     vector field on E, up to rescaling by a positive constant which limits to 1 as
+     ε → 0.
+
+ (b) If γ : [0, t] → Eε is a Reeb trajectory, then φ(γ(0),
+                                                   e       t) = 1 ∈ Sp(2).
+                                                                    f
+
+ (c) If y ∈ ∂E, then at the point y + εν ∈ Yε , the Reeb vector field on Yε is not
+     tangent to ∂Eε .
+
+Proof. (a) This follows from equation (5.1).
+    (b) For s ∈ [0, t], the Reeb flow Φs : Yε → Yε is a translation on a neighborhood
+of γ(0). Consequently the linearized Reeb flow dΦs : ξγ(0) → ξγ(s) is the identity,
+if we regard ξγ(0) and ξγ(s) as (identical) two-dimensional subspaces of R4 . The
+quaternionic trivialization τ : R2 → ξγ(s) likewise does not depend on s ∈ [0, t].
+Consequently φ(y, s) = 1 for all s ∈ [0, t]. Thus φ(y,
+                                                    e t) is the constant path at the
+identity in Sp(2).
+    (c) It is equivalent to show that the Reeb vector field on E at y is not tangent to
+∂E. If the Reeb vector field on E at y is tangent to ∂E, then it is tangent to some
+2-face F ⊂ ∂E. By Lemma 3.10, the face 2-face F is Lagrangian, contradicting our
+hypothesis that the polytope X is symplectic.
+
+
+                                           38
+Smoothed 2-faces.
+Let F be a 2-face. Let E1 and E2 be the 3-faces adjacent to F . By Lemma 1.7, we
+can choose these so that RE2 points out of F ; and a similar argument shows that
+then RE1 points into F . Let ν1 and ν2 denote the outward unit normal vectors to
+E1 and E2 respectively. By Lemma 3.2, the normal cone NF+ consists of nonnegative
+linear combinations of ν1 and ν2 . Let {v, w} be an orthonormal basis for F ⊥ , such
+that the orientation given by (v, w) agrees with the orientation given by (ν1 , ν2 ).
+For i = 1, 2 we can write νi = (cos θi )v + (sin θi )w where 0 < θ2 − θ1 < π. We then
+have a homeomorphism
+                                    ≃
+                      F × [θ1 , θ2 ] −→ Fε ,
+                                                                                    (5.2)
+                           (y, θ) 7−→ y + ε((cos θ)v + (sin θ)w).
+
+    In the coordinates (y, θ), the Reeb vector field R on Fε depends only on θ by
+Lemma 5.5, and has positive ∂θ coordinate for both θ = θ1 and θ = θ2 by our choice
+of labeling of E1 and E2 . By equation (5.1), Lemma 3.10, and our hypothesis that
+the polytope X is symplectic, the ∂θ component of the Reeb vector field is positive
+on all of Fε .
+    Let UF,ε ⊂ F denote the set of y ∈ F such that the Reeb flow on Yε starting
+at (y, θ1 ) ∈ Fε stays in Fε until reaching a point in F × {θ2 }, which we denote by
+(φF,ε (y), θ2 ). Thus we have a well-defined “flow map” φF,ε : UF,ε → F .
+
+Lemma 5.7. Let F be a two-face of a symplectic polytope X ⊂ R4 . Then:
+
+ (a) The flow map φF,ε : UF,ε → F above is translation by a vector VF,ε ∈ T F .
+
+ (b) |VF,ε | = O(ε) and limε→0 UF,ε = F .
+
+ (c) Let y ∈ UF,ε and let t be the Reeb flow time on Fε from y + εν1 to φF,ε (y) + εν2 .
+     Then φ(y, t) ∈ Sp(2) agrees with the transition matrix ψF in Definition 2.20,
+          e t) ∈ Sp(2)
+     and φ(y,      f     is the unique lift of ψF with rotation number in the interval
+     (0, 1/2).
+
+Proof. (a) If y, y 0 ∈ UF,ε , then it follows from the translation invariance in Lemma 5.5
+that φF,ε (y) − y = φF,ε (y 0 ) − y 0 , so φF,ε is a translation.
+    (b) It follows from equation (5.1) that for each v, the Reeb vector field Ry+εv ,
+regarded as a vector in R4 , has a well-defined limit as ε → 0, which by Lemma 3.10
+is not tangent to F . Since ∂θ , regarded as a vector in R4 , has length ε, it follows
+that the flow time of the Reeb vector field on Fε from F × {θ1 } to F × {θ2 } is
+O(ε). Consequently the translation vector VF,ε has length O(ε), and the complement
+F \ UF,ε of the domain of the flow map is contained within distance O(ε) of ∂F .
+
+
+                                            39
+   (c) Write y1 = y + εν1 and y2 = φF,ε (y) + εν2 . By part (a) and the translation
+invariance in Lemma 5.5, the time t Reeb flow Φt on Yε restricted to UF,ε + εν1 is a
+translation in R4 . Hence the derivative of Φt on the full tangent space of Yε , namely
+                                dΦt : Ty1 Yε −→ Ty2 Yε ,
+restricts to the identity on T F . We now have a commutative diagram
+                                             F   τ0
+                              ξy1 −−−→ T F −−−→ R2
+                                              
+                                
+                            dΦt y
+                                               ψ
+                                       1y       y F
+                                             F   τ
+                              ξy2 −−−→ T F −−−→ R2 .
+Here the upper left horizontal arrow is projection along the Reeb vector field in
+Ty1 Yε , and the lower left horizontal arrow is projection along the Reeb vector field in
+Ty2 Yε . The right horizontal arrows were defined in Definition 2.17 and Remark 2.19.
+The left square commutes because dΦt preserves the Reeb vector field. The right
+square commutes by Definition 2.20. The composition of the arrows in the top row
+is the quaternionic trivialization τ on ξy1 , and the composition of the arrows in the
+bottom row is the quaternionic trivialization τ on ξy2 . Going around the outside of
+the diagram then shows that φ(y, t) = ψF .
+    To determine the lift φ(y,
+                             e t), note that this is actually defined for, and depends
+continuously on, any ε > 0 and any pair of hyperplanes E1 and E2 that do not
+contain the origin and that intersect in a non-Lagrangian 2-plane F . Thus we can
+                    e 1 , E2 , ε) ∈ Sp(2).
+denote this lift by φ(E             f      Now fixing E1 , F , and ε, we can interpolate
+from E1 and E2 via a 1-parameter family of hyperplanes {Es }s∈[1,2] such that 0 ∈   / Es
+and E1 ∩ Es = F for 1 < s ≤ 2. The rotation number ρ : Sp(2)   f     → R then gives us
+a continuous map
+                            f : (1, 2] −→ R,
+                                                          
+                                     s 7−→ ρ φ(E
+                                              e 1 , Es , ε)
+
+We have limτ &1 φ(E
+                  e 1 , Es , ε) = 1, so lims&1 f (s) = 0. On the other hand, for each
+s ∈ (1, 2], the fractional part of f (s) is in the interval (0, 1/2) by Lemma 2.21. It
+follows by continuity that f (s) ∈ (0, 1/2) for all s ∈ (1, 2]. Thus f (2) ∈ (0, 1/2),
+which is what we wanted to prove.
+
+Smoothed 1-faces.
+The Reeb flow on a smoothed 1-face is more complicated, but we will not need to
+analyze this in detail. We just remark that one can see the difference between good
+and bad 1-faces in the Reeb dynamics on their smoothings. Namely:
+
+                                           40
+Remark 5.8. If L is a bad 1-face, then by definition, there is a unique unit vector
+v ∈ NL+ X such that iv is tangent to L. The line segment L + εv ⊂ Lε is then a Reeb
+trajectory. On the complement of this line in Lε , the Reeb vector field spirals around
+the line, with the number of times that it spirals around going to infinity as ε → 0.
+This gives some intuition why Type 3 combinatorial Reeb orbits do not correspond
+to limits of sequences of Reeb orbits on smoothings with bounded rotation number.
+   By contrast, if L is a good 1-face, then the Reeb vector field on Lε always has a
+nonzero component in the NL+ X direction.
+
+Smoothed 0-faces.
+If P is a 0-face, then by Lemma 5.3, Pε is identified with a domain in S 3 . By equation
+(5.1), the Reeb vector field on this domain agrees, up to reparametrization, with
+the standard Reeb vector field on the unit sphere in R4 .
+
+5.3      Non-smooth strata
+We now investigate in more detail how Reeb trajectories on Yε intersect the strata
+where Yε is not C ∞ .
+   Let Σ denote the subset of Yε where Yε is not locally C ∞ . By the discussion at
+the end of §5.1, we can write
+
+                                  Σ = Σ1 t Σ2 t Σ3
+
+where:
+
+   • Σ1 is the disjoint union of sets
+
+                                 P + {v ∈ NL+ X | |v| = ε}                         (5.3)
+
+      where P is a vertex of X, and L is a 1-face adjacent to P .
+
+   • Σ2 is the disjoint union of sets
+
+                                 L + {v ∈ NF+ X | |v| = ε}                         (5.4)
+
+      where L is a 1-face, and F is a 2-face adjacent to L.
+
+   • Σ3 is the disjoint union of sets
+                                           F + εν
+      where F is a 2-face, and ν is the outward unit normal vector to one of the two
+      3-faces E adjacent to F .
+
+                                          41
+Lemma 5.9. Let X ⊂ R4 be a symplectic polytope, let ε > 0, and let γ : [a, b] → Yε
+be a Reeb trajectory. Then there exist a nonnegative integer k and real numbers
+a ≤ t1 < t2 < · · · < tk ≤ b with the following properties:
+ (a) γ(ti ) ∈ Σ for each i.
+
+ (b) For each i = 0, . . . , k, one of the following possibilities holds:
+
+       (i) γ maps (ti , ti+1 ) to Yε \ Σ. (Here we interpret t0 = a and tk+1 = b.)
+       (ii) γ maps (ti , ti+1 ) to a Reeb trajectory in a component of Σ1 . (Each com-
+            ponent of Σ1 contains at most one Reeb trajectory of positive length.)
+      (iii) γ maps (ti , ti+1 ) to a Reeb trajectory in a component of Σ2 . (This can
+            only happen when the corresponding 2-face F is complex linear, and in
+            this case the component of Σ2 is foliated by Reeb trajectories.)
+
+Proof. We need to show that a Reeb trajectory intersects Σ in isolated points, or in
+Reeb trajectories of the types described in (ii) and (iii).
+    We have seen in §5.2 that the Reeb vector field is transverse to all of Σ3 . Thus
+the Reeb trajectory γ intersects Σ3 only in isolated points.
+    Next let us consider the Reeb vector field on a component of Σ2 of the form
+(5.4). As in §5.2, let E1 and E2 denote the 3-faces adjacent to F , with outward unit
+normal vectors ν1 and ν2 respectively. The smoothing Fε is parametrized by (5.2).
+This parametrization extends by the same formula to a parametrization of Fε by
+F × [θ1 , θ2 ]. The latter parametrization includes the component (5.4) of Σ2 as the
+restriction to L × [θ1 , θ2 ]. By equation (5.1), at the point corresponding to (y, θ) in
+(5.2), the Reeb vector is given by
+                                  2
+                R=                                i((cos θ)v + (sin θ)w).            (5.5)
+                     h(cos θ)v + (sin θ)w, yi + ε
+This vector is tangent to the component (5.4) if and only if the orthogonal projection
+of i((cos θ)v + (sin θ)w) to F is parallel to L.
+    If the projections of iv and iw to F are not parallel, then this tangency will only
+happen for isolated values of θ, and since the Reeb vector field on Fε always has a
+positive ∂θ component, a Reeb trajectory will only intersect the component (5.4) in
+isolated points.
+    If on the other hand the projections of iv and iw to F are parallel, then there is a
+nontrivial linear combination of iv and iw whose projection to F is zero. This means
+that there is a nonzero vector ν perpendicular to F such that iν is also perpendicular
+to F . This means that F ⊥ is complex linear, and thus F is also complex linear.
+Then iv and iw are both perpendicular to F , so in the parametrization (5.2), the
+Reeb vector field vector field (5.5) is a just a positive multiple of ∂θ .
+
+                                            42
+    The conclusion is that a Reeb trajectory will intersect each component (5.4)
+of Σ2 either in isolated points, or (when F is complex linear) in Reeb trajectories
+which, in the parametrization (5.2), start on L × {θ1 } and end on L × {θ2 }, keeping
+the L component constant.
+    Finally we consider the Reeb vector field on a component (5.3) of Σ1 . The set of
+vectors v that arise in (5.3) is a domain D in the intersection of the sphere |v| = ε
+with the hyperplane L⊥ . As we have seen at the end of §5.2, the Reeb vector field
+on Yε at a point in (5.3) agrees, up to scaling, with the standard Reeb vector field
+on the sphere |v| = ε, whose Reeb orbits are Hopf circles. There is a unique Hopf
+circle C contained entirely in L⊥ . All other Hopf circles intersect L⊥ transversely.
+Thus any Reeb trajectory in Yε intersects the component (5.3) in isolated points
+and/or the arc corresponding to C ∩ D, if the latter intersection is nonempty.
+
+5.4    Rotation number of Reeb trajectories
+Suppose γ : [a, b] → Yε is a Reeb trajectory. Let D ⊂ Yε be a disk through γ(a)
+tranverse to γ, and let D0 ⊂ Yε be a disk through γ(b) transverse to γ. We can
+identify D with a neighborhood of 0 in ξγ(a) , and D0 with a neighborhood of 0 in
+ξγ(b) , via orthogonal projection in R4 . If D is small enough, then there is a well-
+defined map continuous map φ : D → D0 with φ(γ(a)) = γ(b), such that for each
+x ∈ D, there is a unique Reeb trajectory near γ starting at x and ending at φ(x).
+
+Lemma 5.10. Let X be a symplectic polytope in R4 , let ε > 0, and let γ : [a, b] → Yε
+be a Reeb trajectory. Then there is a unique (independent of the choice of D and
+D0 ) homeomorphism
+                                Pγ : ξγ(a) −→ ξγ(b)
+such that:
+
+ (a)
+                                      φ(x) − Pγ (x)
+                                  lim               = 0.                            (5.6)
+                                  x→0     kxk
+
+ (b) Pγ is linear along rays, i.e. if x ∈ ξγ(a) and c > 0 then Pγ (cx) = cPγ (x).
+
+This map Pγ has the following additional properties:
+
+ (c) If γ does not include any arcs as in Lemma 5.9(ii)-(iii), and in particular if γ
+     does not intersect any smoothed 0-face or smoothed 1-face, then Pγ is linear.
+
+ (d) For t ∈ (a, b) we have the composition property
+
+                                   Pγ = Pγ|[t,b] ◦ Pγ|[a,t] .
+
+                                          43
+ (e) For t ∈ [a, b], the homeomorphism R2 → R2 given by the composition
+                                             Pγ|
+                                   τ −1            [a,b]   τ
+                               R2 −→ ξγ(a) −→ ξγ(t) −→ R2
+
+      is a continuous, piecewise smooth function of t.
+
+Proof. Uniqueness of the homeomorphism Pγ follows from properties (a) and (b).
+Independence of the choice of D and D0 follows from properties (a) and (b) together
+with continuity of the Reeb vector field. Assuming existence of the homeomorphism
+Pγ , the composition property (d) follows from uniqueness.
+      We now need to prove existence of the homeomorphism satisfying properties (a),
+(b), (c), and (e). Let a ≤ t1 < t2 < · · · < tk ≤ b be the subdivision of the inteveral
+[a, b] given by Lemma 5.9. For i = 0, . . . , k, let γi denote the restriction of γ to
+[ti , ti+1 ], where we interpret t0 = a and tk = b. It is enough to prove existence of a
+homeomorphism
+                                    Pγi : ξγ(ti ) −→ ξγ(ti+1 )
+with the required properties for each i. The desired homeomorphism Pγ is then
+given by the composition Pk · · · P0 .
+     For case (i) in Lemma 5.9, a homeomorphism Pγi with properties (a), (b), and
+(e) is given by the usual linearized return map on the smooth hypersurface Yε \ Σ
+from ti + δ to ti+1 − δ, in the limit as δ → 0. Since Pγi is linear, we also obtain
+property (c).
+     For case (ii) or (iii) in Lemma 5.9, the existence of Pγi with the desired properties
+follows from the fact that γi is on a smooth hypersurface separating two regions of
+Yε , on each of which the Reeb vector field is C ∞ .
+
+Remark 5.11. In case (ii) or (iii) above, the description of the Reeb flow in §5.2
+allows us to write down the map Pγi quite explicitly. Namely, for a suitable trivi-
+alization, Pγi is given by the flow for some positive time of a continuous, piecewise
+smooth vector field V on R2 , which is the derivative of a shear on one half of R2 ,
+and which is the derivative of a rotation or the identity on the other half of R2 . For
+case (ii), the vector field has the form
+                                       
+                                           −y∂x ,    x ≥ 0,
+                            V (x, y) =                                            (5.7)
+                                         x∂y − y∂x , x ≤ 0.
+
+For case (iii), the vector field has the form
+                                          
+                                            x∂y , x ≥ 0,
+                               V (x, y) =                                           (5.8)
+                                             0, x ≤ 0.
+
+
+                                           44
+   Since the map Pγ : ξγ(a) → ξγ(b) sends rays to rays, it induces a well-defined map
+Pξγ(a) → Pξγ(b) . It follows from Lemma 5.10(c),(d) and equations (5.7) and (5.8)
+that the latter map is C 1 . Similarly to (4.2), we obtain a C 1 diffeomorphism of S 1
+given by the composition
+                              τ −1         Pγ          τ
+                           S 1 −→ Pξγ(a) −→ Pξγ(b) −→ S 1 .
+
+Stealing the notation from Definition 4.4, let us denote this map by φ(y, t) where
+y = γ(a) and t = b − a. By analogy with (4.3), we define
+
+                         φ(y,                      g 1 ).
+                         e t) = {φ(y, s)}s∈[0,t] ∈ Diff(S
+
+This then has a well-defined rotation number, see Appendix A, which we denote by
+                                         e t)) ∈ R.
+                                ρ(γ) = ρ(φ(y,
+
+5.5    Lower bounds on the rotation number
+We now prove the following lower bound on the rotation number.
+
+Lemma 5.12. Let X be a symplectic polytope in R4 . Then there exists a constant
+C > 0, depending only on X, such that if ε > 0 is small, then the following holds.
+Let γ : [a, b] → Yε be a Reeb trajectory, and assume that if t ∈ (a, b) and E is a
+3-face then γ(t) ∈
+                 / Eε . Then
+
+                                 ρ(γ) ≥ Cε−1 (b − a).
+
+Proof. Define a function
+                                     rεmin : Yε −→ R
+as follows. A point Yε can by uniquely written as y + εv where y ∈ Y and v is a
+unit vector in Ny+ X. Then define
+
+                                   1
+      rεmin (y + εv) = min                 (S(iv) + S(cos(θ)jv + sin(θ)kv)).     (5.9)
+                     θ∈R/2πZ π(hv, yi + ε)
+
+
+Here S : T Yε → R is the single-argument version of the second fundamental form,
+which is well-defined, even though along the non-smooth strata of Yε there is no
+corresponding bilinear form.
+   More explicitly, Ty+εv Yε , regarded as a subspace of R4 , does not depend on ε. A
+tangent vector V ∈ Ty+εv Yε can be uniquely decomposed as
+
+                                     V = VT + VN                               (5.10)
+
+                                           45
+where VT ∈ Ty ∂X is tangent to a face F such that y ∈ F and v ∈ NF+ X, and
+VN ∈ Tv Ny+ X is perpendicular to v. We then have
+
+                                  S(V ) = ε−1 |VN |2 .                         (5.11)
+
+   Lemma 4.6 and Proposition 4.7 carry over to the present situation to show that
+                                  Z b
+                           ρ(γ) ≥     rεmin (γ(s))ds.                      (5.12)
+                                        a
+
+In (5.9), by compactness, there is a uniform upper bound on hv, yi for y ∈ ∂X and
+v ∈ Ny+ X a unit vector. Thus by (5.11) and (5.12), to complete the proof of the
+lemma, it is enough to show that there is a constant C > 0 such that
+
+                      |(iv)N |2 + |(cos(θ)jv + sin(θ)kv)N |2 ≥ C               (5.13)
+
+whenever y ∈ ∂X, v ∈ Ny+ X is a unit vector, θ ∈ R/2πZ, and y + εv is not in the
+closure of Eε where E is a 3-face. To prove this, it is enough to show that for each
+k-face F with k < 3, there is a uniform positive lower bound on the left hand side
+of (5.13) for all y ∈ F , all unit vectors v in NF+ X that are not normal to a 3-face
+adjacent to F , and all θ.
+    If k = 2, then we have a positive lower bound on |(iv)N |2 by the discussion of
+smoothed 2-faces in §5.2.
+    If k = 1, denote the 1-face F by L. If v is on the boundary of NL+ X, then we
+have a positive lower bound on |(iv)N |2 as in the case k = 2 above. Suppose now
+that v is in the interior of NL+ X. We have a positive lower bound on |(iv)N |2 when
+ivN is away from the Reeb cone of L. This is sufficient when L is a good 1-face.
+If L is a bad 1-face, then we have to consider the case where iv is on or near the
+Reeb cone RL+ X. If iv is in the Reeb cone, then all vectors in V ∈ Ty+εv Yε that
+are not in the real span of the Reeb cone RL+ X have VN 6= 0. Since the vectors
+cos(θ)jv + sin(θ)kv are all unit length and orthogonal to iv, we get a positive lower
+bound on |(cos(θ)jv + sin(θ)kv)N |2 for all θ when iv is on or near the Reeb cone.
+    Suppose now that k = 0. If v is on the boundary of NL+ X, then the desired lower
+bound follows as in the cases k = 1 and k = 2 above. If v is in the interior of NF+ X,
+then we have |(iv)N |2 = 1.
+    We now deduce a related rotation number bound. Let γ : [a, b] → Yε be a Reeb
+trajectory. By Lemma 5.3, we can write
+
+                                 γ(t) = y(t) + εv(t)
+                                              +
+where y(t) ∈ ∂X and v(t) is a unit vector in Ny(t) X for each t.
+
+                                            46
+Lemma 5.13. Let X be a symplectic polytope in R4 . Then there exists a constant
+C > 0, depending only on X, such that if ε > 0 is small and γ : [a, b] → Yε is a
+Reeb trajectory as above, then
+                                        Z b
+                               ρ(γ) ≥ C     |v 0 (s)|ds.
+                                                 a
+
+Proof. By Lemma 5.12, it is enough to show that there is a constant C such that
+
+                                      |v 0 (s)| ≤ Cε−1 .
+
+To prove this last statement, observe that by equation (5.1), in the notation (5.10)
+we have
+                                         2ε−1
+                          v 0 (s) =                  (iv(s))N .
+                                    hv(s), y(s)i + ε
+Thus
+                                                   2ε−1
+                                |v 0 (s)| ≤                    .
+                                              hv(s), y(s)i + ε
+If y ∈ ∂X and v ∈ Ny+ X is a unit vector, then hv, yi > 0 because X is convex and
+0 ∈ int(X). By compactness, there is then a uniform lower bound on hv, yi for all
+such pairs (y, v).
+
+
+6      The smooth-combinatorial correspondence
+We now prove Theorems 1.11 and 1.12.
+
+6.1    From combinatorial to smooth Reeb orbits
+We first prove Theorem 1.11. In fact we will prove a slightly more precise statement
+in Lemma 6.1 below.
+     Let X be a symplectic polytope in R4 and let γ = (L1 , . . . , Lk ) be a Type 1
+combinatorial Reeb orbit. This means that there are 3-faces E1 , . . . , Ek and 2-faces
+F1 , . . . , Fk such that Fi is adjacent to Ei−1 and Ei , and Li is an oriented line segment
+in Ei from a point in Fi to a point in Fi+1 which is parallel to the Reeb vector field
+on Ei . Here the subscripts i − 1 and i + 1 are understood to be mod k. Below
+we will regard γ as a piecewise smooth parametrized loop γ : R/T Z → X, where
+T = Acomb (γ), which traverses the successive line segments Li as Reeb trajectories.
+Lemma 6.1. Let X be a symplectic polytope in R4 , and let γ = (L1 , . . . , Lk ) be a
+nondegenerate Type 1 combinatorial Reeb orbit. Then there exists δ > 0 such that
+for all ε > 0 sufficiently small:
+
+                                                47
+ (a) There is a unique Reeb orbit γε on the smoothed boundary Yε such that
+
+                                        |γε − γ|C 0 < δ.
+
+ (b) γε converges in C 0 to γ as ε → 0.
+
+ (c) γε does not intersect Fε where F is a 0-face or 1-face.
+
+ (d) γε is linearizable, i.e. has a well-defined linearized return map.
+
+ (e) A(γε ) − Acomb (γ) = O(ε).
+
+  (f) γε is nondegenerate, ρ(γε ) = ρcomb (γ), and CZ(γε ) = CZcomb (γ).
+Proof. Setup. For i = 1, . . . , k, let pi denote the initial point of the segment Li .
+Using the notation Ei , Fi above, let Di denote the set of points y ∈ Fi such that
+Reeb flow along Ei starting at y reaches a point in Fi+1 , which we denote by φi (y).
+Thus we have a well-defined affine linear map
+
+                                    φi : Di −→ Fi+1 .
+
+and by definition φi (pi ) = pi+1 . In particular, the composition
+
+                                φk ◦ · · · ◦ φ1 : F1 −→ F1
+
+is an affine linear map defined in a neighborhood of p1 sending p1 to itself. For
+V ∈ T F1 small, this composition sends
+
+                                  p1 + V 7−→ p1 + AV,
+
+where A is a linear map T F1 → T F1 . Since the combinatorial Reeb orbit γ is
+assumed nondegenerate, the linear map A does not have 1 as an eigenvalue.
+   By Lemma 5.7(a), the Reeb flow along the smoothed 2-face (Fi )ε induces a
+well-defined map
+                               φFi ,ε : UFi ,ε −→ Fi                      (6.1)
+which is translation by a vector VFi ,ε .
+    Proof of (a). If ε > 0 is sufficiently small, then pi is in the domain UFi ,ε for each
+i, and Reeb orbits on Yε that are C 0 close to γ correspond to fixed points of the
+composition
+                      φF1 ,ε ◦ φk ◦ · · · ◦ φ2 ◦ φF2 ,ε ◦ φ1 : F1 −→ F1 .             (6.2)
+It follows from the above that for V ∈ T F1 small, the composition (6.2) sends
+
+                               p1 + V 7−→ p1 + AV + Wε                               (6.3)
+
+                                            48
+where Wε ∈ T F1 has length O(ε). Since the linear map A − 1 is invertible, the
+affine linear map (6.3) has a unique fixed point p1 + V for some V ∈ T F1 . If ε
+is sufficiently small, this fixed point will also be in the domain of the composition
+(6.2), and thus will correspond to the desired Reeb orbit γε .
+    Proof of (b). This holds because for the above fixed point, V has length O(ε).
+    Proof of (c). The Reeb orbit γε does not intersect Fε where F is a 0-face or
+1-face, by the definition of the domain of the map (6.1).
+    Proof of (d). This follows from Lemma 5.10(c).
+    Proof of (e). The symplectic action of the Reeb orbit γε is the sum of its
+flow times over the smoothed 2-faces (Fi )ε , plus the sum of its flow times over
+the smoothed 3-faces (Ei )ε . The former sum is O(ε) as explained in the proof of
+Lemma 5.7(b). The latter sum is (1 + O(ε)) times the sum of the corresponding
+flow times over the 3-faces Ei , and the latter differs from Acomb (γ) by O(ε), because
+the fixed point of (6.3) has distance O(ε) from p1 .
+    Proof of (f ). Let Tε denote the period of γε , and let yε be a point on the image of
+γε in Ek . If F is a 2-face, let ψeF ∈ Sp(2)
+                                       f       denote the lift of the transition matrix ψF
+in Definition 2.20 with rotation number in the interval (0, 1/2). By Lemmas 5.6(b)
+and 5.7(c), the lifted return map φ(y e ε , Tε ) is given by
+
+                              e ε , Tε ) = ψeF ◦ · · · ◦ ψeF .
+                              φ(y                                                   (6.4)
+                                              k             1
+
+
+Nondegeneracy of the combinatorial Reeb orbit γ means that the projection
+
+                          φ(yε , Tε ) = ψFk ◦ · · · ◦ ψF1 ∈ Sp(2)
+
+does not have 1 as an eigenvalue, so γε is nondegenerate. Moreover, it follows from
+(6.4) and the definition of combinatorial rotation number in Definition 2.23 that
+ρcomb (γ) = ρ(γε ). This implies that CZcomb (γ) = CZ(γε ).
+
+6.2    From smooth to combinatorial Reeb orbits
+Proof of Theorem 1.12. We proceed in four steps.
+   Step 1. We claim that for each i, the Reeb orbit γi can be expressed as a
+concatenation of a finite number, ki , of arcs such that:
+
+ (a) Each endpoint of an arc maps to the boundary of Eεi where E is a 3-face.
+
+ (b) For each arc, either:
+
+       (i) There is a 3-face E such that the interior of the arc maps to Eεi , or
+       (ii) No point in the interior of the arc maps to Eεi where E is a 3-face.
+
+
+                                            49
+    The above decomposition follows from parts (a) and (b)(i) of Lemma 5.9, be-
+cause the boundary of Eεi where E is a 3-face is contained in the singular set Σ.
+(Note that the decomposition into arcs in Lemma 5.9 is a subdivision of the above
+decomposition into arcs. Moreover, if ki > 1, then ki is even and the arcs alternate
+between types (i) and (ii).)
+    Step 2. We claim now that there is a constant C > 0, not depending on i, such
+that if γ : [a.b] → Yεi is an arc of type (ii) above, then if we write γ(t) = y(t) + εi v(t)
+                               +
+for y(t) ∈ ∂X and v(t) ∈ Ny(t)    X a unit vector, then we have
+                                     Z b
+                                           |v 0 (s)ds| ≥ C.                              (6.5)
+                                       a
+
+    To see this, note that by (a) above, there are 3-faces E and E 0 such that γ(a) ∈
+Eεi and γ(b) ∈ Eε0 i . Then v(a) = νE , where νE denotes the outward unit normal
+vector to E, and likewise v(b) = νE 0 . If E 6= E 0 , then the integral in (6.5) is
+bounded from below by the distance in S 3 between νE and νE 0 , and this distance
+has a uniform positive lower bound because X has only finitely many 3-faces, each
+with distinct outward unit normal vectors.
+    We now consider the case where E = E 0 . The proof of Lemma 5.13 shows that
+there is a neighborhood U of νE in S 3 , and a constant C > 0, such that for any
+point y + εi v ∈ Yεi \ Eεi with v ∈ U , with respect to the decomposition (5.10), we
+have |(iv)N |2 ≥ C. By shrinking the the neighborhood U , we can replace this last
+inequalty with h(iv)N , νE i > 0. Since v 0 (t) is a positive multiple of (iv(t))N , it follows
+that the path [a, b] → S 3 sending t 7→ v(t) must initially exit the neighborhood U
+before returning to νE . So in this case, we can take the constant C in (6.5) to be
+twice the distance in S 3 from νE to ∂U .
+    Step 3. We now show that we can pass to a subsequence so that the sequence
+of Reeb orbits γi on Yεi converges in C 0 to a Type 1 or Type 2 combinatorial Reeb
+orbit γ for X.
+    By Lemma 5.12 and our hypothesis that ρ(γi ) < R, we must have ki > 1 when
+i is sufficiently large. Then, by Lemma 5.13 and Step 2, there is an i-independent
+upper bound on ki . We can then pass to a subsequence such that ki is equal to an
+even constant k.
+    By compactness, we can pass to a further subsequence such that the endpoints
+of the k arcs from Step 1 for γi converge to k points in the 2-skeleton of X. By
+Lemma 5.6, the k/2 arcs of type (i) converge to Reeb trajectories on 3-faces of
+X. On the other hand, by Lemma 5.12, for each arc of type (ii), the length of its
+parametrizing interval converges to 0. A compactness argument also shows that
+there is an upper bound on the length of the Reeb vector field on Yεi . It follows
+that each arc of type (ii) is converging in C 0 to a point. Then γi converges in C 0
+
+
+                                               50
+to a Type 1 or Type 2 combinatorial Reeb orbit consisting of the line segments on
+3-faces given by the limits of the k/2 arcs of type (i).
+    Step 4. To complete the proof, we now prove that the subsequence and limiting
+orbit constructed above satisfy all of the requirements (i)-(v) of the theorem.
+    We have proved assertions (i) and (iii). Assertion (ii) follows from the proof of
+Lemma 6.1(e). Assertion (iv) follows from the proof of Lemma 6.1(d),(f). Assertion
+(v) follows from Lemma 5.13 and Step 2. (To get explicit constants CF , one only
+needs to consider the case E 6= E 0 in Step 2.)
+
+
+A        Rotation numbers
+Let Sp(2)
+     f     denote the universal cover of the group Sp(2) of 2 × 2 real symplectic
+matrices. Let Diff(S 1 ) denote the group of orientation-preserving C 1 diffeomor-
+phisms11 of S 1 = R/Z, and let Diff(S
+                               g 1 ) denote its universal cover. In this appendix,
+we review two invariants of elements of Sp(2),
+                                        f                          g 1 ): the ro-
+                                               and more generally Diff(S
+tation number ρ and the “minimum rotation number” r. The former is a standard
+notion in dynamics and is a key ingredient in Theorem 1.12; and we use the latter
+to bound the former. We also explain how to use rotation numbers to efficiently
+compute certain products in Sp(2),
+                             f      which is needed for our algorithms.
+
+A.1        Rotation numbers of circle diffeomorphisms
+                                       g 1 ) with the group of C 1 diffeomorphisms
+We can identify the universal cover Diff(S
+Φ : R → R which are Z-equivariant in the sense that Φ(t+1) = Φ(t)+1 for all t ∈ R.
+Such a diffeomorphism of R descends to an orientation-preserving diffeomorphism
+of S 1 , and this defines the covering map Diff(S
+                                           g 1 ) → Diff(S 1 ).
+
+Definition A.1. Given σ ∈ S 1 , we define the rotation number with respect to
+σ, denoted by
+                                    g 1 ) −→ R,
+                               rσ : Diff(S
+as follows. Let Φ be a Z-equivariant diffeomorphism of R as above. Let t ∈ R be a
+lift of σ ∈ R/Z. We then define
+
+                                       rσ (Φ) = Φ(t) − t.                                 (A.1)
+                          g 1 ), we define the rotation number
+Definition A.2. Given Φ ∈ Diff(S
+                                                rσ (Φn )
+                                   ρ(Φ) = lim            ∈R                               (A.2)
+                                            n→∞     n
+ 11
+      For the most part we could work more generally with orientation-preserving homeomorphisms.
+
+
+                                               51
+where σ ∈ S 1 . This limit does not depend on the choice of σ. Equivalently,
+
+                                            Φn (t) − t
+                                 ρ(Φ) = lim                                    (A.3)
+                                        n→∞     n
+where t ∈ R.
+
+   Note that we have the Z-equivariance property
+
+                                 ρ(Φ + 1) = ρ(Φ) + 1.                          (A.4)
+
+   We can bound the rotation number as follows.
+                                                          g 1 ) → R by
+Definition A.3. We define the minimum rotation number r : Diff(S
+
+                                  r (Φ) = min1 rσ (Φ) .                        (A.5)
+                                           σ∈S
+
+                         g 1 ) is presented as a piecewise smooth path {φt }t∈[0,1]
+   Alternatively, if Φ ∈ Diff(S
+         1
+in Diff(S ) with φ0 = idS 1 , then
+                                           Z 1
+                                               d
+                               r(Φ) = min1       φs (σ)ds.
+                                      σ∈S   0 ds
+
+In particular, it follows that
+                                    Z 1                     
+                                                    d
+                           r(Φ) ≥         min          φs (σ) ds.              (A.6)
+                                     0 σ∈S
+                                           1        ds
+
+   It follows from the definitions that
+
+                                     ρ(Φ) ≥ r(Φ).                              (A.7)
+
+A.2     A partial order
+                                               g 1 ) as follows:
+Definition A.4. We define a partial order ≥ on Diff(S
+
+                 Φ ≥ Ψ if and only if rs (Φ) ≥ rs (Ψ) for all s ∈ S 1 .        (A.8)
+
+Equivalently, Φ(t) ≥ Ψ(t) for all t ∈ R.
+                                  g 1 ) is left and right invariant.
+Lemma A.5. The partial order ≥ on Diff(S
+
+
+
+
+                                            52
+                     g 1 ), and suppose that Φ ≥ Ψ, i.e.
+Proof. Let Φ, Ψ, Θ ∈ Diff(S
+
+                                   Φ(t) ≥ Ψ(t)                               (A.9)
+
+for every t ∈ R. We need to show that ΦΘ ≥ ΨΘ and ΘΦ ≥ ΘΨ.
+    Since Θ : R → R is an orientation preserving diffeomorphism, it preserves the
+order on R, so it follows from (A.9) that
+
+                                Θ(Φ(t)) ≥ Θ(Ψ(t))
+
+for every t ∈ R, so ΘΦ ≥ ΘΨ.
+    On the other hand, replacing t by Θ(t) in the inequality (A.9), we deduce that
+
+                                Φ(Θ(t)) ≥ Ψ(Θ(t))
+
+for every t ∈ R, so ΦΘ ≥ ΨΘ.
+                     g 1 ) and Φ ≥ Ψ, then ρ(Φ) ≥ ρ(Ψ).
+Lemma A.6. If Φ, Ψ ∈ Diff(S
+
+Proof. By (A.3), it is enough to show that given t ∈ R, we have Φn (t) ≥ Ψn (t)
+for each positive integer n. This follows by induction on n, using the fact that Φ
+preserves the order on R.
+
+A.3    Rotation numbers of symplectic matrices
+There is a natural homomorphism Sp(2) → Diff(S 1 ), sending a symplectic linear
+map A : R2 → R2 to its action on the set of positive rays (identified with R/Z
+by the map sending t ∈ R/Z to the ray through e2πit ). This lifts to a canonical
+homomorphism Sp(2)
+                 f          g 1 ). Under this homomorphism, the invariants rs , r,
+                        → Diff(S
+and ρ defined above pull back to functions Sp(2)
+                                              f    → R, which by abuse of notation
+we denote using the same symbols.
+   We can describe the rotation number ρ : Sp(2)
+                                               f    → R more explicitly in terms of
+the following classification of elements of the symplectic group Sp(2).
+
+Definition A.7. Let A ∈ Sp(2). We say that A is
+
+   • positive hyperbolic if Tr(A) > 2 and negative hyperbolic if Tr(A) < −2.
+
+   • a positive shear if Tr(A) = 2 and a negative shear if Tr(A) = −2.
+
+   • positive elliptic if −2 < Tr(A) < 2 and det([v, Av]) > 0 for all v ∈ R2 \ {0}.
+
+   • negative elliptic if −2 < Tr(A) < 2 and det([v, Av]) < 0 for all v ∈ R2 \ {0}.
+
+
+                                        53
+    By the equivariance property (A.4), the rotation number ρ : Sp(2)
+                                                                f     → R descends
+to a “mod Z rotation number” ρ̄ : Sp(2) → R/Z.
+Lemma A.8. The mod Z rotation number ρ̄ : Sp(2) → R/Z can be computed as
+follows:
+          
+          
+           0  if        A is positive hyperbolic or a positive shear,
+           1
+             2
+               if        A is negative hyperbolic or a negative shear,
+  ρ̄(A) =
+          
+           θ  if A is positive elliptic with eigenvalues e±2πiθ for θ ∈ (0, 12 ),
+            −θ if A is negative elliptic with eigenvalues e±2πiθ for θ ∈ (0, 12 ).
+          
+
+Proof. In the first two cases, A has 1 or −1 as an eigenvalue. This means that there
+exists s ∈ S 1 which is fixed or sent to its antipode, and one can use this s in the
+definition (A.2).
+    In the third case, A is conjugate to rotation by 2πθ. One can then lift A to
+an element of Sp(2)
+                f                        g 1 ) is a Z-equivariant diffeomorphism
+                       whose image in Diff(S
+Φ : R → R such that |Φn (t) − t − nθ| < 1 for each t ∈ R. It then follows from (A.3)
+that ρ(Φ) = θ. The last case is analogous.
+
+A.4     Computing products in Sp(2)
+                              f
+Observe that Sp(2)
+               f      can be identified with the set of pairs (A, r), where A ∈ Sp(2)
+and r ∈ R is a lift of ρ(A) ∈ R/Z. The identification sends a lift A        e to the pair
+(A, ρ(A)).
+      e
+    For computational purposes, we can keep track of the lifts of A using less infor-
+mation, which is useful when for example we do not want to compute ρ(A) exactly.
+Namely, we can identify a lift A e with a pair (A, r), where r is either an integer (when
+A has positive eigenvalues), an open interval (n, n + 1/2) for some integer n (when
+A is positive elliptic), a half-integer (when A has negative eigenvalues), or an open
+interval (n − 1/2, n) (when A is negative elliptic).
+    The following proposition allows us to compute products in the group Sp(2)    f    in
+terms of the above data, in the cases that we need (see Remark 2.24).
+Proposition A.9. Let A,
+                     eB e ∈ Sp(2).
+                            f                     e ∈ (0, 1/2). Then
+                                   Suppose that ρ(A)
+
+                             ρ(B)e ≤ ρ(A         e + 1.
+                                          e ≤ ρ(B)
+                                        eB)
+                                                       2
+    To apply this proposition, if for example B
+                                              e is described by the pair (B, (m, m +
+1/2)), then it follows that AB is described by either (AB, (m, m + 1/2)), (AB, m +
+                            e  e
+1/2), or (AB, (m + 1/2, m + 1)). To decide which of these three possibilities holds,
+by Lemma A.8 it is enough to check whether AB is positive elliptic, has negative
+eigenvalues, or is negative elliptic.
+
+                                           54
+Proof of Proposition A.9. Let Φ and Ψ denote the elements of Diff(Sg 1 ) determined
+by A
+   e and B e respectively. Let Θ : R → R denote translation by 1/2. By Lemma A.8,
+A
+e projects to a positive elliptic element of Sp(2). It follows that with respect to the
+                 g 1 ), we have
+partial order on Diff(S
+
+                                    idR ≤ Φ ≤ Θ.
+
+By Lemma A.5, we can multiply on the right by Ψ to obtain
+
+                                   Ψ ≤ ΦΨ ≤ ΘΨ.
+
+Using Lemma A.6, we deduce that
+
+                              ρ(Ψ) ≤ ρ(ΦΨ) ≤ ρ(ΘΨ).
+
+Since Ψ comes from a linear map, it commutes with Θ, so we have
+                                               1
+                                 ρ(ΘΨ) = ρ(Ψ) + .
+                                               2
+Combining the above two lines completes the proof.
+
+
+References
+ [1] A. Abbondandolo, B. Bramham, U. Hryniewicz and P. Salomão, Sharp systolic
+     inequalities for Reeb flows on the three-sphere, Invent. Math. 211 (2018), 687–
+     778.
+
+ [2] A. Abbondandolo, B. Bramham, U. Hryniewicz and P. Salomão, Systolic ratio,
+     index of closed orbits and convexity for tight contact forms on the three-sphere,
+     Compositio Math. 154 (2018), 2643–2680.
+
+ [3] A. Abbondandolo and J. Kang, Symplectic homology of convex domains and
+     Clarke’s duality, arXiv:1907.07779.
+
+ [4] S. Artstein-Avidan, R. Karasev, and Y. Ostrover, From symplectic measure-
+     ments to the Mahler conjecture, Duke Math. J. 163 (2014), 2003-2022.
+
+ [5] S. Artstein-Avidan, Y. Ostrover, Bounds For Minkowski billiard trajectories in
+     convex bodies, IMRN 2014, 165–193.
+
+ [6] A. Balitskiy, Equiality cases in Viterbo’s conjecture and isoperimeric billiard
+     inequalities, Int. Math. Res. Not. 2020, 1957–1978.
+
+                                          55
+ [7] K. Cieliebak, H. Hofer, J. Latschev, and F. Schlenk, Quantitative symplectic
+     geometry. In Dynamics, ergodic theory, and geometry, Math. Sci. Res. Inst.
+     Publ. 54 (2007), pp. 1–44, Cambridge University Press.
+
+ [8] I. Ekeland and H. Hofer, Symplectic topology and Hamiltonian dynamics, Math.
+     Z. 200 (1989), 355–378.
+
+ [9] I. Ekeland and H. Hofer, Symplectic topology and Hamiltonian dynamics. II.,
+     Math Z. 203 (1990), 553–567.
+
+[10] J. Gutt and M. Hutchings, Symplectic capacities from positive S 1 -equivariant
+     symplectic homology, Algebraic and Geometric Topology 18 (2018), 3537–3600.
+
+[11] J. Gutt, M. Hutchings, and V. Ramos, Examples around the strong Viterbo
+     conjecture, arXiv:2003.10854, to appear in Journal of Fixed Point Theory and
+     Applications.
+
+[12] P. Haim-Kislev, On the symplectic size of convex polytopes, Geometric and
+     Functional Analysis 29 (2019), 440–463.
+
+[13] D. Hermann, Non-equivalence of symplectic capacities for open sets with re-
+     stricted contact type boundary. Prépublication d’Orsay numéro 32 (1998).
+
+[14] H. Hofer, K. Wysocki, and E. Zehnder, The dynamics on three-dimensional
+     strictly convex energy surfaces, Ann. Math. 148 (1998), 197–289.
+
+[15] H. Hofer and E. Zehnder, Symplectic invariants and Hamiltonian dynamics,
+     Birkhäuser, 1994.
+
+[16] X. Hu, Y. Long, Closed characteristics on non-degenerate star-shaped hyper-
+     surfaces in R2n Science In China (Series A), 45 No. 8 (2002).
+
+[17] M. Hutchings, Taubes’s proof of the Weinstein conjecture in dimension three,
+     Bull. AMS 47 (2010), 73–125.
+
+[18] M. Hutchings, Quantitative embedded contact homology, J. Diff. Geom. 88
+     (2011), 231–266.
+
+[19] U. Hryniewicz, private communication, 2017.
+
+[20] K. Irie, Symplectic homology of fiberwise convex sets and homology of loop
+     spaces, arXiv:1907.09749.
+
+
+
+
+                                        56
+[21] A. F. Künzle, Singular Hamiltonian systems and symplectic capacities, Singu-
+     larities and Differential Equations, 171–187, Banach Center Publications 33,
+     Polish Academy of Sciences, 1996.
+
+[22] P. Rabinowitz, Periodic solutions of Hamiltonian systems, Comm. Pure Appl.
+     Math 31 (1978), 157–184.
+
+[23] F. Schlenk, Embedding problems in symplectic geometry, Walter de Gruyter,
+     2005.
+
+[24] K. Siegel, Higher symplectic capacities, arXiv:1902.01490.
+
+[25] C. Viterbo, Metric and isoperimetric problems in symplectic geometry, J. Amer.
+     Math. Soc. 13 (2000), 411–431.
+
+[26] A. Weinstein, On the volume of manifolds all of whose geodesics are closed , J.
+     Diff. Geom 9 (1974), 513–517.
+
+
+
+
+                                        57
+

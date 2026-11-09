@@ -1,0 +1,6 @@
+PASS: R^2 simplex; itinerary LP minimum=4.5; exact ordering capacity=9/2; feasible cyclic orders=1.
+PASS: R^4 simplex; itinerary LP minimum=2.08333333333; exact ordering capacity=25/12; feasible cyclic orders=1.
+PASS: R^6 simplex; itinerary LP minimum=1.63333333333; exact ordering capacity=49/30; feasible cyclic orders=1.
+PASS: [-1,1]^2, capacity=4; feasible cyclic orders=1.
+PASS: README product, selected four-facet itinerary has action=4.
+PASS: the reversed README itinerary is infeasible for the fixed flow orientation.

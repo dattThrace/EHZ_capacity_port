@@ -1,0 +1,5 @@
+# Preserve the original bytes used by the research SHA-256 records and upstream.
+research/** -text
+upstream/EHZ-capacity/** -text
+*.pdf binary
+*.bundle binary

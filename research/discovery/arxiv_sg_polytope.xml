@@ -1,0 +1,1411 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/+140lg7jeCdvlIfVjtSmim65a/k</id>
+  <title>arXiv Query: search_query=cat:math.SG AND (all:polytope OR all:polytopes)&amp;id_list=&amp;start=0&amp;max_results=70</title>
+  <updated>2026-11-09T21:08:01Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=cat:math.SG+AND+(all:polytope+OR+all:polytopes)&amp;start=0&amp;max_results=70&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>70</opensearch:itemsPerPage>
+  <opensearch:totalResults>231</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2610.37724v1</id>
+    <title>Moment Polyptychs and the Equivariant Quantisation of Hypertoric Varieties</title>
+    <updated>2026-10-27T11:31:17Z</updated>
+    <link href="https://arxiv.org/abs/2610.37724v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.37724v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the equivariant geometric quantisation of a non-compact hypertoric variety of complex dimension $2n$ using symplectic cutting. When the defining arrangement is cooriented so that its base region is non-empty and bounded, fibre rotation has proper moment map and produces compact Kähler orbifold cuts carrying the residual torus action. We introduce the moment polyptych of such a cut, a polytopal complex assembled from truncated arrangement regions, and show that its vertices and local lattice data determine the fixed points, tangent weights, and finite orbifold groups required for equivariant orbifold Riemann-Roch localisation. Even for a smooth hypertoric manifold, a reducible core forces every cut in the outer cut chamber to have non-trivial cyclic isotropy, while the cuts are smooth if and only if the manifold is the cotangent bundle of its distinguished compact toric subvariety, which is then a product of projective spaces. For a positive regular integral level $d$ in the outer cut chamber, algebraic cutting identifies the cut's quantisation with a finite filtration piece of the circle-graded quantisation of the original hypertoric variety, whose successive quotients recover the individual circle-weight spaces. We prove that the higher cohomology of the pre-quantum line orbibundle vanishes at every such level, so that the localised index is the character of the actual space of sections. Finally, a residual weight $x$ occurs at level $d$ if and only if $\mathcal{S}(x) \leq d$, where $\mathcal{S}$ is the arrangement slack function, with multiplicity $\binom{d - \mathcal{S}(x) + n}{n}$. Thus, each finite stage admits a weighted lattice-point description whose multiplicity function is supported on the lattice points in the support of the level-$d$ moment polyptych.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-27T11:31:17Z</published>
+    <arxiv:comment>57 pages, 14 figures</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Benjamin C. W. Brown</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.28469v1</id>
+    <title>On the stability of displacement energy in toric manifolds</title>
+    <updated>2026-10-20T16:21:42Z</updated>
+    <link href="https://arxiv.org/abs/2610.28469v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.28469v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a quantitative exploration of the behaviour of displacement energy of Lagrangians under stabilization. In particular, we completely characterize the displacement behaviour of toric fibres in Fano 4-manifolds. Our approach relates the geometry of the moment polytope's caustic to the structure of the (bulk-deformed) superpotential and to the presence of symmetric probes.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-20T16:21:42Z</published>
+    <arxiv:comment>30 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Jean-Philippe Chassé</name>
+    </author>
+    <author>
+      <name>Ipsita Datta</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.12279v1</id>
+    <title>Invariant sets and spectral rigidity of Hamiltonian diffeomorphisms</title>
+    <updated>2026-10-08T16:38:20Z</updated>
+    <link href="https://arxiv.org/abs/2610.12279v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.12279v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We solve a well-known question of Polterovich from 2002 regarding the rigidity of Hamiltonian diffeomorphisms in Hofer's metric in dimension two: every non-trivial Hamiltonian diffeomorphism of a surface of genus at least one has all positive iterations separated from the identity in Hofer's metric. In higher dimensions, we make progress on the case of autonomous Hamiltonian flows: we prove Hofer non-recurrence for symplectically hyperbolic manifolds, and completely characterize Hofer recurrence for functions of the moment polytope on monotone toric manifolds. These results apply equally well to Viterbo's spectral metric, settling cases of the $γ$-rigidity conjecture, and therefore in many cases also to the $C^0$-metric. Our approach relies on the philosophy that symplectically visible invariant sets govern symplectic non-recurrence phenomena. In dimension two, we use invariant annuli provided by low-dimensional dynamics, and apply methods of $C^0$ symplectic topology to approximately invariant Lagrangian submanifolds. For symplectically hyperbolic manifolds, the invariant sets are provided by sublevel and superlevel sets of autonomous Hamiltonians, while in the toric case, they comprise Lagrangian torus fibers. Across the arguments, we use quantitative Lagrangian Floer theory and its relation to notions of classical dynamics.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-08T16:38:20Z</published>
+    <arxiv:comment>99 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Habib Alizadeh</name>
+    </author>
+    <author>
+      <name>Egor Shelukhin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.30146v1</id>
+    <title>On the chamber decomposition of a Hamiltonian torus action</title>
+    <updated>2026-09-24T17:11:21Z</updated>
+    <link href="https://arxiv.org/abs/2609.30146v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.30146v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For a compact connected Hamiltonian $T$-space (with $T$ a torus), the components of the set of (relative) regular values of the momentum map are open convex polytopes, whose closures (called the chambers) form a polyhedral decomposition of the momentum polytope. In a previous paper we showed that there is a canonical affine stratification of the momentum polytope with the property that, while varying through a stratum, the fibers of the momentum map do not change as $T$-spaces. In this paper we show that the strata of this stratification are the relative interiors of the faces of the chambers. In doing so, we also give a proof of the fact that these faces form a polyhedral complex, which (it seems) was missing from the literature. We further extend the above to Hamiltonian $T$-spaces whose momentum map is proper as map into a convex set and, in the compact Kähler case, we point out a description of the above strata in terms of the $T_\mathbb{C}$-orbit closure polytopes.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-24T17:11:21Z</published>
+    <arxiv:comment>Comments welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Maarten Mol</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.27738v1</id>
+    <title>Ehrhart theorem for integral-integral affine manifolds with corners</title>
+    <updated>2026-09-23T11:53:45Z</updated>
+    <link href="https://arxiv.org/abs/2609.27738v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.27738v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study lattice-counting functions on compact integral-integral affine manifolds with corners, which generalize integral unimodular polytopes. We prove analogues of Ehrhart's theorem and Ehrhart-Macdonald reciprocity in this setting.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-23T11:53:45Z</published>
+    <arxiv:primary_category term="math.DG"/>
+    <author>
+      <name>Oded Elisha</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.25316v1</id>
+    <title>A Polytopal Realization of Higher-Categorical Associahedra</title>
+    <updated>2026-09-21T19:04:23Z</updated>
+    <link href="https://arxiv.org/abs/2609.25316v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.25316v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We describe a polytopal realization of categorical $n$-associahedra. The normal fan of this polytopal realization is a modification of the authors' velocity fan and was found by OpenAI's Astra model.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-21T19:04:23Z</published>
+    <arxiv:comment>9 pages, 7 fugures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Spencer Backman</name>
+    </author>
+    <author>
+      <name>Nathaniel Bottman</name>
+    </author>
+    <author>
+      <name>Daria Poliakova</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.31026v1</id>
+    <title>Toric Constructions via Integral Transversality</title>
+    <updated>2026-08-31T16:08:38Z</updated>
+    <link href="https://arxiv.org/abs/2608.31026v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.31026v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the Delzant world, symplectic toric manifolds correspond to unimodular polytopes, and unimodularity-preserving polytope constructions correspond to geometric constructions on the manifold side. We treat, in a unified framework, constructions such as taking a face, taking a slice, and polytope intersections, identifying each with its geometric counterpart, namely invariant submanifolds, symplectic reduction, and reduction of a product (a full list appears in Table 1). The key tool is "integral transversality", a lattice-refined transversality condition that provides a uniform criterion for preserving unimodularity, ensuring smoothness on the manifold side. To keep every construction within a single ambient vector space -- the dual of the Lie algebra of a fixed torus -- we allow the torus actions involved to have nontrivial, but connected kernels.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-31T16:08:38Z</published>
+    <arxiv:comment>54 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Ana Cannas da Silva</name>
+    </author>
+    <author>
+      <name>Reto Kaufmann</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.23436v1</id>
+    <title>Limits of quantization from mixed to real polarizations on toric varieties</title>
+    <updated>2026-08-24T16:10:41Z</updated>
+    <link href="https://arxiv.org/abs/2608.23436v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.23436v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $(M, ω, J)$ be a $2n$-dimensional toric variety determined by a Delzant polytope $P$, whose $T^{n}$-symmetry determines a real polarization $\mathcal{P}_{\mathbb{R}}$. Let $K \subset T^{n}$ be a subtorus. By a construction due to Leung and the first author, the $K$-action induces a mixed polarization $\mathcal{P}_{K}$.
+  This paper investigates the relationship between the quantum Hilbert spaces $\mathcal{H}_{K}$ and $\mathcal{H}_{\mathbb{R}}$ associated with the polarizations $\mathcal{P}_{K}$ and $\mathcal{P}_{\mathbb{R}}$. Starting from $\mathcal{P}_{K}$, we use an imaginary-time flow to construct a one-parameter family of mixed polarizations $\mathcal{P}_{K,t}$ on $M$ interpolating between $\mathcal{P}_{K}$ and $\mathcal{P}_{\mathbb{R}}$, with $\mathcal{P}_{K,0}=\mathcal{P}_{K}$ and $\lim_{t\to\infty}\mathcal{P}_{K,t}=\mathcal{P}_{\mathbb{R}}$. For the corresponding quantum Hilbert spaces $\mathcal{H}_{K,t}$, we lift the imaginary-time flow to the prequantum line bundle to obtain a $T^{n}$-equivariant isomorphism $\mathcal{H}_{K}\cong\mathcal{H}_{K,t}$. We finally show that $\mathcal{H}_{K,t}$ converges to $\mathcal{H}_{\mathbb{R}}$ as $t\to\infty$.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-24T16:10:41Z</published>
+    <arxiv:comment>24 pages. Comments are welcome</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Dan Wang</name>
+    </author>
+    <author>
+      <name>Yutung Yau</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.08918v1</id>
+    <title>Toric real loci via moment polytopes</title>
+    <updated>2026-08-09T21:14:34Z</updated>
+    <link href="https://arxiv.org/abs/2608.08918v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.08918v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Toric real loci are distinguished lagrangian submanifolds of toric symplectic manifolds. We develop a polyhedral model for toric real loci, called a kaleidoscope, based on the restriction of the moment map. This construction provides a direct geometric description of the topology of toric real loci and leads to simple criteria for orientability, together with transparent formulas for the Euler characteristic. We illustrate the theory with numerous examples and count, in every complex dimension up to 9, the smooth toric Fano varieties whose real loci are orientable. The kaleidoscope construction offers a simple, visual, and effective framework for understanding the topology of toric real loci through the combinatorics of their moment polytopes.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-09T21:14:34Z</published>
+    <arxiv:comment>49 pages, 16 figures</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>João Camarneiro</name>
+    </author>
+    <author>
+      <name>Ana Cannas da Silva</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.14010v2</id>
+    <title>The spread construction and non-uniqueness of visible Lagrangians</title>
+    <updated>2026-08-19T12:36:01Z</updated>
+    <link href="https://arxiv.org/abs/2607.14010v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.14010v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Every even symplectic Hirzebruch surface contains a Lagrangian torus and every odd symplectic Hirzebruch surface contains a Lagrangian Klein bottle as their respective real locus. From a toric point of view, this is a visible Lagrangian which surjects to the full moment polytope under the moment map. In this paper, we prove that every Hirzebruch surface contains both a Lagrangian torus and a Lagrangian Klein bottle with this property. An interesting consequence is that the topology of visible Lagrangian submanifolds is not determined by their image under the moment map. The proof is based on a new construction, which we call the spread of a family of Hamiltonian diffeomorphisms.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-15T16:39:27Z</published>
+    <arxiv:comment>21 pages, 5 figures, 1 table, minor changes</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Joé Brendel</name>
+    </author>
+    <author>
+      <name>Reto Kaufmann</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.08570v1</id>
+    <title>Newton--Okounkov bodies of partial flag varieties via cluster algebras</title>
+    <updated>2026-06-07T10:52:30Z</updated>
+    <link href="https://arxiv.org/abs/2606.08570v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.08570v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We construct Newton--Okounkov polytopes of Schubert varieties in partial flag varieties of arbitrary type using the cluster structure on a unipotent cell. When the governing cluster algebra is of infinite type, we prove that for any very ample homogeneous line bundle over a simply laced partial flag variety, the resulting family of Newton--Okounkov polytopes contains infinitely many pairwise nonequivalent polytopes up to integral affine transformation. As an application to symplectic geometry, we construct infinitely many distinct monotone Lagrangian tori in a broad class of simply laced partial flag varieties.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-07T10:52:30Z</published>
+    <arxiv:comment>45 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Yunhyung Cho</name>
+    </author>
+    <author>
+      <name>Myungho Kim</name>
+    </author>
+    <author>
+      <name>Yoosik Kim</name>
+    </author>
+    <author>
+      <name>Euiyong Park</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.06816v1</id>
+    <title>Seshadri constants and Gromov widths of toric varieties associated with generalized permutohedra</title>
+    <updated>2026-06-05T01:40:07Z</updated>
+    <link href="https://arxiv.org/abs/2606.06816v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.06816v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we study the Seshadri constants and Gromov widths of polarized toric varieties whose moment polytopes are generalized permutohedra. We show that both invariants coincide with the lattice width of the moment polytope, and provide an explicit formula for them in terms of the defining submodular function.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-05T01:40:07Z</published>
+    <arxiv:comment>13 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Atsushi Ito</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.01275v2</id>
+    <title>Symplectic small covers in dimension four</title>
+    <updated>2026-05-05T04:49:24Z</updated>
+    <link href="https://arxiv.org/abs/2605.01275v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.01275v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study symplectic structures on four-dimensional small covers. Our main result shows that every symplectic four-dimensional small cover is aspherical. We then classify symplectic small covers over products of two polygons, proving that symplecticity is equivalent to factor-compatibility. We also classify them up to diffeomorphism. Finally, we construct a symplectic four-dimensional small cover whose orbit polytope is not combinatorially equivalent to a product of two polygons.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-02T06:22:12Z</published>
+    <arxiv:comment>25 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Suyoung Choi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.23848v1</id>
+    <title>Contact flexibility and rigidity for toric Gorenstein prequantizations and Ehrhart theory of toric diagrams</title>
+    <updated>2026-04-26T19:37:00Z</updated>
+    <link href="https://arxiv.org/abs/2604.23848v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.23848v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Gorenstein toric contact manifolds are good toric contact manifolds with zero first Chern class that are completely determined by certain integral convex polytopes called toric diagrams. The Ehrhart polynomial of these toric diagrams determines and is determined by the contact Betti numbers of the corresponding contact manifolds, i.e. the dimension of their cylindrical contact homology in eachdegree. In this paper we look into the following natural question: to what extent do these contact invariants determine the Gorenstein toric contact manifold? Flexibility is the norm and we illustrate it with the family of Gorenstein toric contact manifolds that arise as the prequantization of monotone iterated ${\mathbb P}^1$-bundles, i.e. monotone Bott manifolds. In each dimension, the Ehrhart polynomial of their toric diagrams is equal to the Ehrhart polynomial of the cross-polytope, corresponding to the monotone prequantization of ${\mathbb P}^1 \times \cdots \times {\mathbb P}^1$, and we describe the unimodular classification of these toric diagrams. On the rigidity side, we will show that the primitive prequantization of ${\mathbb P}^1 \times \cdots \times {\mathbb P}^1$ is rigid, i.e. completely determined as a Gorenstein toric contact manifold by its contact Betti numbers. More precisely, in each dimension, we show that its toric diagram, which we name small cross-polytope, is the unique toric diagram with its particular Ehrhart polynomial. We will also prove a rigidity result for a family of Gorenstein toric contact manifolds that arise as the primitive prequantization of monotone ${\mathbb P}^1$-bundles over ${\mathbb P}^{n-1}$.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-26T19:37:00Z</published>
+    <arxiv:comment>36 pages, 13 figures</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Miguel Abreu</name>
+    </author>
+    <author>
+      <name>Leonardo Macarini</name>
+    </author>
+    <author>
+      <name>António Rocha-Neves</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.18023v2</id>
+    <title>Spherical singularities in compactified Ruijsenaars--Schneider systems</title>
+    <updated>2026-05-06T10:32:01Z</updated>
+    <link href="https://arxiv.org/abs/2604.18023v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.18023v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate certain Liouville integrable systems constructed earlier via reduction of the quasi-Hamiltonian double of $\mathrm{SU}(n)$. These systems live on compact connected symplectic manifolds of dimension $2(n-1)$ and can be interpreted as compactified trigonometric Ruijsenaars--Schneider systems. Depending on the value of a parameter $0&lt;y&lt; π$, they arise in two drastically different forms: in type (i) these are toric systems, while in the type (ii) cases they possess globally continuous action variables that generate a Hamiltonian torus action (only) on a dense open subset of the phase space. The principal goal of the paper is to study those fibers of the action map (alias the $\mathbb{T}^{n-1}$ momentum map) which are contained in the complement of the domain of the densely defined torus action occurring in the type (ii) cases. We demonstrate that all such `singular fibers' are smooth connected isotropic submanifolds. We also work out a model of the fibers as quotient spaces of certain subgroups of $\mathrm{SU}(n)$ with respect to an action of another subgroup. The general results are exemplified by determining the vertices of the polytope filled by the action variables in the simplest type (ii) cases that appear for any $n\geq 4$ with $π/(n-1) &lt;y &lt; π/(n-2)$, and proving that the fibers over the `singular vertices' are diffeomorphic to $S^3 \simeq \mathrm{SU}(2)$ in these cases. In this way, our findings enrich the set of examples of Liouville integrable systems with spherical singularities.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-20T09:48:39Z</published>
+    <arxiv:comment>35 pages, 2 figures, v2: small correction in Section 6</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <author>
+      <name>L. Feher</name>
+    </author>
+    <author>
+      <name>H. R. Dullin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.20517v1</id>
+    <title>A positive formula for volumes of moduli spaces of flat unitary connections on compact surfaces</title>
+    <updated>2026-03-20T21:35:33Z</updated>
+    <link href="https://arxiv.org/abs/2603.20517v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.20517v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We provide a manifestly positive expression for the volume of the moduli spaces of flat $\mathrm{U}(n)$-valued connections on punctured compact oriented surfaces. This volume is obtained by summing volumes of explicit polytopes describing coloured honeycombs on a polygon, in the spirit of the work of Knutson and Tao describing the spectrum of the sum of two hermitian matrices. As a corollary, we also provide a positive formula for marginals of the $\mathrm{U}(n)$-valued Yang-Mills measure on a compact oriented surface in terms of the probability distribution of an explicit path process.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-20T21:35:33Z</published>
+    <arxiv:comment>33 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Quentin François</name>
+    </author>
+    <author>
+      <name>David García-Zelada</name>
+    </author>
+    <author>
+      <name>Thierry Lévy</name>
+    </author>
+    <author>
+      <name>Pierre Tarrago</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.08521v2</id>
+    <title>Polytopes and $C^0$-Riemannian metrics with positive $h_{\rm top}$</title>
+    <updated>2026-05-08T08:10:03Z</updated>
+    <link href="https://arxiv.org/abs/2602.08521v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.08521v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study Reeb dynamics on starshaped hypersurfaces in $\mathbb{R}^4$ arising as smoothings of starshaped polytopes. Using the $C^0$--stability of positive topological entropy for Reeb flows in dimension three from our joint work with Dahinden and Pirnapasov, we show that there exist starshaped polytopes $P$ such that for any starshaped smoothing of $\partial P$ the associated Reeb flows have positive topological entropy. This answers a question of Ostrover and Ginzburg.
+  Similarly, we show that given a closed surface $M$ and a number $C&gt;0$, there exist continuous and non-differentiable Riemannian metrics $g$ on $S$ with $h_{\rm top}&gt;C$ in the sense that for any smoothing of $g$ the associated geodesic flows have $h_{\rm top}&gt;C$.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-09T11:08:54Z</published>
+    <arxiv:comment>10 pages. Minor changes. Submitted for publication</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Marcelo R. R. Alves</name>
+    </author>
+    <author>
+      <name>Matthias Meiwes</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.02176v2</id>
+    <title>Hilbert Polynomials of Calabi Yau Hypersurfaces in Toric Varieties and Lattice Points in Polytope Boundaries</title>
+    <updated>2026-01-18T21:05:26Z</updated>
+    <link href="https://arxiv.org/abs/2601.02176v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.02176v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that the Hilbert polynomial of a Calabi-Yau hypersurface $Z$ in a smooth toric variety $M$ associated to a convex polytope $Δ$ is given by a lattice point count in the polytope boundary $\partial Δ,$ just as the Hilbert polynomial of $M$ is known to be given by a lattice point count in the convex polytope $Δ.$ Our main tool is a computation of the Euler class in $K$-theory of the normal line bundle to the hypersurface $Z,$ in terms of the Euler classes of the divisors corresponding to the facets of the moment polytope. We observe a remarkable parallel between our expression for the Euler class and the inclusion-exclusion principle in combinatorics. To obtain our result we combine these facts with the known relation between lattice point counts in the facets of $Δ$ and the Hilbert polynomials of the smooth toric varieties corresponding to these facets.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.KT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-05T14:54:48Z</published>
+    <arxiv:comment>Sharpened statement of Lemma 4.1 and simplified proof of Lemma 4.2. Corrected minor typographical errors in Section 5</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Jonathan Weitsman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.19158v1</id>
+    <title>Kirwan polytopes in the real setting</title>
+    <updated>2025-12-22T08:54:23Z</updated>
+    <link href="https://arxiv.org/abs/2512.19158v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.19158v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This is a monograph devoted to the study of Kirwan's real polytopes, i.e., in the context where there are involutions on the group and on the symplectic manifold. This work brings together and completes the two preprints I had already written on this subject (arXiv:2012.08837, arXiv:2111.13399).</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-22T08:54:23Z</published>
+    <arxiv:comment>in French language</arxiv:comment>
+    <arxiv:primary_category term="math.DG"/>
+    <author>
+      <name>Paul-Emile Paradan</name>
+      <arxiv:affiliation>IMAG</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.12747v1</id>
+    <title>Two-dimensional equivariant symplectic submanifolds in toric manifolds</title>
+    <updated>2025-12-14T15:56:05Z</updated>
+    <link href="https://arxiv.org/abs/2512.12747v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.12747v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>To find all two-dimensional equivariant symplectic submanifolds in symplectic toric manifolds, we combine the convex geometry of Delzant polytopes with local equivariant symplectic models and obtain a criterion for determining when a two-dimensional submanifold is an equivariant symplectic submanifold in a toric manifold.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-14T15:56:05Z</published>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Shiyun Wen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.19083v2</id>
+    <title>A Bound on the Symplectic Systolic Ratio of Polytopes in Even-Dimensional Euclidean Space</title>
+    <updated>2025-09-30T13:30:28Z</updated>
+    <link href="https://arxiv.org/abs/2509.19083v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.19083v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Symplectic capacities are invariants in symplectic geometry that are used to obstruct symplectic embeddings. From a certain symplectic capacity, the Ekeland-Hofer-Zehnder capacity, one can construct the systolic ratio, which measures the difference in the capacity and the Euclidean volume. The systolic ratio of a unit ball is always 1. It was conjectured by Viterbo that the systolic ratio is bounded by 1. This conjecture was disproven by Haim-Kislev recently, and now it is open to determine what bounds one may obtain on the systolic ratio if not 1. In this paper, the author investigates bounds on the systolic ratio of polytopes. In particular, a sharp bound on the systolic ratio of simplices in any dimension is obtained, with the dependence on dimension made explicit.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-23T14:38:43Z</published>
+    <arxiv:comment>A possible counterexample in R^6 due to Haim-Kislev to Theorem 1.1 was brought to my attention. The rest of the new results are based on this theorem, so this paper should be withdrawn until the error is found and resolved and the theorem modified</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Matthew Zediker</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.23498v2</id>
+    <title>Curvy points, the perimeter, and the complexity of convex toric domains</title>
+    <updated>2026-07-01T21:15:45Z</updated>
+    <link href="https://arxiv.org/abs/2506.23498v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.23498v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the related notions of curvature and perimeter for toric boundaries and their implications for symplectic packing problems in dimension 4; a natural setting for this is a generalized version of convex toric domain which we also study, where there are no conditions on the moment polytope at all aside from convexity.
+  We show that the subleading asymptotics of the ECH and elementary ECH capacities recover the perimeter of such domains in their liminf, without any genericity required, and hence the perimeter is an obstruction to a full filling. As an application, we give the first examples of the failure of packing stability by open subsets of compact manifolds with smooth boundary or with no boundary at all; this has implications for long-term super-recurrence. We also show that a single smooth point of positive curvature on the toric boundary obstructs the existence of an infinite staircase, and we build on this to completely classify smooth (generalized) convex toric domains which have an infinite staircase. We also extend a number of theorems to generalized convex toric domains, in particular the "concave to convex", embedding theorem and the "accumulation point theorem". A curvy point forces "infinite complexity"; we raise the question of whether an infinitely complex domain can ever have an infinite staircase and we give examples with infinite staircases and arbitrarily high finite complexity.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-30T03:44:10Z</published>
+    <arxiv:comment>v2: 75 pages, with minor corrections and additional explanations added throughout. Comments welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Dan Cristofaro-Gardiner</name>
+    </author>
+    <author>
+      <name>Nicki Magill</name>
+    </author>
+    <author>
+      <name>Dusa McDuff</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.22847v1</id>
+    <title>Sampling Finite Unit Norm Tight Frames Using Symplectic Geometry</title>
+    <updated>2025-05-28T20:29:03Z</updated>
+    <link href="https://arxiv.org/abs/2505.22847v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.22847v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Unit-norm tight frames in finite-dimensional Hilbert spaces (FUNTFs) are fundamental in signal processing, offering optimal robustness to noise and measurement loss. In this paper we introduce the Eigenlift algorithm for sampling random FUNTFs. Our approach exploits the symplectic geometry of the FUNTF space, which we characterize as a symplectic reduction of frame space by a symmetry group. We then define a Hamiltonian torus action on this reduced space whose momentum map induces a fiber bundle structure. The algorithm proceeds by sampling a point from the base space, which is a convex polytope, lifting it deterministically to a point on the corresponding fiber, then acting on this point by a random element of the torus to obtain a random FUNTF. We implement the method in Python and validate it in low-dimensional settings where it is computationally feasible to sample the base polytope via rejection sampling.</summary>
+    <category term="math.FA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-28T20:29:03Z</published>
+    <arxiv:comment>23 page, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="math.FA"/>
+    <author>
+      <name>Mason Faldet</name>
+    </author>
+    <author>
+      <name>Clayton Shonkwiler</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.07006v1</id>
+    <title>A structure theorem along fibers of extreme points of the momentum polytope</title>
+    <updated>2025-05-11T15:05:47Z</updated>
+    <link href="https://arxiv.org/abs/2505.07006v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.07006v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let G be a complex reductive Lie group acting on a compact Kähler manifold X and assume that the action of a maximal compact subgroup K of G is Hamiltonian. For each extreme point of the convex hull of the momentum map image, there is an associated open dense subset of X, which is invariant under a parabolic subgroup Q of G. We prove a Q-equivariant product decomposition for the Q-action on this subset and discuss some applications of the result. We show a similar statement for real reductive subgroups of G for the restricted momentum map.</summary>
+    <category term="math.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-11T15:05:47Z</published>
+    <arxiv:primary_category term="math.CV"/>
+    <author>
+      <name>Peter Heinzner</name>
+    </author>
+    <author>
+      <name>Christian Zöller</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.05012v1</id>
+    <title>Contact isotopies in the coherent-constructible correspondence</title>
+    <updated>2025-05-08T07:34:58Z</updated>
+    <link href="https://arxiv.org/abs/2505.05012v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.05012v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The coherent-constructible correspondence is a realization of toric mirror symmetry in which the A-side is modeled by constructible sheaves on $T^n$. This paper provides a geometric realization of the mirror Picard group action in this correspondence, characterizing it in terms of quantized contact isotopies and providing a sheaf-theoretic counterpart to work of Hanlon in the Fukaya-Seidel setting. Given a toric Cartier divisor $D$, we consider a family of homogeneous Hamiltonians $H_\varepsilon$ on $T^* T^n$. Their flows act on sheaves via a family of kernels $K_\varepsilon$ on $T^n \times T^n$. The nearby cycles kernel $K_0$ corresponds heuristically to the Hamiltonian flow of the non-differentiable function $\lim_{\varepsilon \to 0} H_\varepsilon$, which is the pullback of the support function of $D$ along the cofiber projection. We show that the action of $K_0$ coincides with the convolution action of the associated twisted polytope sheaf, hence mirrors the action of $\mathcal{O}(D)$ on coherent sheaves.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-08T07:34:58Z</published>
+    <arxiv:comment>26 pages</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Jishnu Bose</name>
+    </author>
+    <author>
+      <name>Harold Williams</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.19775v3</id>
+    <title>Lattice points in polytope boundaries and formal geometric quantization of singular Calabi Yau hypersurfaces in toric varieties</title>
+    <updated>2026-01-06T20:13:57Z</updated>
+    <link href="https://arxiv.org/abs/2504.19775v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.19775v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that the number of lattice points in the boundary of a positive integer dilate of a Delzant integral polytope is a polynomial in the dilation parameter, analogous to the Ehrhart polynomial giving the number of lattice points in a lattice polytope. We give an explicit formula for this polynomial, analogous to the formula of Khovanskii-Pukhlikov for the Ehrhart polynomial. These counting polynomials satisfy a lacunarity principle, the vanishing of alternate coefficients, quite unlike the Ehrhart polynomial. We show that formal geometric quantization of singular Calabi Yau hypersurfaces in smooth toric varieties gives this polynomial, in analogy with the relation of the Khovanskii-Pukhlikov formula to the geometric quantization of toric varieties. The Atiyah-Singer theorem for the index of the Dirac operator gives a moral argument for the lacunarity of the counting polynomial. We conjecture that similar formulas should hold for arbitrary simple integral polytope boundaries.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-28T13:19:30Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Journal of Geometry and Physics Volume 222, April 2026, 105762</arxiv:journal_ref>
+    <author>
+      <name>Jonathan Weitsman</name>
+    </author>
+    <arxiv:doi>10.1016/j.geomphys.2026.105762</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.geomphys.2026.105762" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.22650v1</id>
+    <title>Explicit non-free tensors</title>
+    <updated>2025-03-28T17:38:44Z</updated>
+    <link href="https://arxiv.org/abs/2503.22650v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.22650v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Free tensors are tensors which, after a change of bases, have free support: any two distinct elements of its support differ in at least two coordinates. They play a distinguished role in the theory of bilinear complexity, in particular in Strassen's duality theory for asymptotic rank. Within the context of quantum information theory, where tensors are interpreted as multiparticle quantum states, freeness corresponds to a type of multiparticle Schmidt decomposition. In particular, if a state is free in a given basis, the reduced density matrices are diagonal. Although generic tensors in $\mathbb{C}^n \otimes \mathbb{C}^n \otimes \mathbb{C}^n$ are non-free for $n \geq 4$ by parameter counting, no explicit non-free tensors were known until now. We solve this hay in a haystack problem by constructing explicit tensors that are non-free for every $n \geq 3$. In particular, this establishes that non-free tensors exist in $\mathbb{C}^n \otimes \mathbb{C}^n \otimes \mathbb{C}^n$, where they are not generic.
+  To establish non-freeness, we use results from geometric invariant theory and the theory of moment polytopes. In particular, we show that if a tensor $T$ is free, then there is a tensor $S$ in the GL-orbit closure of $T$, whose support is free and whose moment map image is the minimum-norm point of the moment polytope of $T$. This implies a reduction for checking non-freeness from arbitrary basis changes of $T$ to unitary basis changes of $S$. The unitary equivariance of the moment map can then be combined with the fact that tensors with free support have diagonal moment map image, in order to further restrict the set of relevant basis changes.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-28T17:38:44Z</published>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Maxim van den Berg</name>
+    </author>
+    <author>
+      <name>Matthias Christandl</name>
+    </author>
+    <author>
+      <name>Vladimir Lysikov</name>
+    </author>
+    <author>
+      <name>Harold Nieuwboer</name>
+    </author>
+    <author>
+      <name>Michael Walter</name>
+    </author>
+    <author>
+      <name>Jeroen Zuiddam</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.22633v1</id>
+    <title>The moment polytope of matrix multiplication is not maximal</title>
+    <updated>2025-03-28T17:25:06Z</updated>
+    <link href="https://arxiv.org/abs/2503.22633v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.22633v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Moment polytopes of tensors, the study of which is deeply rooted in invariant theory, representation theory and symplectic geometry, have found relevance in numerous places, from quantum information (entanglement polytopes) and algebraic complexity theory (GCT program and the complexity of matrix multiplication) to optimization (scaling algorithms). Towards an open problem in algebraic complexity theory, we prove separations between the moment polytopes of matrix multiplication tensors and unit tensors. As a consequence, we find that matrix multiplication moment polytopes are not maximal, i.e. are strictly contained in the corresponding Kronecker polytope. As another consequence, we obtain a no-go result for a natural operational characterization of moment polytope inclusion in terms of asymptotic restriction. We generalize the separation and non-maximality to moment polytopes of iterated matrix multiplication tensors. Our result implies that tensor networks where multipartite entanglement structures beyond two-party entanglement are allowed can go beyond projected entangled-pair states (PEPS) in terms of expressivity.
+  Our proof characterizes membership of uniform points in moment polytopes of tensors, and establishes a connection to polynomial multiplication tensors via the minrank of matrix subspaces. As a result of independent interest, we extend these techniques to obtain a new proof of the optimal border subrank bound for matrix multiplication.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-28T17:25:06Z</published>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>Maxim van den Berg</name>
+    </author>
+    <author>
+      <name>Matthias Christandl</name>
+    </author>
+    <author>
+      <name>Vladimir Lysikov</name>
+    </author>
+    <author>
+      <name>Harold Nieuwboer</name>
+    </author>
+    <author>
+      <name>Michael Walter</name>
+    </author>
+    <author>
+      <name>Jeroen Zuiddam</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.04304v3</id>
+    <title>Almost toric fibrations on K3 surfaces via degenerations</title>
+    <updated>2026-05-28T11:08:34Z</updated>
+    <link href="https://arxiv.org/abs/2502.04304v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.04304v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For Kähler K3 surfaces we consider Kulikov models of type III tamed by a symplectic form. Our main result shows that the generic smooth fiber admits an almost toric fibration over the intersection complex, which inherits a natural nodal integral affine structure from almost toric fibrations of the boundary divisors. We prove that a smooth anti-canonical hypersurface in a smooth toric Fano threefold, equipped with a toric Kähler form, admits a symplectic Kulikov model. Moreover, we demonstrate that the induced integral affine structure on the intersection complex is integral affine isomorphic (up to nodal slides) nodal integral affine structure considered by Gross and Siebert on the boundary of the moment polytope.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-06T18:44:42Z</published>
+    <arxiv:comment>Changes made after referee process. Changes made to the title and to the proof of Lemma 2.13</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Pranav Chakravarthy</name>
+    </author>
+    <author>
+      <name>Yoel Groman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.04885v3</id>
+    <title>Direct Sampling of Confined Polygons in Linear Time</title>
+    <updated>2025-10-17T22:52:06Z</updated>
+    <link href="https://arxiv.org/abs/2501.04885v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.04885v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present an algorithm for sampling tightly confined random equilateral closed polygons in three-space which has runtime linear in the number of edges. Using symplectic geometry, sampling such polygons reduces to sampling a moment polytope, and in our confinement model this polytope turns out to be very natural from a combinatorial point of view. This connection to combinatorics yields both our fast sampling algorithm and explicit formulas for the expected distances of vertices to the origin. We use our algorithm to investigate the expected total curvature of confined polygons, leading to a very precise conjecture for the asymptotics of total curvature.</summary>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-08T23:48:35Z</published>
+    <arxiv:comment>Improved exposition. 35 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="math.GT"/>
+    <arxiv:journal_ref>SIAM Journal on Discrete Mathematics 40 (2026), no. 2, 505-535</arxiv:journal_ref>
+    <author>
+      <name>Clayton Shonkwiler</name>
+    </author>
+    <author>
+      <name>Kandin Theis</name>
+    </author>
+    <arxiv:doi>10.1137/25M1747610</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1137/25M1747610" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.09018v1</id>
+    <title>Homological mirror symmetry for weighted projective spaces and Morse Homotopy</title>
+    <updated>2024-12-12T07:29:41Z</updated>
+    <link href="https://arxiv.org/abs/2412.09018v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.09018v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Kontsevich and Soibelman discussed homological mirror symmetry by using the SYZ torus fibrations, where they introduced the weighted version of Fukaya-Oh's Morse homotopy on the base space of the dual torus fibration in the intermediate step. Futaki and Kajiura applied Kontsevich-Soibelman's approach to the case when a complex manifold $X$ is a smooth compact toric manifold. There, they introduced the category of weighted Morse homotopy on the moment polytope of toric manifolds, and compared this category to the derived category of coherent sheaves on $X$ instead of the Fukaya category. In this paper, we extend their setting to the case of toric orbifolds, and discuss this version of homological mirror symmetry for weighted projective spaces.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-12T07:29:41Z</published>
+    <arxiv:comment>31 pages, 8 figures</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>Azuna Nishida</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.04437v1</id>
+    <title>Numerical invariants of normed matrix factorizations</title>
+    <updated>2024-12-05T18:54:42Z</updated>
+    <link href="https://arxiv.org/abs/2412.04437v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.04437v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We define a normed matrix factorization category and a notion of bounding cochains for objects of this category. We classify bounding cochains up to gauge equivalence for spherical objects and use this classification to define numerical invariants. These invariants are expected to correspond under mirror symmetry to the open Gromov-Witten invariants with only boundary constraints of Lagrangian rational cohomology spheres defined by the second author and Tukachinsky.
+  For each Delzant polytope, we construct a normed matrix factorization category. For Delzant polytopes satisfying a combinatorial relative spin condition, we construct an object of this category called the Dirac factorization. The Dirac factorization is expected to correspond under mirror symmetry to the Lagrangian submanifold given by the real locus of the toric symplectic manifold associated to the Delzant polytope. In the case of the $n$-simplex for $n$ odd, we show that the Dirac factorization is spherical, mirroring the fact that $\mathbb{R} P^n$ is a rational cohomology sphere. For $n = 1,$ we show the numerical invariants of the Dirac factorization coincide with the open Gromov-Witten invariants of $\mathbb{R} P^1 \subset \mathbb{C} P^1.$ For $n = 3$ in low degrees, computer calculations verify that the numerical invariants of the Dirac factorization coincide with the open Gromov-Witten-Welschinger invariants of $\mathbb{R}P^3 \subset \mathbb{C} P^3.$ Although $\mathbb{R} P^n$ is trivial in the Fukaya category of $\mathbb{C} P^n$ over any field of characteristic zero, the above results can be seen as a manifestation of mirror symmetry over a Novikov ring.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-05T18:54:42Z</published>
+    <arxiv:comment>82 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>May Sela</name>
+    </author>
+    <author>
+      <name>Jake P. Solomon</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.17509v2</id>
+    <title>On the affine invariant of simple hypersemitoric systems</title>
+    <updated>2026-04-10T12:52:06Z</updated>
+    <link href="https://arxiv.org/abs/2411.17509v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.17509v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Hypersemitoric systems are a class of integrable systems on $4$-dimensional symplectic manifolds which only have mildly degenerate singularities and where one of the integrals induces an effective Hamiltonian $S^1$-action and is proper. We introduce the affine invariant of hypersemitoric systems, which is a generalization of the Delzant polytope of toric systems and the polytope invariant of semitoric systems. Along the way, we compute and plot this invariant for meaningful and more and more complicated examples.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-26T15:18:58Z</published>
+    <arxiv:comment>76 pages, 28 figures</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Konstantinos Efstathiou</name>
+    </author>
+    <author>
+      <name>Sonja Hohloch</name>
+    </author>
+    <author>
+      <name>Pedro Santos</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.06715v2</id>
+    <title>Delzant type theorem for torus-equivariantly embedded toric hypersurfaces</title>
+    <updated>2025-09-24T15:00:23Z</updated>
+    <link href="https://arxiv.org/abs/2411.06715v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.06715v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the previous work, we study the moment polytope of the closure of the complex subtorus orbit in a symplectic toric manifold associated to an affine subspace when the closure is a smooth complex submanifold. In this paper, we clarify the condition for nonsingularity of the closure of the codimension one complex subtorus orbit in terms of polytopes. The main result is a generalization of Delzant theorem.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-11T04:57:46Z</published>
+    <arxiv:comment>27 pages, 1 figure. Added explanation and examples, fixed typos</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <arxiv:journal_ref>Adv. Geom. 26(2): 163-180 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Kentaro Yamaguchi</name>
+    </author>
+    <arxiv:doi>10.1515/advgeom-2026-0002</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1515/advgeom-2026-0002" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.17130v1</id>
+    <title>Quantum spaces associated to mixed polarizations and their limiting behavior on toric varieties</title>
+    <updated>2024-10-22T16:02:37Z</updated>
+    <link href="https://arxiv.org/abs/2410.17130v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.17130v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $(X, ω, J)$ be a toric variety of dimension $2n$ determined by a Delzant polytope $P$. As indicated in [40], $X$ admits a natural mixed polarization $\mathcal{P}_{k}$, induced by the action of a subtorus $T^{k}$. In this paper, we first establish the quantum space $\mathcal{H}_{k}$ for $\mathcal{P}_{k}$, identifying a basis parameterized by the integer lattice points of $P$. This confirms that the dimension of $\mathcal{H}_{k}$ aligns with those derived from Kähler and real polarizations. Secondly, we examine a one-parameter family of Kähler polarizations $\mathcal{P}_{k,t}$, defined via symplectic potentials, and demonstrate their convergence to $\mathcal{P}_{k}$. Thirdly, we verify that these polarizations $\mathcal{P}_{k,t}$ coincide with those induced by imaginary-time flow. Finally, we explore the relationship between the quantum space $\mathcal{H}_{k,0}$ and $\mathcal{H}_{k}$, establishing that ``$\lim_{t \rightarrow \infty} \mathcal{H}_{k,t} = \mathcal{H}_{k}$."</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-22T16:02:37Z</published>
+    <arxiv:comment>25 pages, Comments are welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Dan Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.03633v1</id>
+    <title>Higher-Categorical Associahedra</title>
+    <updated>2024-09-05T15:47:39Z</updated>
+    <link href="https://arxiv.org/abs/2409.03633v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.03633v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The second author introduced 2-associahedra as a tool for investigating functoriality properties of Fukaya categories, and he conjectured that they could be realized as face posets of convex polytopes. We introduce a family of posets called categorical $n$-associahedra, which naturally extend the second author's 2-associahedra and the classical associahedra. Categorical $n$-associahedra give a combinatorial model for the poset of strata of a compactified real moduli space of a tree arrangement of affine coordinate subspaces. We construct a family of complete polyhedral fans, called velocity fans, whose coordinates encode the relative velocities of pairs of colliding coordinate subspaces, and whose face posets are the categorical $n$-associahedra. In particular, this gives the first fan realization of 2-associahedra. In the case of the classical associahedron, the velocity fan specializes to the normal fan of Loday's realization of the associahedron.
+  For proving that the velocity fan is a fan, we first construct a cone complex of metric $n$-bracketings and then exhibit a piecewise-linear isomorphism from this complex to the velocity fan. We demonstrate that the velocity fan, which is not simplicial, admits a canonical smooth flag triangulation on the same set of rays, and we describe a second, finer triangulation which provides a new extension of the braid arrangement. We describe piecewise-unimodular maps on the velocity fan such that the image of each cone is a union of cones in the braid arrangement, and we highlight a connection to the theory of building sets and nestohedra. We explore the local iterated fiber product structure of categorical $n$-associahedra and the extent to which this structure is realized by the velocity fan. For the class of concentrated $n$-associahedra we exhibit generalized permutahedra having velocity fans as their normal fans.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-05T15:47:39Z</published>
+    <arxiv:comment>143 pages, 39 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Spencer Backman</name>
+    </author>
+    <author>
+      <name>Nathaniel Bottman</name>
+    </author>
+    <author>
+      <name>Daria Poliakova</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.10082v3</id>
+    <title>On the blow-up formula of the Chow weights for polarized toric manifolds</title>
+    <updated>2026-06-02T17:11:47Z</updated>
+    <link href="https://arxiv.org/abs/2407.10082v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.10082v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $X$ be a smooth projective toric variety, and let $\widetilde{X}$ denote the blow-up of $X$ at finitely many distinct torus-invariant points. In this paper, we derive an explicit combinatorial formula for the Chow weight of $\widetilde{X}$ in terms of the underlying toric manifold $X$ and the symplectic cuts of its associated Delzant polytope. As an application, we study toric blow-ups of the projective plane and compare their Chow stability with that of blow-ups at general points.</summary>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-14T05:15:47Z</published>
+    <arxiv:comment>Third version (21 pages): We have stated the precise relationship between the toric Chow weights used in this paper and the general algebro-geometric notion of Chow stability. In addition, we have clarified that Proposition 2.3 applies to certain specialized cases</arxiv:comment>
+    <arxiv:primary_category term="math.AG"/>
+    <author>
+      <name>King Leung Lee</name>
+    </author>
+    <author>
+      <name>Naoto Yotsutani</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.05272v2</id>
+    <title>Homological mirror symmetry for Batyrev mirror pairs</title>
+    <updated>2024-11-17T21:23:22Z</updated>
+    <link href="https://arxiv.org/abs/2406.05272v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.05272v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove Kontsevich's homological mirror symmetry conjecture for a large class of mirror pairs of Calabi--Yau hypersurfaces in toric varieties. These mirror pairs were constructed by Batyrev from dual reflexive polytopes. The theorem holds in characteristic zero and in all but finitely many positive characteristics.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-07T21:50:38Z</published>
+    <arxiv:comment>v2: minor changes</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Sheel Ganatra</name>
+    </author>
+    <author>
+      <name>Andrew Hanlon</name>
+    </author>
+    <author>
+      <name>Jeff Hicks</name>
+    </author>
+    <author>
+      <name>Daniel Pomerleano</name>
+    </author>
+    <author>
+      <name>Nick Sheridan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.11994v1</id>
+    <title>Covering Spaces of Symplectic Toric Orbifolds</title>
+    <updated>2024-05-20T12:56:29Z</updated>
+    <link href="https://arxiv.org/abs/2405.11994v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.11994v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this article we study covering spaces of symplectic toric orbifolds and symplectic toric orbifold bundles. In particular, we show that all symplectic toric orbifold coverings are quotients of some symplectic toric orbifold by a finite subgroup of a torus. We then give a general description of the labeled polytope of a toric orbifold bundle in terms of the polytopes of the fiber and the base. Finally, we apply our findings to study the number of toric structures on products of labeled projective spaces.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-20T12:56:29Z</published>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Paweł Raźny</name>
+    </author>
+    <author>
+      <name>Nikolay Sheshko</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.06723v2</id>
+    <title>Positive formula for the product of conjugacy classes on the unitary group</title>
+    <updated>2024-07-05T15:12:38Z</updated>
+    <link href="https://arxiv.org/abs/2405.06723v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.06723v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The convolution product of two conjugacy classes of the unitary group $U_n$ is described by a probability distribution on the space of central measures. Relating this convolution to the quantum cohomology of Grassmannians and using recent results describing the structure constants of the latter, we give a manifestly positive formula for the density of the probability distribution for the product of generic conjugacy classes. In the same flavor as the hive model of Knutson and Tao, this formula is given in terms of a subtraction-free sum of volumes of explicit polytopes. As a consequence, this expression also provides a positive and explicit formula for the volume of $SU_n$-valued flat connections on the three-holed two dimensional sphere, which was first given by Witten in terms of an infinite sum of characters.</summary>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-10T09:25:17Z</published>
+    <arxiv:comment>New version with corrected typos, improved presentation and simplified proofs in Section 6. 48 pages, 29 figures with colors</arxiv:comment>
+    <arxiv:primary_category term="math.RT"/>
+    <author>
+      <name>Quentin François</name>
+    </author>
+    <author>
+      <name>Pierre Tarrago</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.07139v3</id>
+    <title>Chern Characteristics and Todd-Hirzebruch Identities for Transpolar Pairs of Toric Spaces</title>
+    <updated>2026-05-21T00:10:09Z</updated>
+    <link href="https://arxiv.org/abs/2403.07139v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.07139v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Standard toric geometry methods used to construct Calabi-Yau varieties may be extended to complete intersections in non-Fano varieties encoded by star triangulating non-convex polytopes. Similarly, mirror symmetry is conjectured to hold in terms of a transpolar duality generalizing the original construction of Batyrev and Borisov. The associated mirror pairs naturally include certain flip-folded, multi-layered multihedral objects, inclusively named VEX multitopes, and a correspondingly generalized transpolar duality. These self-overlaying VEX multitopes, long since known in pre-symplectic geometry, are found to correspond to certain non-algebraic but smooth toric spaces with Chern classes that satisfy the standard Todd-Hirzebruch identities. The computation of diffeomorphism invariants, including characteristic submanifold intersection numbers, corroborates their recent inclusion in the connected web of Calabi-Yau spaces and associated string compactifications: They arise together with the standard (Fano/reflexive polytope) constructions, within deformation families of generalized complete intersections in products of projective spaces.</summary>
+    <category term="hep-th" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-11T20:12:24Z</published>
+    <arxiv:comment>48 pages, 10 figures (&amp; many displayed illustrations), 6 tables, 152 references; v.3: journal-accepted revision</arxiv:comment>
+    <arxiv:primary_category term="hep-th"/>
+    <author>
+      <name>Per Berglund</name>
+    </author>
+    <author>
+      <name>Tristan Hübsch</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.16884v2</id>
+    <title>Submanifolds with corners in Delzant polytopes associated to affine subspaces</title>
+    <updated>2024-11-11T04:52:12Z</updated>
+    <link href="https://arxiv.org/abs/2402.16884v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.16884v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We studied the closure of a complex subtorus given from an affine subspace in $\mathfrak{t}^{n} \cong \mathbb{R}^{n}$ in a toric manifold. If the closure of the complex subtorus is a smooth complex submanifold in the toric manifold, then we call such submanifold a torus-equivariantly embedded toric manifold with respect to the subtorus action determined by the data of the affine subspace. In this paper, we construct certain submanifolds with corners in a Delzant polytope of the toric manifold from the affine subspaces and show that the conditions for such submanifolds with corners are equivalent to those for torus-equivariantly embedded toric manifolds.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-20T10:57:31Z</published>
+    <arxiv:comment>33 pages, 6 figures. Changed the title, added explanation. arXiv admin note: substantial text overlap with arXiv:2306.15312</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <arxiv:journal_ref>Tokyo J. Math. 48(2): 331-362 (December 2025)</arxiv:journal_ref>
+    <author>
+      <name>Kentaro Yamaguchi</name>
+    </author>
+    <arxiv:doi>10.3836/tjm/1502179432</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.3836/tjm/1502179432" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.09914v3</id>
+    <title>Computing the EHZ capacity is NP-hard</title>
+    <updated>2024-10-05T08:53:26Z</updated>
+    <link href="https://arxiv.org/abs/2402.09914v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.09914v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Ekeland-Hofer-Zehnder capacity (EHZ capacity) is a fundamental symplectic invariant of convex bodies. We show that computing the EHZ capacity of polytopes is NP-hard. For this we reduce the feedback arc set problem in bipartite tournaments to computing the EHZ capacity of simplices.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-15T12:33:50Z</published>
+    <arxiv:comment>(v3) 10 pages, minor changes, Lemma 4.1 simplified, accepted in Proc. AMS</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <arxiv:journal_ref>Proc. Amer. Math. Soc. Ser. B 11 (2024), 603-611</arxiv:journal_ref>
+    <author>
+      <name>Karla Leipold</name>
+    </author>
+    <author>
+      <name>Frank Vallentin</name>
+    </author>
+    <arxiv:doi>10.1090/bproc/250</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1090/bproc/250" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.03437v1</id>
+    <title>Associahedra as moment polytopes</title>
+    <updated>2024-02-05T19:00:04Z</updated>
+    <link href="https://arxiv.org/abs/2402.03437v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.03437v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generalized associahedra are a well-studied family of polytopes associated to a finite-type cluster algebra and choice of starting cluster. We show that the generalized associahedra constructed by Padrol, Palu, Pilaud, and Plamondon, building on ideas from Arkani-Hamed, Bai, He, and Yan, can be naturally viewed as moment polytopes for an open patch of the quotient of the cluster A-variety with universal coefficients by its maximal natural torus action. We prove our result by showing that the construction of Padrol, Palu, Pilaud, and Plamondon can be understood on the basis of the way that moment polytopes behave under symplectic reduction.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-05T19:00:04Z</published>
+    <arxiv:comment>12 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Michael Gekhtman</name>
+    </author>
+    <author>
+      <name>Hugh Thomas</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.02910v2</id>
+    <title>Kähler metrics and toric Lagrangian fibrations</title>
+    <updated>2026-04-14T20:24:28Z</updated>
+    <link href="https://arxiv.org/abs/2401.02910v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.02910v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We extend the Abreu-Guillemin theory of invariant Kähler metrics from toric symplectic manifolds to any symplectic manifold admitting a toric action of a symplectic torus bundle. We show that these are precisely the symplectic manifolds admitting a Lagrangian fibration with elliptic singularities. The base of such a toric Lagrangian fibration is a codimension 0 submanifold with corners of an integral affine manifold, called a Delzant subspace. This concept generalizes the Delzant polytope associated with a compact symplectic toric manifold. Given a Delzant subspace of finite type, we provide a Delzant-type construction of a Lagrangian fibration with the moment image being the specified Delzant subspace. We establish a 1:1 correspondence between invariant Kähler metrics and a pair consisting of an elliptic connection on the total space of the fibration and a hybrid $b$-metric on the base Delzant subspace, both with specified residues over the facets. Finally, we characterize extremal invariant Kähler metrics as those whose scalar curvature descends to an affine function on the base integral affine manifold. We show that this provides a method for finding and constructing extremal Kähler metrics.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-05T17:21:12Z</published>
+    <arxiv:comment>Final version accepted for publication in Journal of Symplectic Geometry</arxiv:comment>
+    <arxiv:primary_category term="math.DG"/>
+    <author>
+      <name>Rui Loja Fernandes</name>
+    </author>
+    <author>
+      <name>Maarten Mol</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.00570v1</id>
+    <title>On the classification of multiplicity-free Hamiltonian actions by regular proper symplectic groupoids</title>
+    <updated>2023-12-31T19:17:02Z</updated>
+    <link href="https://arxiv.org/abs/2401.00570v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.00570v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we study a natural generalization of symplectic toric manifolds in the context of regular Poisson manifolds of compact types. To be more precise, we consider a class of multiplicity-free Hamiltonian actions by regular proper symplectic groupoids that we call faithful. Given such a groupoid, we classify its faithful multiplicity-free Hamiltonian actions in terms of what we call Delzant subspaces of its orbit space -- certain `suborbifolds with corners' satisfying the Delzant condition relative to the integral affine orbifold structure of the orbit space. This encompasses both the classification of symplectic toric manifolds (due to Delzant) in terms of Delzant polytopes and the classification of proper Lagrangian fibrations over an integral affine base manifold (due to Duistermaat) in terms of a sheaf cohomology group. Each Delzant subspace comes with an orbifold version of this cohomology, the degree one part of which classifies faithful multiplicity-free Hamiltonian actions with momentum map image equal to the Delzant subspace, provided there exists such an action. The obstruction to existence is encoded by a degree two class in this cohomology: the Lagrangian Dixmier-Douady class. In addition to the above, we introduce another invariant, which leads to a variation of our classification result involving only classical sheaf cohomology and the group cohomology of certain modules for the isotropy groups of the groupoid.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-31T19:17:02Z</published>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Maarten Mol</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.00252v2</id>
+    <title>Cluster algebras and monotone Lagrangian tori</title>
+    <updated>2025-08-06T07:09:03Z</updated>
+    <link href="https://arxiv.org/abs/2401.00252v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.00252v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Motivated by the construction of Newton--Okounkov bodies and toric degenerations via cluster algebras in [GHKK18, FO25], we consider a family of Newton--Okounkov polytopes of a complex smooth Fano variety $X$ related by a composition of tropicalized cluster mutations. According to the work of [HK15], the toric degeneration associated with each Newton--Okounkov polytope $Δ$ in the family produces a completely integrable system of $X$ over $Δ$. We investigate circumstances in which each completely integrable system possesses a monotone Lagrangian torus fiber. We provide a sufficient condition, based on the data of tropical integer points and exchange matrices, for the family of constructed monotone Lagrangian tori to contain infinitely many monotone Lagrangian tori, no two of which are related by any symplectomorphism. By employing this criterion and exploiting the correspondence between the tropical integer points and the dual canonical basis elements, we generate infinitely many distinct monotone Lagrangian tori on flag manifolds of arbitrary type except in a few cases.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-30T14:38:34Z</published>
+    <arxiv:comment>v2. 45 pages; incorporates referee's comments and suggestions</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Yunhyung Cho</name>
+    </author>
+    <author>
+      <name>Myungho Kim</name>
+    </author>
+    <author>
+      <name>Yoosik Kim</name>
+    </author>
+    <author>
+      <name>Euiyong Park</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.09526v2</id>
+    <title>A Lower Bound of the Hofer-Zehnder Capacity via Delzant Polytopes</title>
+    <updated>2024-10-12T04:19:22Z</updated>
+    <link href="https://arxiv.org/abs/2312.09526v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.09526v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Given a symplectic toric manifold, the moment maps of sub-circle actions can be modified to be admissible functions in the sense of Hofer-Zehnder. By exploiting the relationship between the period of Hamiltonian sub-circle actions of a symplectic toric manifold and its Delzant polytope, we develop an invariant of Delzant polytopes which gives a lower bound of the Hofer-Zehnder capacity.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-15T04:18:37Z</published>
+    <arxiv:comment>12 pages, 3 figures, comments are welcome! Version 2 has a minor mistake fixed and includes more references for relavant work</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Yichen Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.20202v1</id>
+    <title>Equivariant Lagrangian Floer theory on compact toric manifolds</title>
+    <updated>2023-10-31T05:56:57Z</updated>
+    <link href="https://arxiv.org/abs/2310.20202v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.20202v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We define an equivariant Lagrangian Floer theory for Lagrangian torus fibers in a compact symplectic toric manifold equipped with a subtorus action. We show that the set of all Lagrangian torus fibers with weak bounding cochain data whose equivariant Lagrangian Floer cohomology is non-zero can be identified with a rigid analytic space. We prove that the set of these Lagrangian torus fibers is the tropicalization of the rigid analytic space. This provides a way to locate them in the moment polytope. Moreover, we prove that the dimension of such a rigid analytic space is equal to the dimension of the subtorus when the symplectic manifold is $\mathbb{CP}^n$ or has complex dimension less than or equal to 2. We also show that the Lagrangian submanifolds with non-trivial equivariant Floer cohomology are non-displaceable by $G$-equivariant Hamiltonian diffeomorphisms.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-31T05:56:57Z</published>
+    <arxiv:comment>90 pages</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Yao Xiao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.14998v2</id>
+    <title>Symplectically self-polar polytopes of minimal capacity</title>
+    <updated>2025-08-06T12:26:17Z</updated>
+    <link href="https://arxiv.org/abs/2310.14998v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.14998v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we continue the study of symplectically self-polar convex bodies started in arXiv:2211.14630. We construct symplectically self-polar convex bodies of the minimal Ekeland-Hofer-Zehnder capacity. This in turn proves that the lower bound for the Ekeland-Hofer-Zehnder capacity for centrally symmetric convex bodies obtained in arXiv:1801.00242 cannot be improved. We also make some numerical experiments and speculations regarding the minimal volume of symplectically self-polar convex bodies.</summary>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-23T14:49:18Z</published>
+    <arxiv:primary_category term="math.MG"/>
+    <arxiv:journal_ref>Ann. Math. Québec 49 (2025) 335-353</arxiv:journal_ref>
+    <author>
+      <name>Mark Berezovik</name>
+    </author>
+    <arxiv:doi>10.1007/s40316-025-00251-0</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s40316-025-00251-0" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.10366v3</id>
+    <title>Ewald's Conjecture and integer points in algebraic and symplectic toric geometry</title>
+    <updated>2024-03-20T16:28:15Z</updated>
+    <link href="https://arxiv.org/abs/2310.10366v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.10366v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We solve several open problems concerning integer points of polytopes arising in symplectic and algebraic geometry. In this direction we give the first proof of a broad case of Ewald's Conjecture (1988) concerning symmetric integral points of monotone lattice polytopes in arbitrary dimension. We also include an asymptotic quantitative study of the set of points appearing in Ewald's Conjecture. Then we relate this work to the problem of displaceability of orbits in symplectic toric geometry. We conclude with a proof for the $2$-dimensional case, and for a number of cases in higher dimensions, of Nill's Conjecture (2009), which is a generalization of Ewald's conjecture to smooth lattice polytopes. Along the way the paper introduces two new classes of polytopes which arise naturally in the study of Ewald's Conjecture and symplectic displaceability: neat polytopes, which are related to Oda's Conjecture, and deeply monotone polytopes.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-16T13:04:49Z</published>
+    <arxiv:comment>37 pages, 6 figures. Added third co-author as a result of improvements. In particular we strenghten our previous theorem on Ewald's Conjecture by introducing deeply mononote polytopes and prove new cases of Nill's Conjecture</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>Proc. London Math. Soc., 132:4 (2026), e70144</arxiv:journal_ref>
+    <author>
+      <name>Luis Crespo</name>
+    </author>
+    <author>
+      <name>Álvaro Pelayo</name>
+    </author>
+    <author>
+      <name>Francisco Santos</name>
+    </author>
+    <arxiv:doi>10.1112/plms.70144</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1112/plms.70144" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2309.10163v3</id>
+    <title>A faster direct sampling algorithm for equilateral closed polygons and the probability of knotting</title>
+    <updated>2024-05-31T20:03:04Z</updated>
+    <link href="https://arxiv.org/abs/2309.10163v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2309.10163v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a faster direct sampling algorithm for random equilateral closed polygons in three-dimensional space. This method improves on the moment polytope sampling algorithm of Cantarella, Duplantier, Shonkwiler, and Uehara (2016) and has (expected) time per sample quadratic in the number of edges in the polygon. We use our new sampling method and a new code for computing invariants based on the Alexander polynomial to investigate the probability of finding unknots among equilateral closed polygons.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-18T21:20:42Z</published>
+    <arxiv:comment>12 pages, 4 figures. This version includes a table of estimated unknot probabilities for equilateral polygons from 16 to 3043 edges, and an additional data file "unknot-inverse-samples.tsv" giving the raw data from our experiment</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>Journal of Physics A: Mathematical and Theoretical 57 (2024), no. 28, 285205</arxiv:journal_ref>
+    <author>
+      <name>Jason Cantarella</name>
+    </author>
+    <author>
+      <name>Henrik Schumacher</name>
+    </author>
+    <author>
+      <name>Clayton Shonkwiler</name>
+    </author>
+    <arxiv:doi>10.1088/1751-8121/ad54a8</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1751-8121/ad54a8" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.03085v1</id>
+    <title>The structure of monotone blow-ups in symplectic toric geometry and a question of McDuff</title>
+    <updated>2023-08-06T10:39:12Z</updated>
+    <link href="https://arxiv.org/abs/2308.03085v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.03085v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Monotone polytopes, also known as smooth reflexive polytopes, are the polytopes associated to monotone symplectic toric manifolds and Gorenstein Fano toric varieties. We first show that the only monotone polytopes admitting blow-ups at vertices are the simplex and the result of a codimension-two blow-up in it (this is the polyhedral version of a result of Bonavero from 2002). Then we show that the $n$-simplex admits disjoint blow-ups at faces if and only if the faces are disjoint and have dimensions adding up to $n-1$ or $n-2$. These results answer a question posed by Dusa McDuff in 2011.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-06T10:39:12Z</published>
+    <arxiv:comment>14 pages</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Álvaro Pelayo</name>
+    </author>
+    <author>
+      <name>Francisco Santos</name>
+    </author>
+    <arxiv:doi>10.2422/2036-2145.202309_015</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.2422/2036-2145.202309_015" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2307.16461v3</id>
+    <title>On the volume functions and the cohomology rings of special weight varieties of type A</title>
+    <updated>2025-11-25T02:35:56Z</updated>
+    <link href="https://arxiv.org/abs/2307.16461v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2307.16461v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we consider the cohomology rings of some multiple weight varieties of type A, that is, symplectic torus quotients for a direct product of several coadjoint orbits of the special unitary group. Under some specific assumptions, we prove the symplectic volumes of multiple weight varieties are equal to the volumes of flow polytopes. Using differential equations satisfied by the volume functions of flow polytopes, we give an explicit presentation of the cohomology ring of the multiple weight variety of special type.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-07-31T07:43:08Z</published>
+    <arxiv:comment>18pages</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Tatsuru Takakura</name>
+    </author>
+    <author>
+      <name>Yuichiro Yamazaki</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2307.04198v2</id>
+    <title>Compact monotone tall complexity one $T$-spaces</title>
+    <updated>2023-07-25T12:53:02Z</updated>
+    <link href="https://arxiv.org/abs/2307.04198v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2307.04198v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we study compact monotone tall complexity one $T$-spaces. We use the classification of Karshon and Tolman, and the monotone condition, to prove that any two such spaces are isomorphic if and only if they have equal Duistermaat-Heckman measures. Moreover, we show that the moment polytope is Delzant and reflexive, and provide a complete description of the possible Duistermaat-Heckman measures. Whence we obtain a finiteness result that is analogous to that for compact monotone symplectic toric manifolds. Furthermore, we show that any such $T$-action can be extended to a toric $(T \times S^1)$-action. Motivated by a conjecture of Fine and Panov, we prove that any compact monotone tall complexity one $T$-space is equivariantly symplectomorphic to a Fano manifold endowed with a suitable symplectic form and a complexity one $T$-action.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-07-09T15:07:20Z</published>
+    <arxiv:comment>second version (minor modifications to the abstract and the introduction), 71 pages, 14 figures, comments are welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Isabelle Charton</name>
+    </author>
+    <author>
+      <name>Silvia Sabatini</name>
+    </author>
+    <author>
+      <name>Daniele Sepe</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2306.15312v3</id>
+    <title>Torus-equivariantly embedded toric manifolds associated to affine subspaces</title>
+    <updated>2024-08-12T09:05:23Z</updated>
+    <link href="https://arxiv.org/abs/2306.15312v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.15312v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the closure of a complex subtorus in a toric manifold. If the closure of the complex subtorus is a smooth complex submanifold in the toric manifold, then the subtorus action on such submanifold is Hamiltonian. In this case, we may think of the embedding of the submanifold as torus-equivariant. We show that the image of the moment map for the Hamiltonian subtorus action on our submanifold coincides with the image of the Delzant polytope of the ambient toric manifold under the pullback of the inclusion of the tori. The submanifolds constructed in the present paper are called torus-equivariantly embedded toric manifolds with respect to the subtorus action.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-27T08:57:52Z</published>
+    <arxiv:comment>35 pages, 14 figures. Fixed typos</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <arxiv:journal_ref>Osaka J. Math. 62(3): 477-505 (July 2025)</arxiv:journal_ref>
+    <author>
+      <name>Kentaro Yamaguchi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2306.08811v2</id>
+    <title>Equivariant Index on Toric Contact Manifolds</title>
+    <updated>2023-06-27T00:18:32Z</updated>
+    <link href="https://arxiv.org/abs/2306.08811v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.08811v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We compute the equivariant index of the twisted horizontal Dolbeault operator on compact toric contact manifolds of Reeb type. The operator is elliptic transverse to the Reeb foliation and its equivariant index defines a distribution on the torus. Using the good cone condition, we show that the symbol localises to the closed Reeb orbits corresponding to the edges of the moment cone and obtain an Atiyah-Bott-Lefschetz type formula for the index. For the horizontal Dolbeault operator, we obtain an expression for the index as a sum over the lattice points of the moment cone, by applying an adaptation of the Lawrence-Varchenko polytope decomposition to rational polyhedral cones.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-15T01:58:14Z</published>
+    <arxiv:comment>31 pages; Minor corrections</arxiv:comment>
+    <arxiv:primary_category term="math.DG"/>
+    <author>
+      <name>Pedram Hekmati</name>
+    </author>
+    <author>
+      <name>Marcos Orseli</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2306.03888v3</id>
+    <title>On Newton polytopes of Lagrangian augmentations</title>
+    <updated>2023-12-28T19:58:53Z</updated>
+    <link href="https://arxiv.org/abs/2306.03888v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.03888v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This note explores the use of Newton polytopes in the study of Lagrangian fillings of Legendrian submanifolds. In particular, we show that Newton polytopes associated to augmented values of Reeb chords can distinguish infinitely many distinct Lagrangian fillings, both for Legendrian links and higher-dimensional Legendrian spheres. The computations we perform work in finite characteristic, which significantly simplifies arguments and also allows us to show that there exist Legendrian links with infinitely many non-orientable exact Lagrangian fillings.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-06T17:47:06Z</published>
+    <arxiv:comment>21 pages, 7 figures. A published version of this manuscript will appear in the Bulletin of the London Mathematical Society</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Orsola Capovilla-Searle</name>
+    </author>
+    <author>
+      <name>Roger Casals</name>
+    </author>
+    <arxiv:doi>10.1112/blms.12992</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1112/blms.12992" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.08422v4</id>
+    <title>The generalized Pythagorean theorem on the compactifications of certain dually flat spaces via toric geometry</title>
+    <updated>2023-12-26T08:04:35Z</updated>
+    <link href="https://arxiv.org/abs/2305.08422v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.08422v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we study dually flat spaces arising from Delzant polytopes equipped with a symplectic potential together with their corresponding toric Kähler manifolds as their torifications.We introduce a dually flat structure and the associated Bregman divergence on the boundary from the viewpoint of toric Kähler geometry. We show a continuity and a generalized Pythagorean theorem for the divergence on the boundary. We also provide a characterization for a toric Kähler manifold to become a torification of a mixture family on a finite set.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-15T08:04:25Z</published>
+    <arxiv:comment>20 pages, 4 figures : Minor revisions on the format, title changed according to referee's suggestion, typos corrected, explanation added, to appear in Information Geometry : Mistake in the example in Section 6.1 corrected</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Hajime Fujita</name>
+    </author>
+    <arxiv:doi>10.1007/s41884-023-00123-y</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s41884-023-00123-y" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.14821v1</id>
+    <title>Moment cone membership for quivers in strongly polynomial time</title>
+    <updated>2023-03-26T21:11:05Z</updated>
+    <link href="https://arxiv.org/abs/2303.14821v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.14821v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this note we observe that membership in moment cones of spaces of quiver representations can be decided in strongly polynomial time, for any acyclic quiver. This generalizes a recent result by Chindris-Collins-Kline for bipartite quivers. Their approach was to construct "multiplicity polytopes" with a geometric realization similar to the Knutson-Tao polytopes for tensor product multiplicities. Here we show that a less geometric but straightforward variant of their construction leads to such a multiplicity polytope for any acyclic quiver. Tardos' strongly polynomial time algorithm for combinatorial linear programming along with the saturation property then implies that moment cone membership can be decided in strongly polynomial time. The analogous question for semi-invariants remains open.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-26T21:11:05Z</published>
+    <arxiv:comment>7 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>Michèle Vergne</name>
+    </author>
+    <author>
+      <name>Michael Walter</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.07851v3</id>
+    <title>Homological mirror symmetry of toric Fano surfaces via Morse homotopy</title>
+    <updated>2026-05-22T09:42:49Z</updated>
+    <link href="https://arxiv.org/abs/2303.07851v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.07851v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Strominger-Yau-Zaslow (SYZ) proposed a way of constructing mirror pairs as pairs of torus fibrations. We apply this SYZ construction to toric Fano surfaces as complex manifolds, and discuss the homological mirror symmetry, where we consider Morse homotopy of the moment polytope instead of the Fukaya category.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-14T12:46:42Z</published>
+    <arxiv:comment>v3: 50 pages, 5 figures, Fixed typos. arXiv admin note: text overlap with arXiv:2012.06801 by other authors</arxiv:comment>
+    <arxiv:primary_category term="math.DG"/>
+    <arxiv:journal_ref>J. Math. Phys. 65, 053501 (2024)</arxiv:journal_ref>
+    <author>
+      <name>Hayato Nakanishi</name>
+    </author>
+    <arxiv:doi>10.1063/5.0168792</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/5.0168792" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.02369v2</id>
+    <title>Moduli spaces of Delzant polytopes and symplectic toric manifolds</title>
+    <updated>2025-08-22T10:08:02Z</updated>
+    <link href="https://arxiv.org/abs/2303.02369v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.02369v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper introduces modern geometric combinatorial technology from the theory of triangulations in order to derive results in toric symplectic geometry. In the main part of the paper we prove a number of properties of the space $\mathcal{D}(n)$ of $n$-dimensional Delzant polytopes. Two highlights are the construction of examples showing that, in contrast with the classical work of Oda in dimension $2$, no classification of combinatorially minimal Delzant polytopes can be expected in dimension $3$ or higher, and a proof that the space of $n$-dimensional Delzant polytopes is path-connected. Our proof of the latter is based on the fact that every rational fan can be refined to a unimodular fan, which is a standard technique used for resolution of singularities of toric varieties. In the last part of the paper, using the Delzant correspondence, these results allow us to answer several open questions concerning the moduli space $\mathcal{M}(n)$ of symplectic toric manifolds of dimension $2n$, since this space is isometric to the space of Delzant polytopes. Our results imply that no classification of minimal models of symplectic toric manifolds is plausible in dimension $6$ or higher, which answers in the negative a long-standing folklore question originating in Oda's work (1978).</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-04T10:07:42Z</published>
+    <arxiv:comment>44 pages, 6 figures. Added table of contents and several clarifying figures. Introduction and abstract have been rewritten. Added Sections 3.5 and 4.2.1</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <arxiv:journal_ref>Advances in Mathematics 482, Part B, December 2025, 110624</arxiv:journal_ref>
+    <author>
+      <name>Álvaro Pelayo</name>
+    </author>
+    <author>
+      <name>Francisco Santos</name>
+    </author>
+    <arxiv:doi>10.1016/j.aim.2025.110624</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.aim.2025.110624" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2302.13270v1</id>
+    <title>Integrable Systems Arising from Separation of Variables on $S^{3}$</title>
+    <updated>2023-02-26T08:48:33Z</updated>
+    <link href="https://arxiv.org/abs/2302.13270v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.13270v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that the space of orthogonally separable coordinates on the sphere $S^3$ induces a natural family of integrable systems, which after symplectic reduction leads to a family of integrable systems on $S^2 \times S^2$. The generic member of the family corresponds to ellipsoidal coordinates. We use the theory of compatible Poisson structures to study the critical points and critical values of the momentum map. Interesting structure arises because the ellipsoidal coordinate system can degenerate in a variety of ways, and all possible orthogonally separable coordinate systems on $S^3$ (including degenerations) have the topology of the Stasheff polytope $K^4$, which is a pentagon. We describe how the generic integrable system degenerates, and how the appearance of global $SO(2)$ and $SO(3)$ symmetries is the main feature that organises the various degenerate systems. For the whole family we show that there is an action map whose image is an equilateral triangle. When higher symmetry is present, this triangle ``unfolds'' into a semi-toric polygon (when there is one global $S^1$-action) or a Delzant polygon (when there are two global $S^1$-actions). We believe that this family of integrable systems is a natural playground for theories of global symplectic classification of integrable systems.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-26T08:48:33Z</published>
+    <arxiv:comment>37 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Diana M. H. Nguyen</name>
+    </author>
+    <author>
+      <name>Sean R. Dawson</name>
+    </author>
+    <author>
+      <name>Holger R. Dullin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2302.07314v2</id>
+    <title>The Riemannian and symplectic geometry of the space of generalized Kähler structures</title>
+    <updated>2023-02-22T19:53:30Z</updated>
+    <link href="https://arxiv.org/abs/2302.07314v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.07314v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>On a compact complex manifold $(M, J)$ endowed with a holomorphic Poisson tensor $π_J$ and a deRham class $α\in H^2(M, \mathbb R)$, we study the space of generalized Kähler (GK) structures defined by a symplectic form $F\in α$ and whose holomorphic Poisson tensor is $π_J$. We define a notion of generalized Kähler class of such structures, and use the moment map framework of Boulanger and Goto to extend the Calabi program to GK geometry. We obtain generalizations of the Futaki--Mabuchi extremal vector field and Calabi--Lichnerowicz--Matsushima result for the Lie algebra of the group of automorphisms of $(M, J, π_J)$. We define a closed $1$-form on a GK class, which yields a generalization of the Mabuchi energy and thus a variational characterization of GK structures of constant scalar curvature. Next we introduce a formal Riemannian metric on a given GK class, generalizing the fundamental construction of Mabuchi--Semmes--Donaldson. We show that this metric has nonpositive sectional curvature, and that the Mabuchi energy is convex along geodesics, leading to a conditional uniqueness result for constant scalar curvature GK structures. We finally examine the toric case, proving the uniqueness of extremal generalized Kähler structures and showing that their existence is obstructed by the uniform relative K-stability of the corresponding Delzant polytope. Using the resolution of the Yau--Tian--Donaldson conjecture in the toric case by Chen--Cheng and He, we show in some settings that this condition suffices for existence and thus construct new examples.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-14T19:55:37Z</published>
+    <arxiv:comment>47 pages, added remarks in v2</arxiv:comment>
+    <arxiv:primary_category term="math.DG"/>
+    <author>
+      <name>Vestislav Apostolov</name>
+    </author>
+    <author>
+      <name>Jeffrey Streets</name>
+    </author>
+    <author>
+      <name>Yury Ustinovskiy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2211.10993v2</id>
+    <title>Singular Lagrangian torus fibrations on the smoothing of algebraic cones</title>
+    <updated>2024-05-04T11:51:16Z</updated>
+    <link href="https://arxiv.org/abs/2211.10993v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2211.10993v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Given a lattice polytope $Q\subset \mathbb{R}^n$, we can consider the cone $σ=C(Q)=\{λ(q,1)\in \mathbb{R}^{n+1}|λ\in \mathbb{R}_{\geq0}, q\in Q\} \subset \mathbb{R}^{n+1}$, and the affine toric variety $Y_σ$ associated to $σ$. Altmann showed that the versal deformation space of $Y_σ$ can be described by the Minkowski decomposition of the polytope $Q$. Under some conditions on $Q$, we can obtain a smooth deformation $Y_ε$ of $Y_σ$ using Altmann's result. In this article, we consider $Y_ε$ inside some $\mathbb{C}^N$ and construct a complex fibration on $Y_ε$, with general fibre $(\mathbb{C}^*)^n$ and finite singular fibres described using global coordinates related to the components of the Minkowski decomposition. We construct a singular Lagrangian torus fibration out of the complex fibration. This singular fibration admits a convex base diagram representation with cuts as a natural generalization of base diagrams described by Symington for Almost Toric Fibrations ($\dim=4$). In particular, we obtain a convex base diagram whose image is the dual cone of $C(Q)$. There is a 1-parameter family of monotone Lagrangian tori in each of these fibrations. Using the wall-crossing formula, we describe the potential associated with this family in terms of the Minkowski decomposition of $Q$, recovering the result of Lau, and discuss non-displaceability. We also discuss some other consequences of our results.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-11-20T14:54:53Z</published>
+    <arxiv:comment>43 pages, 14 figures. Accepted version</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Santiago Achig-Andrango</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2210.12472v1</id>
+    <title>Optimal Antipodal Configuration of $2d$ Points on a Sphere in $\mathbb R^d$ for Covering</title>
+    <updated>2022-10-22T15:12:28Z</updated>
+    <link href="https://arxiv.org/abs/2210.12472v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2210.12472v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that among antipodal $2d$-point configurations on the sphere $S^{d-1}$ in $\mathbb R^d$, the set of vertices of a regular cross-polytope inscribed in $S^{d-1}$ uniquely solves the best-covering problem (this is new for $d\geq 5$) and the maximal polarization problem for potentials given by a function of the distance squared with a positive and convex second derivative ($d\geq 3$).</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-10-22T15:12:28Z</published>
+    <arxiv:comment>14 pages, 0 figures and tables</arxiv:comment>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Sergiy Borodachov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2210.04455v2</id>
+    <title>Degeneration of Kahler polarizations to mixed polarizations on toric varieties</title>
+    <updated>2022-10-12T10:20:13Z</updated>
+    <link href="https://arxiv.org/abs/2210.04455v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2210.04455v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $(X, ω, J)$ be a toric variety of dimension $2n$ determined by a Delzant polytope. In this paper, we first construct the polarizations $\shP_{k}$ by the Hamiltonian $T^{k}$-action on $X$ (see Theorem 3.11). We will show that $\shP_{k}$ is a singular mixed polarization for $1\le k &lt; n$, and $\shP_{n}$ is a singular real polarization which coincides with the real polarization studied in \cite{BFMN} on the open dense subset of $X$. Then for each $1\le k \le n$, we will find a one-parameter family of Kähler polarizations $\shP_{k,t}$ on $X$ that converges to $\shP_{k}$ (see Theorem 3.12). Finally, we will show that $\shH_{k,t}^{T}$ the space of $T^{k}$-invariant $J_{k,t}$-holomorphic sections converges to $\shH_{k}^{0}$ (see Theorem 3.18).</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-10-10T06:49:55Z</published>
+    <arxiv:comment>We can generalize to a better result</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Dan Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2208.02099v2</id>
+    <title>Multiplicity free U(2)-actions and triangles</title>
+    <updated>2023-08-25T15:30:49Z</updated>
+    <link href="https://arxiv.org/abs/2208.02099v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2208.02099v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We classify the compact, connected multiplicity free Hamiltonian U(2)-manifolds with trivial principal isotropy group whose momentum polytope is a triangle.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-08-03T14:28:50Z</published>
+    <arxiv:comment>v1: 26 pages. v2: 34 pages, added section on invariant complex structures, improved exposition</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Oliver Goertsches</name>
+    </author>
+    <author>
+      <name>Bart Van Steirteghem</name>
+    </author>
+    <author>
+      <name>Nikolas Wardenski</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2205.10585v1</id>
+    <title>The symplectic structure of a toric conic transform</title>
+    <updated>2022-05-21T13:05:55Z</updated>
+    <link href="https://arxiv.org/abs/2205.10585v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2205.10585v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Suppose that a compact $r$-dimensional torus $T^r$ acts in a holomorphic and Hamiltonian manner on polarized complex $d$-dimensional projective manifold $M$, with nowhere vanishing moment map $Φ$. Assuming that $Φ$ is transverse to the ray through a given weight $\boldsymbolν$, associated to these data there is a complex $(d-r+1)$-dimensional polarized projective orbifold $\hat{M}_{\boldsymbolν}$ (referred to as the $\boldsymbolν$-th \textit{conic transform} of $M$). Namely, $\hat{M}_{\boldsymbolν}$ is a suitable quotient of the inverse image of the ray in the unit circle bundle of the polarization of $M$. With the aim to clarify the geometric significance of this construction, we consider the special case where $M$ is toric, and show that $\hat{M}_{\boldsymbolν}$ is itself a Kähler toric obifold, whose moment polytope is obtained from the one of $M$ by a certain "transform", operation (depending on $Φ$ and $\boldsymbolν$).</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-05-21T13:05:55Z</published>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Roberto Paoletti</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2205.04839v1</id>
+    <title>The momentum polytope of actions on contact manifolds via toric varieties</title>
+    <updated>2022-05-10T12:25:29Z</updated>
+    <link href="https://arxiv.org/abs/2205.04839v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2205.04839v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Due to a previous result which states that contact varieties are isomorphic to certain varieties, the momentum polytopes of contact manifolds are convex.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-05-10T12:25:29Z</published>
+    <arxiv:comment>31 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Amna Shaddad</name>
+    </author>
+  </entry>
+</feed>

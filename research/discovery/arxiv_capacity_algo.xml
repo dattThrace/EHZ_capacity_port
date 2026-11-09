@@ -1,0 +1,431 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/0vAIRF+NtyfHBVHAaPYFwVwRjSY</id>
+  <title>arXiv Query: search_query=(all:"symplectic capacity" OR all:"symplectic capacities") AND (all:algorithm OR all:computing OR all:computational)&amp;id_list=&amp;start=0&amp;max_results=70</title>
+  <updated>2026-11-09T21:08:02Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(all:%22symplectic+capacity%22+OR+all:%22symplectic+capacities%22)+AND+(all:algorithm+OR+(all:computing+OR+all:computational))&amp;start=0&amp;max_results=70&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>70</opensearch:itemsPerPage>
+  <opensearch:totalResults>22</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2604.10408v2</id>
+    <title>Symplectic Constraints in Classical Reaction Dynamics: From Gromov's Camel to Reaction Rates</title>
+    <updated>2026-05-04T13:29:31Z</updated>
+    <link href="https://arxiv.org/abs/2604.10408v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.10408v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate whether ideas from symplectic topology, in particular Gromov's non-squeezing theorem and symplectic capacity, can provide useful geometric insight into classical reaction dynamics near an index-1 saddle. Using Poincaré-Birkhoff normal form theory, we describe the phase-space structures that organize transport through the transition-state region, including dividing surfaces, normally hyperbolic invariant manifolds (NHIMs), and the associated bath-action geometry. For quadratic saddle-center and saddle-center-center models, the normal-form geometry identifies natural bath-action area scales associated with the reactive bottleneck. For anharmonic systems (Eckart-Morse and Eckart-Morse-Morse), we formulate corresponding candidate symplectic width scales -- based on transverse bath actions -- using high-order normal forms for bounded local neighborhoods associated with the reaction bottleneck near the saddle. We then present two numerical illustrations: the backward propagation of a locally coupled phase-space ball to examine linear non-squeezing behavior, and a bath-localized ensemble calculation in an anharmonic normal-form model. These computations are consistent with the idea that heavily biasing the initial phase-space distribution of an ensemble toward the high-action boundaries of the bath modes can induce a severe finite-time dynamical delay, influencing reactivity in ways not captured by total phase-space volume or flux alone. The results suggest a new geometric perspective on mode selectivity and reaction bottlenecks, while highlighting open mathematical questions concerning the precise relation between these candidate width scales and genuine symplectic capacities of suitably defined reactive neighborhoods.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="nlin.CD" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-12T02:01:58Z</published>
+    <arxiv:comment>28 pages, 3 figures. Major revision. Title changed. Exposition substantially revised to clarify the symplectic-filter interpretation, energy-layer formulation, candidate width scales, and the distinction between symplectic capacity and projection-area diagnostics</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Stephen Wiggins</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.02731v1</id>
+    <title>Maximal Weinstein neighborhoods of symmetric R-spaces and their symplectic capacities</title>
+    <updated>2025-05-05T15:32:16Z</updated>
+    <link href="https://arxiv.org/abs/2505.02731v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.02731v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Symmetric R-spaces can be characterized as real forms of Hermitian symmetric spaces, and as such, they are all embedded as Lagrangian submanifolds. We show that their maximal Weinstein tubular neighborhoods are dense and use this property to compute both the Gromov width and the Hofer--Zehnder capacity of the corresponding disc (co)tangent bundles of the symmetric R-spaces.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-05T15:32:16Z</published>
+    <arxiv:comment>24 pages. Any comments welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Johanna Bimmermann</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.09622v1</id>
+    <title>Advanced fuel fusion, phase space engineering, and structure-preserving geometric algorithms</title>
+    <updated>2024-02-14T23:56:52Z</updated>
+    <link href="https://arxiv.org/abs/2402.09622v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.09622v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Non-thermal advanced fuel fusion trades the requirement of a large amount of recirculating tritium in the system for that of large recirculating power. Phase space engineering technologies utilizing externally injected electromagnetic fields can be applied to meet the challenge of maintaining non-thermal particle distributions at a reasonable cost. The physical processes of the phase space engineering are studied from a theoretical and algorithmic perspective. It is emphasized that the operational space of phase space engineering is limited by the underpinning symplectic dynamics of charged particles. The phase space incompressibility according to the Liouville theorem is just one of many constraints, and Gromov's non-squeezing theorem determines the minimum footprints of the charged particles on every conjugate phase space plane. In this sense and level of sophistication, the mathematical abstraction of phase space engineering is symplectic topology. To simulate the processes of phase space engineering, such as the Maxwell demon and electromagnetic energy extraction, and to accurately calculate the minimum footprints of charged particles, recently developed structure-preserving geometric algorithms can be used. The family of algorithms conserves exactly, on discretized spacetime, symplecticity and thus incompressibility, non-squeezability, and symplectic capacities. The algorithms apply to the dynamics of charged particles under the influence of external electromagnetic fields as well as the charged particle-electromagnetic field system governed by the Vlasov-Maxwell equations.</summary>
+    <category term="physics.plasm-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-14T23:56:52Z</published>
+    <arxiv:comment>26 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="physics.plasm-ph"/>
+    <arxiv:journal_ref>Phys. Plasmas 31, 050601 (2024)</arxiv:journal_ref>
+    <author>
+      <name>Hong Qin</name>
+    </author>
+    <arxiv:doi>10.1063/5.0203707</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/5.0203707" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2205.13381v1</id>
+    <title>Equivariant symplectic homology, linearized contact homology and the Lagrangian capacity</title>
+    <updated>2022-05-26T14:12:37Z</updated>
+    <link href="https://arxiv.org/abs/2205.13381v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2205.13381v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We establish computational results concerning the Lagrangian capacity from "Cieliebak and Mohnke - Punctured holomorphic curves and Lagrangian embeddings". More precisely, we show that the Lagrangian capacity of a 4-dimensional convex toric domain is equal to its diagonal. The proof involves comparisons between the Lagrangian capacity, the McDuff-Siegel capacities from "McDuff and Siegel - Symplectic capacities, unperturbed curves, and convex toric domains", and the Gutt-Hutchings capacities from "Gutt and Hutchings - Symplectic capacities from positive S1-equivariant symplectic homology". Working under the assumption that there is a suitable virtual perturbation scheme which defines the curve counts of linearized contact homology, we extend the previous result to toric domains which are convex or concave and of any dimension. For this, we use the higher symplectic capacities from "Siegel - Higher symplectic capacities". The key step is showing that moduli spaces of asymptotically cylindrical holomorphic curves in ellipsoids are transversely cut out.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-05-26T14:12:37Z</published>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Miguel Pereira</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2201.03143v3</id>
+    <title>An elementary alternative to ECH capacities</title>
+    <updated>2022-06-12T04:43:46Z</updated>
+    <link href="https://arxiv.org/abs/2201.03143v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2201.03143v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The ECH capacities are a sequence of numerical invariants of symplectic four-manifolds which give (sometimes sharp) obstructions to symplectic embeddings. These capacities are defined using embedded contact homology, and establishing their basic properties currently requires Seiberg-Witten theory. In this note we define a new sequence of symplectic capacities in four dimensions using only basic notions of holomorphic curves. The new capacities satisfy the same basic properties as ECH capacities and agree with the ECH capacities for the main examples for which the latter have been computed, namely convex and concave toric domains. The new capacities are also useful for obstructing symplectic embeddings into closed symplectic four-manifolds. This work is inspired by a recent preprint of McDuff-Siegel giving a similar elementary alternative to symplectic capacities from rational SFT.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-01-10T03:00:04Z</published>
+    <arxiv:comment>v3: minor corrections and clarifications</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Michael Hutchings</name>
+    </author>
+    <arxiv:doi>10.1073/pnas.2203090119</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1073/pnas.2203090119" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2111.00515v3</id>
+    <title>Symplectic capacities, unperturbed curves, and convex toric domains</title>
+    <updated>2024-04-23T04:29:02Z</updated>
+    <link href="https://arxiv.org/abs/2111.00515v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2111.00515v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We use explicit pseudoholomorphic curve techniques (without virtual perturbations) to define a sequence of symplectic capacities analogous to those defined recently by the second named author using symplectic field theory. We then compute these capacities for all four-dimensional convex toric domains. This gives various new obstructions to stabilized symplectic embedding problems which are sometimes sharp.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-10-31T14:44:49Z</published>
+    <arxiv:comment>v3: minor improvements</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <arxiv:journal_ref>Geom. Topol. 28 (2024) 1213-1285</arxiv:journal_ref>
+    <author>
+      <name>Dusa McDuff</name>
+    </author>
+    <author>
+      <name>Kyler Siegel</name>
+    </author>
+    <arxiv:doi>10.2140/gt.2024.28.1213</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.2140/gt.2024.28.1213" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2103.05143v5</id>
+    <title>Capacities from the Chiu-Tamarkin complex</title>
+    <updated>2023-12-18T18:59:38Z</updated>
+    <link href="https://arxiv.org/abs/2103.05143v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2103.05143v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we construct a sequence $(c_k)_{k\in\mathbb{N}}$ of symplectic capacities based on the Chiu-Tamarkin complex $C_{T,\ell}$, a $\mathbb{Z}/\ell$-equivariant invariant coming from the microlocal theory of sheaves. We compute $(c_k)_{k\in\mathbb{N}}$ for convex toric domains, which are the same as the Gutt-Hutchings capacities. Our method also works for the prequantized contact manifold $T^*X\times S^1$. We define a sequence of "contact capacities" $([c]_k)_{k\in\mathbb{N}}$ on the prequantized contact manifold $T^*X\times S^1$, and we compute them for prequantized convex toric domains.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-03-08T23:54:44Z</published>
+    <arxiv:comment>v5: Correct the definition of the contact capacity. To appear in Journal of Symplectic Geometry. Comments are welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <arxiv:journal_ref>J. Symplectic Geom. 22 (2024), no. 3, 441-524</arxiv:journal_ref>
+    <author>
+      <name>Bingyu Zhang</name>
+    </author>
+    <arxiv:doi>10.4310/JSG.241001211759</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.4310/JSG.241001211759" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2102.00600v1</id>
+    <title>Higher $P$-symmetric Ekeland-Hofer capacities</title>
+    <updated>2021-02-01T02:55:49Z</updated>
+    <link href="https://arxiv.org/abs/2102.00600v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2102.00600v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper is devoted to the construction of analogues of higher Ekeland-Hofer symplectic capacities for $P$-symmetric subsets in the standard symplectic space $(\mathbb{R}^{2n},ω_0)$, which is motivated by Long and Dong's study $P$-symmetric closed characteristics on $P$-symmetric convex bodies. We study the relationship between these capacities and other capacities, and give some computation examples. Moreover, we also define higher real symmetric Ekeland-Hofer capacities as a complement of Jin and the second named author's recent study of the real symmetric analogue about the first Ekeland-Hofer capacity.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-02-01T02:55:49Z</published>
+    <arxiv:comment>Latex, 21 pages</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Kun Shi</name>
+    </author>
+    <author>
+      <name>Guangcun Lu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2010.05854v1</id>
+    <title>Symplectic geometry of Cartan-Hartogs domains</title>
+    <updated>2020-10-12T17:00:19Z</updated>
+    <link href="https://arxiv.org/abs/2010.05854v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2010.05854v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper studies the geometry of Cartan-Hartogs domains from the symplectic point of view. Inspired by duality between compact and noncompact Hermitian symmetric spaces, we construct a dual counterpart of Cartan-Hartogs domains and give explicit expression of global Darboux coordinates for both Cartan-Hartogs and their dual. Further, we compute their symplectic capacity and show that a Cartan-Hartogs admits a symplectic duality if and only if it reduces to be a complex hyperbolic space.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-10-12T17:00:19Z</published>
+    <arxiv:comment>24 pages</arxiv:comment>
+    <arxiv:primary_category term="math.DG"/>
+    <arxiv:journal_ref>Annali di Matematica (2022)</arxiv:journal_ref>
+    <author>
+      <name>Roberto Mossa</name>
+    </author>
+    <author>
+      <name>Michela Zedda</name>
+    </author>
+    <arxiv:doi>10.1007/s10231-022-01201-1</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s10231-022-01201-1" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2003.10854v3</id>
+    <title>Examples around the strong Viterbo conjecture</title>
+    <updated>2020-10-03T16:40:32Z</updated>
+    <link href="https://arxiv.org/abs/2003.10854v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2003.10854v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A strong version of a conjecture of Viterbo asserts that all normalized symplectic capacities agree on convex domains. We review known results showing that certain specific normalized symplectic capacities agree on convex domains. We also review why all normalized symplectic capacities agree on $S^1$-invariant convex domains. We introduce a new class of examples called "monotone toric domains", which are not necessarily convex, and which include all dynamically convex toric domains in four dimensions. We prove that for monotone toric domains in four dimensions, all normalized symplectic capacities agree. For monotone toric domains in arbitrary dimension, we prove that the Gromov width agrees with the first equivariant capacity. We also study a family of examples of non-monotone toric domains and determine when the conclusion of the strong Viterbo conjecture holds for these examples. Along the way we compute the cylindrical capacity of a large class of "weakly convex toric domains" in four dimensions.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-03-24T14:01:31Z</published>
+    <arxiv:comment>21 pages, 5 figures; v3: minor corrections</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Jean Gutt</name>
+    </author>
+    <author>
+      <name>Michael Hutchings</name>
+    </author>
+    <author>
+      <name>Vinicius G. B. Ramos</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1911.06466v4</id>
+    <title>Computing higher symplectic capacities I</title>
+    <updated>2021-04-06T22:06:04Z</updated>
+    <link href="https://arxiv.org/abs/1911.06466v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1911.06466v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present recursive formulas which compute the recently defined "higher symplectic capacities" for all convex toric domains. In the special case of four-dimensional ellipsoids, we apply homological perturbation theory to the associated filtered L-infinity algebras and prove that the resulting structure coefficients count punctured pseudoholomorphic curves in cobordisms between ellipsoids. As sample applications, we produce new previously inaccessible obstructions for stabilized embeddings of ellipsoids and polydisks, and we give new counts of curves with tangency constraints.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-11-15T03:55:38Z</published>
+    <arxiv:comment>v4: fixed and slightly expanded section 5.5</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Kyler Siegel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1907.09749v3</id>
+    <title>Symplectic homology of fiberwise convex sets and homology of loop spaces</title>
+    <updated>2021-06-13T06:44:07Z</updated>
+    <link href="https://arxiv.org/abs/1907.09749v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1907.09749v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>For any nonempty, compact and fiberwise convex set $K$ in $T^*\mathbb{R}^n$, we prove an isomorphism between symplectic homology of $K$ and a certain relative homology of loop spaces of $\mathbb{R}^n$. We also prove a formula which computes symplectic homology capacity (which is a symplectic capacity defined from symplectic homology) of $K$ using homology of loop spaces. As applications, we prove (i) symplectic homology capacity of any convex body is equal to its Ekeland-Hofer-Zehnder capacity, (ii) a certain subadditivity property of the Hofer-Zehnder capacity, which is a generalization of a result previously proved by Haim-Kislev.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-07-23T08:25:43Z</published>
+    <arxiv:comment>40 pages. Revised following comments by the referee. Proposition 1.11 added</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Kei Irie</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1902.01490v4</id>
+    <title>Higher symplectic capacities</title>
+    <updated>2024-04-23T03:51:33Z</updated>
+    <link href="https://arxiv.org/abs/1902.01490v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1902.01490v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We construct new families of symplectic capacities indexed by certain symmetric polynomials, defined using rational symplectic field theory. In particular, we introduce a sequence of capacities based on an L-infinity structure on linearized contact homology and rational curve counts with local tangency constraints. We prove various structural properties of these capacities and give some preliminary computations which show that they give state of the art symplectic embedding obstructions in basic examples.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-02-04T23:02:22Z</published>
+    <arxiv:comment>v4: substantial expository revisions, especially in the introduction</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <arxiv:journal_ref>Algebr. Geom. Topol. 25 (2025) 5205-5278</arxiv:journal_ref>
+    <author>
+      <name>Kyler Siegel</name>
+    </author>
+    <arxiv:doi>10.2140/agt.2025.25.5205</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.2140/agt.2025.25.5205" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1809.08498v3</id>
+    <title>On the Ekeland-Hofer symplectic capacities of the real bidisc</title>
+    <updated>2019-11-26T23:52:32Z</updated>
+    <link href="https://arxiv.org/abs/1809.08498v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1809.08498v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In $\mathbb{C}^2$ with the standard symplectic structure we consider the bidisc $D^2\times D^2$ constructed as the product of two open real discs of radius $1$. We compute explicit values for the first, second and third Ekeland-Hofer symplectic capacity of $D^2\times D^2$. We discuss some applications to questions of symplectic rigidity.</summary>
+    <category term="math.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-09-22T22:13:32Z</published>
+    <arxiv:comment>v3: Final version, to appear in "Pacific J. Math.", 20 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CV"/>
+    <arxiv:journal_ref>Pacific J. Math. 305 (2020) 423-446</arxiv:journal_ref>
+    <author>
+      <name>Luca Baracco</name>
+    </author>
+    <author>
+      <name>Martino Fassina</name>
+    </author>
+    <author>
+      <name>Stefano Pinton</name>
+    </author>
+    <arxiv:doi>10.2140/pjm.2020.305.423</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.2140/pjm.2020.305.423" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1805.01390v1</id>
+    <title>Epsilon-non-squeezing and $C^0$-rigidity of epsilon-symplectic embeddings</title>
+    <updated>2018-05-03T16:02:49Z</updated>
+    <link href="https://arxiv.org/abs/1805.01390v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1805.01390v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>An embedding $\varphi \colon (M_1, ω_1) \to (M_2, ω_2)$ (of symplectic manifolds of the same dimension) is called $ε$-symplectic if the difference $\varphi^* ω_2 - ω_1$ is $ε$-small with respect to a fixed Riemannian metric on $M_1$. We prove that if a sequence of $ε$-symplectic embeddings converges uniformly (on compact subsets) to another embedding, then the limit is $E$-symplectic, where the number $E$ depends only on $ε$ and $E (ε) \to 0$ as $ε\to 0$. This generalizes $C^0$-rigidity of symplectic embeddings, and answers a question in topological quantum computing by Michael Freedman. As in the symplectic case, this rigidity theorem can be deduced from the existence and properties of symplectic capacities. An $ε$-symplectic embedding preserves capacity up to an $ε$-small error, and linear $ε$-symplectic maps can be characterized by the property that they preserve the symplectic spectrum of ellipsoids (centered at the origin) up to an error that is $ε$-small. We sketch an alternative proof using the shape invariant, which gives rise to an analogous characterization and rigidity theorem for $ε$-contact embeddings.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-05-03T16:02:49Z</published>
+    <arxiv:comment>17 pages</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Stefan Müller</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1707.06514v1</id>
+    <title>Symplectic capacities from positive S^1-equivariant symplectic homology</title>
+    <updated>2017-07-20T14:02:37Z</updated>
+    <link href="https://arxiv.org/abs/1707.06514v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1707.06514v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We use positive S^1-equivariant symplectic homology to define a sequence of symplectic capacities c_k for star-shaped domains in R^{2n}. These capacities are conjecturally equal to the Ekeland-Hofer capacities, but they satisfy axioms which allow them to be computed in many more examples. In particular, we give combinatorial formulas for the capacities c_k of any "convex toric domain" or "concave toric domain". As an application, we determine optimal symplectic embeddings of a cube into any convex or concave toric domain. We also extend the capacities c_k to functions of Liouville domains which are almost but not quite symplectic capacities.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-07-20T14:02:37Z</published>
+    <arxiv:comment>63 pages</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <arxiv:journal_ref>Algebr. Geom. Topol. 18 (2018) 3537-3600</arxiv:journal_ref>
+    <author>
+      <name>Jean Gutt</name>
+    </author>
+    <author>
+      <name>Michael Hutchings</name>
+    </author>
+    <arxiv:doi>10.2140/agt.2018.18.3537</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.2140/agt.2018.18.3537" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1703.01730v1</id>
+    <title>Computation of annular capacity by Hamiltonian Floer theory of non-contractible periodic trajectories</title>
+    <updated>2017-03-06T05:49:02Z</updated>
+    <link href="https://arxiv.org/abs/1703.01730v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1703.01730v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The first author introduced a relative symplectic capacity $C$ for a symplectic manifold $(N,ω_N)$ and its subset $X$ which measures the existence of non-contractible periodic trajectories of Hamiltonian isotopies on the product of $N$ with the annulus $A_R=(R,R)\times\mathbb{R}/\mathbb{Z}$. In the present paper, we give an exact computation of the capacity $C$ of the $2n$-torus $\mathbb{T}^{2n}$ relative to a Lagrangian submanifold $\mathbb{T}^n$ which implies the existence of non-contractible Hamiltonian periodic trajectories on $A_R\times\mathbb{T}^{2n}$. Moreover, we give a lower bound on the number of such trajectories.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-03-06T05:49:02Z</published>
+    <arxiv:comment>24 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <arxiv:journal_ref>J. Mod. Dyn. 11 (2017) 313-339</arxiv:journal_ref>
+    <author>
+      <name>Morimichi Kawasaki</name>
+    </author>
+    <author>
+      <name>Ryuma Orita</name>
+    </author>
+    <arxiv:doi>10.3934/jmd.2017013</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.3934/jmd.2017013" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1309.5072v3</id>
+    <title>On symplectic capacities of toric domains</title>
+    <updated>2014-08-03T22:25:00Z</updated>
+    <link href="https://arxiv.org/abs/1309.5072v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1309.5072v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A toric domain is a subset of $(\mathbb{C}^n,ω_{\text{std}})$ which is invariant under the standard rotation action of $\mathbb{T}^n$ on $\mathbb{C}^n$. For a toric domain $U$ from a certain large class for which this action is not free, we find a corresponding toric domain $V$ where the standard action is free, and for which $c(U)=c(V)$ for any symplectic capacity $c$. Michael Hutchings gives a combinatorial formula for calculating his embedded contact homology symplectic capacities for certain toric four-manifolds on which the $\mathbb{T}^2$-action is free. Our theorem allows one to extend this formula to a class of toric domains where the action is not free. We apply our theorem to compute ECH capacities for certain intersections of ellipsoids, and find that these capacities give sharp obstructions to symplectically embedding these ellipsoid intersections into balls.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-09-19T18:43:29Z</published>
+    <arxiv:comment>12 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <arxiv:journal_ref>Involve 8 (2015) 665-676</arxiv:journal_ref>
+    <author>
+      <name>Michael Landry</name>
+    </author>
+    <author>
+      <name>Matthew McMillan</name>
+    </author>
+    <author>
+      <name>Emmanuel Tsukerman</name>
+    </author>
+    <arxiv:doi>10.2140/involve.2015.8.665</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.2140/involve.2015.8.665" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1305.2989v3</id>
+    <title>Symplectic capacities from Hamiltonian circle actions</title>
+    <updated>2016-04-21T03:51:28Z</updated>
+    <link href="https://arxiv.org/abs/1305.2989v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1305.2989v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $M$ be a closed Fano symplectic manifold with a semifree Hamiltonian circle action with isolated maximum. We compute the Gromov width and the Hofer-Zehnder capacity of $M$ using a moment map.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-05-14T01:21:02Z</published>
+    <arxiv:comment>14 pages, weakened the assumption to Fano case, added a result on the Hofer-Zehnder capacity, changed title</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Taekgyu Hwang</name>
+    </author>
+    <author>
+      <name>Dong Youp Suh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1302.1984v1</id>
+    <title>Symplectic capacities of Hermitian symmetric spaces</title>
+    <updated>2013-02-08T10:25:24Z</updated>
+    <link href="https://arxiv.org/abs/1302.1984v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1302.1984v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Inspired by the work of G. Lu on pseudo symplectic capacities we obtain several results on the Gromov width and the Hofer--Zehnder capacity of Hermitian symmetric spaces of compact type. Our results and proofs extend those obtained by Lu for complex Grassmannians to Hermitian symmetric spaces of compact type. We also compute the Gromov width and the Hofer--Zehnder capacity for Cartan domains and their products.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-02-08T10:25:24Z</published>
+    <arxiv:comment>28 pages</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <arxiv:journal_ref>Symplectic capacities of Hermitian symmetric spaces, J. Symplect. Geom. 13 (2015), no. 4, 1049-1073</arxiv:journal_ref>
+    <author>
+      <name>Andrea Loi</name>
+    </author>
+    <author>
+      <name>Roberto Mossa</name>
+    </author>
+    <author>
+      <name>Fabio Zuddas</name>
+    </author>
+    <arxiv:doi>10.4310/JSG.2015.v13.n4.a7</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.4310/JSG.2015.v13.n4.a7" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0312483v3</id>
+    <title>Symplectic capacities of toric manifolds and related results</title>
+    <updated>2006-05-03T13:01:18Z</updated>
+    <link href="https://arxiv.org/abs/math/0312483v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0312483v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  In this paper we give concrete estimations for the pseudo symplectic capacities of toric manifolds in combinatorial data. Some examples are given to show that our estimates can compute their pseudo symplectic capacities. As applications we also estimate the symplectic capacities of the polygon spaces. Other related results are impacts of symplectic blow-up on symplectic capacities, symplectic packings in symplectic toric manifolds, the Seshadri constant of an ample line bundle on toric manifolds, and symplectic capacities of symplectic manifolds with $S^1$-action.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2003-12-29T14:27:56Z</published>
+    <arxiv:comment>Final version</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <arxiv:journal_ref>Nagoya Math.J. 181(2006), 149-184</arxiv:journal_ref>
+    <author>
+      <name>Guangcun Lu</name>
+      <arxiv:affiliation>Beijing Normal University</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0103195v10</id>
+    <title>Gromov-Witten invariants and pseudo symplectic capacities</title>
+    <updated>2006-12-07T14:42:43Z</updated>
+    <link href="https://arxiv.org/abs/math/0103195v10" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0103195v10" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We introduce the concept of pseudo symplectic capacities which is a mild generalization of that of symplectic capacities. As a generalization of the Hofer-Zehnder capacity we construct a Hofer-Zehnder type pseudo symplectic capacity and estimate it in terms of Gromov-Witten invariants. The (pseudo) symplectic capacities of Grassmannians and some product symplectic manifolds are computed. As applications we first derive some general nonsqueezing theorems that generalize and unite many previous versions, then prove the Weinstein conjecture for cotangent bundles over a large class of symplectic uniruled manifolds (including the uniruled manifolds in algebraic geometry) and also show that any closed symplectic submanifold of codimension two in any symplectic manifold has a small neighborhood whose Hofer-Zehnder capacity is less than a given positive number. Finally, we give two results on symplectic packings in Grassmannians and on Seshadri constants.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2001-03-28T13:38:08Z</published>
+    <arxiv:comment>63 pages</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <arxiv:journal_ref>Israel Journal of Mathematics 156(2006), 1-63</arxiv:journal_ref>
+    <author>
+      <name>Guangcun Lu</name>
+      <arxiv:affiliation>Beijing Normal University</arxiv:affiliation>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,925 @@
+                                                A Counterexample to Viterbo’s Conjecture
+                                                               Pazit Haim-Kislev, Yaron Ostrover
+                                                                          November 24, 2025
+arXiv:2405.16513v3 [math.SG] 20 Nov 2025
+
+
+
+
+                                                                                 Abstract
+                                                    We present a counterexample to Viterbo’s volume-capacity conjecture.
+                                                 This implies, in particular, that in contrast with a well-known conjecture,
+                                                 symplectic capacities do not coincide on the class of convex domains in
+                                                 the classical phase space.
+
+
+                                           1     Introduction and Results
+                                           A major distinction between the categories of volume-preserving transforma-
+                                           tions and symplectic transformations was first demonstrated by Gromov in [26].
+                                           In this work Gromov introduced the theory of pseudoholomorphic curves and, in
+                                           particular, proved the renowned “non-squeezing” theorem, which provides the
+                                           first example of obstructions to symplectic embeddings distinct from volume
+                                           considerations. This discovery later led to the development of global symplectic
+                                           invariants, known as symplectic capacities. The axiomatic definition of symplec-
+                                           tic capacities was first given by Ekeland and Hofer in [22], and since then many
+                                           examples were devised, arising from various themes and techniques in symplec-
+                                           tic geometry and Hamiltonian dynamics. These invariants play a central role in
+                                           symplectic geometry, particularly in establishing rigidity results and identifying
+                                           obstructions to symplectic embeddings. Despite their importance, many funda-
+                                           mental questions regarding symplectic capacities remain unresolved due to the
+                                           fact that these capacities are notoriously difficult to compute.
+                                               One of the long-standing fundamental conjectures regarding symplectic ca-
+                                           pacities is Viterbo’s volume-capacity conjecture [52] (Conjecture 1.2 below), an
+                                           isoperimetric-type question concerning convex domains in the classical phase
+                                           space. Roughly speaking, it states that among convex domains with a given
+                                           volume, the Euclidean ball has the maximal symplectic size. This conjecture
+                                           inspired extensive research, and was proved in many special cases (a partial list
+                                           of relevant references includes [1, 2, 3, 9, 11, 16, 21, 29, 35, 44, 47]). In particu-
+                                           lar, in [8], it was proved that a special case of Viterbo’s conjecture is equivalent
+                                           to the famous Mahler’s conjecture, an 85-year-old open problem in convex ge-
+                                           ometry concerning the volume of a centrally symmetric convex body and that of
+                                           its dual. The aforementioned works, along with several other results, provided
+                                           substantial evidence supporting Viterbo’s conjecture. However, in this paper
+                                           we provide a counterexample based on Minkowski billiard dynamics. We turn
+                                           now to a precise statement of the main result.
+                                               We begin by recalling the notion of symplectic capacity. Various definitions
+                                           of symplectic capacities exist in the literature, typically defined for the class of
+
+                                                                                     1
+symplectic manifolds, or specific subclasses (see, e.g., [18]). For the purposes
+of this work, the following definition of what is commonly referred to as a
+normalized symplectic capacity will suffice. Consider the classical phase space
+R2n ≃ Cn equipped with P canonical coordinates (q, p), and with the standard
+symplectic form ωstd = dpi ∧ dqi .
+Definition 1.1. A symplectic capacity is a map c that assigns a non-negative
+number to each subset U ⊂ R2n , and satisfies the following:
+      1. (Monotonicity) c(U ) ≤ c(V ) if there is a symplectic embedding U ,→ V .
+      2. (Conformality) c(αU ) = α2 c(U ), for every α ∈ R+ .
+      3. (Normalization) c(B 2n (1)) = c(Z 2n (1)) = π.
+   Here B 2n (r) ⊂ Cn is the Euclidean ball of radius r, and Z 2n (r) is the cylinder
+B (r) × Cn−1 . Two immediate examples of symplectic capacities which arise
+  2
+
+naturally from Gromov’s non-squeezing theorem [26] are the Gromov width
+                                                          s
+                         cG (U ) := sup{πr2 : ∃ B 2n (r) ,→ U },
+          s
+where ,→ stands for a symplectic embedding, and the cylindrical capacity
+                                                    s
+                          cZ (U ) = inf{πr2 : ∃ U ,→ Z 2n (r)}.
+
+Since [26], numerous additional symplectic capacities (not necessarily satisfy-
+ing the Normalization property) have been constructed. Examples include the
+Hofer–Zehnder capacity [38], the Ekeland–Hofer capacities [22], the symplectic
+homology capacity defined by Hermann [36] based on ideas by Viterbo [51] (cf.
+[24]), the Gutt–Hutchings capacities [28] (which were very recently shown [30]
+to coincide with the Ekeland–Hofer capacities for star-shaped domains), the
+embedded contact homology capacities [40] defined by Hutchings in dimension
+4, and capacities defined by Siegel using rational symplectic field theory [49].
+    Due to their monotonicity and conformality properties, symplectic capacities
+are continuous with respect to the Hausdorff topology on the class of smooth
+convex domains in R2n . Throughout this text, the term convex domain refers
+to a bounded convex set with nonempty interior. Consequently, each such ca-
+pacity extends uniquely to the broader class of convex domains, regardless of
+smoothness. Moreover, for the class of convex domains it is known that, among
+others, the Hofer–Zehnder capacity, the first Ekeland–Hofer capacity, and the
+symplectic homology capacity coincide, and are equal to the minimal action
+among closed characteristics (or closed Reeb orbits) on the boundary1 (see,
+e.g., [5, 38, 22, 50, 42, 6, 28, 25, 29]). In what follows we refer to this quantity
+as the Ekeland–Hofer–Zehnder capacity and denote it by cEHZ . As mentioned
+above, an influential conjecture that has initiated and contributed to several
+research efforts in the field is Viterbo’s volume-capacity conjecture [52]:
+Conjecture 1.2 (Viterbo, 2000). For any symplectic capacity c and any convex
+domain K ⊂ R2n ,
+                           c(K)n ≤ n!Vol(K).
+   1 Without the smoothness assumption, one needs to consider “generalized” closed charac-
+
+teristics on the boundary (see, e.g., §2.3 in [10]).
+
+
+                                            2
+    Note that since symplectomorphisms are volume preserving, Conjecture 1.2
+is trivially satisfied for the Gromov width. A stronger version of this conjecture
+asserts that all symplectic capacities coincide on the class of convex domains.
+    Since its introduction, Viterbo’s conjecture has inspired numerous related
+works, many of which provide substantial evidence supporting its validity. In
+particular, one can verify that whenever the supremum over ball embeddings in
+cG (K) is attained for a convex domain K, one has cG (K) = cEHZ (K), thereby
+confirming Conjecture 1.2 for cEHZ in this case. The argument relies on the
+observation that if the intersection ∂B ∩ ∂K (where B is the embedded ball)
+contains an entire closed characteristic of B, then this curve is also a closed
+characteristic of K, and hence the two capacities coincide. If, on the con-
+trary, no closed characteristic of the ball lies entirely on ∂K, one can, roughly
+speaking, push the embedded ball further into the interior via a Hamiltonian
+diffeomorphism and thus embed a larger ball (cf. [23, Theorem 1.2] and ref-
+erences within). Another folklore fact is that the strong Viterbo’s conjecture,
+i.e. that all capacities coincide, holds for convex domains with S 1 -symmetry
+(cf. [29]). Moreover, while for certain capacities the capacity-volume ratio is
+unbounded on some classes of non-convex domains, such as star-shaped ones
+[35], it was shown in [9] that the conjecture holds up to a universal constant.
+In [3] (cf. [1]) it was proven that Conjecture 1.2 holds in a C 3 -neighborhood
+of the ball, and moreover that every smooth local maximizer in R4 which is
+strictly convex is symplectomorphic to the ball. Later, in [21] (cf. [2]) it was
+shown that the aforementioned stronger version of the conjecture is valid within
+a C 2 -neighborhood of the ball. In addition, Viterbo’s conjecture was shown to
+hold for specific examples. The papers [11, 47] prove Conjecture 1.2 for certain
+Lagrangian products. The conjecture was also verified for monotone toric do-
+mains in [29], and for specific domains associated with Hamiltonians of classical
+mechanical type in [44]. In [8] it is shown that the famous Mahler conjecture on
+the volume product of centrally symmetric convex bodies, which had remained
+open for the past 85 years, and was recently proven in dimension three [43], is
+equivalent to the restriction of Conjecture 1.2 to the Ekeland–Hofer–Zehnder
+capacity of Lagrangian products of centrally symmetric convex bodies K ⊂ Rnq
+and their dual bodies K ◦ ⊂ Rnp . We also observe that employing algorithms
+from [32] and [16] to compute the Ekeland–Hofer–Zehnder capacity led to the
+identification of several new examples with the same capacity-volume ratio as
+the ball. Our main result is:
+Theorem 1.3. Viterbo’s conjecture fails for every n ≥ 2.
+    The proof relies on the close connection between the Ekeland–Hofer–Zehnder
+capacity of Lagrangian products of convex domains in the classical phase space
+and Minkowski billiard dynamics [10]. Minkowski billiards, introduced by Gutkin
+and Tabachnikov in [27], provide a natural generalization of classical billiards to
+the Finsler setting, where the Euclidean structure is replaced by a Minkowski
+distance function. In this framework, we consider two convex bodies K, T ⊂ Rn ,
+which for simplicity we assume to contain the origin. One of these bodies,
+say K, serves as the billiard table, while the other body T induces a poten-
+tially asymmetric norm via the support function hT (u) := sup{⟨x, u⟩ | x ∈ T }
+which governs the billiard dynamics within K. Specifically, the reflection law
+for Minkowski billiards arises from a variational principle applied to the length
+
+
+                                        3
+functional, where the Euclidean length is replaced by hT . In what follows,
+we refer to the resulting billiard trajectories as T -billiard trajectories in K.
+Furthermore, since the function hT is the gauge function of the dual body
+T ◦ = {x ∈ Rn | ⟨x, y⟩ ≤ 1, ∀y ∈ T }, we will refer to the corresponding distance
+associated with the support function hT as the T ◦ -length. In particular, for a
+closed T -billiard trajectory in K described by a polygonal curve γ with vertices
+q1 , q2 , . . . , qm , where qi ∈ ∂K, the T ◦ -length of γ is given by
+                                           m
+                                           X
+                         LengthT ◦ (γ) =         hT (qi+1 − qi ),
+                                           i=1
+
+where qm+1 = q1 . As will be explained in more detail in Section 2 below,
+the Ekeland–Hofer–Zehnder capacity of the Lagrangian product of two convex
+domains K × T is given by the T ◦ -length of the shortest periodic T -billiard
+trajectory in K (cf. Section 2.4 in [10], and Section 1.2 in [46]).
+    Let us present an explicit counterexample to Viterbo’s conjecture. Consider
+the Lagrangian splitting of R4 = R2q ⊕ R2p . Let K ⊂ R2q be the regular pentagon
+with vertices {(cos( 2πk          2πk   4                   2
+                         5 ), sin( 5 ))}k=0 , and let T ⊂ Rp be a rotation of K by
+90o , i.e., the vertices of T are {(cos(− 2 + 5 ), sin(− 2 + 2πk
+                                          π     2πk       π         4
+                                                              5 ))}k=0 (see Figure
+1). The main ingredient in the proof of Theorem 1.3 is the following proposition.
+
+                         v1                            w3                     w2
+  v2
+
+                                    v0
+
+                                                 w4                                w1
+   v3
+                         v4                                             w0
+               q1 , q2                                              p1 , p2
+           Figure 1: The pentagon K times the rotated pentagon T .
+
+Proposition 1.4. The Ekeland–Hofer–Zehnder capacity of the Lagrangian prod-
+uct K ×T is the T ◦ -length of any one of the 2-bounce T -billiard trajectories along
+a diagonal of the pentagon K, i.e.,
+                                             π           π 
+                      cEHZ (K × T ) = 2 cos( ) 1 + cos( ) .
+                                            10            5
+    We observe that the Reeb dynamics of ∂(K × T ) exhibit interesting global
+behavior. In particular, there is an open and dense set such that the Reeb
+trajectories passing through it are all closed. This phenomenon is examined in
+more detail in Section 3.1 below.
+
+
+                                           4
+   In what follows, for a convex domain A ⊂ R2n , we denote the symplectic
+systolic ratio of A by
+                                     c (A)n
+                            Sys(A) := EHZ      .
+                                      n!Vol(A)
+Using this notation, Viterbo’s conjecture for cEHZ can be stated as Sys(A) ≤ 1
+for all convex domains A ⊂ R2n . Furthermore, we shall also make use of the
+notion of p-product. Recall that for two subsets X ⊂ Rm and Y ⊂ Rn containing
+the origin, and for 1 ≤ p ≤ ∞, their p-product is defined as
+                           [                         
+              X ⊗p Y :=          (1 − t)1/p X × t1/p Y ⊂ Rm × Rn .
+                         0≤t≤1
+
+   Note that in the limit case p = ∞, this operation corresponds to the usual
+product, whereas for p = 1, it results in the convex hull Conv{(K ×⃗0)∪(⃗0×T )}.
+Proof of Theorem 1.3. For the case n = 2, since the area of both K and T
+is given by A = 52 sin 2π
+                        5 , Proposition 1.4 immediately implies
+                                                 √
+                                c (K × T )2        5+3
+                  Sys(K × T ) = EHZ            =         > 1.
+                                      2A2           5
+To extend this counterexample to arbitrary dimensions, we utilize the fact (see
+Theorem 1.2 in [34]) that for any convex domains X ⊂ R2m and Y ⊂ R2n
+satisfying cEHZ (X) = cEHZ (Y ), one has that Sys(X ⊗2 Y ) = Sys(X) · Sys(Y ).
+The proof of Theorem 1.3 is then completed
+                                       p by taking the symplectic 2-product
+of K × T with a Euclidean ball B 2n−4 ( cEHZ (K × T )/π) of equal capacity.
+Remark 1.5. Using the formula provided in Theorem 1.1 of [32], we have
+numerically computed cEHZ (K × T ) using a MATLAB program on standard
+personal computers, with a running time of less than one minute. The numeri-
+cal computation yielded the claimed capacity value for the product K × T with
+a negligible numerical error. An implementation of the algorithm, which repro-
+duces our results, is available in [31]. Alternative methods for conducting the
+above numerical computation are discussed in [16] and [48]. For completeness,
+we present an independent proof of Proposition 1.4 below.
+Remark 1.6. A notable class of domains in R2n , known as toric domains,
+consists of regions that are invariant under the standard n-torus action on Cn .
+These domains are of special interest in symplectic geometry, as their symmetric
+features facilitate the analysis of various symplectic and dynamical properties
+(see, e.g., [28, 29, 17, 19] and the references therein). A natural question is,
+roughly speaking, how far a general convex domain is from the class of toric do-
+mains, and more specifically, whether every convex domain admits a symplectic
+image that is a star-shaped toric domain. In a recent paper, Hutchings [41] es-
+tablished that the answer to this question is negative in R4 . As J. Gutt pointed
+out to us, Theorem 1.3 offers an alternative proof of this result. Indeed, in [29],
+it was shown that all (normalized) symplectic capacities coincide for a subclass
+of toric domains known as monotone toric domains in R4 . This result was later
+extended to higher dimensions in [20]. Consequently, since any star-shaped toric
+image of a convex domain in R4 must be monotone [29, Proposition 1.8], it fol-
+lows that the Lagrangian product K × T , after a smoothing procedure, cannot
+be symplectomorphic to any star-shaped toric domain.
+
+
+                                        5
+1.1     Discussion and Open Questions
+While Theorem 1.3 provides a counterexample to Viterbo’s volume-capacity
+conjecture, it also gives rise to several new questions. In this subsection we
+explore some of these questions.
+(i) Viterbo’s Conjecture for Symmetric Convex Domains
+    As mentioned earlier, substantial evidence suggests the possibility of an un-
+derlying fundamental reason that accounts for the validity of Viterbo’s conjec-
+ture in many special cases. While Theorem 1.3 demonstrates that Conjecture
+1.2 does not hold universally for the class of convex domains, it remains an
+intriguing question to determine the appropriate subclass for which Conjecture
+1.2 is applicable. Specifically,
+   Question 1: Does Viterbo’s conjecture hold for the class of centrally sym-
+metric convex domains?
+     Viterbo’s conjecture is known to hold for convex domains that exhibit suf-
+ficient symmetry (see, e.g., Proposition 1.4 in [29]). This naturally leads to
+the question of how much the symmetry assumptions can be relaxed while still
+ensuring the conjecture’s validity. In particular, the subclass of centrally sym-
+metric convex domains is of special interest, as a positive resolution to the
+aforementioned question would imply the validity of Mahler’s conjecture [8].
+(ii) The Maximal Systolic Ratio
+   Another natural question that arises from Theorem 1.3 is to determine the
+exact maximal systolic ratio among convex domains. More precisely, let K2n
+denote the class of convex domains in R2n , and denote the maximal symplectic
+systolic constant of this class by Sys(K2n ) := supK∈K2n Sys(K).
+   Question 2: Determine the value Sys(K2n ).
+    In contrast with the larger class of star-shaped domains in which the capacity-
+volume ratio is unbounded [35], for convex domains one has Sys(K2n ) ≤ αn , for
+some implicit dimension-independent universal constant α > 0 (see [9]). More-
+over, it follows from [34] that Sys(K2n ) ≤ Sys(K2m ) whenever n ≤ m. Using
+John ellipsoids and compactness with respect to the Hausdorff metric, one can
+check that the supremum in the definition of Sys(K2n ) is attained, and can be re-
+placed by a maximum. Theorem 1.3 naturally raises the question of identifying
+the maximizers, and exploring their dynamical properties.
+                                                                      √      ⌊ n2 ⌋
+                                                                          5+3
+    We note that the largest systolic ratio currently known in R2n is     5           .
+Indeed, this value can be achieved in a similar manner to the proof of Theo-
+rem 1.3, which we now describe. When n is even, the construction is done by
+taking the symplectic 2-product of n2 copies of K × T . If n is odd, it instead
+involves the 2-product of n−12 copies of K × T along with a 2-dimensional ball
+of the same capacity. In both cases, K and T refer to the pentagons described
+in Proposition 1.4. Since the 2-product of two polytopes is not a polytope, the
+above construction yields a counterexample that is not a polytope. Neverthe-
+less, we remark that in every dimension 2n, there exists a Lagrangian product of
+convex polytopes that provides a counterexample to Viterbo’s conjecture with
+
+
+
+
+                                          6
+the aforementioned systolic ratio. Indeed, consider the following domains
+
+                    K2k = K ⊗1 · · · ⊗1 K ,       K2k+1 = K2k ⊗1 [−l, l],
+                          |    {z        }
+                                 k times
+                   T2k = T ⊗∞ · · · ⊗∞ T ,        T2k+1 = T2k ⊗∞ [−l, l],
+                         |    {z       }
+                                 k times
+
+             p                                                  √         ⌊ n2 ⌋
+                                                                     5+3
+where l =        cEHZ (K × T )/2. Now Sys(Kn × Tn ) =                5               follows from
+the fact [33, Proposition 5.1.4] that for convex domains X1 , Y1 ⊂ Rm , and
+X2 , Y2 ⊂ Rn containing the origin with cEHZ (X1 × Y1 ) = cEHZ (X2 × Y2 ), one has
+                                      
+         Sys (X1 ⊗1 X2 ) × (Y1 ⊗∞ Y2 ) = Sys(X1 × Y1 ) · Sys(X2 × Y2 ).
+
+Remark 1.7. Another notable class of domains in R2n , which includes convex
+domains, is the class DC 2n of dynamically convex domains (see [37]). In response
+to a longstanding open question, it was recently proved (first in R4 [14], and
+then in every dimension [15]) that there exist dynamically convex domains in
+R2n that are not symplectomorphic to any convex domain. The maximal systolic
+constant for this class Sys(DC 2n ) can be defined in a similar manner, where one
+replaces the Ekeland–Hofer–Zehnder capacity with the minimal action among
+closed characteristics on the boundary. In [4] it was shown that Sys(DC 4 ) ≥ 2.
+To the best of our knowledge, it is currently unknown if this quantity is bounded
+from above. It is a natural question to determine how different Sys(DC 2n ) and
+Sys(K2n ) are.
+(iii) Different Capacities of Convex Domains
+    As previously mentioned, a well-known stronger version of Viterbo’s volume-
+capacity conjecture suggests that all (normalized) symplectic capacities coincide
+on convex domains, i.e., cG (K) = cZ (K) for all convex K ∈ K2n (see, e.g., [18,
+35]). Although Theorem 1.3 immediately disproves this conjecture, the fact that
+many symplectic capacities do coincide on this class (see [5, 38, 22, 50, 42, 6,
+28, 25, 29]), naturally leads to the following question:
+   Question 3: How many distinct2 (normalized) symplectic capacities exist
+on the class of convex domains in R2n ?
+    We remark that in dimension 4, it seems that currently there are only two
+known distinct capacities: cG and cZ . Indeed, it was recently shown in [5] that
+the Ekeland–Hofer–Zehnder capacity coincides with the cylindrical capacity for
+all convex domains in R4 . Furthermore, combining results from [21] and [39], one
+concludes that the first embedded contact homology capacity and the cylindrical
+capacity coincide for the larger class of dynamically convex domains in R4 .
+    We finish this section with the following remark:
+Remark 1.8. An immediate corollary of Theorem 1.3 is the existence of con-
+vex domains with a systolic ratio of one that are not symplectomorphic to the
+Euclidean ball, contrary to a conjecture in [52]. Indeed, we owe the following
+argument to E. Kerman: From Theorem 1.3 and a standard approximation ar-
+gument it follows that for every n ≥ 2 there is a smooth convex body C ⊂ R2n
+  2 By distinct, we mean normalized capacities which cannot be represented as a homogeneous
+
+and monotone function of the other normalized capacities, as discussed in Section 3.3 of [18].
+
+
+                                              7
+with Sys(C) > 1. Let L ⊂ R2n be a convex domain such that Sys(L) < 1,
+and consider λL + (1 − λ)C. By continuity, for some λ′ ∈ (0, 1) the domain
+λ′ L + (1 − λ′ )C has systolic ratio one. Moreover, λ′ can be chosen so that even
+an arbitrarily small increase in its value causes the systolic ratio of the domain
+to exceed one. From [1, Corollary 2], it follows that any symplectic image of
+the Euclidean ball admits a C 3 -neighborhood in which every convex domain
+satisfies Viterbo’s conjecture. Consequently, the convex combination associated
+with λ′ cannot be symplectomorphic to the Euclidean ball.
+
+Acknowledgment: The authors are grateful to Alberto Abbondandolo, Leonid
+Polterovich, and Shira Tanny for insightful feedback and suggestions. We also
+sincerely thank the referees for their extremely valuable remarks and comments,
+which have significantly contributed to improving the manuscript. Both authors
+were partially supported by the ISF grant No. 938/22. P.HK. was partially sup-
+ported by a grant from the Institute for Advanced Study by the Erik Ellentuck
+Fellow Fund.
+
+
+2    Minkowski billiards
+In this section we recall the definition of Minkowski billiards. For more infor-
+mation on Minkowski billiard dynamics see, e.g., [10, 27], and [46], where no
+smoothness assumptions are made on the convex bodies involved.
+    The study of billiard dynamics in Minkowski geometries was initiated by
+Gutkin and Tabachnikov [27] as an important special case of the natural ex-
+tension of Euclidean billiard dynamics to the Finsler setting. The connection
+between convex Minkowski billiards and the Ekeland–Hofer–Zehnder capacity
+was established in [10] (cf. [46, 48, 52]), and subsequently utilized in [8] to re-
+late Viterbo’s conjecture and Mahler’s conjecture from convex geometry. From
+the perspective of geometric optics, Minkowski billiard trajectories describe the
+propagation of light in a homogeneous anisotropic medium with perfectly re-
+flecting boundaries. We focus on the specific case of Minkowski billiards within
+a convex body K. Endow K with a (not necessarily symmetric) distance func-
+tion associated with a convex body T , and consider billiard dynamics in K with
+respect to the induced geometry. More precisely, let K ⊂ Rnq be a convex do-
+main (the billiard table), and let T ⊂ Rnp be a convex domain which has the
+origin in its interior. The corresponding Minkowski geometry induced by T is
+given by the support function hT (u) := sup{⟨x, u⟩ | x ∈ T }, which induces a
+(possibly asymmetric) distance function dT ◦ (x, y) = hT (x − y). This notation
+is motivated by the fact that the polar body T ◦ is the unit ball with respect to
+this distance function. Note that when T is the Euclidean unit ball, dT ◦ is the
+usual Euclidean metric. When K and T are strictly convex smooth domains, the
+corresponding billiard dynamics in K is determined by the reflection associated
+with the distance function dT ◦ . That is, for fixed points x, z ∈ ∂K, the points
+x, y, z, where y ∈ ∂K, form a T -billiard trajectory if y is an extremal point of
+the function dT ◦ (x, y) + dT ◦ (y, z). Since we do not wish to assume smoothness
+or strict convexity, we provide the following definition (see Figure 2). Recall
+that for a convex domain K ⊂ Rn , the outer normal cone to K at x ∈ ∂K is
+defined as
+                 NK (x) = {u ∈ Rn | ⟨u, y − x⟩ ≤ 0 for all y ∈ K} .
+
+
+                                        8
+We note that when ∂K is smooth NK (x) = R+ nK (x), where nK (x) is the
+unique unit outer normal.
+Definition 2.1 (Minkowski Billiards). A closed polygonal curve with vertices
+q1 , . . . , qm , m ∈ N≥2 , on ∂K is a closed T -billiard trajectory in K if there are
+points p1 , . . . , pm on ∂T such that for every 1 ≤ j ≤ m,
+                               (
+                                qj+1 − qj ∈ NT (pj ),
+                                pj+1 − pj ∈ −NK (qj+1 ).
+
+
+
+
+                                                    NT (p1 )
+
+
+
+                                                               p1
+
+
+ nK (q2 )
+            q2
+                            q3   nK (q3 )
+                                                                    T              p2
+            K
+                            q1                                                           nT (p2 )
+                                                               p0
+                 nK (q1 )
+
+
+                 Figure 2: An example of a T -billiard trajectory in K.
+
+    Here, and in what follows, indices 1, . . . , m are considered modulo m in Z.
+Note that this definition naturally extends to polygonal curves that are not
+closed. A direct computation shows that when T is a Euclidean ball, and K
+is strictly convex with piecewise smooth boundary, the corresponding billiard
+dynamics follows the well-known law of geometric optics: the angle of incidence
+equals the angle of reflection.
+    In the Euclidean case, Bezdek and Bezdek [13] introduced a useful character-
+ization of length-minimizing billiard trajectories, stating that closed billiard tra-
+jectories in K of minimal length correspond to length-minimizing closed polyg-
+onal curves that cannot be translated into the interior of K. This statement,
+proved in Theorem 1.1, and in particular Lemma 2.4, of [13], was later extended
+to Minkowski billiards (see e.g., [7, Theorem 2.1], and [46, Theorem 1]). More
+precisely, denote by P the set of all polygonal curves which cannot be translated
+into the interior of K:
+
+             P(K) = {(q1 , . . . , qm ) | {q1 , . . . , qm } ̸⊂ int(K) + t, ∀t ∈ Rn }.
+
+The result demonstrates that a polygonal curve (q1 , . . . , qm ) is a T -billiard tra-
+jectory in K with minimal T ◦ -length if and only if it is a curve in P(K) and it
+has the minimal T ◦ -length among all such curves. In addition, the proofs ibid
+confirm that the minimum-length polygonal curve in P (K) can always be cho-
+sen to have at most n +1 vertices. This characterization of the minimal periodic
+billiard trajectory is a key component in the proof of Theorem 1.3 below.
+
+                                                9
+    To relate Minkowski billiards with the Ekeland–Hofer–Zehnder capacity, re-
+call that a closed characteristic of a smooth convex domain Σ ⊂ R2n is a loop
+γ ⊂ ∂Σ such that γ̇(t) is a positive multiple of J∇H(γ(t)), where H : R2n → R
+has Σ as a sub-level set, and J : R2n → R2n is the standard complex structure
+J 2 = −Id. Note that after rescaling, each such characteristic is an orbit of the
+Reeb vector field associated to the standard contact
+                                                   R form on ∂Σ. The action
+of a closed characteristic γ is defined by A(γ) = λ γ, where λ is a primitive
+of ω. If Σ is not smooth, one can define a generalized closed characteristic,
+roughly speaking, by changing the condition above to require that γ̇(t) is a pos-
+itive multiple of a vector in J∂H(γ(t)), where ∂H is the sub-gradient of H (see,
+e.g., [45]). Moreover, one can show that the Ekeland–Hofer–Zehnder capacity
+of Σ is given by the minimal action over all generalized closed characteristics
+on the boundary ∂Σ. For more precise details, see e.g., [10, 45]. In the case
+where Σ is the Lagrangian product K × T of two convex domains containing
+the origin, consider the Hamiltonian function
+
+                           H(q, p) = max{gK (q), gT (p)},
+
+where for a convex domain Σ the associated gauge function gΣ is defined by
+gΣ (x) := inf{r | x ∈ rΣ}. The corresponding characteristic directions, defined
+by this Hamiltonian, at a point (q0 , p0 ) ∈ int(K) × ∂T , belongs to (NT (p0 ), ⃗0),
+which creates movements in a straight line until the trajectory hits a point
+q1 on the boundary of K. The movement induced by the Hamiltonian now
+continues in a similar manner in a straight line in T along a direction belonging
+to −NK (q1 ). Furthermore, the action of a closed characteristic of K × T can be
+naturally related to the billiard length measured with respect to hT . Specifically,
+denoting the vertices of a closed T -billiard trajectory in K by (q1 , . . . , qm ). This
+trajectory can be lifted to a generalized closed characteristic in Rnq ⊕ Rnp whose
+symplectic action equals the T ◦ -length of the billiard trajectory:
+                                  m
+                                  X
+                                        hT (qi+1 − qi ).
+                                  i=1
+
+This relationship follows, roughly speaking, from the fact that the symplectic
+                                                                      Pn       ac-
+tion of a loop γ can be expressed as the integral of the one-form λ = i=1 pi dqi
+along γ.
+     Overall, one has that closed characteristics of K × T are in correspondence
+with T -billiards in K, which in turn are in correspondence with the minimal
+T ◦ -length polygonal curves which cannot be translated into the interior of K.
+Moreover, the Ekeland–Hofer–Zehnder capacity equals the minimal action over
+all (generalized) closed characteristics and the action of a K × T closed char-
+acteristic equals the T ◦ -length of a T -billiard trajectory in K. This can be
+summarized as follows (see Theorem 2.13 in [10], and Theorem 1 in [46]).
+Theorem 2.2. For any two convex domains K ⊂ Rnq and T ⊂ Rnp one has
+
+  cEHZ (K × T ) = min{A(γ) | γ is a closed characteristic of K × T }
+                 = min{LengthT ◦ (η) | η is a closed T -billiard in K}
+                 = min{LengthT ◦ (η) | η ∈ P(K) has at most n + 1 vertices }.
+
+
+                                            10
+3     The Reeb Dynamics of K × T
+Building on the connection between Minkowski billiards and the Reeb flow asso-
+ciated with Lagrangian products of convex domains, as discussed in Section 2, we
+now proceed to examine the T -billiard trajectories in K for the pentagons prod-
+uct configuration described in the introduction. We begin by proving Proposi-
+tion 1.4 by determining the minimal T ◦ -length of a billiard trajectory in K, and
+continue with a discussion about the general behavior of T -billiard trajectories.
+Proof of Proposition 1.4. Denote the vertices of the regular pentagon in-
+scribed in the unit disc K ⊂ R2q by vk := (cos( 2πk        2πk
+                                                  5 ), sin( 5 )), and the vertices
+of the regular pentagon T ⊂ Rp by wk := (cos(− 2 + 2πk
+                                  2                    π                π   2πk
+                                                             5 ), sin(− 2 + 5 )),
+where 0 ≤ k ≤ 4. As discussed in Section 2, and in particular Theorem 2.2,
+the computation of cEHZ (K × T ) can be carried out by finding the minimal T ◦ -
+length among periodic T -billiard trajectories in K. Furthermore, it suffices to
+consider only such trajectories with two or three bounce points which cannot be
+translated into the interior of K. Recall that, by the definition of the support
+function, and the particular choice of T , the T ◦ -length of a vector v ∈ R2q is
+given by
+                              hT (v) = max ⟨v, wk ⟩.                           (1)
+                                           0≤k≤4
+
+A direct computation shows that the T ◦ -length of any of the 2-bounce billiard
+                                                                  π
+trajectories along the diagonals of the pentagon K is 2 cos( 10     )(1 + cos( π5 )).
+Any other 2-bounce trajectory which cannot be translated into the interior is a
+trajectory connecting one of the vertices vk with a point qe on the opposite edge,
+i.e., the edge connecting the vertices vk+2 and vk+3 counting indices modulo five.
+We claim that the T ◦ -length of such 2-bounce trajectory equals the T ◦ -length
+of any of the diagonal trajectories. Indeed, it follows immediately from (1) that
+for a point qe = λvk+2 + (1 − λ)vk+3 , where λ ∈ [0, 1], the T ◦ -length of the
+2-bounce trajectory connecting vk and qe is
+
+           hT (vk − qe) + hT (e
+                              q − vk ) = ⟨vk − qe, wk+1 ⟩ + ⟨e
+                                                             q − vk , wk−1 ⟩.
+
+Note that since vk+3 − vk+2 is orthogonal to wk+1 − wk−1 , the above expression
+is independent of λ, and one has that all such 2-bounce trajectories have the
+same T ◦ -length as the diagonal connecting vk+3 and vk .
+    Now consider T ◦ -length minimizing 3-bounce trajectories. Let γ be a mini-
+mal T ◦ -length 3-bounce trajectory, and denote its vertices by x1 , x2 , x3 . Since
+this curve cannot be translated into the interior, two of its vertices lie on adja-
+cent edges, and the third vertex lies on the opposite edge. Since K and T exhibit
+symmetry with respect to rotations with angle 2π  5 , one can assume without loss
+of generality that the vertices of γ lie on the edges [v1 , v2 ], [v4 , v0 ] and [v3 , v4 ]
+(see Figure 3).
+    Note that since T is not centrally symmetric, one needs to consider both
+the clockwise and counterclockwise orientations of γ. Let us first address the
+clockwise orientation case. Let us fix x1 and x3 and explore the T ◦ -length of γ
+when one moves x2 on the line between v4 to v0 . Denote xλ2 := λv4 + (1 − λ)v0 ,
+and let γλ be the clockwise oriented polygonal curve with vertices x1 , xλ2 , x3 . It
+immediately follows from (1) that the T ◦ -length of the line from xλ2 to x3 (for
+all possible choices of xλ2 ) is hT (x3 − xλ2 ) = ⟨x3 − xλ2 , w4 ⟩. For the line from x1
+
+
+                                            11
+                                                  v1
+                                    x1
+                      v2
+
+
+
+
+                                                                  v0
+
+
+
+
+                                                            x2
+                       v3
+                                     x3
+                                                 v4
+
+
+      Figure 3: The billiard trajectory γ in the clockwise orientation case.
+
+
+to xλ2 , the value hT (xλ2 − x1 ) is either ⟨xλ2 − x1 , w1 ⟩ or ⟨xλ2 − x1 , w0 ⟩, depending
+on how xλ2 is chosen. Choose Λ ∈ [0, 1] such that the line from x1 to xΛ               2 is
+perpendicular to the line from w0 to w1 . We conclude that
+                 (
+                   ⟨xλ2 − x1 , w1 ⟩ + ⟨x3 − xλ2 , w4 ⟩ + ⟨x1 − x3 , wj ⟩, if λ ≤ Λ,
+      hT (γλ ) =
+                   ⟨xλ2 − x1 , w0 ⟩ + ⟨x3 − xλ2 , w4 ⟩ + ⟨x1 − x3 , wj ⟩, otherwise,
+
+for some 0 ≤ j ≤ 4. Hence, the derivative of the T ◦ -length of γλ with respect
+to λ equals
+                              (
+                 d             ⟨v4 − v0 , w1 − w4 ⟩, if λ ≤ Λ,
+                   hT (γλ ) =
+                dλ             ⟨v4 − v0 , w0 − w4 ⟩, otherwise.
+
+Since ⟨v4 − v0 , w1 − w4 ⟩ < 0 and ⟨v4 − v0 , w0 − w4 ⟩ = 0, we get that the
+minimum is attained at λ ∈ [Λ, 1], so we can assume that x2 = v4 . By the
+triangle inequality, the T ◦ -length of γλ is greater or equal than the T ◦ -length of
+the 2-bounce trajectory between x1 and v4 . This 2-bounce trajectory cannot be
+translated into the interior of K, a case that has already been discussed above.
+   Finally, we consider the case where the orientation is counterclockwise, and
+we denote the 3-bounce trajectory in this case as γ eλ . A similar argument yields
+                               (
+                  d             ⟨v4 − v0 , w2 − w3 ⟩, if λ ≤ Λ,
+                                                              e
+                    hT (e
+                        γλ ) =
+                 dλ             ⟨v4 − v0 , w1 − w3 ⟩, otherwise,
+
+where Λe is chosen so that the line from x3 to xΛ is perpendicular to the line
+                                                        e
+                                                2
+from w1 to w2 . Again, the minimum is attained at λ ∈ [Λ, e 1], hence we may
+assume x2 = v4 , and the rest follows in the same way as in the previous case.
+This completes the proof of the proposition.
+   We remark that, in addition to the 2-bounce minimizing trajectories pre-
+sented above, there also exist 3-bounce trajectories with minimal T ◦ -length.
+
+
+                                            12
+Indeed, a variety of T ◦ -minimizing billiard trajectories can be obtained by fol-
+lowing the arguments of the proof of Proposition 1.4, and identifying equality
+cases where the triangle inequality has been used (which is possible due to the
+lack of smoothness of hT ). In particular, using the same notation as in the proof
+above, one can check that for a given x1 , all clockwise trajectories where x2 and
+x3 lie within the cone formed by the parallel lines to v1 v0 and v2 v3 passing
+through x1 are billiard trajectories with minimal T ◦ -length (see Figure 4).
+                           v1                                        v1
+
+
+v2                                                v2
+
+
+
+
+                                        v0                                         v0
+
+
+
+
+v3                                                v3
+
+
+                      v4                                            v4
+
+Figure 4: Different minimal T ◦ -length billiard trajectories with three bounces
+(left) and two bounces (right).
+
+
+3.1    The Generic Behavior
+In this subsection we consider the Reeb flow through a point on the boundary
+∂(K × T ), corresponding to a T -billiard trajectory in K that avoids corners and
+whose velocity vectors are always orthogonal to the edges of T . This type of
+behavior is generic in the sense that a small perturbation of the point ensures
+that it holds. It turns out that these trajectories are periodic, and can be
+classified into two distinct types, each corresponding to one of two possible T ◦ -
+lengths. Moreover, because the support functions of T and its inscribed disc
+coincide in the five relevant directions, it follows that the reflection law governing
+these trajectories is the classical Euclidean one. Figure 5 and Figure 6 illustrate
+the two types of trajectories along with their unfolding, which demonstrate that
+their length is preserved under small perturbations. For each of the two types,
+there are also (non-generic in the sense described above) billiard trajectories of
+half the T ◦ -length passing through the middles of the edges, which close after 5
+bounces instead of 10. We note that even these shorter trajectories are strictly
+longer than the diagonal trajectory described in Proposition 1.4.
+
+
+
+
+                                             13
+                                                                                  1
+                                                                          2
+                                                                  4
+                                                     0                                    0
+                                             2                                                        1
+                                     3                                        3
+                             0
+                                                                                              2
+                     1                                   1                            4
+             3
+     4                                   4                            2
+                                                                                                              0
+                         2                       0
+                                                                                  0
+         0                       3                                        1
+                                                                  3                           3
+                 1                                   4
+                                             1
+                                                                                                      4
+                                     2
+4                            4
+                     0
+             2
+     3
+
+Figure 5: A T -billiard trajectory in K of the first kind (right) and its associated
+unfolding (left).
+
+
+
+
+                                                                                                          1
+
+
+                                                                                                  2
+
+
+
+
+                                                                                                                  0
+
+
+
+
+                                                                                                  3
+
+
+
+                                                                                                          4
+
+
+
+
+Figure 6: A T -billiard trajectory in K of the second kind (right) and its associ-
+ated unfolding (left).
+
+    The dynamics in which periodic billiard trajectories run parallel to the edges
+through every point appear in the Lagrangian product of any regular polygon
+with its 90-degree rotation. Such a behavior of the Reeb flow is closely related
+with the notion of “symplectic Besse”, i.e., a Reeb flow all whose orbits are
+closed. We remark that any local maximizer of the capacity-volume ratios asso-
+ciated with the sequence of Ekeland–Hofer capacities, which is a 2n-dimensional
+smooth star-shaped domain, must have Besse boundary, and moreover, in di-
+mension 4, such domains are symplectomorphic to rational ellipsoids (see [12]).
+In the same paper, they pointed out non-smooth domains that have higher
+capacity-volume ratio than ellipsoids. Further study of non-smooth domains
+with Besse-type dynamics would be particularly interesting.
+
+
+References
+ [1] A. Abbondandolo and G. Benedetti, On the local systolic optimality
+     of Zoll contact forms, Geom. Funct. Anal., 33 (2023), pp. 299–363.
+
+
+
+                                                             14
+ [2] A. Abbondandolo, G. Benedetti, and O. Edtmair, Symplectic ca-
+     pacities of domains close to the ball and Banach-Mazur geodesics in the
+     space of contact forms, Duke Math. J., 174 (2025), pp. 1567–1646.
+
+ [3] A. Abbondandolo, B. Bramham, U. L. Hryniewicz, and P. A. S.
+     Salomão, Sharp systolic inequalities for Reeb flows on the three-sphere,
+     Invent. Math., 211 (2018), pp. 687–778.
+ [4]        , Systolic ratio, index of closed orbits and convexity for tight contact
+       forms on the three-sphere, Compos. Math., 154 (2018), pp. 2643–2680.
+ [5] A. Abbondandolo, O. Edtmair, and J. Kang, On closed characteris-
+     tics of minimal action on a convex three-sphere, arXiv:2412.01777, (2024).
+ [6] A. Abbondandolo and J. Kang, Symplectic homology of convex do-
+     mains and Clarke’s duality, Duke Math. J., 171 (2022), pp. 739–830.
+
+ [7] A. Akopyan, A. Balitskiy, R. Karasev, and A. Sharipova, Elemen-
+     tary approach to closed billiard trajectories in asymmetric normed spaces,
+     Proc. Amer. Math. Soc., 144 (2016), p. 4501–4513.
+ [8] S. Artstein-Avidan, R. Karasev, and Y. Ostrover, From symplec-
+     tic measurements to the Mahler conjecture, Duke Math. J., 163 (2014),
+     p. 2003–2022.
+ [9] S. Artstein-Avidan, V. Milman, and Y. Ostrover, The M -ellipsoid,
+     symplectic capacities and volume, Comment. Math. Helv., 83 (2008),
+     pp. 359–369.
+
+[10] S. Artstein-Avidan and Y. Ostrover, Bounds for Minkowski bil-
+     liard trajectories in convex bodies, Int. Math. Res. Not. IMRN, (2014),
+     p. 165–193.
+[11] A. Balitskiy, Equality cases in Viterbo’s conjecture and isoperimetric
+     billiard inequalities, Int. Math. Res. Not. IMRN, (2020), pp. 1957–1978.
+
+[12] L. Baracco, O. Bernardi, C. Lange, and M. Mazzucchelli, On
+     the local maximizers of higher capacity ratios, to appear in Ann. Sc. Norm.
+     Super. Pisa Cl. Sci., (2023).
+[13] D. Bezdek and K. Bezdek, Shortest billiard trajectories, Geom. Dedi-
+     cata, 141 (2009), pp. 197–206.
+[14] J. Chaidez and O. Edtmair, 3D convex contact forms and the Ruelle
+     invariant, Invent. Math., 229 (2022), pp. 243–301.
+[15]       , The Ruelle invariant and convexity in higher dimensions, J. Eur.
+       Math. Soc., published online, (2025).
+
+[16] J. Chaidez and M. Hutchings, Computing Reeb dynamics on four-
+     dimensional convex polytopes, J. Comput. Dyn., 8 (2021), pp. 403–445.
+[17] K. Choi, D. Cristofaro-Gardiner, D. Frenkel, M. Hutchings,
+     and V. G. B. Ramos, Symplectic embeddings into four-dimensional con-
+     cave toric domains, J. Topol., 7 (2014), pp. 1054–1076.
+
+
+                                         15
+[18] K. Cieliebak, H. Hofer, J. Latschev, and F. Schlenk, Quantitative
+     symplectic geometry, in Dynamics, ergodic theory, and geometry, vol. 54
+     of Math. Sci. Res. Inst. Publ., Cambridge Univ. Press, Cambridge, 2007,
+     pp. 1–44.
+[19] D. Cristofaro-Gardiner, Symplectic embeddings from concave toric do-
+     mains into convex ones, J. Differential Geom., 112 (2019), pp. 199–232.
+     With an appendix by Cristofaro-Gardiner and Keon Choi.
+
+[20] D. Cristofaro-Gardiner and R. Hind, On the agreement of symplectic
+     capacities in high dimension, arXiv:2307.12125, (2023).
+[21] O. Edtmair, Disk-like surfaces of section and symplectic capacities, Geom.
+     Funct. Anal., 34 (2024), pp. 1399–1459.
+[22] I. Ekeland and H. Hofer, Symplectic topology and Hamiltonian dynam-
+     ics, Math. Z., 200 (1989), pp. 355–378.
+[23] A. Fathi, On the existence of smooth Lyapunov functions for arbitrary
+     closed sets, Bull. Braz. Math. Soc. (N.S.), 53 (2022), pp. 957–980.
+[24] A. Floer, H. Hofer, and K. Wysocki, Applications of symplectic ho-
+     mology. I, Math. Z., 217 (1994), pp. 577–606.
+[25] V. L. Ginzburg and J. Shon, On the filtered symplectic homology of
+     prequantization bundles, Internat. J. Math., 29 (2018), pp. 1850071, 35.
+[26] M. Gromov, Pseudo holomorphic curves in symplectic manifolds, Invent.
+     Math., 82 (1985), pp. 307–347.
+
+[27] E. Gutkin and S. Tabachnikov, Billiards in Finsler and Minkowski
+     geometries, J. Geom. Phys., 40 (2002), pp. 277–301.
+[28] J. Gutt and M. Hutchings, Symplectic capacities from positive
+     S1 -equivariant symplectic homology, Algebr. Geom. Topol., 18 (2018),
+     pp. 3537–3600.
+[29] J. Gutt, M. Hutchings, and V. G. B. Ramos, Examples around the
+     strong Viterbo conjecture, J. Fixed Point Theory Appl., 24 (2022), pp. Pa-
+     per No. 41, 22.
+[30] J. Gutt and V. G. Ramos, The equivalence of Ekeland-Hofer and equiv-
+     ariant symplectic homology capacities, arXiv:2412.09555, (2024).
+[31] P. Haim-Kislev. Personal website: https://www.pazithaimkislev.com.
+[32]        , On the symplectic size of convex polytopes, Geom. Funct. Anal., 29
+       (2019), pp. 440–463.
+
+[33]         , Symplectic invariants and convex bodies, Ph.D. thesis, Tel Aviv Uni-
+       versity, (2024).
+[34] P. Haim-Kislev and Y. Ostrover, Remarks on symplectic capacities of
+     p-products, Internat. J. Math., 34 (2023), pp. Paper No. 2350021, 21.
+
+
+
+                                         16
+[35] D. Hermann, Non-equivalence of symplectic capacities for open sets with
+     restricted contact type boundary, Prépublication d’Orsay numéro 32, (1998).
+
+[36] D. Hermann, Holomorphic curves and Hamiltonian systems in an open set
+     with restricted contact-type boundary, Duke Math. J., 103 (2000), pp. 335–
+     374.
+[37] H. Hofer, K. Wysocki, and E. Zehnder, The dynamics on three-
+     dimensional strictly convex energy surfaces, Ann. of Math. (2), 148 (1998),
+     pp. 197–289.
+[38] H. Hofer and E. Zehnder, A new capacity for symplectic manifolds, in
+     Analysis, et cetera, Academic Press, Boston, MA, 1990, pp. 405–427.
+[39] U. Hryniewicz, M. Hutchings, and R. Vinicius G.B., Hopf orbits
+     and the first ECH capacity, arXiv:2312.11830, (2024).
+
+[40] M. Hutchings, Quantitative embedded contact homology, J. Differential
+     Geom., 88 (2011), pp. 231–266.
+[41]        , Zeta functions of       dynamically    tame    Liouville   domains,
+       arXiv:2402.07003, (2024).
+
+[42] K. Irie, Symplectic homology of fiberwise convex sets and homology of loop
+     spaces, J. Symplectic Geom., 20 (2022), pp. 417–470.
+[43] H. Iriyeh and M. Shibata, Symmetric Mahler’s conjecture for the volume
+     product in the 3-dimensional case, Duke Math. J., 169 (2020), pp. 1077–
+     1134.
+
+[44] R. Karasev and A. Sharipova, Viterbo’s conjecture for certain Hamil-
+     tonians in classical mechanics, Arnold Math. J., 5 (2019), pp. 483–500.
+[45] A. Künzle, Singular Hamiltonian systems and symplectic capacities, Sin-
+     gularities and differential equations, Banach Center Publ., 33, Polish Acad.
+     Sci., Warsaw, (1996), pp. 171–187.
+
+[46] D. Rudolf, The Minkowski billiard characterization of the EHZ-capacity
+     of convex Lagrangian products, Journal of Dynamics and Differential Equa-
+     tions, (2022).
+[47]       , Viterbo’s conjecture for Lagrangian products in R4 and symplecto-
+       morphisms to the Euclidean ball, arXiv:2203.02294, (2022).
+[48] D. Rudolf and S. Krupp, Shortest Minkowski billiard trajectories on
+     convex bodies, arXiv:2203.01802, (2022).
+[49] P. Siegel, K, Higher symplectic capacities, to appear in Algebraic & Ge-
+     ometric Topology, (2025).
+
+[50] C. Viterbo, Capacités symplectiques et applications, Séminaire Bourbaki,
+     Vol. 1988/89, Astérisque 177–178 (1989), no. 714, 345–362.
+[51]       , Functors and computations in Floer homology with applications. I,
+       Geom. Funct. Anal., 9 (1999), pp. 985–1033.
+
+
+                                       17
+[52]       , Metric and isoperimetric problems in symplectic geometry, J. Amer.
+       Math. Soc., 13 (2000), pp. 411–431.
+
+
+Pazit Haim-Kislev
+School of Mathematics, Institute for Advanced Study, Princeton, NJ, USA
+e-mail: pazithaim@ias.edu
+
+Yaron Ostrover
+School of Mathematical Sciences, Tel Aviv University, Israel
+e-mail: ostrover@tauex.tau.ac.il
+
+
+
+
+                                       18
+

@@ -1,0 +1,1031 @@
+                                             THE MINKOWSKI BILLIARD CHARACTERIZATION OF THE
+                                              EHZ-CAPACITY OF CONVEX LAGRANGIAN PRODUCTS
+
+                                                                                 DANIEL RUDOLF
+arXiv:2203.01718v2 [math.DS] 17 Nov 2022
+
+
+
+
+                                                  Abstract. We rigorously state the connection between the EHZ-capacity of con-
+                                                  vex Lagrangian products K ˆ T Ă Rn ˆ Rn and the minimal length of closed
+                                                  pK, T q-Minkowski billiard trajectories. This connection was made explicit for the
+                                                  first time by Artstein-Avidan and Ostrover under the assumption of smoothness
+                                                  and strict convexity of both K and T . We prove this connection in its full gener-
+                                                  ality, i.e., without requiring any conditions on the convex bodies K and T . This
+                                                  prepares the computation of the EHZ-capacity of convex Lagrangian products of
+                                                  two convex polytopes by using discrete computational methods.
+
+
+                                                                   1. Introduction and main result
+                                              Simply put, this paper is about the connection between the symplectic size of
+                                           certain convex bodies in R2n , n ě 1, and the length of certain minimal periodic
+                                           billiard trajectories on that convex bodies, more precisely, it is about the connection
+                                           between the EHZ-capacity of convex Lagrangian products
+                                                                                K ˆ T Ă Rn ˆ Rn
+                                           and the minimal `T -length of closed pK, T q-Minkowski billiard trajectories.
+                                             Let us first introduce these two quantities one by one.
+
+                                           1.1. The EHZ-capacity of convex Lagrangian products. The EHZ-capacity
+                                           of a convex set C Ă R2n is
+                                                           cEHZ pCq “ mintApxq : x closed characteristic on BCu,
+                                           where a closed characteristic on BC is an absolutely continuous loop in R2n satisfying
+                                                               #
+                                                                 ẋptq P JBHC pxptqq a.e.
+                                           (1)
+                                                                 HC pxptqq :“ 21 µC pxptqq2 “ 12 @t P R{Z
+                                                      ˆ         ˙
+                                                          0 1n
+                                           where J “               is the symplectic matrix, B the subdifferential-operator, and
+                                                        ´1n 0
+                                                                    µC pxq “ mints ě 0 : x P sCu, x P R2n ,
+
+                                             Date: November 21, 2022.
+                                                                                          1
+2                                   DANIEL RUDOLF
+
+the Minkowski functional. By Apxq we denote the loop’s action given by
+                                    ż
+                                  1
+                         Apxq “ ´       xJ ẋptq, xptqy dt.
+                                  2 R{Z
+   We remark that the above definition of the E(keland)H(ofer)Z(ehnder)-capacity is
+the outcome of a historically grown study of symplectic capacities. More precisely,
+it is the generalization (to the non-smooth case) by Künzle in [14] of a symplectic
+capacity that originally represented the coincidence of the Ekeland-Hofer- and Hofer-
+Zehnder-capacities constructed in [9] and [13], respectively.
+   Let us clarify the notion of Lagrangian products in R2n .
+   On R2n there exists a natural symplectic structure such that x P R2n can be
+written as
+                                 x “ pq1 , ..., qn ; p1 , ..., pn q,
+where q “ pq1 , .., qn q represent the local and p “ pp1 , ..., pn q the momentum coordi-
+nates in the classical physical phase space
+                                        Rnq ˆ Rnp .
+This phase space is equipped with the standard symplectic 2-form ω0 which satisfies
+                                     n
+                                     ÿ
+                         ω0 pq, pq “   dpj ^ dqj “ xJq, py.
+                                     j“1
+
+The Hamiltonian “vector” field
+                                     XHC “ JBHC
+of the Hamiltonian differential inclusion (1) is determined by
+                                   ιXHC ω0 “ ´BHC
+and the action of a closed curve γ by
+                                        ż
+                               Apγq “           λ,   ω0 “ dλ.
+                                            γ
+
+    Now, a product K ˆ T Ă R2n is called Lagrangian if K Ă Rnq and T Ă Rnp .
+1.2. Minkowski billiards. Minkowski billiards are the natural extensions of Eu-
+clidean billiards to the Finsler setting.
+   Euclidean billiards are associated to the local Euclidean billiard reflection rule:
+The angle of reflection equals the angle of incidence (assuming that the relevant
+normal vector as well as the incident and the reflected ray lie in the same two-
+dimensional affine flat). This local Euclidean billiard reflection rule follows from the
+global least action principle. For a reflection on a hyperplane this principle means
+that a billiard trajectory segment pqj´1 , qj , qj`1 q minimizes the Euclidean length in
+the space of all paths connecting qj´1 and qj`1 via a reflection at this hyperplane.
+        THE MINKOWSKI BILLIARD CHARACTERIZATION OF THE EHZ-CAPACITY...                                3
+
+   In Finsler geometry, the notion of length of vectors in Rn is given by a convex
+body T Ă Rn , i.e., a compact convex set in Rn which has the origin in its interior
+(in Rn ). The Minkowski functional µT determines the distance function, where we
+recover the Euclidean setting when T is the n-dimensional Euclidean unit ball. Then,
+heuristically, billiard trajectories are defined via the global least action principle with
+respect to µT , because in Finsler geometry, there is no useful notion of angles.
+   Here, convexity of T Ă Rn means that for every boundary point z P BT there is
+a hyperplane H with its associated open half spaces H̊ ` and H̊ ´ of Rn such that
+either T X H̊ ` “ H or T X H̊ ´ “ H. We call T Ă Rn strictly convex if for every
+boundary point z P BT and every unit vector in the outer normal cone
+                       NT pzq “ tn P Rn : xn, y ´ zy ď 0 for all y P T u
+the hyperplane H in Rn containing z and normal to n satisfies H X T “ tzu.
+  Let us precisely define Minkowski billiard trajectories. As we have shown in [16], it
+makes sense to differentiate between weak and strong Minkowski billiard trajectories.
+Definition 1.1 (Weak Minkowski billiard trajectories). Let K Ă Rn be a convex
+body. Let T Ă Rn be another convex body and
+                           T ˝ “ tx P Rn : xx, yy ď 1 @y P T u Ă Rn
+its polar body. We say that a closed polygonal curve1 with vertices q1 , ..., qm , m P
+Ně2 , on the boundary of K is a closed weak pK, T q-Minkowski billiard trajectory if
+for every j P t1, ..., mu, there is a K-supporting hyperplane Hj through qj such that
+qj minimizes
+(2)                             µT ˝ ps
+                                      qj ´ qj´1 q ` µT ˝ pqj`1 ´ qsj q
+over all qsj P Hj (see Figure 1). We encode this closed weak pK, T q-Minkowski billiard
+trajectory by pq1 , ..., qm q and call its vertices bouncing points. Its `T -length is given
+by
+                                                    m
+                                                    ÿ
+                             `T ppq1 , ..., qm qq “   µT ˝ pqj`1 ´ qj q.
+                                                    j“1
+
+  We call a boundary point q P BK smooth if there is a unique K-supporting
+hyperplane through q. We say that BK is smooth if every boundary point is smooth
+(we also say K is smooth while we actually mean BK).
+  We remark that, in general, the K-supporting hyperplanes Hj in Definition 1.1
+are not uniquely determined. One can prove that this is only the case for smooth
+and strictly convex T (see [16]).
+  1For the sake of simplicity, whenever we talk of the vertices q , ..., q
+                                                                 1     m of a closed polygonal curve,
+we assume that they satisfy qj ‰ qj`1 and qj is not contained in the line segment connecting qj´1
+and qj`1 for all j P t1, ..., mu. Furthermore, whenever we settle indices 1, ..., m, then the indices in
+Z will be considered as indices modulo m.
+4                                     DANIEL RUDOLF
+
+
+                                       qsj
+                                                    qj
+
+
+
+                   K                                                     Hj
+
+
+
+
+            qj´1
+
+                                                               qj`1
+       Figure 1. The weak Minkowski billiard reflection rule: qj minimizes
+       (2) over all qsj P Hj , where Hj is a K-supporting hyperplane through
+       qj .
+
+   We note that the weak Minkowski billiard reflection rule does not only general-
+ize the Euclidean billiard reflection rule to Finsler geometries, it also extends the
+classical understanding of billiard trajectories–which are usually understood as tra-
+jectories with bouncing points in smooth boundary points (billiard table cushions)
+while they terminate in non-smooth boundary points (billiard table pockets)–to non-
+smooth billiard table boundaries. To the author’s knowledge, the papers [5] (’89),
+[10] (’04), and [6] (’09) were among the first suggesting a detailed study of these
+generalized billiard trajectories.
+   In the case when T ˝ is smooth and strictly convex, Definition 1.1 yields a geometric
+interpretation of the billiard reflection rule: On the basis of Lagrange’s multiplier
+theorem, one derives the condition
+           ∇qsj Σj ps
+                    qj q|sqj “qj “ ∇µT ˝ pqj ´ qj´1 q ´ ∇µT ˝ pqj`1 ´ qj q “ µj nHj ,
+where µj ą 0, since the strict convexity of T ˝ implies
+                          ∇µT ˝ pqj ´ qj´1 q ‰ ∇µT ˝ pqj`1 ´ qj q,
+and where nHj is the outer unit vector normal to Hj . This implies that the weak
+Minkowski billiard reflection rule can be illustrated as within Figure 2. For smooth,
+strictly convex, and centrally symmetric T ˝ Ă Rn , this interpretation is due to
+[11, Lemma 3.1, Corollary 3.2 and Lemma 3.3] (this interpretation has also been
+referenced in [2]). For the extension to just smooth and strictly convex T ˝ Ă Rn ,
+         THE MINKOWSKI BILLIARD CHARACTERIZATION OF THE EHZ-CAPACITY...                       5
+
+it is due to [7, Lemma 2.1]. However, from the constructive point of view, this
+interpretation has its limitations.
+
+
+                                                    ∇µT ˝ pqj ´ qj´1 q
+
+
+                        T˝
+
+                       nHj
+ Hj
+                              qj
+
+                                                                         ∇µT ˝ pqj ´ qj´1 q
+         K
+
+
+                                                                                       nHj
+  qj´1            ∇µT ˝ pqj`1 ´ qj q
+                                         qj`1
+                                                                     ∇µT ˝ pqj`1 ´ qj q
+         Figure 2. T ˝ is a smooth and strictly convex body in R2 and its
+         boundary plays the role of the indicatrix, i.e., the set of vectors of
+         unit Finsler (with respect to T ˝ ) length, which therefore is an 1-level
+         set of µT ˝ . Note that the two T ˝ -supporting hyperplanes intersect on
+         Hj due to the condition ∇µT ˝ pqj ´ qj´1 q ´ ∇µT ˝ pqj`1 ´ qj q “ µj nHj .
+
+Definition 1.2 (Strong Minkowski billiards). Let K, T Ă Rn be convex bodies. We
+say that a closed polygonal curve q with vertices q1 , ..., qm , m P Ně2 , on BK is a
+closed strong pK, T q-Minkowski billiard trajectory if there are points p1 , ..., pm on BT
+such that
+                            #
+                              qj`1 ´ qj P NT ppj q,
+(3)
+                              pj`1 ´ pj P ´NK pqj`1 q
+is satisfied for all j P t1, ..., mu. We call p “ pp1 , ..., pm q a closed dual billiard
+trajectory in T . We denote by Mn`1 pK, T q the set of closed pK, T q-Minkowski
+billiard trajectories with at most n ` 1 bouncing points.
+  Definition 1.2 appeared implicitly in [11, Theorem 7.1], then later the first time
+explicitly in [3]. It yields a different interpretation of the billiard reflection rule.
+6                                    DANIEL RUDOLF
+
+Without requiring a condition on T , the billiard reflection rule can be represented
+as within Figure 3. From the constructive point of view, this interpretation is much
+more appropriate in comparison to the one for weak Minkowski billiards.
+
+
+
+
+                                                                       pj´1
+    NK pqj q
+               qj                                       T
+                               K
+
+
+
+                                           qj`1
+                                                     pj`1
+qj´1                                                                                 pj
+
+
+
+
+         Figure 3. The pair pq, pq satisfies (3), namely: qj ´ qj´1 P NT ppj´1 q,
+         qj`1 ´ qj P NT ppj q, pj ´ pj´1 P ´NK pqj q, and pj`1 ´ pj P ´NK pqj`1 q.
+
+   The natural follow-up question concerns the relationship between weak and strong
+Minkowski billiards. In [16, Theorem 1.3], we have shown the following for convex
+bodies K, T Ă Rn : Every closed strong pK, T q-Minkowski billiard trajectory is a
+weak one. If T is strictly convex, then every closed weak pK, T q-Minkowski billiard
+trajectory is a strong one. This is a sharp result in the following sense: One can
+construct convex bodies K, T Ă Rn (where T is not strictly convex) and a closed
+weak pK, T q-Minkowski billiard trajectory which is not a strong one (see Example
+A in [16]).
+   In the following–if the risk of confusion is excluded–we will call strong Minkowski
+billiards trajectories just Minkowski billiard trajectories.
+
+                                                                       cp
+1.3. Main result. For a convex body K Ă Rn , we define the set Fn`1       pKq as the
+set of all closed polygonal curves q “ pq1 , ..., qm q with m ď n ` 1 that cannot be
+translated into K̊.
+   Our main result concerning the connection between the minimal `T -length of
+closed pK, T q-Minkowski billiard trajectories and the EHZ-capacity of convex La-
+grangian products K ˆ T reads:
+      THE MINKOWSKI BILLIARD CHARACTERIZATION OF THE EHZ-CAPACITY...                                            7
+
+Theorem 1.3. Let K, T Ă Rn be convex bodies such that K ˆ T Ă R2n is a convex
+Lagrangian product. Then, we have
+        cEHZ pK ˆ T q “            min
+                                  cp
+                                            `T pqq “       cp
+                                                             min       `K ppq “          min          `T pqq.
+                               qPFn`1 pKq               pPFn`1 pT q                 qPMn`1 pK,T q
+
+  We note that under the condition of strict convexity of T , the statement of The-
+orem 1.3 also holds for `T -minimizing closed weak pK, T q-Minkowski billiard trajec-
+tories. In the general case, this is not true. When T is not strictly convex, then one
+can have
+                         min                     `T pqq ă                  min                      `T pqq
+           q cl. weak pK,T q-Mink. bill. traj.              q cl. strong pK,T q-Mink. bill. traj.
+
+(see [16, Example E], where q “ pq1 , q2 , q3 q is a closed weak Minkowski billiard
+trajectory which is shorter than any closed strong Minkowski billiard trajectory),
+and it even can happen that there is no `T -minimizing closed weak pK, T q-Minkowski
+billiard trajectory at all (see [16, Example G]; while in Example E instead, there
+exists a minimizer).
+   In order to classify Theorem 1.3 against the background of current research,
+we note that the relationship between action-minimizing closed characteristics on
+BpK ˆ T q and `T -minimizing closed pK, T q-Minkowski billiard trajectories was made
+explicit for the first time by Artstein-Avidan and Ostrover in [3]. However, two
+points in particular must be taken into account here: First, they showed this rela-
+tionship only under the assumption of smoothness and strict convexity of both K
+and T . In particular, if one intends to compute the length-minimizing trajectories
+(as we have described in [16] for the 4-dimensional case), this is not so effective,
+since for this, one would typically use convex polytopes, which are neither smooth
+nor strictly convex. Secondly, their definition of closed pK, T q-Minkowki billiard
+trajectories slightly differed from ours. They used the notion of closed Minkowski
+billiard trajectories for closed trajectories which arised within their characterization
+of closed characteristics on BpK ˆ T q. As consequence, they had to take trajectories
+into account, for example, which intuitively had no relation to billiard trajectories
+and could produce ugly behaviour (see [12])–they called them gliding billiard trajec-
+tories. As part of our approach, we were able to avoid considering such trajectories,
+allowing us to focus entirely on trajectories that are commonly understood as bil-
+liard trajectories and which, in the case of strict convexity of T , i.e., when weak and
+strong Minkowski billiards coincide, in fact can be traced back to the classical least
+action principle.
+   Besides what has been proved by Artstein-Avidan and Ostrover, Alkoumi and
+Schlenk indicated in [2] Theorem 1.3 for the case K, T Ă R2 , where T is additionally
+assumed to be smooth and strictly convex. Balitskiy showed in [4] the first equality
+of the statement in Theorem 1.3 under the assumption of smoothness of T .
+   We note that the generality of Theorem 1.3 is central to understand the differ-
+ent characterizations of action-minimizing closed characteristics in more detail. For
+8                                      DANIEL RUDOLF
+
+instance, it will be our starting point when analyzing Viterbo’s conjecture for La-
+grangian products in [17]. The generality of this theorem is essential for being able
+to apply it on convex polytopes, what would not be possible based on the lesser
+general statement in [3], but which is essential in order to develope an algorithm for
+the computation of the EHZ-capacity of convex Lagrangian products.
+  Let us briefly give an overview of the structure of this paper: In Section 2, we
+recall useful results from [16]. In Section 3, we prove Theorem 1.3 by mainly stating
+three theorems, whose proofs we outsourced in Sections 4, 5, and 6.
+
+                                   2. Preliminaries
+    We recall statements from [16] which will be used within the following proofs.
+Proposition 2.1 (Proposition 3.4 in [16]). Let K, T Ă Rn be convex bodies. Let
+q “ pq1 , ..., qm q be a closed pK, T q-Minkowski billiard trajectory with closed dual
+billiard trajectory p “ pp1 , ..., pm q in T . Then, we have
+                                       `T pqq “ `´K ppq.
+Proposition 2.2 (Proposition 3.5 in [16]). Let K, T Ă Rn be convex bodies and
+T is additionally assumed to be strictly convex and smooth. Let q “ pq1 , ..., qm q be
+a closed pK, T q-Minkowski billiard trajectory with its closed dual billiard trajectory
+p “ pp1 , ..., pm q in T . Then, p is a closed pT, ´Kq-Minkowski billiard trajectory with
+                             ´q `1 :“ p´q2 , ..., ´qm , ´q1 q
+as closed dual billiard trajectory on ´K.
+   For the following proposition, we denote by F pKq, K Ă Rn convex body, the set
+of all sets in Rn that cannot be translated into K̊.
+Proposition 2.3 (Proposition 3.9 in [16]). Let K, T Ă Rn be convex bodies. Let
+q “ pq1 , ..., qm q be a closed pK, T q-Minkowski billiard trajectory with closed dual
+billiard trajectory p “ pp1 , ..., pm q. Then, we have
+                              q P F pKq and p P F pT q.
+Theorem 2.4 (Theorem 3.12 in [16]). Let K, T Ă Rn be convex bodies, where T
+is additionally assumed to be strictly convex. Then, every `T -minimizing closed
+                                                                          cp
+pK, T q-Minkowski billiard trajectory is an `T -minimizing element of Fn`1   pKq, and,
+                                                cp
+conversely, every `T -minimizing element of Fn`1   pKq can be translated in order to be
+an `T -minimizing closed pK, T q-Minkowski billiard trajectory.
+   Especially, one has
+(4)                          min
+                             cp
+                                       `T pqq “       min         `T pqq.
+                          qPFn`1 pKq              qPMn`1 pK,T q
+       THE MINKOWSKI BILLIARD CHARACTERIZATION OF THE EHZ-CAPACITY...                     9
+
+                             3. Proof of Theorem 1.3
+  The proof of Theorem 1.3 relies on the following three theorems which we will
+prove in Sections 4, 5, and 6, respectively.
+Theorem 3.1. Let K Ă Rn be a convex polytope and T Ă Rn a strictly convex
+body. We consider K ˆ T Ă R2n as convex Lagrangian product. Then, for ev-
+ery closed/action-minimizing closed characteristic x on BpK ˆ T q, there is a closed
+characteristic x
+               r “ prxq , x
+                          rp q on BpK ˆ T q which is a closed polygonal curve and where
+x
+rq is a closed/an `T -minimizing closed pK, T q-Minkowski billiard trajectory with x rp
+as its closed dual billiard trajectory on T and
+                                          xq “ `T pr
+                                 Apxq “ Apr        xq q.
+Conversely, for every closed/`T -minimizing closed pK, T q-Minkowski billiard tra-
+jectory q “ pq1 , ..., qm q with closed dual billiard trajectory p “ pp1 , ..., pm q on T ,
+x “ pq, pq (after a suitable parametrization of q and p) is a closed/an action-
+minimizing closed characteristic on BpK ˆ T q with
+                                         `T pqq “ Apxq.
+  Especially, one has
+                      cEHZ pK ˆ T q “                 min                   `T pqq.
+                                           q cl. pK,T q-Mink. bill. traj.
+
+Theorem 3.2. Let K, T Ă Rn be convex bodies. Then, every `T -minimizing closed
+                                                                         cp
+pK, T q-Minkowski billiard trajectory is an `T -minimizing element of Fn`1  pKq, and,
+                                                   cp
+conversely, for every `T -minimizing element of Fn`1  pKq, there is an `T -minimizing
+closed pK, T q-Minkowski billiard trajectory with ď n ` 1 bouncing points and with
+the same `T -length.
+   Especially, one has
+(5)                          min
+                              cp
+                                        `T pqq “       min         `T pqq.
+                           qPFn`1 pKq              qPMn`1 pK,T q
+
+  We note that Theorem 3.2 is the generalization of (4) without requiring the strict
+convexity of T . So far, in contrast to Theorem 2.4, it is not clear whether the
+minimizers in (4) coincide (even not up to translation).
+  For the next theorem we introduce the Hausdorff-distance dH between two sets
+U, V Ă Rn . It is given by
+                               !                                    )
+               dH pU, V q “ max max min ||u ´ v||, max min ||u ´ v|| .
+                                    uPU vPV                    vPV    uPU
+
+Theorem 3.3.      (i) If T Ă Rn is a strictly convex body and pKi qiPN a sequence
+     of convex bodies in Rn that dH -converges to some convex body K Ă Rn ,
+     then there is a strictly increasing sequence pij qjPN and a sequence pq ij qjPN
+     of `T -minimizing closed pKij , T q-Minkowski billiard trajectories which dH -
+     converges to an `T -minimizing closed pK, T q-Minkowski billiard trajectory.
+10                                         DANIEL RUDOLF
+
+      (ii) If K Ă Rn is a convex body and pTi qiPN a sequence of strictly convex bod-
+           ies in Rn that dH -converges to some convex body T Ă Rn , then there is a
+           strictly increasing sequence pij qjPN and a sequence pq ij qjPN of `Tij -minimizing
+           closed pK, Tij q-Minkowski billiard trajectories which dH -converges to an `T -
+           minimizing closed pK, T q-Minkowski billiard trajectory.
+     We come to the proof of Theorem 1.3:
+
+Proof of Theorem 1.3. Let K, T Ă Rn be convex bodies such that K ˆ T Ă R2n is a
+convex Lagrangian product. We first prove
+(6)                 cEHZ pK ˆ T q “             min         `T pqq “         min
+                                                                            cp
+                                                                                         `T pqq.
+                                          qPMn`1 pK,T q                  qPFn`1 pKq
+
+We can find a sequence of convex polytopes pKi qiPN in Rn that dH -converges to K
+for i Ñ 8 and a sequence of strictly convex bodies pTj qjPN in Rn that dH -converges
+to T for j Ñ 8. Applying Theorem 3.1, we conclude
+                       cEHZ pKi ˆ Tj q “                       min                   `Tj pqq.
+                                                 q cl. pKi ,Tj q-Mink. bill. traj.
+
+Because of the dH -continuity of cEHZ (see, e.g., [1, Theorem 4.1(v)]) and Theorem
+3.3(i), for the limit i Ñ 8, we get
+                        cEHZ pK ˆ Tj q “                     min                   `Tj pqq.
+                                                 q cl. pK,Tj q-Mink. bill. traj.
+
+Again using the dH -continuity of cEHZ and this time Theorem 3.3(ii), for the limit
+j Ñ 8, we get
+                     cEHZ pK ˆ T q “        min        `T pqq.
+                                                 q cl. pK,T q-Mink. bill. traj.
+
+By Theorem 3.2, this implies (6).
+  It remains to prove
+
+                                  cp
+                                    min     `T pqq “         min
+                                                             cp
+                                                                        `K ppq.
+                               qPFn`1 pKq                 pPFn`1 pT q
+
+Let pTj qjPN be a sequence of strictly convex and smooth bodies in Rn converging to
+T for j Ñ 8. Then, for every j P N, one has
+                         min
+                          cp
+                                    `Tj pqq “               min                   `Tj pqq
+                       qPFn`1 pKq               q cl. pK,Tj q-Mink. bill. traj.
+
+                                           “                 min                     `´K pqq
+                                                p cl. pTj ,´Kq-Mink. bill. traj.
+
+                                           “       min
+                                                   cp
+                                                               `´K pqq
+                                                pPFn`1 pTj q
+
+                                           “       min
+                                                   cp
+                                                               `K pqq,
+                                                pPFn`1 pTj q
+      THE MINKOWSKI BILLIARD CHARACTERIZATION OF THE EHZ-CAPACITY...                                      11
+
+where the first and third equality follows from Theorem 3.2, the second from Propo-
+sitions 2.1 and 2.2 (requires strict convexity and smoothness of Tj ), and the last
+from the following consideration: one has the equivalence
+                                   cp                                  cp
+            p “ pp1 , ..., pm q P Fn`1 pTj q ô p´ “ ppm , ..., p1 q P Fn`1 pTj q,
+and therefore
+                       min cp             `´K ppq “       min
+                                                          cp
+                                                                     `K pp´ “ ppm , ..., p1 qq
+             p“pp1 ,...,pm qPFn`1 pTj q               pPFn`1 pTj q
+
+                                                  “       min
+                                                           cp
+                                                                       `K pp´ q
+                                                      p´ PFn`1 pTj q
+
+                                                  “       min
+                                                         cp
+                                                                     `K ppq.
+                                                      pPFn`1 pTj q
+
+Using (6), summarized, for every j P N, we can conclude
+        cEHZ pK ˆ Tj q “          min
+                                  cp
+                                             `Tj pqq “       min
+                                                             cp
+                                                                         `K pqq “ cEHZ pTj ˆ Kq.
+                               qPFn`1 pKq                 pPFn`1 pTj q
+
+Due to the dH -continuity of cEHZ and the generality of (6), for j Ñ 8, one has
+           min
+            cp
+                      `T pqq “ cEHZ pK ˆ T q “ cEHZ pT ˆ Kq “                         min
+                                                                                     cp
+                                                                                                `K pqq.
+         qPFn`1 pKq                                                               pPFn`1 pT q
+
+                                                                                                          
+  We remark that the proof of Theorem 1.3 implies the following relationships:
+                                cEHZ pK ˆ T q “ cEHZ pT ˆ Kq,
+       cEHZ pK ˆ T q “ cEHZ p´K ˆ T q “ cEHZ pK ˆ ´T q “ cEHZ p´K ˆ ´T q
+for general convex bodies K, T Ă Rn , and
+                cEHZ pK ˆ T q “               min         `T pqq “         min        `K ppq,
+                                          qPMn`1 pK,T q                pPMn`1 pT,Kq
+
+
+             cEHZ pK ˆ T q “               min       `T pqq “            min       `T pqq
+                                     qPMn`1 pK,T q               qPMn`1 p´K,T q
+
+                                 “          min        `´T pqq “            min          `´T pqq
+                                     qPMn`1 pK,´T q                    qPMn`1 p´K,´T q
+
+when either T or K is additionally assumed to be strictly convex and smooth.
+
+                                 4. Proof of Theorem 3.1
+  Let K Ă Rn be a convex polytope and T Ă Rn a strictly convex body. We start by
+investigating properties of closed characteristics on the boundary of the Lagrangian
+product
+                                  K ˆ T Ď Rnq ˆ Rnp
+For this, we split x P R2n into q- and p-coordinates: x “ pxq , xp q. Then, we observe
+        HKˆT pxptqq “ HKˆT ppxq ptq, xp ptqqq “ maxtHK pxq ptqq, HT pxp ptqqu,
+12                                    DANIEL RUDOLF
+
+what for
+(7)                           xptq P BpK ˆ T qzpBK ˆ BT q
+means                                #
+                                         HT pxp ptqq , xptq P K̊ ˆ BT,
+                    HKˆT pxptqq “
+                                         HK pxq ptqq , xptq P BK ˆ T̊ ,
+(see Figure 4). A straight forward calculation yields
+                                #
+                                  p0, BHT pxp ptqqq , xptq P K̊ ˆ BT,
+                BHKˆT pxptqq “
+                                  pBHK pxq ptqq, 0q , xptq P BK ˆ T̊ ,
+for the case (7) and
+        BHKˆT pxptqq Ă tpαBHK pxq ptqq, βBHT pxp ptqqq|pα, βq ‰ p0, 0q, α, β ě 0u
+                       “ NKˆT pxptqq
+for the case xptq P BK ˆ BT . Because of
+                                ẋptq P JBHKˆT pxptqq a.e.,
+this yields almost everywhere
+                     $
+                     & pBHT pxp ptqq, 0q
+                     ’                             , xptq P K̊ ˆ BT,
+(8)           ẋptq P p0, ´BHK pxq ptqqq           , xptq P BK ˆ T̊ ,
+                     ’
+                     % pβBH px ptqq, ´αBH px ptqqq , xptq P BK ˆ BT,
+                            T    p       K  q
+
+for pα, βq ‰ p0, 0q and α, β ě 0.
+   We notice that in the case xptq P K̊ ˆ BT , there is just moving xq , while in the
+case xptq P BK ˆ T̊ , there is just moving xp . For the case xptq P BK ˆ BT , it is
+apriori not clear whether xq and xp are never moving at the same time. However,
+this fact is guaranteed by the strict convexity of T :
+Proposition 4.1. We can reduce (8) to
+                      #
+                        pBHT pxp ptqq, 0q  , xptq P K̊ ˆ BT,
+(9a)          ẋptq P                                                   a.e.
+                        p0, ´BHK pxq ptqqq , xptq P BK ˆ T̊ ,
+
+(9b)    ẋptq P pBHT pxp ptqq, 0q or ẋptq P p0, ´BHK pxq ptqqq, xptq P BK ˆ BT,    a.e.
+Proof. We assume
+                 ẋptq “ pẋq ptq, ẋp ptqq P pβBHT pxp ptqq, ´αBHK pxq ptqqq
+for
+                           xptq P BK ˆ BT @t P ra, bs, a ă b,
+and α, β ą 0.
+  We split the proof into two parts.
+       THE MINKOWSKI BILLIARD CHARACTERIZATION OF THE EHZ-CAPACITY...                           13
+
+                                  BHKˆT pp0, x1p qq
+                                                                               BHKˆT ppx1q , x1p qq
+
+
+
+
+                        K̊ ˆ BT            p0, x1p q
+                                                             px1q , x1p q
+                                      T
+                                                 K ˆT
+
+                                                                            BHKˆT ppx1q , 0qq
+
+                           K                                 px1q , 0q
+
+
+
+
+         BK ˆ T̊                                             BK ˆ T̊
+
+                        K̊ ˆ BT
+
+
+
+
+              Figure 4. Illustration of K ˆ T Ă Rn ˆ Rn and BHKˆT .
+
+   Supposing xq pra1 , b1 sq, a ď a1 ă b1 ď b, is a subset of the interior of a facet,
+i.e., an pn ´ 1q-dimensional face, Kn´1 of K, then NK pxq ptqq is for every t P ra1 , b1 s
+one-dimensional, which implies because of
+                         ẋp ptq P ´αBHK pxq ptqq Ă ´NK pxq ptqq
+that xp pra1 , b1 sq is a subset of a one-dimensional straight line. However, together
+with xp pra1 , b1 sq Ă BT this is a contradiction to the strict convexity of T .
+   Supposing xq pra1 , b1 sq, a ď a1 ă b1 ď b, is a subset of the interior of a j-face
+Kj Ă BK, 1 ď j ď n ´ 2, then NK pxq ptqq is pn ´ jq-dimensional for every t P ra1 , b1 s
+(see Figure 5). Considering
+                        ẋp ptq P ´αBHK pxq ptqq Ă ´NK pxq ptqq,
+14                                            DANIEL RUDOLF
+                                                                                                       K,Rn
+                                                                                                      Tn´j p
+                                                                                      NT pxp pt0 qq
+
+
+                                                                                                      Tn´j
+                                                                        xp pra1 , b1 sq
+
+
+                                     K
+     xq pra1 , b1 sq
+
+
+                                                                   T
+NK pxq pt0 qq
+
+            Figure 5. Illustration of the idea behind the proof of Proposition 4.1
+            when xq pra1 , b1 sq is a subset of the interior of a j-face of K, 1 ď j ď
+                                                                                     n
+            n ´ 2. We have t0 P ra1 , b1 s and clearly see NT pxp pt0 qq X pTn´j qK,Rp “
+            t0u.
+
+we conclude that xp pra1 , b1 sq is a subset of the intersection of an pn ´ jq-dimensional
+plane Tn´j (orthogonal to Kj ) and BT . Note that because of the strict convexity of
+T , Tn´j necessarily has a nonempty intersection with the interior of T . From this,
+we conclude
+                                                       n
+(10)                          NT pxp ptqq X pTn´j qK,Rp “ t0u @t P ra1 , b1 s,
+                          n
+where by pTn´j qK,Rp we denote the orthogonal complement to Tn´j in Rnp .
+  Indeed, let t P ra1 , b1 s. If
+                                                               n
+                                 n P NT pxp ptqq X pTn´j qK,Rp ,       n ‰ 0,
+then one has
+(11)                    n P NT pxp ptqq,        i.e., xn, z ´ xp ptqy ă 0 @z P T̊ ,
+and
+                                         n
+(12)                   n P pTn´j qK,Rp ,       i.e., xn, z ´ xp ptqy “ 0 @z P Tn´j .
+Since
+                                               T̊ X Tn´j ‰ H,
+there is a z0 P T̊ X Tn´j which due to (11) implies
+                                             xn, z0 ´ xp ptqy ă 0
+and due to (12)
+                                             xn, z0 ´ xp ptqy “ 0,
+         THE MINKOWSKI BILLIARD CHARACTERIZATION OF THE EHZ-CAPACITY...                           15
+
+a contradiction. This implies (10).
+  Considering
+                        ẋq ptq P βBHT pxp ptqq Ă NT pxp ptqq,
+we get
+                                                                  n
+                                    ẋq pra1 , b1 sq * pTn´j qK,Rp ,
+which ends up in a contradiction since by construction of Tn´j , we have
+                                                             n
+                                       Kj,0 Ď pTn´j qK,Rp ,
+where by Kj,0 we denote the in the origin translated Kj (how exactly, is not relevant),
+and therefore
+                                                           n
+                              ẋq pra1 , b1 sq Ă pTn´j qK,Rp .
+                                                                                                  
+  Let x be a closed characteristic. We denote its changing points, i.e., the points
+where the movement of xq , respectively of xp , goes over to the movement of xp ,
+respectively of xq , by
+(13)         ¨ ¨ ¨ Ñ pqj , pj q Ñ pqj`1 , pj q Ñ pqj`1 , pj`1 q Ñ pqj`2 , pj`1 q Ñ . . .
+and conclude from (9) that they satisfy
+                           #
+                             qj`1 ´ qj P NT ppj q
+                             pj`1 ´ pj P ´NK pqj`1 q
+
+for all j P t1, ..., mu. We compute their respective trajectory segments’ contributions
+to the action of x (denoted by Ax1 Ñx2 for a trajectory segment from x1 to x2 ) as
+follows: Suppose, we have
+               xpaq “ pqj , pj q, xpbq “ pqj`1 , pj q and xpcq “ pqj`1 , pj`1 q
+for a ă b ă c, then
+                                                                 żb
+                 AxpaqÑxpbq pxq “ Apqj ,pj qÑpqj`1 ,pj q pxq “        xxp ptq, ẋq ptqy dt
+                                                                  a
+                                                               żb
+                                                             “x ẋq ptq dt, pj y
+                                                                     a
+                                                             “xxq pbq ´ xq paq, pj y
+                                                             “xqj`1 ´ qj , pj y
+and                                                              żc
+            AxpbqÑxpcq pxq “ Apqj`1 ,pj qÑpqj`1 ,pj`1 q pxq “         xxp ptq, ẋq ptqy dt “ 0.
+                                                                 b
+16                                     DANIEL RUDOLF
+
+  We note that the action of x only depends on the consecutive changing points in
+(13), no matter what happens between them. Therefore, it makes sense to think of
+the following equivalence relation on closed characteristics:
+             x „ y :ô consecutive changing points of x and y coincide.
+Representatives of the same equivalence class have the same action, i.e.,
+                               @x1 , x2 P rxs„ : Apx1 q “ Apx2 q.
+   Then, by (9), there is a closed characteristic x r “ pr xq , x
+                                                                rp q in the equivalence
+class of x, which is a closed polygonal curve consisting of the straight line segments
+connecting the changing points in (13). Consequently, using
+                           qj`1 ´ qj P NT ppj q @j P t1, ..., mu
+and [16, Proposition 2.2], we have
+                                m
+                                ÿ
+                  xq “ Apxq “
+                Apr                                                   xq q.
+                                   xqj`1 ´ qj , pj y “ `T pxq q “ `T pr
+                                    j“1
+
+  x
+  rq is a closed polygonal curve with vertices q1 , ..., qm on BK. Without loss of
+generality, we can assume qj`1 ‰ qj and pj`1 ‰ pj for all j P t1, ..., mu.
+  Otherwise, if qj`2 “ qj`1 , then the changing points
+(14)   ... Ñ pqj , pj q Ñ pqj`1 , pj q Ñ pqj`1 , pj`1 q Ñ pqj`2 , pj`1 q Ñ pqj`2 , pj`2 q Ñ ...
+can be replaced by
+(15)                 ... Ñ pqj , pj q Ñ pqj`2 , pj q Ñ pqj`2 , pj`2 q Ñ ...
+Indeed, because of
+                pj`1 ´ pj P ´NK pqj`1 q and pj`2 ´ pj`1 P ´NK pqj`2 q,
+we have
+                                    pj`2 ´ pj P NT pqj`2 q,
+and because of
+                                     qj`1 ´ qj P NT ppj q,
+we have
+                                    qj`2 ´ qj P NT ppj q.
+Therefore, the changing points in (15) are in the sense of (9). If pj`1 “ pj , then
+again, (14) can be replaced by (15) by similar reasoning. In both cases the lengths
+of the respective associated closed characteristics remain unchanged.
+   As consequence, without loss of generality, we can assume that x      rq is a closed
+polygonal curve with vertices q1 , ..., qm on BK, where qj`1 ‰ qj and qj not contained
+in the line segment connecting qj´1 and qj`1 for all j P t1, ..., mu (otherwise, if qj is
+contained in the line segment connecting qj´1 and qj`1 , then NT ppj´1 q “ NT ppj q, and
+by the strict convexity of T , pj´1 “ pj , but then the corresponding segment again can
+be removed), i.e., q is a closed polygonal curve in the sense of Footnote 1. Therefore,
+       THE MINKOWSKI BILLIARD CHARACTERIZATION OF THE EHZ-CAPACITY...                     17
+
+by the definition of Minkowski billiard trajectories, x  rq is a closed pK, T q-Minkowski
+billiard trajectory with closed dual billiard trajectory x   rp and with `T -length equal
+to the action of x.
+   Summarized, we proved that for every closed characteristic x on BpK ˆ T q, there
+is a closed characteristic x
+                           r “ prxq , x
+                                      rp q on BpK ˆ T q which is a closed polygonal curve
+and where x rq is a closed pK, T q-Minkowski billiard trajectory with x  rp as closed dual
+billiard trajectory on T and
+                                           xq “ `T pr
+                                  Apxq “ Apr        xq q.
+And conversely, for every closed pK, T q-Minkowski billiard trajectory q “ pq1 , ..., qm q
+with closed dual billiard trajectory p “ pp1 , ..., pm q on T , x “ pq, pq (after a suitable
+parametrization of q and p) is a closed characteristic on BpK ˆ T q with
+                                       `T pqq “ Apxq.
+Since these relations remain uneffected by minimizing the action/length, we have
+                       cEHZ pK ˆ T q “               min                   `T pqq
+                                          q cl. pK,T q-Mink. bill. traj.
+
+and consequently proved Theorem 3.1.
+
+                              5. Proof of Theorem 3.2
+   The structure of the proof of Theorem 3.2 is similar to the structure of the proof
+of Theorem 2.4.
+Proof of Theorem 3.2. It is sufficient to prove the following two points:
+                                                                                   cp
+     (i) Every closed pK, T q-Minkowski billiard trajectory is either in Fn`1          pKq or
+                                                                cp
+         there is an `T -shorter closed polygonal curve in Fn`1 pKq.
+                                                  cp
+    (ii) For every `T -minimizing element of Fn`1     pKq, there is a closed pK, T q-Minkowski
+         billiard trajectory with ď n ` 1 bouncing points and the same `T -length.
+   Ad (i): Let q “ pq1 , ..., qm q be a closed pK, T q-Minkowski billiard trajectory. From
+                                                                                      cp
+Proposition 2.3, we conclude q P F pKq. For m ď n ` 1, we then have q P Fn`1             pKq.
+If m ą n ` 1, then, by [15, Lemma 2.1(i)], there is a selection
+                     ti1 , ..., in`1 u Ă t1, ..., mu with i1 ă ... ă in`1
+such that the closed polygonal curve
+                                       pqi1 , ..., qin`1 q
+       cp
+is in Fn`1 pKq. One has
+                                   `T ppqi1 , ..., qin`1 qq ď `T pqq.
+                                                                      cp
+   Ad (ii): Let q “ pq1 , ..., qm q be an `T -minimizing element of Fn`1 pKq. Further, let
+                                                                  n
+pTi qiPN be a sequence of strictly convex bodies in R that dH -converges to T . For all
+i P N, let
+                                     q i,mi “ pq1i,mi , ..., qm
+                                                              i,mi
+                                                                i
+                                                                    q
+18                                           DANIEL RUDOLF
+
+be an `Ti -minimizing closed pK, Ti q-Minkowski billiard trajectory. Then, by Theo-
+                                                                 cp
+rem 2.4, q i,mi is an `Ti -minimizing closed polygonal curve in Fn`1 pKq for all i P N
+(therefore mi ď n ` 1 for all i P N). We conclude
+                         cp,˚R             cp
+                                                               (
+               q i,mi P Fn`1   pKq “ q P Fn`1 pKq : q Ă BRn p0q  @i P N,
+                                                 cp,˚R
+where R is chosen sufficiently large. Since pFn`1      pKq, dH q is a compact metric
+                                             n
+subspace of the complete metric space pP pR q, dH q (see the proof of Theorem 2.4),
+via a standard compactness argument, we find a strictly increasing sequence pij qjPN
+                                    cp,˚R
+and a closed polygonal curve q ˚ P Fn`1   pKq such that
+                                         mij ”: m ď n ` 1,
+
+                               pq ij ,mij qjPN dH -converges to q ˚ ,
+                          q ˚ “ pq1˚ , ..., qm
+                                             ˚
+                                             r q with m
+                                                      r ď m ď n ` 1.
+  We show that q ˚ is a closed pK, T q-Minkowski billiard trajectory. Without loss of
+generality, we assume
+                                 i         ij
+(16)                        lim q j ‰ lim qk`1              @k P t1, ..., mu.
+                            jÑ8 k     jÑ8
+                           i
+Otherwise, we neglect qkj and continue with
+                                     i          i       i         ij
+                                  pq1j , ..., qk´1
+                                                j      j
+                                                   , qk`1 , ..., qm  q.
+                                                                  i
+We do exactly the same in the case limjÑ8 qkj is contained in the line segment
+connecting
+                                ij            ij
+                           lim qk´1 and lim qk`1  .
+                                  jÑ8                       jÑ8
+
+These cases are responsible for possibly having m
+                                                r ă m. From now on, we can
+assume m
+       r “ m. Then, due to (16), we have that
+                                  ´           ¯
+                                     ij    ij
+                              lim qk`1 ´ qk ‰ 0,
+                                    jÑ8
+
+and because of the strict convexity of Tij (for strictly convex body Tr one has that
+                                                                          i
+pi ‰ pj is equivalent to NTr ppi q X NTr ppj q “ t0u), there is a unique pkj P BTij with
+                                      j  i          i                 i
+                                    qk`1 ´ qkj P NTij ppkj q.
+              i
+              j       i                                                         i
+Then, since qk`1 ´ qkj converges for j Ñ 8, this is also true for pkj : we write
+                                                  i
+                                             lim p j “: p˚k .
+                                             jÑ8 k
+
+This can be argued for every k P t1, ..., mu. Since
+                  i                                           i
+       lim NTij ppkj q Ď NT pp˚k q and lim NK pqkj q Ď NK pqk˚ q @k P t1, ..., mu
+       jÑ8                                     jÑ8
+       THE MINKOWSKI BILLIARD CHARACTERIZATION OF THE EHZ-CAPACITY...                   19
+
+by possibly going to a subsequence and by specifying the meaning of the limits by:
+a sequence of cones pCi qiPN converges to some convex cone if the sequence
+                                     pCi X B1n p0qqiPN
+dH -converges to C X B1n p0q, we get
+                             #
+                                ˚
+                               qk`1  ´ qk˚ P NT pp˚k q,
+                               p˚k`1 ´ p˚k P ´NK pqj`1˚
+                                                        q.
+Therefore, q ˚ is a closed pK, T q-Minkowski billiard trajectory.
+  It remains to show that
+(17)                                  `T pq ˚ q “ `T pqq.
+                                                            cp
+For that, we show that q ˚ is an `T -minimizing element in Fn`1 pKq. We assume by
+                                     cp
+contradiction that there is a qs in Fn`1 pKq with
+(18)                                      q q ă `T pq ˚ q.
+                                      `T ps
+                                                                  cp
+Since for all j P N, q ij ,mij is an `Tij -minimizing element of Fn`1 pKq, it follows that
+                             `Tij pq ij ,mij q ď `Tij ps
+                                                       q q @j P N.
+Using the dH -convergence of pTi qiPN to T and [16, Proposition 3.11(vi)], this implies
+                              `T pq ij ,mij q ď `T ps
+                                                    q q @j P N.
+Then, using [16, Proposition 3.11(v)], we obtain
+                                      `T pq ˚ q ď `T ps
+                                                      q q,
+                                                                         cp
+a contradiction to (18). Therefore, q ˚ is an `T -minimizing element of Fn`1 pKq. This
+implies (17).                                                                       
+  So far, in the general case, it is not known whether there is an example in or-
+der to sharpen the statement of this theorem, i.e., whether every minimizer `T -
+                          cp
+minimizing element of Fn`1   pKq has a translate which is an `T -minimizing closed
+pK, T q-Minkowski billiard trajectory.
+
+                             6. Proof of Theorem 3.3
+Proof of Theorem 3.3. Ad (i): For all i P N, let q i be an `T -minimizing closed
+pKi , T q-Minkowski billiard trajectory. Then, by Theorem 2.4 (or Theorem 3.2),
+                                                                     cp
+for all i P N, q i is an `T -minimizing closed polygonal curve in Fn`1   pKi q.
+   Since pKi qiPN dH -converges to K, for all ε ą 0, there is an i0 “ i0 pεq P N such that
+                         p1 ´ εqK Ă Ki Ă p1 ` εqK            @i ě i0 .
+This means by [16, Proposition 3.11(i)] (which also holds for proper inclusions) that
+               cp                cp           cp
+(19)          Fn`1 pp1 ` εqKq Ă Fn`1 pKi q Ă Fn`1 pp1 ´ εqKq @i ě i0 .
+20                                     DANIEL RUDOLF
+
+                                                                                  cp
+   By (19) and the fact that, for all i P N, q i is an `T -minimizing element of Fn`1 pKi q,
+for ε ą 0 and i0 “ i0 pεq big enough, we have that
+                           cp
+                    q i P Fn`1 pp1 ´ εqKq and q i Ă BRn p0q @i ě i0 ,
+where by BRn p0q we denote the n-dimensional ball in Rn of sufficiently large radius
+R ą 0 that contains K. Via a standard compactness argument (see the proof of
+Theorem 2.4), there is a strictly increasing sequence pij qjPN and a closed polygonal
+curve
+                                   cp
+                             q P Fn`1  pp1 ´ εqKq @ε ą 0
+             ij
+such that pq qjPN dH -converges to q and every q ij has m ď n ` 1 vertices/bouncing
+points (we note that, in general, the q i s can have a varying number of vertices/bouncing
+points).
+                                                        cp
+   We show that q is an `T -minimizing element of Fn`1      pKq. Since the aforementioned
+is true for any ε ą 0, we have
+                             č cp                         cp
+                          qP     Fn`1 pp1 ´ εqKq Ď Fn`1      pKq,
+                              εą0
+where the last inclusion follows from the fact that any closed polygonal curve with
+at most n ` 1 vertices that can be translated into K̊ can also be translated into
+                                                        cp
+p1 ´ εqK̊ for ε ą 0 small enough. Therefore, q is in Fn`1  pKq. It remains to show
+                                                                             cp
+that q is `T -minimizing. We assume by contradiction that there is a qr P Fn`1  pKq
+with
+                                    `T pr
+                                        q q ă `T pqq.
+We choose ε ą 0 such that
+(20)                                           q q ă `T pqq.
+                                    `T pp1 ` εqr
+Then, by [16, Proposition 3.11(ii)],
+                                        cp         cp
+                     p1 ` εqr
+                            q P p1 ` εqFn`1 pKq “ Fn`1 pp1 ` εqKq.
+From (19), it follows for j big enough that
+                                                cp
+                                    p1 ` εqr
+                                           q P Fn`1 pKij q,
+and hence
+                                            q q ě `T pq ij q
+                                 `T pp1 ` εqr
+                                                cp
+since q ij is an `T -minimizing element of Fn`1    pKij q. Passing to the limit in j and
+using [16, Proposition 3.11(v)], we obtain
+                                    `T pp1 ` εqr
+                                               q q ě `T pqq,
+                                                                           cp
+a contradiction to (20). Therefore, q is an `T -minimizing element of Fn`1    pKq.
+    We show that q is an `T -minimizing closed pK, T q-Minkowski billiard trajectory.
+Since pq ij qjPN dH -converges to q, under the assumption that q also has m vertices
+q1 , ..., qm (satisfying qk ‰ qk`1 and the condition that qk is not contained in the line
+segment connecting qk´1 and qk`1 for all k P t1, ..., mu; see Footnote 1), it follows
+       THE MINKOWSKI BILLIARD CHARACTERIZATION OF THE EHZ-CAPACITY...                             21
+
+        i
+that pqkj qjPN converges to qk for all k P t1, ..., mu (see again the aforementioned
+identification given in the proof of Theorem 2.4). Then, from the dH -convergence
+                         i
+of pKi qiPN to K and qkj P BKij for all k P t1, ..., mu and all j P N, it follows that
+qk P BK for all k P t1, ..., mu. By referring to Theorem 2.4 (T is strictly convex; here
+Theorem 3.2 would not be enough), q then satisfies all the conditions in order to be
+an `T -minimizing closed pK, T q-Minkowski billiard trajectory. If q has less than m
+vertices, i.e., if
+                              i          ij
+                         lim qkj “ lim qk`1  for a k P t1, ..., mu,
+                          jÑ8         jÑ8
+           i
+or limjÑ8 qkj is contained in the line segment connecting
+                                        i                   i
+                                   lim q j               j
+                                               and lim qk`1 ,
+                                   jÑ8 k´1            jÑ8
+
+then, without loss of generality, we can neglect the k-th vertex of q ij for all j P N, but
+get the same result: all the vertices of q are on BK and q satisfies all other conditions
+in order to be an `T -minimizing closed pK, T q-Minkowski billiard trajectory.
+   Ad (ii): We can copy completely the proof of point (ii) within the proof of Theorem
+3.2.                                                                                     
+
+
+                                          References
+[1] Abbondandolo, A., and Majer, P. (2015). A non-squeezing theorem for convex symplectic
+ images of the Hilbert ball. Calc. Var. Partial Differ. Equ. 54, 1469-1506.
+[2] Alkoumi, N., and Schlenk, S. (2015). Shortest closed billiard orbits on convex tables. Manuscr.
+ Math. 147, 365-380.
+[3] Artstein-Avidan, S., and Ostrover, Y. (2014). Bounds for Minkowski billiard trajectories in
+ convex bodies. Int. Math. Res. Not. IMRN 1, 165-193.
+[4] Balitskiy, A. (2020). Equality Cases in Viterbo’s Conjecture and Isoperimetric Billiard Inequal-
+ ities. Int. Math. Res. Not. 2020(7), 1957-1978.
+[5] Bezdek, K., and Conelly, R. (1989). Covering curves by translates of a convex set. Amer. Math.
+ Mon. 96, 789-806.
+[6] Bezdek, D., and Bezdek, K. (2009). Shortest billiard trajectories. Geom. Dedic. 141, 197-206.
+[7] Blagojevic, P., Harrison, M., Tabachnikov, S., and Ziegler, G.M. (2020). Counting periodic
+ trajectories of Finsler billiards SIGMA 16.
+[8] Clarke, F. (1979). A classical variational principle for periodic Hamiltonian trajectories. Proc.
+ Am. Math. Soc. 76, 186-188.
+[9] Ekeland, I., and Hofer, H. (1989). Symplectic topology and Hamiltonian dynamics. Math.
+ Zeitschrift 200(3), 355-378.
+[10] Ghomi, M. (2004). Shortest periodic billiard trajectories in convex bodies. Geom. Funct. Anal.
+ 14, 295-302.
+[11] Gutkin, E., and Tabachnikov, S. (2002). Billiards in Finsler and Minkowski geometries. J.
+ Geom. Phys. 40, 277-301.
+[12] Halpern, B. (1977). Strange Billiard Tables. Trans. Am. Math. Soc. 232, 297-305.
+[13] Hofer, H., and Zehnder, E. (1990). A new capacity for symplectic manifolds. Analysis, et
+ cetera, 405-427, Academic Press, Boston, MA.
+22                                      DANIEL RUDOLF
+
+[14] Künzle, A. F. (1996). Singular Hamiltonian systems and symplectic capacities. in: Singularities
+ and Differential Equations, Banach Center Publ. 33, 171-187.
+[15] Krupp, S., and Rudolf, D. (2022). A regularity result for shortest generalized billiard trajec-
+ tories in convex bodies in Rn . Geom. Dedicata 216 (55).
+[16] Krupp, S., and Rudolf, D. (2022). Shortest Minkowski billiard trajectories on convex bodies.
+ arXiv:2203.01802.
+[17] Rudolf, D. (2022). Viterbo’s conjecture for Lagrangian products in R4 symplectomorphisms
+ to the Euclidean ball. arXiv:2203.02294v5.
+
+
+     Daniel Rudolf, RWTH Aachen, Chair for Geometry and Analysis,
+               Pontdriesch 10-12, 52062 Aachen, Germany.
+                     E-mail address: rudolf@mathga.rwth-aachen.de
+

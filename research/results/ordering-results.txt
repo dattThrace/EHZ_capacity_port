@@ -1,0 +1,9 @@
+PASS: 18 rational skew-weight instances; DP equals exhaustive ordering.
+PASS: R^2 simplex, 3 facets; anchored DP agrees with 2 cyclic orders; capacity=9/2.
+PASS: R^4 simplex, 5 facets; anchored DP agrees with 24 cyclic orders; capacity=5/2.
+PASS: R^6 simplex, 7 facets; anchored DP agrees with 720 cyclic orders; capacity=49/18.
+PASS: R^8 simplex, 9 facets; anchored DP agrees with 40320 cyclic orders; capacity=81/88.
+Complete facet graph, m=8: 16,064 cyclic support orders.
+Complete facet graph, m=10: 1,112,073 cyclic support orders.
+Complete facet graph, m=12: 119,481,284 cyclic support orders.
+Complete facet graph, m=20: 349,096,664,728,623,316 cyclic support orders.

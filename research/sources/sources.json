@@ -1,0 +1,89 @@
+{
+  "research_date": "2026-11-09",
+  "sources": [
+    {
+      "arxiv_id": "1712.03494v3",
+      "url": "https://arxiv.org/abs/1712.03494v3",
+      "file": "1712.03494.pdf",
+      "sha256": "37a977d8039d6fc7e772dba4dfb046f102d1693846a9f7f3bc8b318d68e5b5d5",
+      "size_bytes": 633591
+    },
+    {
+      "arxiv_id": "2402.09914v3",
+      "url": "https://arxiv.org/abs/2402.09914v3",
+      "file": "2402.09914.pdf",
+      "sha256": "c31e0baf91cad1ab78b0b6dd0018bd892df7d6d6b9d8825d5b21c1621e378e8c",
+      "size_bytes": 153677
+    },
+    {
+      "arxiv_id": "2203.01718v2",
+      "url": "https://arxiv.org/abs/2203.01718v2",
+      "file": "2203.01718.pdf",
+      "sha256": "fe5e822769832b8626d83efa1027bbcdc8badf838b130f70c2d192c1b1bf9754",
+      "size_bytes": 521647
+    },
+    {
+      "arxiv_id": "2203.01802v1",
+      "url": "https://arxiv.org/abs/2203.01802v1",
+      "file": "2203.01802.pdf",
+      "sha256": "c9dcde86d18b551c079afd04678817c41eadfc0d4ab19dabd1689e59a9ecbeaf",
+      "size_bytes": 860177
+    },
+    {
+      "arxiv_id": "2008.10111v2",
+      "url": "https://arxiv.org/abs/2008.10111v2",
+      "file": "2008.10111.pdf",
+      "sha256": "46fc6a9c53f18e183ec16d521af20e760036bc7e0ca331ca8f9f114bcd0ff123",
+      "size_bytes": 915504
+    },
+    {
+      "arxiv_id": "2405.16513v3",
+      "url": "https://arxiv.org/abs/2405.16513v3",
+      "file": "2405.16513.pdf",
+      "sha256": "392962378a10e4631e3d5d7e7067e9d4a60594f9aedca7d8501a9ad07d39d95c",
+      "size_bytes": 672032
+    },
+    {
+      "arxiv_id": "1303.4197v2",
+      "url": "https://arxiv.org/abs/1303.4197v2",
+      "file": "1303.4197.pdf",
+      "sha256": "62780dbc433249bf91425fb1ed8fb10c717f1d4e71fb461e084e2629c0a9430c",
+      "size_bytes": 209479
+    },
+    {
+      "arxiv_id": "2603.12495v2",
+      "url": "https://arxiv.org/abs/2603.12495v2",
+      "file": "2603.12495.pdf",
+      "sha256": "095422463b0a7d2dba6bdd90f4d99deeda63144290a98e044a8d7eb2a7c8a3f5",
+      "size_bytes": 3568558
+    },
+    {
+      "arxiv_id": "2609.37794v1",
+      "url": "https://arxiv.org/abs/2609.37794v1",
+      "file": "2609.37794.pdf",
+      "sha256": "b42c598a5d521491d4cd426257d72b9711e1803c2a9c88e75eb51f434a832d98",
+      "size_bytes": 2662086
+    },
+    {
+      "arxiv_id": "2310.14998v2",
+      "url": "https://arxiv.org/abs/2310.14998v2",
+      "file": "2310.14998.pdf",
+      "sha256": "6610b2d07e877c866b4d49a8e4058c09f7fb091e521258d00f9a4a9ffb0f8f5e",
+      "size_bytes": 437788
+    },
+    {
+      "arxiv_id": "1801.00242v1",
+      "url": "https://arxiv.org/abs/1801.00242v1",
+      "file": "1801.00242.pdf",
+      "sha256": "8b11bd4ad2b6de7a3580c4d813ee5d5deaabc2f796e36082930d0c683f83dece",
+      "size_bytes": 135600
+    },
+    {
+      "arxiv_id": "2511.16644v1",
+      "url": "https://arxiv.org/html/2511.16644v1",
+      "file": "recent_zoll.html",
+      "sha256": "2fbf9ccfaea86569497c181502a1fd7de04b5efc10c5e72473f610ffeb12365a",
+      "scope": "Abstract and introduction/results inspected"
+    }
+  ]
+}

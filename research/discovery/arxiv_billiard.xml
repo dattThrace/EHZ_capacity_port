@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/qqaK1Hie5OlPpepbyIfsmkvyy70</id>
+  <title>arXiv Query: search_query=all:"Minkowski billiard"&amp;id_list=&amp;start=0&amp;max_results=70</title>
+  <updated>2026-11-09T21:07:26Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22Minkowski+billiard%22&amp;start=0&amp;max_results=70&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>70</opensearch:itemsPerPage>
+  <opensearch:totalResults>15</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2608.12618v1</id>
+    <title>Local finiteness of the number of reflections in semi-dispersing Minkowski billiards</title>
+    <updated>2026-08-12T22:00:25Z</updated>
+    <link href="https://arxiv.org/abs/2608.12618v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.12618v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove that in a semi-dispersing Minkowski billiard, that is a billiard in the complement of a collection of convex sets in a normed space with a smooth strictly convex norm, any billiard trajectory of finite length has only finitely many reflections off the walls.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-12T22:00:25Z</published>
+    <arxiv:comment>11 pages</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <arxiv:journal_ref>Math. Notes, 119:6 (2026), 1039-1049</arxiv:journal_ref>
+    <author>
+      <name>Roman Barinov</name>
+    </author>
+    <author>
+      <name>Sergei Ivanov</name>
+    </author>
+    <arxiv:doi>10.1134/S0001434626602881</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1134/S0001434626602881" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.05986v1</id>
+    <title>Symplectic billiards as Minkowski billiards</title>
+    <updated>2026-07-07T08:18:41Z</updated>
+    <link href="https://arxiv.org/abs/2607.05986v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.05986v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We establish a connection between Minkowski billiards and symplectic billiards, two classes of dynamical systems that have been studied largely independently. We show that the Minkowski billiard map can be described in symplectic terms via reduction from the canonical symplectic structure on $V \times V^*$, and that symplectic billiards can be viewed as a ``square root'' of a symplectic version of Minkowski billiards. As an application, we recover several known results on symplectic billiards from the more general Minkowski setting, and extend some of them to higher dimensions and to periodic orbits of even period. In particular, we prove the existence of at least $(r-1)(n-1)$ $2r$-periodic symplectic billiard orbits in dimension $2n$.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-07T08:18:41Z</published>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Peter Albers</name>
+    </author>
+    <author>
+      <name>Ana Chavez Caliz</name>
+    </author>
+    <author>
+      <name>Serge Tabachnikov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.03790v2</id>
+    <title>Integrable Billiards and Related Topics</title>
+    <updated>2025-10-18T10:34:58Z</updated>
+    <link href="https://arxiv.org/abs/2510.03790v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.03790v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper surveys our results on integrable billiards. We consider various models of billiards, including Birkhoff, outer, magnetic, and Minkowski billiards. Also, we discuss wire billiards and billiards in cones. For four models of convex plane billiards, we also discuss an isoperimetric-type inequality for the Mather $β$-function. We conclude with a section of open questions on this subject.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-04T11:51:03Z</published>
+    <arxiv:comment>Submitted to the proceedings of ICM 2026</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Misha Bialy</name>
+    </author>
+    <author>
+      <name>Andrey E. Mironov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.02093v1</id>
+    <title>Twist Coefficients of Periodic Orbits of Minkowski Billiards</title>
+    <updated>2024-12-03T02:25:53Z</updated>
+    <link href="https://arxiv.org/abs/2412.02093v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.02093v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the fundamental properties of Minkowski billiards and introduce a new coordinate system $(s,u)$ on the phase space $\mathcal{M}$. In this coordinate system, the Minkowski billiard map $\mathcal{T}$ preserves the standard area form $ω= ds \wedge du$. We then classify the periodic orbits of Minkowski billiards with period $2$ and derive formulas for the twist coefficient $τ_1$ for elliptic periodic orbits, expressed in terms of the geometric characteristics of the billiard table. Additionally, we analyze the stability properties of these elliptic periodic orbits.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-03T02:25:53Z</published>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Carlos Villanueva</name>
+    </author>
+    <author>
+      <name>Pengfei Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.20159v1</id>
+    <title>If a Minkowski billiard is projective, it is the standard billiard</title>
+    <updated>2024-07-29T16:36:29Z</updated>
+    <link href="https://arxiv.org/abs/2407.20159v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.20159v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the recent paper arXiv:2405.13258, the first author of this note proved that if a billiard in a convex domain in $\mathbb{R}^n$ is simultaneously projective and Minkowski, then it is the standard Euclidean billiard in an appropriate Euclidean structure. The proof was quite complicated and required high smoothness. Here we present a direct simple proof of this result which works in $C^1$-smoothness. In addition we prove the semi-local and local versions of the result</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-29T16:36:29Z</published>
+    <arxiv:primary_category term="math.DS"/>
+    <arxiv:journal_ref>Sbornik : Mathematics 216:5 (2025) 638--653</arxiv:journal_ref>
+    <author>
+      <name>Alexey Glutsyuk</name>
+    </author>
+    <author>
+      <name>Vladimir S. Matveev</name>
+    </author>
+    <arxiv:doi>10.4213/sm10182e</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.4213/sm10182e" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2203.02294v5</id>
+    <title>Viterbo's conjecture for Lagrangian products in $\mathbb{R}^4$ and symplectomorphisms to the Euclidean ball</title>
+    <updated>2022-09-21T14:06:51Z</updated>
+    <link href="https://arxiv.org/abs/2203.02294v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2203.02294v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We use the generalized Minkowski billiard characterization of the EHZ-capacity of Lagrangian products in order to reprove that the $4$-dimensional Viterbo conjecture holds for the Lagrangian products (any triangle/parallelogram in $\mathbb{R}^2$)$\times$(any convex body in $\mathbb{R}^2$) and extend this fact to the Lagrangian products (any trapezoid in $\mathbb{R}^2$)$\times$(any convex body in $\mathbb{R}^2$). Based on this analysis, we classify equality cases of this version of Viterbo's conjecture and prove that most of them can be proven to be symplectomorphic to Euclidean balls. As a by-product, we prove sharp systolic Minkowski billiard / worm problem inequalities. Furthermore, we discuss the Lagrangian products (any convex quadrilateral in $\mathbb{R}^2$)$\times$(any convex body in $\mathbb{R}^2$) for which we show that the truth of Viterbo's conjecture would follow from the positive solution of a challenging Euclidean covering problem. Finally, we show that the flow associated to equality cases of Viterbo's conjecture for Lagrangian products in $\mathbb{R}^4$--which turn out to be convex polytopes--is not Zoll in general, but that a weaker Zoll property, namely, that every characteristic almost everywhere away from lower-dimensional faces is closed and action-minimizing, does apply.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-03-04T13:11:24Z</published>
+    <arxiv:comment>70 pages, 41 figures, updated version including an additional section on the (weak) Zoll property of equality cases</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Daniel Rudolf</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2203.02043v1</id>
+    <title>Viterbo's conjecture as a worm problem</title>
+    <updated>2022-03-03T22:29:00Z</updated>
+    <link href="https://arxiv.org/abs/2203.02043v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2203.02043v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we relate Viterbo's conjecture from symplectic geometry to Minkowski versions of worm problems which are inspired by the well-known Moser worm problem from geometry. For the special case of Lagrangian products this relation provides a connection to systolic Minkowski billiard inequalities and Mahler's conjecture from convex geometry. Moreover, we use the above relation in order to transfer Viterbo's conjecture to a conjecture for the longstanding open Wetzel problem which also can be expressed as a systolic Euclidean billiard inequality and for which we discuss an algorithmic approach in order to find a new lower bound. Finally, we point out that the above mentioned relation between Viterbo's conjecture and Minkowski worm problems has a structural similarity to the known relationship between Bellmann's lost-in-a-forest problem and the original Moser worm problem.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-03-03T22:29:00Z</published>
+    <arxiv:comment>64 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Daniel Rudolf</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2203.01802v1</id>
+    <title>Shortest Minkowski billiard trajectories on convex bodies</title>
+    <updated>2022-03-03T16:17:33Z</updated>
+    <link href="https://arxiv.org/abs/2203.01802v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2203.01802v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We rigorously investigate closed Minkowski/Finsler billiard trajectories on $n$-dimensional convex bodies. We outline the central properties in comparison and differentiation from the Euclidean special case and establish two main results for length-minimizing closed Minkowski/Finsler billiard trajectories: one is a regularity result, the other is of geometric nature. Building on these results, we develop an algorithm for computing length-minimizing closed Minkowski/Finsler billiard trajectories in the plane.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-03-03T16:17:33Z</published>
+    <arxiv:comment>67 pages, 17 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Daniel Rudolf</name>
+    </author>
+    <author>
+      <name>Stefan Krupp</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2203.01718v2</id>
+    <title>The Minkowski Billiard Characterization of the EHZ-capacity of Convex Lagrangian Products</title>
+    <updated>2022-11-17T22:15:17Z</updated>
+    <link href="https://arxiv.org/abs/2203.01718v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2203.01718v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We rigorously state the connection between the EHZ-capacity of convex Lagrangian products $K\times T\subset\mathbb{R}^n\times\mathbb{R}^n$ and the minimal length of closed $(K,T)$-Minkowski billiard trajectories. This connection was made explicit for the first time by Artstein-Avidan and Ostrover under the assumption of smoothness and strict convexity of both $K$ and $T$. We prove this connection in its full generality, i.e., without requiring any conditions on the convex bodies $K$ and $T$. This prepares the computation of the EHZ-capacity of convex Lagrangian products of two convex polytopes by using discrete computational methods.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-03-03T13:58:10Z</published>
+    <arxiv:comment>22 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <arxiv:journal_ref>Journal of Dynamics and Differential Equations, Published Online 17. November 2022</arxiv:journal_ref>
+    <author>
+      <name>Daniel Rudolf</name>
+    </author>
+    <arxiv:doi>10.1007/s10884-022-10228-0</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s10884-022-10228-0" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2106.06956v2</id>
+    <title>Billiard tables with rotational symmetry</title>
+    <updated>2021-10-04T16:02:10Z</updated>
+    <link href="https://arxiv.org/abs/2106.06956v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2106.06956v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We generalize the following simple geometric fact: the only centrally symmetric convex curve of constant width is a circle. Billiard interpretation of the condition of constant width reads: a planar curve has constant width, if and only if, the Birkhoff billiard map inside the planar curve has a rotational invariant curve of $2$-periodic orbits. We generalize this statement to curves that are invariant under a rotation by angle $\frac{2π}{k}$, for which the billiard map has a rotational invariant curve of $k$-periodic orbits. Similar result holds true also for Outer billiards and Symplectic billiards. Finally, we consider Minkowski billiards inside a unit disc of Minkowski (not necessarily symmetric) norm which is invariant under a linear map of order $k\ge 3$. We find a criterion for the existence of an invariant curve of $k$-periodic orbits. As an application, we get rigidity results for all those billiards.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-06-13T10:08:58Z</published>
+    <arxiv:comment>33 pages, 8 figures</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Misha Bialy</name>
+    </author>
+    <author>
+      <name>Daniel Tsodikovich</name>
+    </author>
+    <arxiv:doi>10.1093/imrn/rnab366</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1093/imrn/rnab366" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2012.12159v3</id>
+    <title>A Funk perspective on billiards, projective geometry and Mahler volume</title>
+    <updated>2021-04-22T08:25:29Z</updated>
+    <link href="https://arxiv.org/abs/2012.12159v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2012.12159v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We explore connections furnished by the Funk metric, a relative of the Hilbert metric, between projective geometry, billiards, convex geometry and affine inequalities. We first show that many metric invariants of the Funk metric are invariant under projective transformations as well as projective duality. These include the Holmes-Thompson volume and surface area of convex subsets, and the length spectrum of their boundary, extending results of Holmes-Thompson and Álvarez Paiva on Schäffer's dual girth conjecture. We explore in particular Funk billiards, which generalize hyperbolic billiards in the same way that Minkowski billiards generalize Euclidean ones, and extend a result of Gutkin-Tabachnikov on the duality of Minkowski billiards.
+  We next consider the volume of outward balls in Funk geometry. We conjecture a general affine inequality corresponding to the volume maximizers, which includes the Blaschke-Santaló and centro-affine isoperimetric inequalities as limit cases, and prove it for unconditional bodies, yielding a new proof of the volume entropy conjecture for the Hilbert metric for unconditional bodies. As a by-product, we obtain generalizations to higher moments of inequalities of Ball and Huang-Li, which in turn strengthen the Blaschke-Santaló inequality for unconditional bodies. Lastly, we introduce a regularization of the total volume of a smooth strictly convex 2-dimensional set equipped with the Funk metric, resembling the O'Hara Möbius energy of a knot, and show that it is a projective invariant of the convex body.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-12-22T16:48:27Z</published>
+    <arxiv:comment>42 pages, 10 figures. Proof of Theorem 6.1 simplified</arxiv:comment>
+    <arxiv:primary_category term="math.DG"/>
+    <author>
+      <name>Dmitry Faifman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1903.00678v3</id>
+    <title>Representation formula for symmetric symplectic capacity and applications</title>
+    <updated>2020-04-20T00:51:35Z</updated>
+    <link href="https://arxiv.org/abs/1903.00678v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1903.00678v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This is the second installment in a series of papers aimed at generalizing symplectic capacities and homologies. We study symmetric versions of symplectic capacities for real symplectic manifolds, and obtain corresponding results for them to those of the first [19] of this series (such as representation formula, a theorem by Evgeni Neduv, Brunn-Minkowski type inequality and Minkowski billiard trajectories proposed by Artstein-Avidan-Ostrover).</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-03-02T10:26:02Z</published>
+    <arxiv:comment>Latex, 63 pages. Final version, to appear in Discrete and Continuous Dynamical Systems- Series(DCDS-A), Vol.40, no.8. arXiv admin note: substantial text overlap with arXiv:1903.01116</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Rongrong Jin</name>
+    </author>
+    <author>
+      <name>Guangcun Lu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1707.04007v1</id>
+    <title>Duality of Caustics in Minkowski Billiards</title>
+    <updated>2017-07-13T07:44:28Z</updated>
+    <link href="https://arxiv.org/abs/1707.04007v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1707.04007v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we study convex caustics in Minkowski billiards. We show that for the Euclidean billiard dynamics in a planar smooth centrally symmetric and strictly convex body $K$, for every convex caustic which $K$ possesses, the "dual" billiard dynamics in which the table is the Euclidean unit disk and the geometry that governs the motion is induced by the body $K$, possesses a dual convex caustic. Such a pair of caustics is dual in a strong sense, and in particular they have the same perimeter, Lazutkin parameter (both measured with respect to the corresponding geometries), and rotation number. We show moreover that for general Minkowski billiards this phenomenon fails, and one can construct a smooth caustic in a Minkowski billiard table which possesses no dual convex caustic.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.MG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-07-13T07:44:28Z</published>
+    <arxiv:comment>33 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Shiri Artstein-Avidan</name>
+    </author>
+    <author>
+      <name>Dan Itzhak Florentin</name>
+    </author>
+    <author>
+      <name>Yaron Ostrover</name>
+    </author>
+    <author>
+      <name>Daniel Rosen</name>
+    </author>
+    <arxiv:doi>10.1088/1361-6544/aa9d5c</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1361-6544/aa9d5c" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1408.5255v1</id>
+    <title>Shortest closed billiard orbits on convex tables</title>
+    <updated>2014-08-22T10:43:26Z</updated>
+    <link href="https://arxiv.org/abs/1408.5255v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1408.5255v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Given a planar compact convex billiard table $T$, we give an algorithm to find the shortest generalised closed billiard orbits on $T$. (Generalised billiard orbits are usual billiard orbits if $T$ has smooth boundary.) This algorithm is finite if $T$ is a polygon and provides an approximation scheme in general. As an illustration, we show that the shortest generalised closed billiard orbit in a regular $n$-gon $R_n$ is 2-bounce for $n \ge 4$, with length twice the width of $R_n$. As an application we obtain an algorithm computing the Ekeland-Hofer-Zehnder capacity of the four-dimensional domain $T \times B^2$ in the standard symplectic vector space $\mathbb{R}^4$. Our method is based on the work of Bezdek-Bezdek and on the uniqueness of the Fagnano triangle in acute triangles. It works, more generally, for planar Minkowski billiards.</summary>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-08-22T10:43:26Z</published>
+    <arxiv:comment>16 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="math.DG"/>
+    <author>
+      <name>Naeem Alkoumi</name>
+    </author>
+    <author>
+      <name>Felix Schlenk</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1111.2353v3</id>
+    <title>Bounds for Minkowski Billiard Trajectories in Convex Bodies</title>
+    <updated>2012-08-30T12:32:11Z</updated>
+    <link href="https://arxiv.org/abs/1111.2353v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1111.2353v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we use the Ekeland-Hofer-Zehnder symplectic capacity to provide several bounds and inequalities for the length of the shortest periodic billiard trajectory in a smooth convex body in ${\mathbb R}^{n}$. Our results hold both for classical billiards, as well as for the more general case of Minkowski billiards.</summary>
+    <category term="math.SG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-11-09T21:44:28Z</published>
+    <arxiv:comment>Latex, 26 pages</arxiv:comment>
+    <arxiv:primary_category term="math.SG"/>
+    <author>
+      <name>Shiri Artstein-Avidan</name>
+    </author>
+    <author>
+      <name>Yaron Ostrover</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,1317 @@
+                                               The Ekeland–Hofer–Zehnder Capacity of rotated Lp-Ellipsoids
+
+                                                                                     Vardan Oganesyan∗
+                                                                                   vardanmath@gmail.com
+arXiv:2609.37794v1 [math.SG] 29 Sep 2026
+
+
+
+
+                                                                                            Abstract
+                                                    We find explicit formulas for the EHZ and cylindrical capacities of rotated Lp -ellipsoids. In
+                                                 addition, we provide an algorithm to estimate the EHZ capacity.
+
+
+                                           Contents
+                                           1 Introduction and results                                                                                 1
+
+                                           2 Preliminary lemmas                                                                                8
+                                             2.1 Support function . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+                                             2.2 Clarke’s dual-action formula . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+                                             2.3 Wirtinger inequality . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+                                             2.4 Cylindrical upper bound . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+
+                                           3 Proof of Theorem 2                                                                                      13
+
+                                           4 Proof of Theorem 6                                                                                      14
+
+                                           5 Proof of Theorem 7                                                                                      17
+
+                                           6 Appendix. Code for approximation of EHZ capacity                                                        18
+                                             6.1 Basic idea of gradient optimization . . . . . . . . . . . . . . . . . . . . . . . . . . . .         19
+                                             6.2 General form of the loss . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .        19
+                                             6.3 Fourier representation of the loops . . . . . . . . . . . . . . . . . . . . . . . . . . . .         19
+                                             6.4 Explicit form of the losses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       21
+                                             6.5 Test results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      23
+
+
+                                           1    Introduction and results
+                                           The initial goal of the author was to code approximation of EHZ capacity for a given domain. Only
+                                           after numerical estimates, the author found out explicit formulas proved in this paper. In the last
+                                           section we explain how we numerically estimate EHZ capacity and give a link to the code with
+                                           numerical results.
+                                             ∗
+                                               supported by the Higher Education and Science Committee of the MESCS RA under Research Project No.
+                                           25RL-1A040
+
+
+
+
+                                                                                                1
+   We assume that coordinates of R2n are ordered as (x1 , . . . , xn , y1 , . . . , yn ) and the standard
+symplectic form is
+                                        Xn
+                                    ω=      dxj ∧ dyj .
+                                                  j=1
+
+For 1 < p < ∞, let q = p/(p − 1). Consider B, D ∈ GL(n, R) and define the Lp -ellipsoid
+                       Kp (B, D) = (x, y) ∈ R2n : ∥Bx∥pp + ∥Dy∥pp ≤ 1 .
+                                    
+
+Define the following matrix and its norm:
+                                                                   ∥Cξ∥p
+                   C = BDT ,        M = ∥C∥ℓnq →ℓnp := max               = max ∥Cξ∥p .
+                                                              ξ̸=0 ∥ξ∥q   ∥ξ∥q =1
+
+When B = D = I we get the ordinary ball Bp2n . Let c0 (p) be the area of Bp2 .
+Lemma 1. For any 1 ≤ p < ∞,
+                                                             4Γ(1 + 1/p)2
+                                  c0 (p) = Area(Bp2 ) =                   ,
+                                                              Γ(1 + 2/p)
+where Γ is the Gamma function.
+Proof. In the first quadrant, the area of Bp2 is the area under the graph t = (1 − sp )1/p , where
+0 ≤ s ≤ 1. Therefore, using u = sp , we get
+                       Z 1
+                                             4 1 1/p−1
+                                              Z                                    
+                                                                      4    1      1
+            c0 (p) = 4     (1 − sp )1/p ds =     u     (1 − u)1/p du = B     ,1 +     ,
+                        0                    p 0                      p    p      p
+where B is the Beta function. The identities B(a, b) = Γ(a)Γ(b)/Γ(a + b) and Γ(1 + s) = sΓ(s) give
+the required formula.
+
+   We denote by cEHZ and cZ the EHZ and cylindrical capacities, respectively.
+
+Theorem 2. Let n ≥ 1, 2 ≤ p < ∞, q = p/(p − 1) and B, D ∈ GL(n, R). With respect to the
+standard symplectic form ω, we have
+                                                        c0 (p)             4Γ(1 + 1/p)2
+          cEHZ (Kp (B, D)) = cZ (Kp (B, D)) =                       =                          ,
+                                                     ∥BDT ∥ℓnq →ℓnp   Γ(1 + 2/p)∥BDT ∥ℓnq →ℓnp
+where cEHZ and cZ are the EHZ and cylindrical capacities, respectively. Since the cylindrical ca-
+pacity is the largest normalized symplectic capacity, every normalized symplectic capacity c satisfies
+                                                                     c0 (p)
+                           c(Kp (B, D)) ≤ cZ (Kp (B, D)) =                       .
+                                                                  ∥BDT ∥ℓnq →ℓnp
+
+Lemma 3. Let T = diag(d1 , . . . , dn ) with di ≥ 0. Then, for 2 ≤ p < ∞ and q = p/(p − 1), we have
+                                            ∥T ∥ℓnq →ℓnp = max di .
+                                                              i
+
+Proof. Since q ≤ p, for every ξ ∈ Rn we have
+                                                                   
+                             ∥T ξ∥p ≤       max di       ∥ξ∥p ≤ max di ∥ξ∥q .
+                                             i                    i
+
+Equality is obtained by taking ξ = ej , where dj = maxi di .
+
+                                                         2
+Corollary 4. Let 2 ≤ p < ∞ and αi , βi > 0. Let
+                                    1/p                                  1/p
+                       B = diag(α1 , . . . , αn1/p ),       D = diag(β1 , . . . , βn1/p ).
+
+Then
+                               cEHZ (Kp (B, D)) = c0 (p) min (αi βi )−1/p .                       (1)
+                                                              1≤i≤n
+
+Note that for these B, D, our Lp -ellipsoid has the following form:
+                                                    n
+                                  (                                                )
+                                                   X
+                     Kp (B, D) = (x, y) ∈ R2n :        (αi |xi |p + βi |yi |p ) ≤ 1 .
+                                                        i=1
+
+Proof. Since BDT = diag((α1 β1 )1/p , . . . , (αn βn )1/p ), this follows directly from Theorem 2 and
+Lemma 3.
+
+Remark 5. Formula (1) also follows from the symplectic p-product formula of Haim-Kislev and
+Ostrover [15, Proposition 1.5]. Each planar factor has area c0 (p)(αi βi )−1/p , and for p ≥ 2 the EHZ
+capacity of the symplectic p-product is the minimum of the capacities of its factors.
+Let us note that this type of domain is also studied y Brocic in [6].
+
+
+   A Hadamard matrix of order n is a matrix A ∈ {−1, 1}n×n satisfying
+
+                                                AAT = nIn .
+
+In this paper, by a normalized Hadamard matrix we mean the orthogonal matrix H = n−1/2 A.
+This means that
+                                H ∈ O(n),     |Hij | = n−1/2 .
+The first general construction of such matrices was given by Sylvester in 1867 [19]. Hadamard
+studied them in 1893 in connection with the maximal determinant problem [14], and Paley later
+gave important constructions using finite fields [18]. For n > 2, a Hadamard matrix can exist
+only if n is divisible by 4. The Hadamard conjecture asks whether this necessary condition is also
+sufficient. This conjecture is still open.
+    The normalized Hadamard matrices of orders 2 and 4 are
+                                                        
+                                                 1 1 1
+                                           H2 = √
+                                                  2 1 −1
+and                                                   
+                                             1 1   1 1
+                                          1 1 −1 1 −1
+                                      H4 =            .
+                                          2 1 1 −1 −1
+                                             1 −1 −1 1
+    The following theorem shows that Hadamard matrices play an important role in capacities of
+Lp -ellipsoids.
+Theorem 6. Let 2 < p < ∞ and B, D ∈ O(n). Then
+
+                     c0 (p) ≤ cEHZ (Kp (B, D)) = cZ (Kp (B, D)) ≤ c0 (p)n1/2−1/p .
+
+The upper bound inequality is equality if and only if BDT is normalized Hadamard matrix.
+
+                                                        3
+    Viterbo’s volume-capacity conjecture, formulated in [20], says that every convex body K ⊂ R2n
+satisfies
+                                       c(K)n ≤ n!V ol(K)
+for every normalized symplectic capacity c. There are some results proving and disproving this
+inequality. Artstein-Avidan, Milman and Ostrover [3] proved the inequality up to a universal mul-
+tiplicative constant, independent of the dimension. More recently, Abbondandolo, Benedetti and
+Edtmair [1] proved that all normalized symplectic capacities coincide on smooth domains suffi-
+ciently C 2 -close to the Euclidean ball. As a result, Viterbo’s inequality holds in this neighborhood.
+Cristofaro-Gardiner and Hind [9] proved that all normalized symplectic capacities coincide on mono-
+tone toric domains in every dimension, extending the four-dimensional result of Gutt, Hutchings
+and Ramos.
+    In 2024, Haim-Kislev and Ostrover [16] disproved the general conjecture. Their four-dimensional
+example is the Lagrangian product P × RP , where P is a regular pentagon and R is a rotation
+through π/2. They showed that
+                                                             √
+                                    cEHZ (P × RP )2      3+ 5
+                                                       =          > 1.
+                                     2V ol(P × RP )         5
+    Despite this counterexample, the inequality remains valid for many families. It is still unclear
+if the inequality holds for centrally-symmetric domains. Note that the counterexample is not
+centrally-symmetric. In 2026 Balitskiy, Mitrofanov and Polyanskii [4] proved that
+
+                                cEHZ (K × Q)2 ≤ 2Area(K)Area(Q)
+
+when K ⊂ R2 is a convex body and Q ⊂ R2 is a convex quadrilateral.
+   For Lp −balls and actions of O(n) we prove the following theorem.
+
+Theorem 7. Let 2 < p < ∞, n > 1 and let B, D ∈ O(n). Then Kp (B, D) satisfies Viterbo’s
+inequality for every normalized capacity. In other words, for every normalized symplectic capacity
+c we have
+                                c(Kp (B, D))n < n!V ol(Kp (B, D)).
+Note that p is strictly greater than 2 and the Viterbo inequality here is also strict. If p = 2, then
+we have equality.
+
+   Let Hn be a normalized Hadamard matrix. Taking B = Hn and D = I, we have BDT = Hn .
+Therefore,
+                             cEHZ (Kp (Hn , I)) = c0 (p)n1/2−1/p .
+Recall that c0 (p) is the area of 2-dimensional Bp2 −ball. When p is big Bp2 becomes close to 2D−
+box of size 2. This means that c0 (p) → 4 as p → ∞. It follows that
+                                                               √
+                                     lim cEHZ (Kp (Hn , I)) = 4 n.
+                                   p→∞
+
+Also, as p → ∞, the bodies Kp (Hn , I) converge to
+
+                    K∞ (Hn , I) = (x, y) ∈ R2n : ∥Hn x∥∞ ≤ 1, ∥y∥∞ ≤ 1 .
+                                   
+
+
+   So, the limiting body is the cube [−1, 1]2n with HnT matrix applied to its x-coordinates. This
+means that
+                         (2n)−1/p K∞ (Hn , I) ⊂ Kp (Hn , I) ⊂ K∞ (Hn , I)
+
+                                                  4
+Monotonicity tells us that
+
+                cEHZ (Kp (Hn , I)) ≤ cEHZ (K∞ (Hn , I)) ≤ (2n)2/p cEHZ (Kp (Hn , I)).
+
+Taking the limit, we get                                  √
+                                    cEHZ (K∞ (Hn , I)) = 4 n.
+
+
+
+
+Figure 1: The maximal EHZ capacity for orthogonal B, D when n = 2 and n = 4. In both cases
+the maximum is obtained              T
+                         √ when BD is a normalized Hadamard matrix. The dashed lines show
+the limiting capacities 4 2 and 8, respectively.
+
+    The volume of the limiting cube is V ol(K∞ (Hn , I)) = 22n = 4n . So, Viterbo’s inequality for
+this cube becomes          √
+                         (4 n)n = 4n nn/2 ≤ 4n n! = n!V ol(K∞ (Hn , I)).
+So, in this case for 2n = 4 Viterbo’s inequality becomes equality
+                                               √
+                       cEHZ (K∞ (H2 , I))2 = (4 2)2 = 32 = 2!V ol(K∞ (H2 , I)).
+
+However, for 2n = 8, there is no equality
+
+                   cEHZ (K∞ (H4 , I))4 = 84 = 4096 < 6144 = 4!V ol(K∞ (H4 , I)).
+
+
+
+                                                 5
+    The fact that EHZ capacity for limiting cube in R4 gives equality in Viterbo’s inequality leads
+to the following idea. Assume that the smooth domain is very close to the cube. Then by perturb-
+ing the cube we may get centrally symmetric domain that provides counterexample to Viterbo’s
+conjecture. The author considered 2 options: - perturb powers in Lp -ellipsoid and assume that not
+all powers are equal.
+- truncate a vertex or an edge or a face taking out a small part of the cube. This may decrease the
+volume but remain EHZ capacity.
+
+   Unfortunately, the author could not find counterexample using any of these two ideas.
+
+Remark. The results presented below are obtained using numerical approximation. More de-
+tails of how this approximation is obtained can be found in Appendix. It is already mentioned that
+exact formulas above was obtained using numerical estimates and rigorously proved after. Also,
+tests (can be found in Appendix) show that approximations work. So, there is a strong reason to
+believe the results below.
+
+   Let us focus on dimension 2n = 4. Our Lp -ball has the following form
+
+                    Bp4 = {(x1 , x2 , y1 , y2 ) ∈ R4 | |x1 |p + |x2 |p + |y1 |p + |y2 |p ≤ 1},
+
+    NOTATION!!! Now we change our coordinates and assume that coordinates of R4 are ordered
+in the following way:
+                                   (x1 , y1 , x2 , y2 ),
+where (x1 , y1 ), (x2 , y2 ) are symplectic pairs. The reason for this is that the code (which we use for
+numerical estimates) is written in terms of this coordinates. However, all formulas above look ugly
+in this coordinates. The author reailzed that this order of coordinates is inconvenient only after
+writing the code and all approximations.
+
+   Now we want to study what happens with EHZ capacity of A(Bp4 ), where A ∈ SO(4). Previ-
+ously, we found exact formulas for the action of SO(2)
+
+                   (x1 , x2 ) → C(x1 , X2 ),    (y1 , y2 ) → D(y1 , y2 )     C, D ∈ SO(2),
+
+not SO(4).
+   First, note that EHZ capacity is invariant under action of U (2). This means that we can
+study action of SO(4)/U (2) instead. It is known that SO(4)/U (2) can be identified with S 2 using
+quaternions in the following way:
+
+                 SO(4)/U (2) = {q1 i + q2 j + q3 k | q12 + q22 + q32 = 1, q1 , q2 , q3 ∈ R},
+
+i, j, k are quaternions. Moreover, Bp4 has a lot of discrete symmetries. Taking the into account we
+can replace S 2 by a spherical triangle
+
+                               T = {q12 + q22 + q32 = 1 | q1 ≥ q2 ≥ q3 ≥ 0}
+
+without loss of generality (if we are interested only in EHZ capacities).
+
+
+
+
+                                                        6
+   It can be checked directly that any matrix ASO(4) have a representative in T of the following
+form:                                                                  
+                                           1 0        0           0
+                                          0 q1      q2          q3     
+                                                                       
+                                                        2
+                                                        q2       q2 q3 
+                       A(q1 , q2 , q3 ) = 
+                                          0 −q2 1 − 1 + q    −         
+                                                          1    1 + q1 
+                                                    q2 q3          q32 
+                                           0 −q3 −           1−
+                                                    1 + q1       1 + q1
+We see that                                                   
+                                                  1   0   0   0
+                                                0    1   0   0
+                                   A(1, 0, 0) = 
+                                                0
+                                                               .
+                                                      0   1   0
+                                                  0   0   0   1
+
+                                                  1  0            0    0
+                                                                       
+                                                     1            1
+                                                0   √            √    0
+                                                                       
+                                 1 1                   2           2
+                              A( √  , √  , 0) = 
+                                                                       
+                                  2 2                 1           1     
+                                                0  −√            √    0
+                                                        2          2
+                                                                       
+                                                  0  0            0    1
+                                                                              
+                                          1  0                0            0
+                                         0 √1              √1           √1    
+                            1 1 1             3             √3            3√ 
+                        A( √ , √ , √ ) =                  3+ 3
+                                                                               .
+                             3 3 3       0 − √1
+                                                 3           6√        − 3−6 3 
+                                                                         √ 
+                                          0 − √13         − 3−6 3       3+ 3
+                                                                          6
+
+    So, we have only small spherical triangle to study. We can sample points of this triangle to find
+some statistics. Moreover, the number of points may be small. The results presented in the table
+below.
+
+
+
+
+                                                 7
+    Note that A(1/sqrt2, 1/sqrt2, 0) is 2-dimensional normalized Hadamard matrix applied to (y1 , x2 ).
+Up to symmetry this is equivalent to application of normalized Hadamard matrix to (x1 , x2 ) and
+identity to (y1 , y2 ). So, numerical results show that for some p > p∗ the maximum capacity among
+all elements of SO(4) provided by Hadamard matrix and inequality Theorem 6 holds true. How-
+ever, this is not proved theorem and seen only by numerical approximation.
+                               √       √               √    √      √
+   Let us draw graphs of A(1/ 2, 1/ 2, 0) and A(1/ 3, 1/ 3, 1/ 3) applied to Bp4 for different
+                                                                                     √     √
+p. This graph also shows that there is p∗ , where maximum starts achieving at q = (1/ 2, 1/ 2, 0).
+The author does not have nice geometrical explanation of this fact.
+
+
+
+
+2     Preliminary lemmas
+2.1   Support function
+Let K be a convex body in Rm . By definition, the support function of K is
+
+                                         hK (a) = sup ⟨a, z⟩.
+                                                  z∈K
+
+We see that hK (a) is the largest value of the linear functional z 7→ ⟨a, z⟩ on K. Consider the unit
+Lp -ball Bpm . By definition,
+                                       hBpm (a) = sup ⟨a, z⟩.
+                                                  ∥z∥p ≤1
+
+
+
+
+                                                  8
+Since Bpm is centrally symmetric, replacing z by −z shows that
+                                         sup ⟨a, z⟩ = sup |⟨a, z⟩|.
+                                        ∥z∥p ≤1            ∥z∥p ≤1
+
+This means that the support function coincides with the operator norm ∥a∥∗ of the linear functional
+z 7→ ⟨a, z⟩ on (Rm , ∥ · ∥p ). So,
+                                     hBpm (a) = ∥a∥∗ = sup |⟨a, z⟩|.
+                                                               ∥z∥p ≤1
+
+Let us show that the operator norm is the ℓq -norm, where 1/p + 1/q = 1. Hölder’s inequality says
+that for every z ∈ Bpm we have
+                                                     1/q           1/p
+                              m
+                              X           Xm                Xm
+                   |⟨a, z⟩| =   aj zj ≤       |aj |q        |zj |p  ≤ ∥a∥q .
+                               j=1                j=1                    j=1
+
+Taking the supremum over z ∈ Bpm gives
+                                          hBpm (a) = ∥a∥∗ ≤ ∥a∥q .
+Let us show that we have equality. Equality for a = 0 is obvious. For a ̸= 0, consider
+                                    1         q−2
+                                                  a1 , . . . , |am |q−2 am .
+                                                                          
+                            z=       q−1 |a1 |
+                                 ∥a∥q
+Since (q − 1)p = q, we have
+                                        Pm          (q−1)p
+                                                                  Pm              q
+                                           j=1 |aj |                  j=1 |aj |
+                              ∥z∥pp =                      =                          = 1.
+                                            ∥a∥q
+                                                (q−1)p                 ∥a∥qq
+Therefore, z ∈ ∂Bpm . Moreover,
+                                     Pm              q−2 a
+                                                                  Pm              q
+                                        j=1 aj |aj |       j          j=1 |aj |
+                          ⟨a, z⟩ =              q−1          =                        = ∥a∥q .
+                                           ∥a∥q                      ∥a∥q−1
+                                                                         q
+As a result, we have proved that
+                                          hBpm (a) = ∥a∥∗ = ∥a∥q .                                           (2)
+Let us apply this fact to Kp (B, D). Define the invertible linear map
+                                            F (x, y) = (Bx, Dy).
+By definition, Kp (B, D) = F −1 Bp2n . Changing variables Z = F z, we obtain
+                          hKp (B,D) (a) =         sup      ⟨a, z⟩ = sup ⟨a, F −1 Z⟩.
+                                             z∈F −1 Bp2n              Z∈Bp2n
+
+Since ⟨a, F −1 Z⟩ = ⟨(F T )−1 a, Z⟩, we obtain
+                        hKp (B,D) (a) = sup ⟨(F T )−1 a, Z⟩ = hBp2n ((F T )−1 a).
+                                          Z∈Bp2n
+
+Let a = (ξ, η), where ξ, η ∈ Rn . Using (2) we get
+                                                                                                  1/q
+                 hKp (B,D) (ξ, η) = (B −T ξ, D−T η) q = ∥B −T ξ∥qq + ∥D−T η∥qq                           .
+Therefore, this support function is the dual norm of (x, y) 7→ (∥Bx∥pp + ∥Dy∥pp )1/p . We have proved
+the following lemma.
+Lemma 8. The support function of Kp (B, D) satisfies
+                    hKp (B,D) (ξ, η)q = ∥(B T )−1 ξ∥qq + ∥(DT )−1 η∥qq ,                  ξ, η ∈ Rn .        (3)
+
+                                                           9
+2.2   Clarke’s dual-action formula
+Let S 1 = R/(2πZ). For a periodic loop z ∈ W 1,2 (S 1 ; R2n ), its symplectic action is
+                                            Z
+                                          1
+                                  A(z) =        ω(z(t), ż(t)) dt.
+                                          2 S1
+Consider the space                                                  Z              
+                                                1,2     1     2n
+                            En =       z∈W            (S ; R ) :          z(t) dt = 0 .
+                                                                     S1
+The loops in this space are not required to lie on ∂K.
+Lemma 9 (Clarke’s dual-action formula). Let K ⊂ R2n be a compact convex body with C 2 -smooth
+boundary containing the origin as interior point. For r > 1, we have
+                                            πr
+                                                     Z
+                                      r/2
+                            cEHZ (K) =          min      hK (ż(t))r dt.                  (4)
+                                            2π z∈En S 1
+                                                            A(z)=1
+
+Proof. This is Clarke’s dual-action principle [8], in the normalization of [15, Equation (4)]. See also
+[2, Proposition 2.1].
+
+2.3   Wirtinger inequality
+Lemma 10. Let 1 < p < ∞ and q = p/(p − 1). Suppose that f ∈ W 1,q (S 1 ; R) satisfies
+                                Z
+                                   |f (t)|p−2 f (t)dt = 0,
+                                           S1
+
+where S 1 = R/2πZ. Then
+                                           1/p                          1/q
+                                                  π 2/p
+                       Z                                Z
+                                       p                        ′    q
+                                 |f (t)| dt     ≤             |f (t)| dt      .
+                              S1                  c0 (p)   S1
+
+Proof. We apply the generalized Wirtinger inequality of Croce and Dacorogna [10, Theorem 1.1].
+Let a, b > 1 and let d = a/(a − 1). They compute the constant (here u′ is the derivative of u)
+                             (                                                                )
+                               ∥u′ ∥La (−1,1)
+                                                                          Z 1
+            α(a, b, b) = inf                  : u ∈ W 1,a (R/2Z), u ̸= 0,     |u|b−2 u ds = 0
+                               ∥u∥Lb (−1,1)                                −1
+
+as follows:                           1/b  1/d      1/a−1/b      
+                                      1      1        2             1 1
+                      α(a, b, b) = 2                             B   ,    .
+                                      d      b       d+b            d b
+Taking a = q and b = p, we have d = p. Therefore,
+                                                    2Γ(1/p)2
+                                              
+                                      2    1 1
+                          α(q, p, p) = B    ,     =          = c0 (p),
+                                      p    p p      pΓ(2/p)
+where c0 (p) is computed in Lemma 1. This means that
+                           Z 1        1/p          Z 1           1/q
+                                   p            1           ′    q
+                                |u| dt      ≤             |u (t)| dt     .
+                             −1               c0 (p)   −1
+
+It remains to transfer the inequality from R/2Z to R/2πZ. Change of variable proves the Lemma.
+
+
+                                                            10
+Lemma 11. Let 2 ≤ p < ∞, q = p/(p − 1) and u = (u1 , . . . , un ) ∈ W 1,q (S 1 ; Rn ). There exists a
+unique vector a = (a1 , . . . , an ) ∈ Rn such that
+                        Z
+                               |ui (t) − ai |p−2 (ui (t) − ai ) dt = 0, i = 1, . . . , n.
+                               S1
+
+For this vector a, we have
+                                                       1/p                                        1/q
+                                                                π 2/p
+                           Z                                              Z
+                                     ∥u(t) − a∥pq dt          ≤                    ∥u̇(t)∥qq dt           .                (5)
+                                S1                              c0 (p)        S1
+
+Proof. First, let us construct the vector a. For each i = 1, . . . , n, consider
+                                         Z
+                                Gi (s) =     |ui (t) − s|p dt,    s ∈ R.
+                                                   S1
+
+For fixed s this is the p-th power of the Lp -distance from ui to a constant function s on S 1 . Note
+that for p > 1, this function is strictly convex. Also, the reversed triangle inequality gives
+
+                                        Gi (s)1/p ≥ |(2π)1/p |s| − ∥ui ∥Lp (S 1 ) |.
+
+Therefore, Gi (s) → +∞ as |s| → ∞. This means that Gi has a unique minimum ai . Differentiating,
+we obtain                                 Z
+                       0 = G′i (ai ) = −p   |ui (t) − ai |p−2 (ui (t) − ai ) dt.
+                                                        S1
+This constructs the required vector a. Applying Lemma 10 to ui − ai , we get
+
+                                                                   π 2/p
+                                         ∥ui − ai ∥Lp (S 1 ) ≤            ∥u̇i ∥Lq (S 1 ) .
+                                                                   c0 (p)
+
+Since p/q = p − 1 ≥ 1, the triangle inequality in Lp/q (S 1 ) gives
+                      Z                    q/p        n                                 n
+                                                                                                ∥ui − ai ∥qLp .
+                                                        X                                 X
+                               ∥u − a∥pq dt        =          |ui − ai |q             ≤
+                          S1                            i=1                               i=1
+                                                                              Lp/q
+
+As a result,
+                                        q/p                 !q   n
+                                                                                                   !q Z
+                                                   π 2/p                                  π 2/p
+                 Z
+                                                                        ∥u̇i ∥qLq =
+                                                                  X
+                         ∥u − a∥pq dt          ≤                                                              ∥u̇∥qq dt.
+                    S1                             c0 (p)                                 c0 (p)       S1
+                                                                  i=1
+
+Taking the q-th root proves (5).
+
+2.4    Cylindrical upper bound
+In the coordinate order (x1 , . . . , xn , y1 , . . . , yn ), the first symplectic coordinate pair is (x1 , y1 ). The
+standard cylinder of radius R is
+
+                                   ZR = (x, y) ∈ R2n : x21 + y12 < R2 .
+                                            
+
+Recall that cZ (K) is the infimum of πR2 over symplectic embeddings of a neighborhood of K into
+ZR . Thus, normalization and monotonicity imply c(K) ≤ cZ (K) for every normalized symplectic
+capacity c.
+
+                                                               11
+Lemma 12. Let 1 < p < ∞, q = p/(p − 1) and B, D ∈ GL(n, R). Set C = BDT and M =
+∥C∥ℓnq →ℓnp . Then
+                                                      c0 (p)
+                                    cZ (Kp (B, D)) ≤         .                                 (6)
+                                                       M
+Consequently, the same upper bound holds for every normalized symplectic capacity, including cEHZ .
+Proof. Choose v ∈ Rn such that ∥v∥q = 1 and ∥Cv∥p = M . Such a vector exists due to compactness
+of ℓq −sphere. Since C is invertible, we get M > 0. Consider
+
+                                                       |Cv|p−2 Cv
+                                                 u=               .
+                                                          Mp
+Since (p − 1)q = p, we have
+
+                                      ∥Cv∥p−1
+                                          p     1                           ∥Cv∥pp
+                            ∥u∥q =        p
+                                              =   ,            ⟨u, Cv⟩ =           = 1.
+                                        M       M                            Mp
+Define α = B T u and β = DT v. Then
+
+                                            ⟨α, β⟩ = ⟨u, BDT v⟩ = 1.
+
+We want to change variables to make ⟨α, x⟩ and ⟨β, y⟩ the first pair of symplectic coordinates. Let
+us construct that change of variables explicitly.
+    Choose a basis ρ2 , . . . , ρn of β ⊥ , and let A be the n × n matrix with rows αT , ρT2 , . . . , ρTn . These
+rows are linearly independent because α ∈          / β ⊥ (α is not perpendicular to β). Therefore, A is
+invertible. We see that
+                                  Aβ = e1 = (1, 0, . . . , 0)T ,  A−1 e1 = β.
+Consider a linear map
+
+                            F (x, y) = (X, Y ),         X = Ax,          Y = (AT )−1 y.
+
+We see that for any (x, y), (x′ , y ′ ) ∈ R2n
+
+              ω(F (x, y), F (x′ , y ′ )) = ⟨Ax, (AT )−1 y ′ ⟩ − ⟨Ax′ , (AT )−1 y⟩ = ⟨x, y ′ ⟩ − ⟨x′ , y⟩.
+
+This means that F is symplectic.
+   The new coordinates are ordered as (X1 , . . . , Xn , Y1 , . . . , Yn ). Their first symplectic pair is
+(X1 , Y1 ) (because F is symplectic). By construction,
+
+                                        X1 = eT1 Ax = ⟨α, x⟩ = ⟨u, Bx⟩,
+                               Y1 = eT1 A−T y = ⟨A−1 e1 , y⟩ = ⟨β, y⟩ = ⟨v, Dy⟩.
+
+Therefore, Hölder’s inequality gives
+                                              1
+                   |X1 | ≤ ∥u∥q ∥Bx∥p =         ∥Bx∥p ,         |Y1 | ≤ ∥v∥q ∥Dy∥p = ∥Dy∥p .
+                                              M
+For every (x, y) ∈ Kp (B, D), we obtain
+
+                                   M p |X1 |p + |Y1 |p ≤ ∥Bx∥pp + ∥Dy∥pp ≤ 1.
+
+Define Ω ⊂ R2
+                                    Ω = (s, t) ∈ R2 : M p |s|p + |t|p ≤ 1 .
+                                       
+
+
+                                                          12
+We showed that
+                          F (Kp (B, D)) ⊂ (X, Y ) ∈ R2n : (X1 , Y1 ) ∈ Ω .
+                                         
+
+The change of variables (s, t) → (M s, t) gives
+
+                                                         1              c0 (p)
+                                    Area(Ω) =              Area(Bp2 ) =        .
+                                                         M               M
+   Fix ε > 0. Choose a smooth convex open domain U ⊂ R2 such that Ω ⊂ U and Area(U ) <
+Area(Ω) + ε. Define a number R such that πR2 = Area(U ). Since U is in R2 , there is symplectic
+map from U to the ball B 2 (R) ⊂ R2 . Note this map by φ = (φ1 , φ2 ).
+   Define                                                                                   
+                  φ(X, Y ) = φ1 (X1 , Y1 ), X2 , . . . , Xn , φ2 (X1 , Y1 ), Y2 , . . . , Yn .
+We get that φ ◦ F is a symplectic embedding of a neighborhood of Kp (B, D) into ZR . By the
+definition of cZ ,
+                                                           c0 (p)
+                         cZ (Kp (B, D)) ≤ πR2 = Area(U ) <        + ε.
+                                                            M
+Taking ε as small as we want proves the lemma.
+
+
+3    Proof of Theorem 2
+Recall that C = BDT and M = ∥C∥ℓnq →ℓnp . We apply Clarke’s formula (4) with r = q. Write
+
+                         z(t) = (B T u(t), DT v(t)),                 u, v ∈ W 1,2 (S 1 ; Rn ).
+
+Since B and D are invertible, the condition z ∈ En is equivalent to
+                                   Z            Z
+                                      u(t) dt =     v(t) dt = 0.                                                      (7)
+                                         S1                   S1
+
+Formula (3) gives
+                                   hKp (B,D) (ż(t))q = ∥u̇(t)∥qq + ∥v̇(t)∥qq .
+By the definition of the action,
+                                                   Z
+                                              1
+                                   A(z) =                (⟨u, C v̇⟩ − ⟨u̇, Cv⟩) dt.
+                                              2     S1
+                                                                 R                      R
+Since u, v are periodic, integration by parts gives                S 1 ⟨u̇, Cv⟩ dt = − S 1 ⟨u, C v̇⟩ dt.   Therefore, the
+condition A(z) = 1 becomes             Z
+                                                   ⟨u(t), C v̇(t)⟩ dt = 1.                                            (8)
+                                              S1
+As a result, Clarke’s formula has the following form:
+                                             πq
+                                                    Z
+                                      q/2
+                                                        ∥u̇(t)∥qq + ∥v̇(t)∥qq dt,
+                                                                             
+                      cEHZ (Kp (B, D)) =        min                                                                   (9)
+                                            2π       S1
+
+where the minimum is taken over all u, v ∈ W 1,2 (S 1 ; Rn ) satisfying (7) and (8). Since q ≤ 2, we
+can apply Lemma 11 to u. Choose the vector a given by that lemma. Periodicity of v implies
+                          Z                          Z            
+                             ⟨a, C v̇(t)⟩ dt = a, C        v̇(t) dt = 0.
+                               S1                                     S1
+
+
+                                                            13
+Therefore,                                    Z
+                                        1=           ⟨u(t) − a, C v̇(t)⟩ dt .
+                                                S1
+Define                      Z                      1/q                    Z                        1/q
+                       X=            ∥u̇(t)∥qq dt          ,         Y =               ∥v̇(t)∥qq dt            .
+                                S1                                              S1
+For each t, Hölder’s inequality and the definition of M give
+
+                  |⟨u(t) − a, C v̇(t)⟩| ≤ ∥u(t) − a∥q ∥C v̇(t)∥p ≤ M ∥u(t) − a∥q ∥v̇(t)∥q .
+
+Applying Hölder’s inequality on S 1 , and then (5), we obtain
+                                                                     1/p
+                                                                 M π 2/p
+                                     Z
+                            1≤M             ∥u(t) − a∥pq dt              XY,Y ≤
+                                      S1                          c0 (p)
+                                                            c0 (p) q/2
+                                                                   
+                                X q + Y q ≥ 2(XY )q/2 ≥ 2                .
+                                                            M π 2/p
+
+In formula (9) the integral equals X q + Y q . Taking the minimum and using q − 1 = q/p, we get
+                                                                             q/2                     q/2
+                                                                    c0 (p)                     c0 (p)
+                      cEHZ (Kp (B, D))q/2 ≥ π q−1                                      =                       .
+                                                                    M π 2/p                     M
+
+Finally, we get
+                                                                            c0 (p)
+                                          cEHZ (Kp (B, D)) ≥                       .
+                                                                             M
+By Lemma 12,
+                                                                                           c0 (p)
+                              cEHZ (Kp (B, D)) ≤ cZ (Kp (B, D)) ≤                                 .
+                                                                                            M
+Combining the last two inequalities we get
+
+                                                     c0 (p)        4Γ(1 + 1/p)2
+                        cEHZ (Kp (B, D)) =                  =                          .
+                                                      M       Γ(1 + 2/p)∥BDT ∥ℓnq →ℓnp
+
+The theorem is proved.
+
+
+4    Proof of Theorem 6
+Proof. Recall that a normalized Hadamard matrix is an orthogonal matrix H ∈ O(n) whose entries
+satisfy |Hij | = n−1/2 . We will show that these matrices minimize the norm ∥C∥ℓnq →ℓnp among
+orthogonal matrices. By Theorem 2, this means that they maximize the capacity.
+Lemma 13. Let 2 < p < ∞, q = p/(p − 1) and C ∈ O(n). Then
+
+                                          n1/p−1/2 ≤ ∥C∥ℓnq →ℓnp ≤ 1.                                              (10)
+
+The lower bound is equality if and only if C is a normalized Hadamard matrix. If p > 2, then
+equality in the lower bound holds only for normalized Hadamard matrices.
+
+
+
+
+                                                               14
+Proof. First, recall that ∥z∥s ≤ ∥z∥r whenever 1 ≤ r ≤ s < ∞. Since q ≤ 2 ≤ p, we get that for
+every ξ ∈ Rn , C ∈ O(n) we have
+
+                                        ∥Cξ∥p ≤ ∥Cξ∥2 = ∥ξ∥2 ≤ ∥ξ∥q .
+
+Dividing by ∥ξ∥q and taking the supremum over ξ ̸= 0, we obtain
+
+                                                        ∥C∥ℓnq →ℓnp ≤ 1.
+
+This gives us the upper bound. Let us prove the lower bound.
+   Applying Hölder’s inequality with conjugate for p/2 and p/(p − 2), we obtain
+
+                       n                       n
+                                                             !2/p      n
+                                                                                            !(p−2)/p
+                       X                       X                       X
+             ∥z∥22 =            2
+                             |zi | · 1 ≤                 p
+                                                     |zi |                    1   p/(p−2)
+                                                                                                       = n1−2/p ∥z∥2p .
+                       i=1                     i=1                     i=1
+
+This implies that
+                                                 ∥z∥p ≥ n1/p−1/2 ∥z∥2 .                                                   (11)
+This inequality turns into equality if and only if |zi |p are all equal.
+   Let ej be the standard basis vector. We have ∥ej ∥q = 1, and Cej is the j-th column of C. Since
+C is orthogonal, ∥Cej ∥2 = 1. By the definition of the operator norm and (11),
+
+                                      ∥Cej ∥p
+                    ∥C∥ℓnq →ℓnp ≥             = ∥Cej ∥p ≥ n1/p−1/2 ∥Cej ∥2 = n1/p−1/2 .
+                                       ∥ej ∥q
+
+This proves the lower bound.
+
+   Let H be a normalized Hadamard matrix. We first compute two operator norms of H. Since
+every entry of H has absolute value n−1/2 , for every ξ ∈ Rn and every i we have
+
+                                           n
+                                           X                     n
+                                                                 X
+                             |(Hξ)i | =          Hij ξj ≤                  |Hij ||ξj | = n−1/2 ∥ξ∥1 .
+                                           j=1                       j=1
+
+
+Taking the maximum over i gives ∥Hξ∥∞ ≤ n−1/2 ∥ξ∥1 . Equality is obtained by taking ξ = ej
+(every entry of Hej has absolute value n−1/2 ). Therefore,
+
+                                                 ∥H∥ℓn1 →ℓn∞ = n−1/2 .
+
+Moreover, H ∗ H = H T H = I, so H preserves the Euclidean norm also on Rn . Therefore,
+∥H∥ℓn2 →ℓn2 = 1.
+    Let us recall the Riesz–Thorin interpolation theorem (see [5, Theorem 1.1.1]). It says that if a
+linear operator T satisfies
+
+                                    ∥T ∥ℓnr →ℓns ≤ A0 ,                    ∥T ∥ℓnr →ℓns ≤ A1 ,
+                                           0     0                                 1    1
+
+
+then, for 0 < θ < 1,
+                                                ∥T ∥ℓnr →ℓns ≤ A1−θ θ
+                                                                0 A1 ,
+                                                             θ   θ
+
+where
+                                    1    1−θ  θ                            1    1−θ  θ
+                                       =     + ,                              =     + .
+                                    rθ    r0  r1                           sθ    s0  s1
+
+                                                                 15
+Let us apply the theorem between
+
+                                 H : ℓn1 −→ ℓn∞ ,          H : ℓn2 −→ ℓn2 .
+
+Taking θ = 2/p, we obtain
+
+                             1     θ   1 1                        1   θ 1
+                                =1− =1− = ,                          = = .
+                             rθ    2   p q                        sθ  2 p
+Therefore,
+                                                      1−2/p
+                            ∥H∥ℓnq (R)→ℓnp (R) ≤ n−1/2        = n1/p−1/2 .
+
+Combining this with the already proved lower bound, we get
+
+                                     ∥H∥ℓnq (R)→ℓnp (R) = n1/p−1/2 .
+
+Let us study matrices when we have equality. Assume that p > 2 and that C ∈ O(n) satisfies
+
+                                        ∥C∥ℓnq →ℓnp = n1/p−1/2 .
+
+For every standard basis vector ej , we have
+
+                          n1/p−1/2 ≤ ∥Cej ∥p ≤ ∥C∥ℓnq →ℓnp ∥ej ∥q = n1/p−1/2 .
+
+This means that equality holds in (11) for every column Cej . Since p > 2, we have equality if and
+only if all coordinates have the same absolute value. Since ∥Cej ∥2 = 1, it follows that
+
+                                   |Cij | = n−1/2 ,        1 ≤ i, j ≤ n.
+
+This means that C is a normalized Hadamard matrix. Conversely, the argument above shows that
+every normalized Hadamard matrix has the norm equal to its lower bound.
+
+   Since B, D are orthogonal, so is C = BDT . Put M = ∥C∥ℓnq →ℓnp . Lemma 13 gives
+
+                                          n1/p−1/2 ≤ M ≤ 1.
+
+All quantities are positive. Taking reciprocals reverses the inequalities:
+                                               1
+                                         1≤      ≤ n1/2−1/p .
+                                               M
+Multiplying by c0 (p) and using Theorem 2, we obtain the required capacity bounds.
+    For p > 2, the capacity is equal to its upper bound if and only if M = n1/p−1/2 . By Lemma 13
+this happens if and only if BDT is a normalized Hadamard matrix. In particular, if such a matrix
+H exists, we can take B = H and D = I. Then
+
+                         cEHZ (Kp (H, I)) = cZ (Kp (H, I)) = c0 (p)n1/2−1/p .
+
+For p = 2, we have M = 1 for every orthogonal pair B, D, and all these domains have capacity
+c0 (2) = π.
+
+
+
+
+                                                      16
+5    Proof of Theorem 7
+Let us recall that the cylindrical capacity is the biggest one. Then Theorem 2 says that for any
+normalized capacity we have
+
+                           c(Kp (B, D)) ≤ cZ (Kp (B, D)) ≤ c0 (p)n1/2−1/p .                  (12)
+
+Since B, D are orthogonal, direct computations show
+
+                                                       22n Γ(1 + 1/p)2n
+                           V ol(Kp (B, D)) = V ol(Bp2n ) =               ,
+                                                           Γ(1 + 2n/p)
+                                                                        1/n                (13)
+                                       1/n               2        n!
+                    (n!V ol(Kp (B, D)))    = 4Γ(1 + 1/p)                      .
+                                                             Γ(1 + 2n/p)
+
+We need to compare this expression with the right-hand side of (12).
+
+Lemma 14. For any n > 1 and 0 ≤ s ≤ 1, we have
+
+                                 Γ(1 + ns) ≤ n!Γ(1 + s)n n−n(1−s)/2 .                        (14)
+
+Proof. Define
+                              G(s) = log(Γ(1 + ns)) − n log(Γ(1 + s)).
+Let us prove that G is convex. By the Weierstrass product for the Gamma function we have
+                                           ∞
+                             1            Y    x  −x/m
+                                 = xeγE x    1+    e     ,                x > 0,
+                            Γ(x)                m
+                                          m=1
+
+where γE is the Euler constant. Taking logarithms gives
+                                                          ∞ 
+                                                          X            x x
+                    − log(Γ(x)) = log(x) + γE x +               log 1 +   −   ,
+                                                                        m   m
+                                                          m=1
+                                                                ∞
+                               d                 1 X    x
+                                 log Γ(x) = −γE − +           ,
+                              dx                 x   m(m + x)
+                                                            m=1
+                                                ∞                   ∞
+                        d2             1   X    1        X     1
+                          2
+                            log Γ(x) = 2 +           2
+                                                       =            .
+                       dx             x      (m + x)       (x + m)2
+                                               m=1                  m=0
+
+Note that each of the series above converges uniformly on every compact subset of (0, ∞). So, we
+are allowed to apply termwise differentiation.
+    Using the formulas above and taking into account that n > 1 and elements with k < n are
+positive, we obtain
+                                 ∞ 
+                               n X                                            
+                      ′′
+                               X                1               1
+                    G (s) =                            2
+                                                         −                         > 0.
+                                         (s + m + k/n)     (s + m + 1)2
+                               k=1 m=0
+
+This means that G is convex.
+   Since G(0) = 0, G(1) = log(n!) and G is convex, we have (less than the line joining endpoints)
+
+                                           G(s) ≤ s log(n!).
+
+                                                     17
+Taking exponents of both sides we have
+
+                                Γ(1 + ns) ≤ (n!)s Γ(1 + s)n .
+
+Now we need an estimate for (n!)s . Note (n!)2 = nk=1 k(n + 1 − k) ≥ nn . This implies that
+                                                  Q
+n! ≥ nn/2 . As a result,
+                                    (n!)s ≤ n!n−n(1−s)/2 .
+This proves the lemma.
+
+
+    Assume that s = 2/p in the lemma above. We obtain
+                                                                      1/n
+                                   n1/2−1/p
+                                                   
+                                                            n!
+                                             ≤                               .
+                                  Γ(1 + 2/p)           Γ(1 + 2n/p)
+                                                                      2
+Using formulas (12), (13) and the value of c0 (p) = 4Γ(1+1/p)
+                                                     Γ(1+2/p) we get
+
+
+                     c(Kp (B, D)) ≤ c0 (p)n1/2−1/p < (n!V ol(Kp (B, D)))1/n .
+
+This proves the theorem.
+
+
+6    Appendix. Code for approximation of EHZ capacity
+As it is written in the introduction, all formulas are first observed after numerical computations
+and rigorously proved after. In this section we give the idea of how we estimate EHZ capacity for
+a given domain. Note that checking the code for many domains, where the answer is known, gives
+us the correct answer with error around 10−6 .
+
+The code and numerical estimates can be found if you follow this link https://github.com/vardanbobo007/symplecti
+capacity/blob/main/README.md
+
+We use the following convention
+                                            
+                                        0 −I
+                              J=               ,            ω(u, v) = ⟨Ju, v⟩.
+                                        I 0
+
+We use the function F and the following convex region
+
+                                     K = {x ∈ R2n : F (x) ≤ 1}
+
+such that ∇F ̸= 0 near ∂K. To estimate EHZ capacity, we need to approximate the following
+problem:
+                                 ( Z
+                                  1 1
+                  cEHZ (K) = inf      ⟨−Jγ(t), γ̇(t)⟩ dt :
+                             γ,λ  2 0
+                                         γ(0) = γ(1),           F (γ(t)) = 1,                  (*)
+                                                                                        )
+                                         γ̇(t) = −λ(t)J∇F (γ(t)),                λ(t) > 0 .
+
+
+                                                       18
+6.1   Basic idea of gradient optimization
+Let us discuss the basic idea first. Suppose that an object is described by parameters θ and L(θ)
+is a positive real number that measures how bad this object is, called the loss. A big value L(θ)
+means that the object is far from what we want. A small value means that it is closer.
+    The gradient ∇θ L points in the direction where the loss increases most quickly. To reduce the
+loss we move in the opposite direction. Starting from θ(0) we repeat
+
+                                           θ(s+1) = θ(s) − ηs ∇θ L(θ(s) ),
+
+where ηs > 0 is a step size. After many updates the coefficients move toward a local minimum.
+    The loss may have many local minima and the result depends on the starting point. For
+this reason we optimize many loops simultaneously. We start from many random loops and later
+continue with the best ones.
+    The idea is that some initial loops converge to a local minimum and one of them gives us the
+EHZ capacity.
+
+6.2   General form of the loss
+There are three things that we want from every loop. It should lie on the boundary, its tangent
+vector should belong to the characteristic direction and its action should be small. We represent
+these requirements by
+                                  Lbound ,      Lchar ,    Lact .
+Their explicit form will be given later. For now, let us discuss the general idea. We combine them
+into one loss
+                       L(θ) = αbound Lbound (θ) + αchar Lchar (θ) + αact Lact (θ),
+where all coefficients are positive. They let us give priority to some parts of the problem. For
+example, if loops do not stay close to the boundary we can increase αbound . If their tangent
+vectors do not follow the characteristic direction we can increase αchar . The action loss should
+distinguish different valid characteristics but it should not dominate before the geometric conditions
+are satisfied.
+    The step size ηs decreases during the gradient optimization. We need steps smaller and smaller
+as we get closer to the local minimum
+
+6.3   Fourier representation of the loops
+We need to define a map S 1 → R2n , i.e. to define 2n maps γ1 , . . . , γ2n . We represent each closed
+loop
+                             γℓ : [0, 1] −→ R2n ,     ℓ = 1, . . . , B
+by finite Fourier series. For a fixed number N we write
+                                   N
+                                   X
+             γi,ℓ (t) = ai,ℓ,0 +         (ai,ℓ,k cos(2πkt) + bi,ℓ,k sin(2πkt)) ,   i = 1, . . . , 2n.
+                                   k=1
+
+Note that all these loops are automatically closed. All Fourier coefficients are the parameters that
+we change during optimization.
+
+
+
+
+                                                          19
+   It is easy to compute tangent vector explicitly:
+                                      N
+                                      X
+                        γ̇i,ℓ (t) =         2πk (−ai,ℓ,k sin(2πkt) + bi,ℓ,k cos(2πkt)) .
+                                      k=1
+
+
+
+Stage 1: global sampling
+
+    The goal of stage 1 is a wide search and its purpose is to find several promising regions in the
+parameter space.
+    In the first stage we generate B random Fourier loops. Usually B = 512 is enough when 2n = 4
+or 6.
+    Let us describe how we randomly generate one loop. The same works for each loop. The center
+of each loop i = 1, . . . , B is sampled as
+
+                                                 ai,0 ∼ N (0, σc2 I),
+
+where σc is the constant we choose. To construct the first Fourier coefficients we sample a Gaussian
+vector zi and normalize it
+                                         zi
+                                   ui =       ,   zi ∼ N (0, I).
+                                        ∥zi ∥
+The first cosine coefficient is taken in the direction ui and the sine coefficient in the direction −Jui :
+
+                                      ai,1 = Ricos ui ,      bi,1 = −Risin Jui ,
+
+where real numbers Ricos and Risin are sampled independently from a fixed interval (which we
+choose). The reasons for these choices are that Gaussian distribution gives uniform distribution on
+a sphere.
+    Coefficients for higher terms are sampled using a decaying Gaussian scale. For k = 2, . . . , N
+the code uses                                    
+                                                  σp 2
+                               ai,k , bi,k ∼ N 0, r I ,        r > 0,
+                                                  k
+where σp is a parameter we choose.
+   We minimize the total loss for all B loops by changing their Fourier coefficients. We apply
+gradient descent technique some number of steps (which we choose) and decrease the step size ηs
+with each step. After the optimization we check every loop separately. We keep only loops with
+positive actions and with boundary and characteristic errors below chosen tolerance.
+
+Stage 2: local Gaussian sampling
+
+    After stage 1, we get some loops with small boundary and characteristic errors. Now, the goal
+of stage 2 is to explore neighborhoods of the loops we have after stage 1.
+    Let θ1 , . . . , θR be the loops accepted after Stage 1. From each loop we produce Kloc (number
+which we choose) new loops. One copy is left unchanged and Gaussian noise is added to the other
+copies.
+    The center coefficients receive noise with standard deviation τ0 . All already existing cosine and
+sine coefficients receive noise with standard deviation τ . It can be written as
+
+                                      θei,j = θi + ξi,j ,        j = 1, . . . , Kloc ,
+
+                                                            20
+where ξi,1 = 0 (we keep the original loop) and the other ξi,j are Gaussian.
+    After making these local copies we increase the number of Fourier terms. The old coefficients
+are copied and only the new terms are randomly initialized. If N1 and N2 are the old and new
+numbers of modes, then for N1 < k ≤ N2 their standard deviation is σknew     r , where σnew is the
+
+number we choose. We minimize the loss for all new loops and again keep only loops with positive
+action and with boundary and characteristic error below some chosen number.
+    As in the stage one, we decrease the step size ηs with each step. The number of steps is another
+parameter we need to choose.
+
+Stage 3: increasing accuracy
+
+    The purpose of this stage is to improve several stable candidates before the final optimization.
+    In Stage 3 we select some of the loops with the smallest action and also some random valid
+loops from Stage 2. Keeping random loops prevents the method from following only one candidate
+too early.
+    We increase the number of Fourier terms again. The old coefficients are copied without adding
+new noise. Only the newly added coefficients are initialized by Gaussian variables whose standard
+deviation is σnew /k r .
+    The bigger number of Fourier terms lets the loops follow the boundary and characteristic di-
+rection more accurately.
+    As before, we do the gradient optimization with smaller steps.
+
+Stage 4: final optimization
+
+    In Stage 4 we keep some loops with the smallest action together with a random selection of
+the remaining loops. We increase the number of Fourier terms one more time. As before, the old
+coefficients are copied and only the new terms receive decaying Gaussian noise.
+    Note that loops in this stage already have close to zero boundary and characteristic losses. In
+this stage, we do not use gradient descent method. Instead, we use LBFGS. Gradient descent uses
+only the current gradient. LBFGS method uses information from several previous gradients to
+approximate the local curvature of the loss. This usually gives a more accurate result when a good
+starting loop is already known.
+    After this optimization we take the one with the smallest action (bigger than a number close
+to zero). This gives our approximation of EHZ capacity cEHZ (K).
+
+Trivial loops
+
+    During this process some loops definitely shrinks to a point or are close to it. As a result,
+the action converges to zero. However, some loops converge to a local minimum (in the space of
+coefficients of the finite Fourier series). Also, after each stage, we remove loops with very small
+actions from our considerations
+    As the table below shows, there are loops at the local minimum with actual minimum value. To
+avoid getting only trivial loops we sample many initial loops and add noise to their initialization.
+
+6.4   Explicit form of the losses
+Let us give explicit form of the losses mentioned in the previous sections.
+
+
+
+                                                 21
+    Recall, that we generate B loops. Let M be the number of points on a loop, where we evaluate
+values of the loop. Note that we need to increase M when consider more and more terms in the
+Fourier series, i.e. we need more points to catch high frequencies. We assume that these M points
+are distributed equally and have the following form:
+                                         m
+                                 tm =      ,      m = 0, . . . , M − 1.
+                                         M
+The losses (which we minimize) are averages over both indices: the loop index i and the time index
+m.
+
+Boundary loss
+
+The loop lies on ∂K when F (γi (t)) = 1. We measure the failure of this condition by
+                                                 B M −1
+                                         1 XX
+                           Lbound (θ) =       (F (γi (tm )) − 1)2 .
+                                        BM
+                                                i=1 m=0
+
+
+
+Characteristic loss
+
+Using the sign convention of the previous section, define
+
+                                        Xi,m = −J∇F (γi (tm )).
+
+The code projects the tangent vector onto this characteristic direction. The nonnegative projection
+coefficient is                                                     
+                                                 ⟨γ̇i (tm ), Xi,m ⟩
+                                λi,m = max 0,                         ,
+                                                  ∥Xi,m ∥2 + ε
+and the remaining vector is
+                                     Ri,m = γ̇i (tm ) − λi,m Xi,m .
+We define
+                                                     B M −1
+                                                1 XX
+                                 Lchar (θ) =         ∥Ri,m ∥2 .
+                                               BM
+                                                    i=1 m=0
+
+
+
+Action loss
+
+The action loss is the mean action of all loops. We write it as
+                                               B M −1
+                                          1 XX
+                           Lact (θ) =          ⟨−Jγi (tm ), γ̇i (tm )⟩ .
+                                        2BM
+                                               i=1 m=0
+
+Since the grid is uniform, the average over m approximates the integral over [0, 1].
+
+Total loss
+
+The total loss is
+                      L(θ) = αbound Lbound (θ) + αchar Lchar (θ) + αact Lact (θ).
+
+                                                   22
+Note that the total loss may be much higher than the resulting capacity. The reason is that we
+take average of actions over all loops and we may get different loops as local minima. Not all local
+minima are supposed to have the minimal action.
+   At the end, we take the loop with smallest action (bigger than some number close to zero).
+
+6.5   Test results
+Below we present numerical results of our experiments. As an additional check, we apply a random
+unitary transformation U ∈ U (n) to each test domain K. Since the EHZ capacity is invariant
+under unitary transformations, the capacity should remain unchanged
+
+                                      cEHZ (U K) = cEHZ (K).                                      (15)
+
+We then recompute the capacity numerically for the transformed domain and compare it with the
+same analytical value.
+    The exact values used for comparison in the benchmark tests are given by standard formulas for
+the Ekeland–Hofer–Zehnder capacity of ellipsoids and related convex and toric domains. These for-
+mulas, together with the relevant properties of symplectic capacities, can be found in [11, 7, 12, 13];
+see also [15] for closely related product constructions. We use these analytical values as reference
+values for evaluating the accuracy of the numerical method.
+
+   Note that the exact formulas proved in this paper are first observed using numerical estimates.
+This also shows that the code estimates capacity numerically in an appropriate way.
+
+
+
+
+                          Figure 2: Numerical EHZ capacity benchmarks.
+
+
+                                                  23
+References
+ [1] A. Abbondandolo, G. Benedetti, and O. Edtmair, Symplectic capacities of domains close to
+     the ball and Banach–Mazur geodesics in the space of contact forms, arXiv:2312.07363 (2023).
+
+ [2] S. Artstein-Avidan and Y. Ostrover, A Brunn–Minkowski inequality for symplectic capacities
+     of convex domains, International Mathematics Research Notices (2008), no. 13, Art. ID rnn044,
+     31 pp.
+
+ [3] S. Artstein-Avidan, V. Milman, and Y. Ostrover, The M -ellipsoid, symplectic capacities and
+     volume, Commentarii Mathematici Helvetici 83 (2008), 359–369.
+
+ [4] A. Balitskiy, I. Mitrofanov, and A. Polyanskii, Triangle covering problems and the Viterbo
+     inequality in the plane, 2026.
+
+ [5] J. Bergh and J. Löfström, Interpolation Spaces: An Introduction, Grundlehren der mathema-
+     tischen Wissenschaften, Vol. 223, Springer-Verlag, Berlin–New York, 1976.
+
+ [6] F. Broćić, A note on the capacities of Lagrangian p-sum, Annales Mathématiques du Québec
+     49 (2025), no. 1
+
+ [7] K. Cieliebak, H. Hofer, J. Latschev, and F. Schlenk, Quantitative symplectic geometry, in
+     B. Hasselblatt and A. Katok (eds.), Dynamics, Ergodic Theory, and Geometry, Mathematical
+     Sciences Research Institute Publications, Vol. 54, Cambridge University Press, 2007, pp. 1–44.
+
+ [8] F. H. Clarke, A classical variational principle for periodic Hamiltonian trajectories, Proceed-
+     ings of the American Mathematical Society 76 (1979), 186–188.
+
+ [9] D. Cristofaro-Gardiner and R. Hind, On the agreement of symplectic capacities in high dimen-
+     sion, arXiv:2307.12125 (2023).
+
+[10] G. Croce and B. Dacorogna, On a generalized Wirtinger inequality, Discrete and Continuous
+     Dynamical Systems 9 (2003), no. 5, 1329–1341.
+
+[11] I. Ekeland and H. Hofer, Symplectic topology and Hamiltonian dynamics, Mathematische
+     Zeitschrift 200 (1989), no. 3, 355–378.
+
+[12] J. Gutt and M. Hutchings, Symplectic capacities from positive S 1 -equivariant symplectic ho-
+     mology, Algebraic & Geometric Topology 18 (2018), no. 6, 3537–3600.
+
+[13] J. Gutt, M. Hutchings, and V. G. B. Ramos, Examples around the strong Viterbo conjecture,
+     Journal of Fixed Point Theory and Applications 24 (2022), Article 41.
+
+[14] J. Hadamard, Résolution d’une question relative aux déterminants, Bulletin des Sciences
+     Mathématiques 17 (1893), 240–246.
+
+[15] P. Haim-Kislev and Y. Ostrover, Remarks on symplectic capacities of p-products, International
+     Journal of Mathematics 34 (2023), no. 4, 2350021.
+
+[16] P. Haim-Kislev and Y. Ostrover, A counterexample to Viterbo’s conjecture, 2024.
+
+[17] J. Moser, On the volume elements on a manifold, Transactions of the American Mathematical
+     Society 120 (1965), 286–294.
+
+
+                                                24
+[18] R. E. A. C. Paley, On orthogonal matrices, Journal of Mathematics and Physics 12 (1933),
+     311–320.
+
+[19] J. J. Sylvester, Thoughts on inverse orthogonal matrices, simultaneous sign-successions, and
+     tessellated pavements, Philosophical Magazine 34 (1867), 461–475.
+
+[20] C. Viterbo, Metric and isoperimetric problems in symplectic geometry, Journal of the American
+     Mathematical Society 13 (2000), 411–431.
+
+
+
+
+                                               25
+

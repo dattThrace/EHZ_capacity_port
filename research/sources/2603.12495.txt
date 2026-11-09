@@ -1,0 +1,1461 @@
+                                                   TRIANGLE COVERING PROBLEMS AND THE VITERBO
+                                                             INEQUALITY IN THE PLANE
+
+                                                   ALEXEY BALITSKIY, IVAN MITROFANOV, AND ALEXANDER POLYANSKII
+
+                                                  Abstract. We review a certain problem on covering triangles in the plane. Equiva-
+                                                  lently, it can be viewed as a family of ‘isobilliard’ inequalities in convex shapes, and
+                                                  as a special case of Viterbo’s conjecture in symplectic geometry. We give an elemen-
+                                                  tary overview of these topics and, using the optics of the covering problem, we establish
+arXiv:2603.12495v2 [math.MG] 19 Aug 2026
+
+
+
+
+                                                  several new special cases of Viterbo’s conjecture, provide a simple explanation of the
+                                                  counterexample of Haim-Kislev and Ostrover, and state a few open questions. The main
+                                                  novel result is a proof of Viterbo’s conjecture for lagrangian products K × Q, where
+                                                  Q ⊂ R2 is any quadrilateral and K ⊂ R2 is any convex shape.
+
+
+
+
+                                                                 1. A glance: triangle covering problems
+                                              An engineer has a few triangular rulers and wants to keep them neatly in a flat folio.
+                                           The shapes of the rulers are known, as are the engineer’s peculiar preferences: they want
+                                           the folio to be convex, and they refuse to flip or rotate the rulers; the rulers may only be
+                                           moved by parallel translation. What are the minimal area of such a folio and its optimal
+                                           shape? This is the question we will address. Formally, given a collection of triangles in
+                                           the plane, we are looking for a way to parallel translate them, with overlaps allowed, in
+                                           order to minimize the area of their convex hull. Let us mention some concrete instances
+                                           before we state the problem abstractly and explain where the triangles come from.
+                                               (1) Engineer D. Isk has infinitely many rulers: one for each triangle with perimeter
+                                                   2, including degenerate ones, i.e., ordinary straightedges of length 1. This is
+                                                   equivalent to J. Wetzel’s worm problem [40], and it is still open. We mention the
+                                                   current progress in Section 2.
+                                               (2) Engineer Q. Uadrilateral has four rulers, depend-
+                                                   ing on two parameters a, b > 1, as shown in the
+                                                   figure on the right. We solve this problem in Sec-
+                                                   tion 5, establishing a new special case of Viterbo’s
+                                                   conjecture (more about it below).
+                                               (3) Engineer P. Entagon has ten rulers: one is a triangle with angles π/5, π/5, 3π/5,
+                                                   and the others are its copies rotated by kπ/5, k = 1, . . . , 9. An attempt to solve
+                                                   this problem (Section 6) leads to the counterexample of P. Haim-Kislev and Y. Os-
+                                                   trover [19], which disproves Viterbo’s conjecture in its greatest generality.
+                                              All these questions are instances of a single problem asking to find the smallest Q-
+                                           cover (Problem 3.4), where Q can be any convex shape (by a convex shape, we mean any
+                                           compact convex set in the plane with non-empty interior). In the examples above Q is a
+                                           disk, or a quadrilateral, or a regular pentagon.
+                                              We will briefly review the history of covering problems in Section 2, as well as the
+                                           relation between the smallest Q-cover and the geometry of billiards and Reeb orbits,
+                                           leading to a conjecture of C. Viterbo. This conjecture is a natural question of isoperimetric
+                                           flavor in symplectic geometry, and a version of it happens to be equivalent to our Q-
+                                           covering problem. Without going into details, we state this version now, and in Section 2
+                                           we will explain the terminology, including the symplectic capacity c(·) that we use.
+                                                                                             1
+      TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                       2
+
+Conjecture 1.1 (False in this generality!). For any convex bodies K, Q ⊂ Rn , their
+lagrangian product satisfies the ‘isocapacitary’ inequality:
+                                                 c(K × Q)n
+                                 vol(K × Q) ≥                 .
+                                                      n!
+   In the meantime, the reader may think of the following ‘isobilliard’ reformulation of this
+conjecture, which will be explained in Section 2: for any convex bodies K,  p Q ⊂ Rn , in the
+“billiard table” K there exists a periodic billiard orbit of length at most n! vol(K × Q),
+                                                                            n
+
+
+where both billiard reflections and lengths are defined using the asymmetric norm on Rn
+whose dual unit ball is a translate of Q.
+   Conjecture 1.1 is known to be true in several special cases [20, 22, 6, 1], but in the
+generality stated above it was disproved recently by P. Haim-Kislev and Y. Ostrover [19].
+However, their counterexample does not eliminate one of the main motivations behind the
+conjecture: a weaker symmetric variant of Viterbo’s conjecture would still imply [3] the
+longstanding Mahler conjecture [26] from 1939. In the sequel we refer to the inequality
+from Conjecture 1.1 as the Viterbo inequality, meaning that this is a property that may
+or may not hold for particular products.
+   In this paper, we work in the case n = 2. In Section 3 we explain the equivalence of
+Conjecture 1.1 and the problem of the smallest Q-cover (Problem 3.4). It boils down to
+an elementary question about decomposing (in some way) a closed curve into triangles,
+whose shapes align well with Q (Definition 3.6).
+   In Sections 4 to 7 we consider the problem of the smallest Q-cover in the following
+cases:
+      • Q is a triangle—as a warm-up and a showcase of our techniques;
+      • Q is a quadrilateral—as the main non-trivial result of this paper;
+      • Q is a pentagon—as a simple explanation of why Viterbo’s conjecture is false;
+      • Q is a hexagon—as a source of additional tricks, proofs, and open questions.
+   When Q is any quadrilateral or a regular hexagon, we completely describe all smallest
+Q-covers. The corresponding result on the symplectic side is two-fold. First, we establish
+the Viterbo inequality for two new classes of examples.
+Theorem 1.2. Conjecture 1.1 holds if K ⊂ R2 is any convex shape and Q ⊂ R2 is either
+an arbitrary quadrilateral or an affinely regular hexagon:
+                                                    1
+                                 area K · area Q ≥ c(K × Q)2 .
+                                                    2
+   Second, we get a characterization of all equality cases: all convex shapes K such that
+area K · area Q = 12 c(K × Q)2 , when Q is a quadrilateral or an affinely regular hexagon.
+It turns out to be quite tricky. For example, in the problem of the smallest folio of
+Q. Uadrilateral, if a1 + 1b ̸= 1, then there is a unique equality case, and if a1 + 1b = 1, then
+there is a one-parameter family of such equality cases. When Q is an affinely regular
+hexagon, there are two two-parameter families of equality cases as well as two isolated
+ones.
+   The counterexample of [19] raises a natural question of how much the Viterbo inequality
+should be relaxed in order to be true ([19, Question 2]). It is known [4] that Conjecture 1.1
+holds up to a factor of an absolute constant raised to the power of n. We state this question
+in our special case of interest, to which our methods apply.
+Question 1.3. What is the smallest number κ such that for any convex shapes K, Q ⊂ R2 ,
+the relaxed Viterbo inequality
+                                                1
+                             area K · area Q ≥    c(K × Q)2
+                                               2κ
+      TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                     3
+
+holds?
+                                   √
+  It follows from [19] that κ ≥ 5+3 5√
+                                       > 1. As a corollary of the Viterbo inequality for
+quadrilaterals, we will see that κ < 2.
+
+Acknowledgments. This material is based in part upon work supported by the HORI-
+ZON EUROPE Research and Innovation programme under Marie Sklodowska-Curie grant
+agreement No. 101107896. Alexander Polyanskii is partially supported by NSF grant
+DMS 2349045. Ivan Mitrofanov is supported by SNSF grant TMAG-2 216487/1.
+
+
+  2. A chronicle: from worms through billiards to symplectic systoles
+2.1. Worms. While in this paper we focus on translation covers, the history of covering
+problems starts with congruence covers, also known as displacement covers or universal
+covers. More specifically, given a collection of shapes {Tj | j ∈ J} to be covered, one is
+asked to find the smallest (in some sense) shape K such that for any j ∈ J there is an
+isometry fj of the euclidean plane such that fj (Tj ) ⊂ K. In other words, K contains a
+congruent copy of each Tj . Apparently, the first covering problem is due to H. Lebesgue,
+who asked in 1914 about the area-minimizing congruence cover for all sets of unit diameter
+([10, Chapter 11.14, Problem 1]). The question is still open; see [11, 17] for the current
+best bounds.
+   If all fj are required to be translations, a shape K for which one can choose translations
+fj with fj (Tj ) ⊂ K is called a translation cover for the family {Tj | j ∈ J}. The first
+famous question on translation covers was asked by S. Kakeya in 1917: what is the
+smallest area of a shape that contains a translated copy of every “needle” (any line
+segment of unit length)? The solution among convex shapes was shown by J. Pál to be an
+equilateral triangle [31], whereas Besicovitch constructed non-convex covers of arbitrarily
+small area [7].
+   A famous unsolved problem, known as L. Moser’s worm problem [10, Chapter 11.4,
+Problem 4], is to find the area-minimizing congruence cover for the collection of curves of
+length 1. In [40], J. Wetzel proved a lower bound for the area of such a congruence cover,
+which is still unbeaten. More importantly for us, in the same paper Wetzel proposed a
+related problem: find the smallest area of a convex translation cover for all closed curves
+of length 1. We call it Wetzel’s worm problem, though given that the curves are closed,
+we could have called it a ringworm problem as well. This problem is open as well [10,
+Chapter 11.4, Problem 8], with the best lower bound due to Wetzel himself [40]. A
+classical observation due to V. Klee [23], following directly from Helly’s theorem, leads to
+an equivalent reformulation of Wetzel’s worm problem [9, Remark 1], which we stated in
+the introduction: a convex set K is a translation cover for any closed curve of unit length if
+and only if it is a translation cover for any triangle of unit perimeter (including degenerate
+ones, which are line segments of length 1/2), so one might look for the smallest translation
+cover for triangles of unit perimeter. The best (in terms of area) known example of such a
+set K (and the best upper bound for the area in Wetzel’s problem) is due to H. Mallée [27],
+and we describe this example now. In Figure 1, left, one sees a parabola with a vertical
+directrix (not shown) and focus F , so that every ray of light passing through F reflects
+off the parabola and exits horizontally. An arc of this parabola can be reflected under the
+D3 dihedral group to obtain the shape K, shown in Figure 1, right, circumscribed around
+a regular triangle (one of the dashed triangles) having F as one of its vertices and with
+its opposite side horizontal. Inside K one sees three dashed closed curves—two triangles
+and one line segment traversed twice—of equal length.
+      TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                                  4
+
+
+
+
+        Figure 1. Mallée’s parabolic triangle (right) is composed of six parabolic
+        arcs. One of these arcs is shown on the left, and the full shape is obtained
+        by reflecting it under the D3 dihedral group around the central regular
+        triangle.
+
+   We note that the corresponding problem of finding the smallest congruence cover for all
+triangles of fixed perimeter is solved in [16]. We recommend [41] and [10, Chapter 11.4]
+for further information on planar covering problems. Among recent advances, we mention
+the version of Wetzel’s problem that only considers centrally symmetric closed curves; it
+is solved in [21].
+   In Section 3 we will pose a version of Wetzel’s worm problem in which both the way
+lengths are measured and the collection of triangles to be covered depend on a parameter—
+a convex polygon Q. Some instances of this problem were given in the introduction.
+
+2.2. Billiards. An important insight of [9] is an equivalent reformulation of Wetzel’s
+worm problem in terms of billiards.1 The idea is to consider the triangle (perhaps, de-
+generate) of shortest perimeter that cannot be covered by a translate of the interior of
+K; it turns out it can be translated so that all its vertices lie on the boundary of K, and
+its sides are related to the boundary in a way that is akin to the billiard reflection rule.
+The only catch is that the corresponding boundary point does not have to belong to a
+smooth part of the boundary of K, so the billiard rule needs to be generalized. We say
+that a polygonal curve u → v → w, where u, w ∈ K, v ∈ ∂K, u ̸= v ̸= w, satisfies the
+generalized billiard reflection rule at v, if there is a support line ℓ for K at v such that
+the outward normal vector ν to ℓ forms equal angles with the vectors v − u and w − v.
+The central objects of this subsection are closed, or periodic, generalized billiard orbits.
+We say that a billiard orbit is m-periodic if it has m reflection points in ∂K. Now we can
+formulate the elegant result of K. Bezdek and R. Connelly [9, Lemma 8], using modern
+terminology.
+
+  1People had considered billiard orbits in the context of covering closed curves earlier, e.g. in [12], but
+to our knowledge [9] was the first to give an equivalent reformulation of Wetzel’s worm problem in billiard
+terms.
+      TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                               5
+
+Theorem 2.1. A convex shape K is a translation cover for any closed curve of unit length
+if and only if K does not admit a 2- or 3-periodic generalized billiard orbit of length less
+than 1.
+  Let us denote by c(K × B) the length of the shortest closed generalized billiard orbit in
+the “billiard table” K. Here B is the unit disk in the plane, and the rationale behind this
+notation will be explained a bit later. While the paper [9] only hints at considering closed
+generalized billiard orbits of arbitrary period, the later paper [8] shows—using similar
+ideas—that the shortest closed generalized billiard orbit always exists and is necessarily
+2- or 3-periodic. Wetzel’s worm problem now becomes an ‘isobilliard’ problem: it asks
+                                2
+to maximize the ratio c(K×B)
+                         area K
+                                  over convex shapes K. Now we can state the conjectural
+optimality of Mallée’s example as an isobilliard inequality.
+Conjecture 2.2. Mallée’s parabolic triangle has the smallest area among convex shapes
+K ⊂ R2 with c(K × B) = 1.
+   The next milestone in our story is the observation made in [2]: Theorem 2.1 remains
+valid when R2 is endowed with an arbitrary norm, with lengths and billiard reflections
+defined accordingly. Given a compact convex set Q ⊂ R2 containing the origin in its inte-
+rior, one can define the (asymmetric) norm ∥ · ∥Q as the Minkowski functional associated
+to Q◦ , the polar set of Q (see Section 3 for the details). This norm defines a non-euclidean
+way of measuring lengths, which we call Q-lengths. Thinking about light propagation in
+an anisotropic medium and employing Fermat’s principle, one is led to an appropriately
+modified definition of billiard reflection, which gives rise to Minkowski billiards, intro-
+duced by E. Gutkin and S. Tabachnikov [18]. The arguments of [9, 8] can be adapted to
+this new setting, implying that in any convex billiard table K the shortest closed (gener-
+alized) Q-Minkowski billiard orbit exists and is 2- or 3-periodic. We denote by c(K × Q)
+its length. The following result appears in [2],2 building on the ideas from [9, 8].
+Theorem 2.3. A convex shape K is a translation cover for any closed curve of unit
+Q-length if and only if c(K × Q) ≥ 1.
+   We remark that even though we restrict our attention here to planar covers and billiards,
+the papers [8, 2] work in higher dimensions; the relevant higher-dimensional notions are
+straightforward generalizations of two-dimensional ones.
+   The definition of c(K ×Q) is invariant with respect to translations of K, and in Section 3
+we explain why one does not need to assume that the origin lies in the interior of Q, by
+defining Q-lengths in a way that is translation-invariant with respect to Q as well. We
+also note that if K or Q is rescaled by a positive factor, then c(K × Q) gets multiplied
+by the same factor.
+   The notation c(K × Q), yet to be explained, might suggest that the roles of K and Q
+are somewhat symmetric. This is indeed the case; we outline the intuition very briefly.
+Let q, q ′ ∈ ∂K be two consecutive points of reflection of a billiard orbit. In an anisotropic
+space, the velocity and the momentum are related as follows: the velocity of the segment
+q → q ′ , positively proportional the vector q ′ − q, has to lie in NQ (p), the outward normal
+cone of Q at the point p ∈ ∂Q, which is the momentum of q → q ′ (rescaling the velocity, we
+can assume that the momentum is unit). At the point q ′ , a billiard reflection occurs, and
+  2The paper [2] only works with (non-generalized) Minkowski billiards for smooth K and Q, and [2,
+Theorem 2.1] is formulated there in the smooth case. A similar result in the case where Q is smooth and
+origin-symmetric, so that the norm ∥ · ∥Q is symmetric and strictly convex, was independently obtained
+by Y. Nir [29]. Once an appropriate definition of generalized Minkowski billiards is adopted, the details
+of the non-smooth case are straightforward and can be found in [34].
+      TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                        6
+
+it turns out that the new momentum p′ ∈ ∂Q is related to the old one in a way that makes
+p−p′ lie in NK (q ′ ), the outward normal cone of K at q ′ . This surprising symmetry between
+the reflection rule and the velocity-momentum relation has various applications, including
+the fact that c(K × Q) = c(Q × K). See Figure 2 for an example of a periodic billiard
+orbit. To summarize, the Minkowski billiard dynamics in the configuration (K, Q) is
+equivalent—after reversing time—to the Minkowski billiard dynamics in the configuration
+(Q, K), where Q becomes the billiard table and K determines the geometry. For the
+details, we refer to [5, 34].
+
+
+
+
+       Figure 2. A periodic (generalized) Q-Minkowski billiard orbit in K corre-
+       sponds to a pair of closed polygonal curves in K and Q satisfying symmetric
+       conditions: qi+1 − qi ∈ NQ (pi ) and pi−1 − pi ∈ NQ (qi ) for all i.
+
+2.3. Symplectic systoles. We explain now how Minkowski billiards fit in the framework
+of much more general symplectic dynamics. Again, for simplicity, we limit the discussion
+to the lowest-dimensional scenario, although all the notions can be considered in higher
+dimensions as well.
+   In this subsection, it is convenient to regard R2 × R2 as a phase space with coordinates
+(q1 , q2 , p1 , p2 ). The billiard table K lives in the q-space (space of positions), while the
+dual unit ball Q of the norm lives in the p-space (space of momenta). The splitting of
+R2 × R2 into the space of positions and the space of momenta is called lagrangian, and so
+is the product K × Q. We will see how the billiard dynamics in the configuration (K, Q)
+corresponds to the symplectic dynamics on the boundary of their product, ∂(K × Q) ⊂
+R2 × R 2 .
+   More generally, let X ⊂ R2 × R2 be any convex body, the prototype example being
+X = K × Q. Its boundary ∂X is a convex hypersurface in R2 × R2 . If we pretend for
+a second that ∂X is smooth, then we have two natural—and in fact equivalent—ways of
+defining smooth dynamics on it.
+     (1) Contact viewpoint. Consider the standard symplectic form ω = q1 ∧ p1 + q2 ∧ p2 .
+           The restriction ω|∂X has a one-dimensional kernel, which can be oriented according
+           to the sign of the Liouville form λ = p1 dq1 +p2 dq2 , which endows ∂X with a contact
+           structure. The integral curves of ker ω|∂X are called characteristics, or Reeb flow
+           trajectories, and the integral of λ along a Reeb flow trajectory is called its action.
+     (2) Hamiltonian viewpoint. View ∂X as a non-degenerate level set of a smooth hamil-
+           tonian H : R2 × R2 → R. The associated hamiltonian vector field X is determined
+           by ω(X, ·) = −dH(·). This canonically defines characteristics as the trajectories
+           of the corresponding hamiltonian flow.
+      TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                                  7
+
+   The second approach is easier to extend to the convex non-smooth case, if we re-
+formulate it as follows. It is convenient to introduce the “imaginary unit” operator
+J (q1 , q2 , p1 , p2 ) = (−p1 , −p2 , q1 , q2 ), so that the standard inner product on R2 × R2 is
+given by ⟨x, y⟩ = ω(x, J y). Then characteristics can be equivalently defined as solutions
+of the classicalRHamilton equation of motion γ̇(t) = −J ∇H(γ(t)). The action can be
+rewritten as 12 ⟨γ(t), J γ̇(t)⟩dt. In the non-smooth case, the gradient direction ∇H is
+replaced by the outward normal cone of K × Q, and the Hamilton differential equation
+becomes a differential inclusion. It turns out that the resulting definition of Reeb dynam-
+ics in ∂(K × Q) exactly matches the definition of Minkowski billiard dynamics [5], and the
+action of Reeb flow trajectories in ∂(K × Q) coincides with the Q-length of corresponding
+billiard trajectory in K.
+   Having defined the Reeb flow, a natural question is whether periodic Reeb flow trajec-
+tories exist. They are called Reeb orbits. In the setting as above, for a smooth convex
+hypersurface, the existence was proven in [32, 39]. The extension to the non-smooth case
+is explained in [5, Appendix]. Reeb orbits of smallest action are often called symplectic
+systoles. Finally we are ready to define the mysterious quantity c(·), one of the many
+symplectic invariants known as symplectic capacities.
+Definition 2.4. Given a convex body X ⊂ R2 ×R2 , its Ekeland–Hofer–Zehnder symplectic
+capacity c(X) is the smallest action of a Reeb orbit in ∂X.
+   Without going into details, we just mention that a vibrant field of research is dedicated
+to various symplectic capacities, starting from the celebrated Gromov non-squeezing the-
+orem; see, e.g, [13]. Conjecture 1.1 was stated in [37] more generally, for any symplectic
+capacity of any convex body, and not just the EHZ capacity of lagrangian products. A ma-
+jor source of motivation for studying Conjecture 1.1 comes from the fact that it implies [3]
+Mahler’s conjecture from 1939 [26], which bounds the volume product vol K · vol K ◦ of
+any convex origin-symmetric body K ⊂ Rn from below by that of a cube. The proof of
+the implication was significantly simplified in [2], where it was reduced to a worm prob-
+lem: if K is origin-symmetric, then every closed curve of K ◦ -length 4 can be covered by
+a translate of K.3
+   There are other active directions of symplectic research concerned with the equality
+cases in the Viterbo inequality. It happens that many of them exhibit various properties
+of symplectic balls in different sense. One way a convex body X may resemble a symplectic
+ball is when the interior of X is symplectomorphic to the interior of a round ball in R2 ×R2 ;
+that is, when there is a diffeomorphism between them preserving the restriction of ω. This
+is a strong property, and it was recently shown in [28] that it extends to a certain analogy
+between the boundary ∂X and the standard round sphere S 3 . The boundary ∂X can
+be similar to the sphere S 3 in terms of its Reeb flow. The Reeb flow on the standard
+round sphere is exceptionally rigid: the entire S 3 decomposes into an S 2 -worth of Reeb
+orbits of equal action (forming the classical Hopf fibration S 3 → S 2 ). When ∂X enjoys
+similar properties to some extent, one speaks of variants of the Zoll property, which is
+straightforward to define when ∂X is smooth, but becomes delicate in the non-smooth
+setting. If ∂X is smooth, then the classical Zoll property forces the Viterbo inequality
+to become an equality [38]. If ∂X is non-smooth, as in our case of interest X = K × Q,
+a strong variant of the Zoll property was proposed in [28]; it is not known whether it
+implies that the Viterbo inequality is attained with equality. We will briefly touch on
+these phenomena when discussing specific equality cases. Some of them are known to be
+  3A very short argument for the euclidean version of this statement can be found in [12]; see also the
+references therein for the history of this statement, which goes back at least to B. Segre. The proof in [2]
+of the normed-space version happens to be the same.
+      TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                     8
+
+symplectic balls, and the proofs are generally difficult. Some of the others are expected
+to be, with supporting evidence coming from the fact that they satisfy a weak variant of
+the Zoll property [33, Theorem 1.5]. Still others are known not to be symplectic balls [19,
+Remark 1.8]. In Sections 4, 5 and 7 we describe several families of lagrangian products
+K × Q that we believe to be symplectic balls. Some of us also believe that these families,
+up to swapping K and Q, exhaust all symplectic balls among lagrangian products in
+dimension 2 + 2.
+   To conclude our brief history survey, we summarize the connection between worms,
+billiards, and symplectic systoles, explained in this section.
+Theorem 2.5. The following are equivalent for convex shapes K and Q.
+  (1) K is a translation cover for any closed curve of unit Q-length.
+  (2) K is a translation cover for any triangle of unit Q-perimeter.
+  (3) K does not admit a 2- or 3-periodic generalized Q-Minkowski billiard orbit with
+      Q-length less than 1.
+  (4) The shortest periodic generalized Q-Minkowski billiard orbit in the billiard table
+      K has Q-length at least 1.
+  (5) The Ekeland–Hofer–Zehnder symplectic capacity of K × Q is at least 1.
+  This theorem can be used as a tool for studying Conjecture 1.1: the Viterbo inequality
+holds for • × Q if and only if every translation cover for the collection of triangles of unit
+                                  1
+Q-perimeter has area at least 2 area Q
+                                       . In the following section we strengthen this criterion
+by further narrowing down the set of “worms”.
+
+                   3. A pivot: reduction to normal triangles
+   In this section we add to the list of equivalences from Theorem 2.5, by modifying its
+second item in the case when Q is a polygon. The set of “worms” will be narrowed down
+from all triangles of unit Q-perimeter to a finite collection of such (possibly degenerate)
+triangles whose sides are orthogonal to those of Q. First, we carefully define the Q-normed
+geometry; then we introduce these distinguished triangles (Definition 3.2); and finally we
+prove Theorem 3.3, which allows us to restate the Viterbo inequality as a worm problem
+for a finite collection of distinguished triangles (Problem 3.4). The material of this section
+can be generalized to higher dimensions in a straightforward way.
+
+3.1. Normed geometry and normal triangles. We work in the euclidean plane R2
+with the standard inner product ⟨·, ·⟩, and we endow it with an additional metric structure.
+Apart from the usual euclidean geometry, allowing one to measure usual euclidean lengths,
+we consider as well the Q-normed geometry, meaning that we can also measure “Q-
+lengths” using the support function of Q:
+                                     ∥x∥Q := max⟨x, y⟩.
+                                              y∈Q
+
+If Q contains the origin in its interior, this is equivalent to saying that ∥ · ∥Q is the norm
+on R2 whose unit ball is the set Q◦ , the polar (or dual ) set of Q:
+                           Q◦ := x ∈ R2 ⟨x, y⟩ ≤ 1 ∀y ∈ Q .
+                                  
+
+We do not require Q to be origin-symmetric, so the norm is not necessarily symmetric:
+∥x∥Q may differ from ∥ − x∥Q (sometimes the term gauge is used for asymmetric norms).
+  However, even if we do not require Q to contain the origin in its interior, the number
+∥x∥Q is well-defined although it might be negative. Nevertheless, the triangle inequality
+      TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                    9
+
+still holds for ∥ · ∥Q :
+        ∥x1 + x2 ∥Q = max⟨x1 + x2 , y⟩ ≤ max⟨x1 , y⟩ + max⟨x2 , y⟩ = ∥x1 ∥Q + ∥x2 ∥Q .
+                           y∈Q                     y∈Q           y∈Q
+
+  The Q-length obviously changes if Q is shifted. However, in the sequel we only care
+about Q-lengths of closed curves, and shifting Q does not change those. For any t ∈ R2 ,
+and any closed polygonal curve γ = (v1 → . . . → vm → vm+1 = v1 ), we have:
+                               m
+                               X
+                  lenQ+t (γ) =     ∥vi+1 − vi ∥Q+t
+                                     i=1
+                                     Xm
+                                 =         max ⟨vi+1 − vi , y⟩
+                                           y∈Q+t
+                                     i=1
+                                     Xm
+                                 =         max⟨vi+1 − vi , y + t⟩
+                                           y∈Q
+                                     i=1
+                                     Xm                           m
+                                                                  X
+                                 =         max⟨vi+1 − vi , y⟩ +           ⟨vi+1 − vi , t⟩
+                                           y∈Q
+                                     i=1                            i=1
+                                     m
+                                     X
+                                 =         ∥vi+1 − vi ∥Q + ⟨0, t⟩
+                                     i=1
+                                 = lenQ (γ).
+   For rectifiable curves, the Q-length is defined by approximation with polygonal curves.
+Since we will be only interested in Q-lengths of closed curves, we can shift Q as we want:
+for instance, we can assume that Q contains the origin in its interior (so that ∥·∥Q becomes
+an asymmetric norm). Shifting Q can also simplify calculations.
+Example 3.1. Let us compute the (oriented) Q-perimeter of a (non-degenerate) triangle,
+lenQ (u → v → w → u). The only information about Q that we need is the positions
+of the three support lines ℓu→v , ℓv→w , ℓw→u of Q corresponding to the directions v − u,
+w − v, and w − u, respectively. This means that ℓu→v = {y ∈ R2 | ⟨v − u, y⟩ = ∥v − u∥Q },
+and similarly for ℓv→w and ℓw→u . Since the vectors w − v and u − w are not parallel for
+a non-degenerate initial triangle, the lines ℓv→w and ℓw→u intersect, and we may choose a
+shift vector t so that they intersect at the origin. Then we have
+     lenQ (u → v → w → u) = ∥v − u∥Q+t + 0 + 0 = dist(ℓv→w ∩ ℓw→u , ℓu→v ) · |v − u|,
+where dist(·, ·) denotes the euclidean distance between a point and a line, and |v − u|
+denotes the euclidean length of [u, v]. We can use the right-hand side as a formula for
+Q-perimeter expressed just in terms of euclidean distances. A similar argument for a line
+segment [u, v] shows that, for a shift vector t ∈ ℓv→u ,
+               lenQ (u → v → u) = ∥v − u∥Q+t + 0 = dist(ℓv→u , ℓu→v ) · |v − u|,
+where dist(ℓv→u , ℓu→v ) essentially measures the euclidean width of Q in the direction v −u.
+  From now on, let Q be a convex polygon. Each side of Q determines an outward
+normal direction, in the sense that all outward normal vectors to this side coincide up
+to rescaling (multiplication by a positive number), and we refer to equivalence classes of
+nonzero vectors modulo rescaling as directions.
+Definition 3.2. Let Q ⊂ R2 be a convex polygon containing the origin in its interior.
+A nondegenerate triangle will be called Q-normal if one of the two ways of orienting its
+boundary gives a polygonal curve u → v → w → u satisfying the following properties:
+     TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                    10
+
+     • the directions of u → v, v → w, and w → u are outward normal directions of Q;
+     • the Q-perimeter is 1:
+             lenQ (u → v → w → u) = ∥v − u∥Q + ∥w − v∥Q + ∥u − w∥Q = 1.
+A line segment [u, v], viewed as a degenerate triangle, will be called Q-normal if
+     • the directions of u → v and v → u are outward normal directions of Q;
+     • its back-and-forth Q-length is 1:
+                      lenQ (u → v → u) = ∥v − u∥Q + ∥u − v∥Q = 1.
+When we talk about Q-normal triangles, we mean both degenerate and non-degenerate
+ones.
+   The word ‘normal’ reflects both the fact that these curves follow outward normal direc-
+tions of Q and the normalization of their lengths in Q-normed geometry. Obviously, the
+property of being Q-normal is preserved under translations, so we will oftentimes speak
+about translation classes of Q-normal triangles.
+3.2. Reduction to triangle covers. For two sets A, B ⊂ R2 , let us say that A fits into
+B if A + t ⊂ B for some translation vector t ∈ R2 . If γ : I → R2 is a curve, and the
+image of γ in R2 fits into B, then we will simply say that the curve γ fits into B. The
+main result of this section is as follows.
+Theorem 3.3. If every Q-normal triangle fits into K, then every closed curve of unit
+Q-length fits into K. Consequently, every Q-normal triangle fits into K if and only if
+c(K × Q) ≥ 1.
+  In view of Theorem 3.3, Conjecture 1.1, when stated for a fixed polygon Q, reduces to
+the following covering problem associated with Q.
+Problem 3.4. Let Q ⊂ R2 be a convex polygon. Let us say that a convex shape K ⊂ R2
+is a Q-cover if every Q-normal triangle fits into K. What is the smallest Q-cover, in
+terms of area? In other words: given a collection of Q-normal triangles, one from each
+translation class, we would like to translate each of them in order to minimize the area of
+                                                            1
+the convex hull. Is it true that this area is at least 2 area(Q) ?
+Remark 3.5. More generally, when Q is convex but not a polygon, a natural generalization
+of Definition 3.2 is obtained if one considers all outward normal directions at smooth points
+of ∂Q. The corresponding version of Problem 3.4 is still equivalent to Conjecture 1.1,
+but there collection of (translation classes of) Q-normal triangles is now infinite, so the
+reformulation does not seem to be a simplification. For example, when Q is a euclidean
+disk, the corresponding problem of the smallest Q-cover is just Wetzel’s original worm
+problem.
+  Now we turn to the proof of Theorem 3.3. The key idea in the proof is cutting a curve
+at several places and rearranging the pieces to make a few simpler curves. The way a
+longer curve is built out of shorter ones will be called interleaving.
+Definition 3.6. Let θ = (θ1 , . . . , θk ) be a collection of continuous non-decreasing func-
+tions θi : [0, k] → [0, 1] such that
+      • each θi interpolates between θi (0) = 0 and θi (k) = 1 in a piecewise differentiable
+        way;
+      • θi′ = 0 or θi′ = 1 everywhere except finitely many points;
+        Pk
+      •     θi (t) = t for all t ∈ [0, k].
+       i=1
+      TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                          11
+
+In other words, [0, k] splits into finitely many intervals, and on each of them all but one
+of the θi s are constant, and the remaining one grows with derivative 1. Let us define the
+θ-interleaving of curves γ1 , . . . , γk : [0, 1] → R2 as the curve γ : [0, k] → R2 given by
+                                              k
+                                              X
+                                  γ(t) =            γi (θi (t)),   t ∈ [0, k].
+                                              i=1
+
+
+
+
+       Figure 3. Two closed curves γ1 , γ2 , and their interleaving γ. Note that
+       γ1 and γ2 are cut into three pieces each (at the black points), and then the
+       pieces are interleaved to form γ. The order in which blue (resp. red) pieces
+       appear in γ is the same as in the original blue (resp. red) curve.
+
+   Clearly, when all γi are closed, their interleaving is closed too. The procedure of in-
+terleaving curves γ1 , . . . , γk can be described, up to reparametrization, as follows (see
+Figure 3). First, we cut γ1 , . . . , γk into several pieces. Then we form a new curve γ by
+placing all these pieces one after another in some way, while preserving the relative order
+of the pieces coming from each individual curve γi . That is, for every 1 ≤ i ≤ k, the
+pieces in γ originating from γi appear in γ in the same order as they do along γi . From
+this description one can readily infer basic properties of interleaving such as ‘associativity
+up to reparametrization’. We state it for three curves (and implicitly use it later), but it
+can be stated analogously for any number of curves.
+Proposition 3.7. Let γ1 , γ2 , γ3 : [0, 1] → R2 be curves. Let γ12 : [0, 2] → R2 be an
+interleaving of γ1 and γ2 , and denote by γ  e12 : [0, 1] → R2 its reparametrization given
+by γe12 (t) = γ12 (2t). Then any interleaving of γ
+                                                 e12 and γ3 is, up to reparametrization, an
+interleaving of γ1 , γ2 , γ3 .
+  For the main proof of this section, it will be useful to relate Minkowski sums to convex
+hulls as follows.
+Lemma 3.8. Let Ai ⊂ R2 , 1 ≤ i ≤ k, be arbitrary sets, and let λi ≥ 0 be coefficients of
+                      Pk                                  Pk
+a convex combination,     λi = 1. Then the Minkowski sum      λi Ai fits into the convex
+          k         i=1                                 i=1
+           S
+hull conv    Ai .
+           i=1
+                              k              
+                               S
+Proof. The convex hull conv              Ai       can be viewed as the geometric join
+                                   i=1
+                                  ( k                                            k
+                                                                                            )
+                                   X                                             X
+              A1 ∗ . . . ∗ Ak =           µ i xi      xi ∈ conv Ai , µi ≥ 0,           µi = 1 .
+                                    i=1                                          i=1
+      TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                                12
+
+                                                           k
+                                                           P                               k
+                                                                                           P
+As a subset of this, if we fix µi = λi , we have the set         λi conv Ai , containing         λi Ai . □
+                                                           i=1                             i=1
+
+Proof of Theorem 3.3. Suppose we are given Q-normal triangles T1 , . . . , TJ ⊂ R2 , such
+that all translation classes of Q-normal triangles are present among them. Suppose also
+that we have! a closed curve γ of Q-length 1. We need to argue that γ fits into K =
+        J
+        S
+conv       Tj .
+       j=1
+   Step 1. First, we reduce to the case of polygonal curves in a straightforward way. By the
+definition of the Q-length of a general rectifiable curve γ, there exists a sequence of closed
+polygonal curves γ (i) such that the lengths lenQ (γ (i) ) increase and tend to lenQ (γ) = 1;
+and moreover, the convex hulls conv(γ (i) ) converge in the Hausdorff metric to the convex
+hull conv(γ). Assuming the result has been proved for polygonal curves, we obtain vectors
+ti ∈ R2 such that conv(γ (i) ) + t(i) ⊂ K. Since the sequence (t(i) ) is bounded, after passing
+to a subsequence we may assume that it converges to some vector t ∈ R2 . Since K
+is closed, we can pass to the Hausdorff limit in the inclusion conv(γ (i) ) + t(i) ⊂ K and
+conclude that γ fits into K. This reduces the case of general curves to the case of polygonal
+curves.
+   Step 2. Now we reduce to the case of a curve only following outward normal directions
+of Q. We will replace γ with such a curve, preserving the Q-length and increasing the
+convex hull.
+   Consider a line segment u → v of γ. Either it already follows an outward normal
+direction of Q, and there is nothing to be changed, or the vector v − u belongs to the
+interior of the outward normal cone of Q at some vertex. Let pos{ν, ξ} be this cone, with
+ν and ξ being outward normals of Q. Write v − u = αν + βξ for some α, β > 0. Replace
+the segment u → v in γ with a two-segment curve u → u + αν = v − βξ → v. This does
+not change the Q-length of the curve, since the functional ∥ · ∥Q is linear on pos{ν, ξ}.
+   Repeating this procedure over all segments of γ, complete this step. The resulting curve
+will be still called γ.
+   Step 3. Now we will represent γ as an interleaving of several curves γ1 , . . . , γM , such
+that
+                          M
+                          P
+      • lenQ (γi ) = λi ,   λi = 1 = lenQ (γ);
+                        i=1
+     • each γi is triangle (perhaps, degenerate) tracing the boundary of a λi -rescaled copy
+       of Tj(i) , for some 1 ≤ j(i) ≤ J.
+  Let γ = (v1 → . . . → vm → vm+1 = v1 ); let νi = vi+1 − vi be the corresponding outward
+                             m
+                             P
+normal vectors of Q, so that   νi = 0. Choose any inclusion-minimal subcollection of νi
+                                 i=1
+that admits a linear dependency with positive coefficients; by Carathéodory’s theorem, it
+consists of two or three vectors. Let α1 νi1 + . . . + αℓ νiℓ = 0, ℓ = 2 or 3, be this positive
+dependency. Assume that α1 is the largest coefficient. Now we can represent γ as the
+interleaving of the following two curves.
+   (1) The curve γ1 with ℓ segments is defined either as
+                                                α2
+                              0 → νi1 → νi1 +      νi = 0,       if ℓ = 2,
+                                                α1 2
+        or as
+                                   α2            α2    α3
+                0 → νi1 → νi1 +       νi2 → νi1 + νi2 + νi3 = 0,             if ℓ = 3.
+                                   α1            α1    α1
+      TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                              13
+
+       Note that γ1 is a triangle (degenerate if ℓ = 2), and let j(1) be its “type”, that is,
+       the index such that the Q-normal triangle Tj(1) has the same shape up to rescaling
+       by the factor of λ1 := lenQ (γ1 ).
+   (2) The curve γ ′ can be read off from the following linear dependency with non-
+       negative coefficients, obtained by subtracting α11 (α1 νi1 + . . . + αℓ νiℓ ) = 0 from
+       Pm
+           νi = 0:
+       i=1
+            m
+                                       (
+           X                              1,       if i ∈
+                                                        / {i1 , . . . , iℓ };
+               βi νi = 0, where βi =          αk
+           i=1
+                                          1 − α1 , if i = ik for some k = 1, . . . , ℓ.
+        The curve γ ′ can now be defined as
+                                                            m−1
+                                                            X                    m
+                                                                                 X
+     v1 → v1 + β1 ν1 → v1 + β1 ν1 + β2 ν2 → . . . → v1 +          βi νi → v1 +         βi νi = v1 .
+                                                            i=1                  i=1
+
+         Note that at least one part of this polygonal curve collapses (βi1 = 0), so γ ′ has
+         fewer segments than γ.
+It is straightforward to see that the line segments of γ1 and γ ′ can be interleaved to obtain
+γ; in particular, 1 = lenQ (γ) = λ1 + lenQ (γ ′ ). Hence, γ is an interleaving of γ1 and γ ′ . If
+λ1 = 1, then γ ′ is a trivial (stationary) curve, and we are done. Otherwise we can apply
+the same procedure to γ ′ , representing it as an interleaving of a triangle γ2 , similar to
+Tj(2) , and a curve γ ′′ that has fewer segments than γ ′ . Eventually we will decompose γ
+into interleaving triangular curves γ1 , . . . , γM .
+   Finally, since γi fits into λi Tj(i) , it follows trivially from the definition of interleaving
+                  M
+                                                                         M         
+                  P                                                         S
+that γ fits into     λi Tj(i) . Then by Lemma 3.8, γ fits into conv            Tj(i) ⊂ K. This
+                 i=1                                                       i=1
+finishes the proof.                                                                                   □
+
+                            4. A warm-up: triangular norm
+  In this section we consider Problem 3.4 in the case where Q = △ is a triangle. This
+problem is trivial, and the answer can be found by a very elementary case analysis, but
+we use it as a playground to introduce some tricks that will help us later.
+  The first observation we make is that both volume and symplectic capacity are invariant
+under translations of K or Q, as well as linear transformations
+                                  K × Q 7→ AK × (AT )−1 Q.
+Any triangle is affinely equivalent to a regular one with unit area; therefore, we can assume
+that △ is a regular triangle of unit width (unit euclidean distance between a vertex and
+its opposite side).
+   The △-normed triangles come in two translation classes that differ by a rotation by π.
+Fix two model △-normed triangles Ty0 and To0 ; we refer to them as ‘yellow’ and ‘orange’,
+in agreement with Figure 4. A simple computation (Example 3.1) shows that they have
+unit (euclidean) side length. Denote by Ty (ty ) = ty + Ty0 the sliding yellow triangle,
+depending on a shift parameter ty ∈ R2 . Similarly, let To (to ) = to + To0 be the sliding
+orange triangle. The problem of the smallest Q-cover is equivalent to minimizing the area
+of K := conv(Ty (ty ) ∪ To (to )).
+   We will prove with several different methods a sharp inequality area K ≥ area K0 ,
+where K0 is the regular hexagon for the most symmetric placement of normal triangles.
+We will also see that K0 belongs to a two-dimensional family of equality cases. The first
+method is the one that matters in the sequel, as it is particularly well suited to the study
+       TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                                    14
+
+
+
+
+        Figure 4. △-normed triangles define the curve Γ (middle), and in the
+        most symmetric placement their convex hull is the regular hexagon K0
+        (right).
+
+of equality cases in the Viterbo inequality in the plane. All three methods generalize to
+higher dimensions in one way or another.
+4.1. First method: enclosing constant area. Given two vectors s = (s1 , s2 ), y =
+(t1 , t2 ) in the plane, we write s ∧ t to denote the oriented area of the parallelogram
+spanned by s and t:                                    
+                                                  s1 t1
+                                    s ∧ t = det           .
+                                                  s2 t2
+Definition 4.1. Given a closed polygonal line γ = (v1 → . . . → vm → vm+1 = v1 ) in the
+plane, we introduce its enclosed area by the formula
+                                             m
+                                          1X
+                                 A(γ) =         vi ∧ vi+1 .
+                                          2 i=1
+   The geometric meaning behind this definition is as follows. The curve γ splits the
+plane into regions Di . Let wi ∈ Z be  P the winding number of the curve γ around Di
+(it can be negative). Then A(γ) =         wi area Di . Another equivalent way of defining
+                                        i
+the enclosed area is via the line integral 12 (x dy − y dx), which is connected to area by
+                                             R
+                                                      γ
+Green’s formula. Note that A(γ) is invariant under translations of γ, and that it changes
+its sign if we reverse the orientation of γ.
+   There are two steps in this method. First, we find a closed polygonal curve Γ ⊂ K
+connecting some of the points vi is a certain order, such that A(Γ) equals a positive
+constant A that does not depend on the shift parameters ty and to . Second, we bound
+A(Γ) ≤ area K. If this inequality becomes an equality for certain values of the shift
+parameters, then the bound area K ≥ A is sharp.
+   An appropriate curve Γ for the first step is depicted in Figure 4; the vertices of Ty (ty )
+are labeled v1 (ty ), v3 (ty ), v5 (ty ), and the vertices of To (to ) are labeled v2 (to ), v4 (to ), v6 (to ),
+as in the figure. Let us check that A(Γ(ty , to )) is a constant function. First, we compute
+its variation with respect to ty :
+                                                                                 
+A(Γ(ty + s, to )) − A(Γ(ty , to )) = v1 (ty + s) ∧ v2 (to ) − v1 (ty ) ∧ v2 (to ) + five similar terms
+                                      X                                  
+                                   =         s ∧ vk (to ) + vk (to ) ∧ s
+                                         k∈{2,4,6}
+                                      = 0.
+      TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                       15
+
+  Similarly, the variation with respect to to is zero as well. Since this computation is valid
+at any (ty , to ), A(Γ(ty , to )) is constant. The value A of the constant can be computed if we
+choose the values of the shift parameters so that K = K0 is a regular hexagon. A simple
+                                               1
+direct calculation shows that A = 2 area         Q
+                                                   , so that the inequality we proved is exactly
+Conjecture 1.1 in the case where Q is a triangle.
+  At the second step, we want to make sure that A(Γ) ≤ area conv(Ty (ty ) ∪ To (to )). It
+suffices to check that the winding number of Γ around any point never exceeds 1. It should
+be easy for the reader to convince themselves this is true simply by dragging the triangles
+around and observing the shape of Γ. We will give an overkill argument (Lemma 4.2) that
+proves it for a large class of curves. This lemma will come especially handy in Section 5.
+In our current simple example, it concludes the proof if we set ai = vi , bi = v8−i , for
+i = 1, 2, 3, 4 (with v7 = v1 by convention). The assumption of the lemma is satisfied
+because a1 − b1 = 0 = a4 − b4 , and a2 − b2 = v2 − v6 = v3 − v5 = a3 − b3 .
+Lemma 4.2. Let Γ = (a1 → . . . → am → bm → . . . b1 → a1 ) be a closed polygonal curve
+in the plane with the following properties:
+     • the vectors ai − bi have the same direction for all i = 1, . . . , m (it is acceptable if
+        ai = bi for some i);
+     • the euclidean lengths |ai − bi | form a unimodal sequence of numbers, that is, there
+        is j such that this sequence is non-decreasing for 1 ≤ i ≤ j and non-increasing for
+        j ≤ i ≤ m.
+Then A(Γ) ≤ area(conv(Γ)).
+Proof. Note that this lemma is not obvious by default, and it fails for general curves. For
+example, if Γ winds around a convex polygon N times then A(Γ) = N · area(conv(Γ)).
+  Consider the Steiner symmetrization with respect to a line L orthogonal to all ai − bi .
+For each i, it slides the points ai and bi along the line they belong to until the moment when
+the midpoint mi = ai +b 2
+                           i
+                             ends up on L. This procedure has two area-related properties.
+     • The symmetrization does not change A(Γ), as it is easy to check directly from the
+        definition. For 1 < i < m, sliding [ai , bi ] by a vector s ∥ bi −ai changes A(Γ) by the
+        amount of ai−1 ∧s+s∧ai+1 +bi+1 ∧s+s∧bi−1 = s∧(bi−1 −ai−1 )−s∧(bi+1 −ai+1 ) = 0.
+        For i = 1 or i = m the computation is even simpler.
+     • The symmetrization can only decrease area(conv(Γ)). This can be seen by cutting
+        conv(Γ) into trapezoids along the lines spanned by the pairs (ai , bi ), and observing
+        how they transform. Here are the details of this argument. Let e        ai and ebi denote
+        the images of ai and bi after the symmetrization, and let Γ       e be the symmetrized
+        curve. Let ℓ be a line perpendicular to L. The convex hull conv(Γ)       e is the union
+        of all trapezoids e  aie
+                               ajebjebi . Each of these trapezoids either does not meet ℓ, or
+        intersects ℓ in a segment whose midpoint lies on L. Among these segments, the
+        longest one contains all the others. Consider the corresponding trapezoid; before
+        symmetrization it cut out on ℓ a segment of the same length, but the intersection
+        ℓ ∩ conv(Γ) could have been longer. Thus the symmetrization can only decrease
+        the length of the intersection ℓ ∩ conv(Γ). Applying the same argument to every
+        line ℓ, we conclude that the symmetrization can only decrease area(conv(Γ)).
+  Therefore, it suffices prove the lemma for L-symmetric curves. In Figure 5 one can see
+an example, where only one half of such a curve is depicted. The curve splits the half-
+plane into regions, which are labeled in Figure 5 with the multiplicity they contribute in
+A(Γ). These labels are equal to winding numbers of Γ around regions.
+  Let us prove that no winding number can be greater than +1; this is enough to conclude
+the proof. Suppose the contrary: there is a point p in the halfplane around which Γ winds
+      TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                       16
+
+
+
+
+                        Figure 5. Half of the symmetrized curve Γ
+
+more than once. This would mean that there exist indices i < j < k such that the
+segments [ai , ai+1 ] and [ak , ak+1 ] pass above p from right to left, while [aj , aj+1 ] passes
+below p from left to right (here the words ‘left’, ‘right’, ‘above’, ‘below’ are understood as
+if L is horizontal, as in Figure 5). But this contradicts the unimodality assumption. □
+
+4.2. Second method: covering the plane by lattice translates. This method gen-
+eralizes well to higher dimensions: it was used in [6] to prove Conjecture 1.1 in the case
+when Q is a simplex in Rn (and K ⊂ Rn is any convex body). We sketch it very briefly,
+since it will not be used in the rest of the paper.
+   As before, let K = conv(Ty (ty ) ∪ To (to )). Consider the lattice Λ spanned by the sides
+of Ty and To . Note that the plane admits a triangulation such that its vertex set is Λ,
+and every triangular cell of it is a △-normal triangle. The key idea is to prove that the
+translates K + λ, λ ∈ Λ, cover R2 . To show that, suppose there exists x ∈        / K + Λ.
+Then (K − x) ∩ Λ = ∅, which contradicts the following lemma proven in [6] by a simple
+topological argument.
+Lemma 4.3 (Planar case of [6, Lemma 5.3]). Suppose we are given a triangulation of the
+plane such that every triangular cell of it fits into a convex shape K. Then any translate
+of K meets the vertex set of the triangulation.
+  Since K + Λ = R2 , the volume of K is at least that of any fundamental domain of Λ, for
+instance, the regular hexagon K0 , which is also the Voronoı̆ cell of Λ. This lower bound on
+                                                                                        1
+the area of K, when calculated explicitly, becomes our desired inequality area K ≥ 2 area △
+                                                                                            .
+
+4.3. Third method: combining enclosing with lattice covering. The proof follow-
+ing the second method can be completed in a different way. Instead of using Lemma 4.3,
+one can substitute an idea from the first method.
+  Using the notation from the second proof, we define Λ as the lattice spanned by the
+edges of Ty or To . Our aim is to prove that the translates K + λ, λ ∈ Λ, cover R2 .
+  For a closed polygonal curve γ = (v1 → · · · → vm → vm+1 = v1 ) in the plane, let
+wγ : R2 \ γ → Z be definedRas follows: wγ (x) is the winding number of the curve γ around
+x ∈ R2 \ γ. Then A(γ) = R2 wγ (x) dx.
+  Let Γ(ty , to ) be the closed polygonal line from the first proof. The key fact is that
+                                    X
+(⋆)                                    wΓ(ty +λ,to +λ) (x) = 1
+                                    λ∈Λ
+      TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                           17
+               S
+for any x ̸∈       Γ(ty + λ, to + λ). Note that the sum is well-defined since the support of
+               λ∈Λ                                                                 S
+wΓ(ty ,to ) is bounded. The key fact can be verified as follows. Every arrow in      Γ(ty +
+                                                                                          λ∈Λ
+λ, to + λ) appears together with its opposite arrow; it follows from the observation that
+the six arrows of Γ(ty , to ) split into three pairs of opposite arrows, and in each pair
+(vi → vi+1 , vi+3 → vi+4 ) the difference vi+3 − vi+1 = vi+4 − vi belongs to Λ (here we used
+cyclic indexing modulo 6). Therefore, the left-hand side of (⋆) equals the same integer
+z wherever it is defined. This integer can be determined by integrating the left-hand
+side of (⋆) on a large square S and comparing it to the area of S. Asymptotically, as
+the side length of S tends to ∞, this integral equals A(Γ) · |Λ ∩ S|, up to an error term
+depending on the perimeter of S (again, since the support of wΓ(ty ,to ) is bounded). Since
+A(Γ) = area K0 , and the Λ-translates of K0 tile the plane, it follows that z = 1. In fact,
+to conclude the proof we do not need to know the exact value of z; it suffices to know
+that z ̸= 0.
+                       S if wΓ(ty ,to ) (x) ̸= 0 for x ̸∈ Γ(ty , to ), then x ∈ K = conv(Γ(ty , to )).
+   It is easy to see that
+By (⋆), for each x ̸∈      Γ(ty + λ, to + λ), there is λ ∈ Λ with x ∈ K + λ. By compactness
+                       λ∈Λ
+of K, we conclude that the same is true for any x ∈ R2 .
+   This proof can also be generalized to higher dimensions to give an alternative proof of
+[6, Theorem 5.1].
+4.4. Characterization of equality cases. The methods above provide different per-
+spectives on smallest △-covers. The analysis of equality cases in the first proof leads to
+                                          1
+the following conclusion: area K = 2 area   △
+                                               if and only if Γ is a convex curve (a curve
+winding once around a convex domain). The two-dimensional family of such equality
+cases, including K0 , is depicted in Figure 6. We call them tight hexagons, associated with
+the three outward normal directions of △ (most of them are indeed hexagons, but the
+boundary cases degenerate into parallelograms).
+
+
+
+
+        Figure 6. The two-dimensional family of area-minimizing △-covers topo-
+        logically is a disk. Each point represents a relative placement of the two
+        △-normal triangles, whose convex hull is a tight hexagon.
+       TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                              18
+
+   The second method gives the following perspective on equality cases: observe that
+              1
+area K = 2 area △
+                  if and only if K is a △-cover that tiles the plane by Λ-translations. One
+way to describe them all is as follows. Consider the class Φ of positive definite quadratic
+forms ϕ(x) suchp that the Delaunay tessellation of Λ with respect to the distance functional
+distϕ (x, y) = ϕ(x − y) coincides with the triangulation we considered above. The class
+                                                                 3
+                                                                   αi ⟨di , x⟩2 , where d1 , d2 , d3
+                                                                P
+Φ was described explicitly by Erdahl [14] as the forms ϕ(x) =
+                                                                        i=1
+are vectors parallel to the sides of Q, and α1 , α2 , α3 are any positive numbers. Then any
+smallest △-cover can be approximated by (the translates of) the Voronoı̆ cells of Λ with
+respect to distϕ . This is the two-dimensional case of the characterization that works in
+any dimension, and it will be explained in a separate paper.
+  Only one equality case from the family of tight hexagons has been shown to give rise to
+a symplectic ball. Namely, for the regular tight hexagon K0 , it was shown in [30], using
+the Toda lattice, that the interior of K0 × △ is symplectomorphic to a ball. It is an open
+question whether the same holds for other tight hexagons.
+
+4.5. Half-symmetric Viterbo inequality. In this paragraph, Q is any convex polygon
+(not a triangle). As we will see in Section 6, Conjecture 1.1 does not hold for general K and
+Q. A simple argument shows that in the case where both K and Q are origin-symmetric,
+Conjecture 1.1 is equivalent to Mahler’s conjecture.4 A middle-ground between the more
+general (and false) and the less general (and equivalent to Mahler’s) versions could be
+the case where only K is required to be origin-symmetric. Reformulating is as a worm
+problem, we obtain the problem of the smallest origin-symmetric Q-cover. Let K be an
+origin-symmetric Q-cover. Let us say that a triple of outward normal directions of Q
+encloses the origin if their convex hull contains the origin in its interior. For every triple
+of outward normal directions of Q that encloses the origin, there are two corresponding
+Q-normal triangles, differing by a central symmetry. Let T be one of them, shifted so
+that T ⊂ K. The set conv(T ∪ (−T )) may already be a tight hexagon associated with
+that triple of outward normal directions of Q. But even if not, we can shift T and −T
+towards each other, so that conv(T ∪ (−T )) strictly decreases, and eventually it becomes
+a tight hexagon. In other words, if K is an origin-symmetric Q-cover, then it also covers
+a tight hexagon, centered at the origin, for each triple of outward normal directions of
+Q enclosing the origin. The other way around, if K covers a tight centered hexagon for
+each triple of outward normal directions of Q enclosing the origin, then every Q-normal
+triangle fits into K trivially. Therefore, we arrive at the following question, an affirmative
+answer to which is equivalent to Conjecture 1.1 in the case when n = 2 and K is centrally
+symmetric.
+Question 4.4. Let Q be a convex polygon. To each pair of parallel sides, assign the
+corresponding Q-normal line segment. To each triple of outward normal directions of
+Q that encloses the origin, assign one tight hexagon, selected arbitrarily from the two-
+dimensional family of tight hexagons associated with this triple. Shift each assigned shape
+so that it is centered at the origin. Is it true that the convex hull of these shapes has area
+             1
+at least 2 area Q
+                  ?
+  4Here is this argument. The implication from Viterbo’s conjecture to Mahler’s conjecture is the main
+result of [3]. For the reverse implication, inscribe in K the largest possible homothetic copy βQ◦ . It is
+known [3] that, by connecting any pair of antipodal points in Q◦ , one obtains a shortest Q-Minkowski
+billiard orbit in Q◦ . The common boundary ∂βQ◦ ∩ ∂K is origin-symmetric, so connecting any two of
+its antipodal points yields a shortest Q-Minkowski billiard orbit in K, with Q-length 4β. Therefore,
+                                     Mahler
+                                              (4β)n  c(K×Q)n
+vol K · vol Q ≥ β n vol Q◦ · vol Q     ≥        n! =    n!   .
+     TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                    19
+
+                         5. A plunge: quadrilateral norm
+  In this section we solve Problem 3.4 in the case where Q is a convex quadrilateral, thus
+proving the corresponding part of Theorem 1.2.
+5.1. The Viterbo inequality for quadrilaterals. Applying an appropriate affine trans-
+formation, we can assume that Q is a quadrilateral with perpendicular diagonals of equal
+lengths. In the generic case there are two triples of sides of Q whose outward normal
+directions enclose the origin in the sense that their convex hull contains the origin in its
+interior. In degenerate situations (opposite sides parallel) one or both triples may become
+pairs instead, and the corresponding situations are simpler to investigate, but they also
+follow from the generic case by “passing to the limit” type of argument. So we stick to the
+generic case, so that there are four Q-normal triangles. Problem 3.4 calls for the search
+of a convex shape of smallest area into which all four normal triangles fit. In Figure 7 we
+depict an optimal shape, which turns out to be a square (but sometimes it is not unique).
+Theorem 5.1. Let Q be a convex quadrilateral with perpendicular diagonals of unit
+length (so the area of Q is 1/2). Then any Q-cover has area at least 1, and there is a
+Q-cover of area exactly 1: the unit square with the sides parallel to the diagonals of Q.
+Proof. Assume that Q has no parallel sides (otherwise, approximate it by one with no
+parallel sides). Let K0 be the unit square with the sides parallel to the diagonals of Q.
+   Step 1. We first show that K0 is Q-cover. Denote the vertices of Q by A, B, C, D, and
+circumscribe a square around Q with sides parallel to AC and BD. Let E and F be
+two opposite vertices of the circumscribed square, and suppose that lines AB and CD
+intersect at the point G, as in Figure 7. It is a corollary of the Pappus theorem from
+projective geometry that the points E, F , and G lie on the same line. Namely, the dual
+Pappus theorem (which is equivalent to the Pappus theorem itself) can be applied to two
+triples of lines: three vertical lines AE, BD, CF , and three horizontal lines BF, AC, DE.
+The conclusion is that the lines AB, CD, EF pass through the same point G. In other
+words, if we circumscribe a rectangle around △AGD, with sides parallel to AC and BD,
+then it will actually be a square. Two out of four Q-normal triangles are homothetic to
+△AGD rotated by ±π/2. Therefore, we can inscribe two Q-normal triangles in the same
+square; see Figure 7, on the right, where the yellow and orange triangles are inscribes
+in the red square. We need to show that the side length of this red square is 1. (The
+argument for two remaining Q-normal triangles, blue and green in the figure, is similar.)
+   As it is explained in Example 3.1, for the computation of the Q-perimeter of the yellow
+triangle △XY Z we can “shift the origin” (in the plane of quadrilateral Q) to the point
+A. Then
+                     1 = lenQ (X → Y → Z → X) = dist(A, CD) · |XY |,
+where dist(A, CD) denotes the euclidean distance from A to the line CD, and |XY |
+denotes the euclidean length of the segment XY . Denote by α the angle ∡ACD, and
+observe that the side length of the red square equals
+                                             sin α        1
+                           |XY | sin α =              =        = 1.
+                                         dist(A, CD)    |AC|
+   Step 2. We show that any Q-cover has the area at least that of K0 . The main tool
+in the proof will be computing oriented areas enclosed by curves (Definition 4.1). We
+label the vertices of the four Q-normal triangles inside K0 by p1 , . . . , p12 following the
+cyclic order along the boundary of K0 . Let vi (t) = pi + t, t ∈ R2 , be sliding copies of
+the vertices pi . Denote by Ty (ty ) = △v1 v5 v8 = ty + △p1 p5 p8 the sliding yellow triangle
+(it received indices 1, 5, 8 depending on this particular shape of Q, but indices do not
+      TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                        20
+
+
+
+
+       Figure 7. The quadrilateral Q (purple, left) and the Q-covering square
+       K0 (red, right) with four Q-normal triangles inside.
+
+
+matter in the following argument). Similarly, let To (to ) = △v2 v7 v11 be the sliding orange
+triangle, Tb (tb ) = △v3 v6 v10 the sliding blue triangle, and Tg (tg ) = △v4 v9 v12 the sliding
+green triangle. Now consider the following closed polygonal curves:
+
+           ΓAD = v1 → v2 → v3 → v4 → v5 → v7 → v8 → v9 → v10 → v11 → v1 ,
+           ΓAB = v1 → v2 → v3 → v4 → v6 → v7 → v8 → v9 → v10 → v12 → v1 ,
+           ΓBC = v1 → v4 → v6 → v7 → v10 → v12 → v1 ,
+           ΓCD = v1 → v4 → v5 → v7 → v10 → v11 → v1 .
+
+They are obtained in the following way. To construct ΓAD , consider all lines ℓ perpendic-
+ular to AD such that all intersections of ℓ with the boundary of K0 are among the points
+pi . Note down these pi , observe their cyclic order along the boundary of K0 , and construct
+ΓAD out of the corresponding points vi in the same order. The curves ΓAB , ΓBC , and ΓCD
+are constructed similarly. We found these curves when examining the billiard properties
+of the configuration (K0 , Q). It turns out that it enjoys some kind of Zoll property: for
+almost every initial position of a billiard ball in K0 and almost every initial momentum
+in ∂Q, the resulting trajectory is a 4-periodic billiard orbit of fixed length. The four
+Q-normal triangles arise as limiting 3-periodic billiard orbits, and the curves Γ• appear
+naturally when analyzing the space of these 3- and 4-periodic orbits.
+    Each of the four curves Γ• depends on the slide parameters t = (ty , to , tb , tg ) ∈ (R2 )4 ,
+and each of the oriented areas A(Γ• ) is a linear function of t. We will find a convex
+combination
+
+            Θα (t) = αAD A(ΓAD ) + αAB A(ΓAB ) + αBC A(ΓBC ) + αCD A(ΓCD )
+
+that is constant. For t = 0 each of the curves Γ• traces the boundary of K0 counterclock-
+wise, so the constant actually equals Θα (0) = area(K0 ) = 1.
+      TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                           21
+
+
+
+
+        Figure 8. Labeling of the vertices of the Q-normal triangles and the con-
+        tour ΓAD .
+
+
+  Introduce vectors u, w ∈ R2 and numbers a, b > 1 in the following way:
+
+                                     u = v2 − v11 = v5 − v8 ,
+                                    au = v3 − v10 = v4 − v9 ,
+                                     w = v6 − v3 = v9 − v12 ,
+                                    bw = v8 − v1 = v7 − v2 .
+
+  Now we compute the variations of oriented areas with respect to sliding Ty :
+
+                                                              1                           1
+A(ΓAD (ty + s, to , tb , tg )) − A(ΓAD (ty , to , tb , tg )) = s ∧ (v2 − v11 + v9 − v4 ) = s ∧ (1 − a)u,
+                                                              2                           2
+                                                              1                           1
+A(ΓAB (ty + s, to , tb , tg )) − A(ΓAB (ty , to , tb , tg )) = s ∧ (v9 − v7 + v2 − v12 ) = s ∧ (1 − b)w,
+                                                              2                           2
+                                                              1                 1
+A(ΓBC (ty + s, to , tb , tg )) − A(ΓBC (ty , to , tb , tg )) = s ∧ (v4 − v12 ) = s ∧ (au + w),
+                                                              2                 2
+                                                              1                 1
+A(ΓCD (ty + s, to , tb , tg )) − A(ΓCD (ty , to , tb , tg )) = s ∧ (v7 − v11 ) = s ∧ (u + bw).
+                                                              2                 2
+  If we choose α• in a way that guarantees
+
+             αAD (1 − a)u + αAB (1 − b)w + αBC (au + w) + αCD (u + bw) = 0,
+
+the resulting function Θα (t) will not depend on ty . It turns out that the conditions that
+Θα (t) does not depend on to , tb , tg are exactly the same. This can be verified directly, but
+we also indicate another way of seeing this. Denote by δt• Θα the expression obtained by
+varying t• . Then δto Θα = −δty Θα , δtb Θα = −δtg Θα just due to the central symmetry of
+the configuration. The fact that δtb Θα = −δty Θα follows from the observation that, in
+all four curves, the union of yellow and blue vertices alternates with the union of orange
+and green vertices. Consequently, in δtb Θα and δty Θα we will see—with opposite signs—
+only the terms corresponding to those vertices whose two neighbors are one blue and one
+yellow.
+      TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                         22
+
+   All non-negative solutions of the zero-variation equation are parametrized by arbitrary
+x, y ≥ 0 as follows:
+                                            xa        y
+                                   αAD =         +       ,
+                                           a−1 a−1
+                                            x        yb
+                                   αAB =         +      ,
+                                           b−1 b−1
+                                   αBC = x,
+                                   αCD = y.
+Fix any non-negative solution with αAD + αAB + αBC + αCD = 1. Lemma 4.2 shows that
+A(Γ• ) ≤ area(conv(Γ• )) for any of the four curves we considered. Note that the lemma is
+indeed applicable; for example, the assumptions of the lemma for ΓAD boil down to the
+fact that the arrows p1 → p1 , p2 → p11 , p3 → p10 , p4 → p9 , p5 → p8 , p7 → p7 (two of
+which are trivial) have the same direction, and their (euclidean) lengths form a unimodal
+sequence. This can be seen from Figure 8, where these vectors are consecutive slices of
+K0 ; the unimodality follows from the convexity of K0 .
+   We are ready to conclude the proof. Suppose K is a Q-cover, that is, for some choice
+of t = (ty , to , tb , tg ), we have Ty , To , Tb , Tg ⊂ K. Then ΓAD , ΓAB , ΓBC , ΓCD ⊂ K. With the
+choice of α• as above, we see that
+               area(K) ≥ αAD · area(conv(ΓAD )) + three similar summands
+                         ≥ αAD · A(ΓAD ) + three similar summands
+                         = Θα (t) = Θα (0) = area(K0 ).
+                                                                                                 □
+   As a corollary of Theorem 5.1, we see that Theorem 1.2 holds in the case where Q is a
+quadrilateral.
+   The problem of engineer Q. Uadrilateral from the introduction is equivalent via an
+affine change to the problem we just solved, with the same parameters a, b. The smallest
+                                                                  ab(ab−1)
+area of a Q-cover in that problem can be computed directly to be 2ab−a−b   .
+5.2. Characterization of equality cases. To characterize the cases where area K =
+ab(ab−1)
+2ab−a−b
+         , one needs to describe carefully all situations when all four curves ΓAD , ΓAB ,
+ΓBC , ΓCD enclose the same area of the same shape K. It does not necessarily mean
+that each Γ• strictly follows the boundary of ∂K counterclockwise; there might be parts
+of Γ• that trace a certain arc back and forth without any contribution to the enclosed
+area. However, 1) these parts must lie inside K, otherwise we have a strict inequality in
+Lemma 4.2, and 2) if we remove those parts, the simplified Γ• does follow the boundary
+of ∂K counterclockwise. The case analysis behind the classification of equality cases is
+straightforward but tedious. We only formulate the result below.
+   It is convenient to parametrize all quadrilaterals Q up to affine equivalence using the
+parameters a and b; we can assume that a ≤ b. An elementary computation shows that
+                                                      |AG|
+those parameters can be seen in Figure 7 as a = |AB|       and b = |AH|
+                                                                    |AD|
+                                                                         . We also need to
+recall the cases when Q has one or two pairs of parallel sides; they can be thought as
+corresponding to one or both parameters a and b equal to +∞. For example, if b = +∞,
+it corresponds to the case when the blue and green triangles become so thin so that
+degenerate to a single line segment, so we can assume v3 = v4 = v6 and v9 = v10 = v12 .
+In this case Q is a trapezoid. If both a and b equal +∞, then Q is a parallelogram, and
+the covering problem becomes completely trivial, as it asks for the smallest convex hull
+of two non-parallel segments. Another type of degeneration can be considered if we allow
+      TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                           23
+
+a = 1: in this case Q becomes a triangle regardless of the value of b, and this problem
+was already solved in Section 4.
+   We now collect the description of all equality cases depending on 1 ≤ a ≤ b ≤ +∞,
+from the least generic case to the most generic. We assume that Q is affinely reduced to
+the form with perpendicular diagonals of equal lengths, and whenever we refer to K0 , it
+is the square from Theorem 5.1.
+      • a = 1, the value of b does not matter. Q is a triangle. The space of equality cases
+        is two-dimensional and was described in Section 4.
+      • a, b = +∞. Q is a parallelogram. The space of equality cases is two-dimensional
+        and described as follows: there are two Q-normal line segments, and the area of
+        their convex hull is minimal whenever they intersect.
+      • a ∈ (1, +∞), b = +∞. Q is a trapezoid. The only equality case is K0 .5
+      • a, b ∈ (1, +∞), (a − 1)(b − 1) = 1. Q is a quadrilateral without parallel sides but
+        it satisfies a constraint that enforces p5 = p6 and p11 = p12 in Figure 8. The space
+        of equality cases is one-dimensional: one endpoint is K0 , and it is possible to slide
+        the Q-normal triangles to obtain a one-parametric family of Q-covering hexagons
+        of the same area (see Figure 9). These equality cases (except for the boundary
+        one with K0 ) have not been described before in the literature.
+      • (a − 1)(b − 1) ̸= 1. Q is a maximally generic quadrilateral. The only equality case
+        is K0 .
+
+
+
+
+        Figure 9. A one-parameter family of smallest Q-covers in the case where
+        Q is a quadrilateral with (a − 1)(b − 1) = 1.
+
+  For many of these equality cases it can be shown that the interior of K ×Q is symplecto-
+morphic to a ball. The idea is to construct explicit symplectic embeddings (see [36, 35]),
+and then in dimension 4 the existence of symplectomorphisms follows from the heavy
+machinery of [25]. The details of these embeddings are given in [33] for most equality
+cases, except for the new ones with (a − 1)(b − 1) = 1. We leave it as an open question
+whether the new equality cases with (a − 1)(b − 1) = 1 are symplectic balls.
+
+5.3. Weak Viterbo inequality via approximation by quadrilaterals. Here we
+quote an observation of Y. Ostrover (private communication). Having proved the Viterbo
+inequality for quadrilaterals (Theorem 5.1), we can establish a non-sharp version of the
+Viterbo inequality for all convex shapes K and Q by approximating Q with a quadri-
+lateral. A result of W. Kuperberg [24] states that around any convex shape√ Q one can
+                                ′            area Q′
+circumscribe a quadrilateral Q such that area Q < κ, where 1 < κ < 2 is a fixed
+
+  5A discussion of this case (as well the corresponding special case of Theorem 5.1) appeared in [33]
+following correspondence with the first-named author, in which these considerations were raised.
+       TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                          24
+                                                                       √
+non-explicit constant, later specified in [15] as κ = (1 − 2.6 · 10−7 ) 2.6 Then we have:
+                                       area Q′      1                 1
+           area K · area Q ≥ area K ·           ≥     c(K × Q′ )2 ≥     c(K × Q)2 .
+                                          κ        2κ               2κ
+Here we applied Theorem 5.1 to the pair (K, Q′ ), and used the monotonicity of capacities
+c(K × Q) ≤ c(K × Q′ ) for Q ⊂ Q′ . This monotonicity is known in general for convex
+sets in R2 × R2 , but it can also be explained elementarily. As discussed in Section 2, the
+capacity is symmetric√in K and Q; and by Theorem 2.5 we have c(Q × K) ≤ c(Q′ × K).
+This proves that κ < 2 in Question 1.3.
+
+                            6. A revelation: pentagonal norm
+  In this section we consider the case where Q is a convex pentagon. The space of
+pentagons is four-dimensional, if we consider them up to affine equivalence. We have no
+complete solution of Problem 3.4 for any pentagon, but we consider two scenarios that
+we find enlightening. The first of them leads to an example due to P. Haim-Kislev and
+Y. Ostrover, which disproves Conjecture 1.1. The framework of the worm problem for
+Q-normal triangles provides a simple explanation of that example.
+6.1. Regular pentagon and the counterexample of Haim-Kislev and Ostrover.
+Let Q be a regular pentagon. There are ten Q-normal triangles, all congruent with angles
+π/5, π/5, 3π/5; they are obtained by rotating a single one by angles kπ/5, k = 0, 1, . . . , 9.
+Let K be an appropriately rescaled copy of Q, rotated by π/2, such that every Q-normal
+triangle fits (tightly) into K. The paper [19] used the Minkowski billiard framework to
+compute c(K × Q). The machinery of Section 3 allows us to significantly simplify their
+argument: since every Q-normal triangle fits into K, whereas no larger homothetic copy
+of any Q-normal triangle does, Theorem 3.3 immediately gives c(K × Q) = 1. A direct
+computation of areas shows that
+                                                 5     c(K × Q)2
+                            area K · area Q = √      ·           ,
+                                                5+3        2
+                                              | {z }
+                                                    <1
+
+which violates the Viterbo inequality (Conjecture 1.1).
+
+
+
+
+            Figure 10. The Haim-Kislev–Ostrover example. Two of the ten Q-normal
+            triangles (yellow and orange) are shown covered by K; the remaining eight
+            are obtained by applying the symmetries of K.
+
+  It seems likely that this K has the smallest area among all Q-covers, but we do not
+know how to prove this.
+   6It is also conjectured in [24] that the worst shape Q is a regular pentagon, and that one may take
+κ = √35 .
+      TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                         25
+
+6.2. Squares truncated at one corner. Let Q be a pentagon obtained by cutting off
+one corner of a square along a line segment. These pentagons form a two-dimensional
+subfamily within the full four-dimensional family of pentagons. For such Q, there are
+four Q-normal triangles, two of which are degenerate. In the fall of 2023, the first-named
+author, together with Mingkun Liu, invited Lou Meylender and Thomas Thalmaier, two
+undergraduate students at the University of Luxembourg, to investigate this problem
+experimentally within the framework of the Experimental Mathematics Lab. They im-
+plemented an optimization program searching for the smallest Q-cover. For the shapes
+they found Conjecture 1.1 holds with a margin. We formulate their findings as a conjec-
+ture about the optimal shape of Q-covers.
+
+
+
+
+       Figure 11. The Meylender–Thalmaier conjecturally optimal Q-cover K0
+       (right) in the case where Q is a square truncated at one corner.
+
+  Label the vertices of the four Q-normal triangles p1 , . . . , p10 as shown in Figure 11. The
+trapezoid K0 in this figure can be described as follows: it corresponds to a unique place-
+ment (up to translation) of the four Q-normal triangles for which the points p1 , p2 , p3 , p4
+are collinear, the points are p4 , p5 , p6 , p7 are collinear, and the points p7 , p8 , p9 , p10 are
+collinear.
+Conjecture 6.1. Let Q be a pentagon obtained from a square by truncating one of its
+                                    c(K×Q)2
+corners. Then the systolic ratio 2 area K·area Q
+                                                 is strictly less than 1 for any convex shape
+K, and it is maximized with respect to K if and only if K is a translate of K0 or −K0 .
+   Note that this conjectured inequality is strictly stronger than the corresponding special
+case of the Viterbo inequality. To quantify how much it is stronger, let us parametrize the
+space of squares truncated at one corner as follows. Let A, B, C, D, E be the vertices of Q
+so that AB ∥ DE and AE ∥ BC. Let the lines AB and CD intersect at the point F , and
+let the lines CD and AE intersect at G. Let α = |BF      |
+                                                     |AF |
+                                                           , β = |EG|
+                                                                 |AG|
+                                                                      , and γ = 1 − α − β. The
+parameters satisfy the constraints 0 < α, β, γ < 1. An elementary computation allows
+      TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                        26
+
+one to express the areas of Q and K0 in terms of α, β, γ, showing that
+                              c(K0 × Q)2                 1
+                                              =        (α2 +β 2 )γ 2
+                                                                       < 1.
+                           2 area K0 · area Q   1+    1−α2 −β 2 −γ 2
+
+                            7. A glimmer: hexagonal norm
+  In this section we study Problem 3.4 in the case where Q is a convex centrally symmetric
+hexagon. We solve it completely in the case where Q is affinely equivalent to a regular
+hexagon; this proves the remaining part of Theorem 1.2.
+7.1. Regular hexagon. Let Q be a hexagon affinely equivalent to a regular one. After
+an affine transformation, we can assume that Q is the regular hexagon of unit euclidean
+width. The Q-normal triangles can have sides of three parallel classes, orthogonal to the
+sides of Q. This list of Q-normal triangles consists of two regular triangles with side length
+2/3, and three unit line segments (see Figure 12). The regular triangle K0 whose three
+altitudes are Q-normal line segments is expected to be an area-minimizing Q-cover, since
+we already know that the pair (Q, K0 ) attains equality in the Viterbo inequality. We will
+confirm this, but we will also discover that there are many other area-minimizing Q-covers
+different from K0 and −K0 , and moreover, the set of minimizers consists of components
+of different dimensions. This adds to the complexity of this Q-cover problem.
+
+
+
+
+       Figure 12. When Q is a regular hexagon, the regular triangle K0 is one
+       of the smallest Q-covers.
+
+  To solve this problem we employ a new trick, whose essence is captured in the following
+lemma.
+Lemma 7.1. Let Φ ⊂ K be nested convex polygons. For each side si of Φ, let vi be any
+vertex of K that maximizes the inner product ⟨·, νi ⟩ with the outward normal νi to si .
+The (possibly degenerate) triangle Ci := conv({vi } ∪ si ) will be called the cap based on
+si . Then the caps Ci based on all sides of Φ do not overlap, meaning that their interiors
+are pairwise disjoint.
+Proof. In this argument, disregard all caps Ci that have empty interior. For each Ci
+with non-empty interior, introduce the linear function fi : R2 → R such that fi (vi ) = 1
+and fi |si = 0. By construction, fi |Φ ≤ 0 and fi |F ≤ 1. Then for any j ̸= i, we have
+(fi − fj )|si = −fj |si ≥ 0, and fi (vi ) − fj (vi ) = 1 − fj (vi ) ≥ 0. Therefore, fi ≥ fj on Ci ,
+and moreover, fi > fj on the interior of Ci . If there was a point x in the intersection of
+the interiors of Ci and Cj , we would have fi (x) > fj (x) and fj (x) > fi (x) simultaneously.
+Therefore, Ci and Cj do not overlap.                                                            □
+      TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                     27
+
+Theorem 7.2. Let Q be the regular hexagon of unit width, and let K be any Q-cover.
+                              1
+Then area K ≥ area K0 = 2 area  Q
+                                  , where K0 is the regular triangle with unit height and
+sides parallel to those of Q.
+Proof. Let Ty , To , L1 , L2 , L3 ⊂ K be the five Q-normal shapes shifted to fit into K. In
+fact, we can assume that K is the convex hull of these five shapes, and so it is a convex
+polygon. Denote by A the area of Ty . Then area K0 = 3A, and we want to prove that
+area K ≥ 3A.
+   Let us first consider the relative position of Ty and To . Similarly to the argument at
+the end of Section 4, we check whether Φ := conv(Ty ∪ To ) is a tight hexagon, that is, an
+area-minimizing translation cover for Ty and To (its area is 2A, according to Section 4).
+If not, we can shift Ty and To towards each other, so that Φ strictly decreases until it
+becomes a tight hexagon. Then shift K to make Φ centered at the origin.
+   Now we apply Lemma 7.1 to Φ ⊂ K. We obtain six non-overlapping caps Ci =
+conv({vi } ∪ si ), i = 1, . . . , 6, based on the six sides si of Φ (some of them may be
+                                          6
+                                          P
+degenerate). It suffices to prove that      area Ci ≥ A. To this end, let Ri := conv({0} ∪ si )
+                                       i=1
+be the triangles slicing Φ. Let us prove that area C1 + area C4 ≥ area R1 = area R4 . If
+s1 is a degenerate side, then area R1 = 0 and there is nothing to prove. Otherwise, s1
+and s4 are parallel line segments. Let f1 be the linear function such that f |s1 = −1 and
+f |s4 = 1. If we denote area R1 = area R4 = A1 , then we have area C1 = A1 (f |s1 − f (v1 )) =
+A1 (−1 − f (v1 )) and area C4 = A1 (f (v4 ) − f |s4 ) = A1 (f (v4 ) − 1). Since there is a line
+segment Lj = [u, w] ⊂ K such that f (u) − f (w) ≥ 23 (f |s4 − f |s1 ) = 3, it follows from the
+definition of the points vi that f (v4 ) − f (v1 ) ≥ 3 as well. Therefore, area C1 + area C4 ≥
+area R1 = area R4 = A1 (f (v4 ) − f (v1 ) − 2) ≥ A1 . Summing this inequality with the
+                                                    6
+                                                      area Ci ≥ 12 area Φ = A, which completes
+                                                   P
+analogous ones for the other caps, we obtain
+                                                i=1
+the proof.                                                                                   □
+   As a corollary we immediately obtain Theorem 1.2 in the case where Q is an affinely
+regular hexagon.
+   An attempt to solve the same problem using the method of closed curves enclosing
+constant area leads to the following observations. First of all, such a curve exists: if we
+label the vertices of the Q-normal triangles along ∂K0 as p1 , . . . , p12 , and denote by vi
+the sliding copy of pi , then Γ = (v1 → . . . → v12 → v1 ) is a curve enclosing constant
+area, equal to area K0 . It is the second step of the method that we do not know how to
+complete: why must A(Γ) ≤ area conv Γ hold?
+   However, the characterization of equality cases is easier done with this method rather
+than by analyzing the proof we gave. Recall that the smallest area of a Q-cover is attained
+when, roughly speaking, Γ follows the boundary of ∂K counterclockwise, except for pos-
+sible portions where Γ traces an arc inside K back and forth without any contribution
+to the enclosed area. In Figure 13 one sees an example where this cancellation happens
+thanks to the fact that p1 = p11 , p3 = p5 , and p7 = p9 , and the exact position of the yellow
+triangle does not matter. Shifting the orange triangle does not change the enclosed area,
+so we obtain a two-dimensional family of equality cases. They are mostly hexagons (in
+Figure 13 it is the most symmetric hexagon in the family), but the boundary cases are
+pentagons and quadrilaterals. The centrally symmetric image of this family yields another
+two-dimensional family of equality cases. To the best of our knowledge, all these equality
+cases were previously unknown. Together with K0 and −K0 , these two families exhaust
+all equality cases, as can be verified by analyzing Γ.
+   It is an open question whether each of these sets K gives rise to a symplectic ball K ×Q.
+     TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                           28
+
+
+
+
+       Figure 13. A two-dimensional family of smallest Q-covers: the orange
+       triangle can be shifted—while preserving the area of the convex hull—as
+       long as it intersects all three Q-normal line segments. The position of the
+       yellow triangle is irrelevant as long as it stays inside the convex hull of the
+       other four Q-normal shapes.
+
+7.2. Non-regular hexagons. The methods of this paper fail to provably find the small-
+est Q-cover for any other hexagon Q other than the affinely regular one. We conclude
+by the following observation, obtained by swapping the role of K and Q in some of the
+equality cases that we already found earlier, and where K turned out to be a centrally
+symmetric hexagon. There is a full-dimensional open set in the space of centrally symmet-
+ric hexagons such that, for any Q from this set, there are at least four shapes K attaining
+equality in the Viterbo inequality. They appear to be isolated, and conjecturally, they
+have the smallest area among Q-covers. See Figure 14 for one such example: K0 , K1 ,
+−K0 , and −K1 are conjecturally the only area-minimizing Q-covers there. Observe that
+the orange triangle slides freely inside K1 .
+
+
+
+
+       Figure 14. Expected smallest Q-covers for a non-regular centrally sym-
+       metric hexagon Q.
+
+                                          References
+[1] A. Abbondandolo, G. Benedetti, and O. Edtmair. Symplectic capacities of domains close to the ball
+    and Banach–Mazur geodesics in the space of contact forms. Duke Mathematical Journal, 174(8):1567–
+    1646, 2025.
+[2] A. Akopyan, A. Balitskiy, R. Karasev, and A. Sharipova. Elementary approach to closed bil-
+    liard trajectories in asymmetric normed spaces. Proceedings of the American Mathematical Society,
+    144(10):4501–4513, 2016.
+      TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                                  29
+
+ [3] S. Artstein-Avidan, R. Karasev, and Y. Ostrover. From symplectic measurements to the Mahler
+     conjecture. Duke Mathematical Journal, 163(11):2003–2022, 2014.
+ [4] S. Artstein-Avidan, V. Milman, and Y. Ostrover. The m-ellipsoid, symplectic capacities and volume.
+     Commentarii Mathematici Helvetici, 83(2):359–369, 2008.
+ [5] S. Artstein-Avidan and Y. Ostrover. Bounds for Minkowski billiard trajectories in convex bodies.
+     International Mathematics Research Notices, 2014(1):165–193, 2014.
+ [6] A. Balitskiy. Equality cases in Viterbo’s conjecture and isoperimetric billiard inequalities. Interna-
+     tional Mathematics Research Notices, 2020(7):1957–1978, 2020.
+ [7] A. Besicovitch. On Kakeya’s problem and a similar one. Mathematische Zeitschrift, 27(1):312–320,
+     1928.
+ [8] D. Bezdek and K. Bezdek. Shortest billiard trajectories. Geometriae Dedicata, 141(1):197–206, 2009.
+ [9] K. Bezdek and R. Connelly. Covering curves by translates of a convex set. The American Mathe-
+     matical Monthly, 96(9):789–806, 1989.
+[10] P. Brass, W. O. Moser, and J. Pach. Research problems in discrete geometry. Springer, 2005.
+[11] P. Brass and M. Sharifi. A lower bound for Lebesgue’s universal cover problem. International Journal
+     of Computational Geometry & Applications, 15(05):537–544, 2005.
+[12] G. Chakerian and M. Klamkin. Minimal covers for closed curves. Mathematics Magazine, 46(2):55–
+     61, 1973.
+[13] K. Cieliebak, H. Hofer, J. Latschev, and F. Schlenk. Quantitative symplectic geometry. In Dynamics,
+     Ergodic Theory, and Geometry, volume 54 of Mathematical Sciences Research Institute Publications,
+     pages 1–44. Cambridge University Press, Cambridge, 2007.
+[14] R. M. Erdahl. Zonotopes, dicings, and voronoi’s conjecture on parallelohedra. European Journal of
+     Combinatorics, 20(6):527–549, 1999.
+[15] F. Fodor and F. Grundbacher. On the minimal area of quadrangles circumscribed about planar
+     convex bodies. Discrete Mathematics, 349(7):115087, 2026.
+[16] Z. Füredi and J. E. Wetzel. The smallest convex cover for triangles of perimeter two. Geometriae
+     Dedicata, 81(1):285–293, 2000.
+[17] P. Gibbs. An upper bound for Lebesgue’s covering problem. arXiv preprint arXiv:1810.10089, 2018.
+[18] E. Gutkin and S. Tabachnikov. Billiards in Finsler and Minkowski geometries. Journal of Geometry
+     and Physics, 40(3-4):277–301, 2002.
+[19] P. Haim-Kislev and Y. Ostrover. A counterexample to Viterbo’s conjecture. Annals of Mathematics,
+     203(2):603–622, 2026.
+[20] D. Hermann. Non-equivalence of symplectic capacities for open sets with restricted contact type bound-
+     ary. Université de Paris-Sud, département de Mathématique, prépublication d’Orsay numéro 32,
+     1998.
+[21] M. K. Jung, S. D. Yoon, H.-K. Ahn, and T. Tokuyama. Universal convex covering problems under
+     translations and discrete rotations. Advances in Geometry, 23(4):481–500, 2023.
+[22] R. Karasev and A. Sharipova. Viterbo’s conjecture for certain Hamiltonians in classical mechanics.
+     Arnold Mathematical Journal, 5(4):483–500, 2019.
+[23] V. Klee. The critical set of a convex body. American Journal of Mathematics, 75(1):178–188, 1953.
+[24] W. Kuperberg. On minimum area quadrilaterals and triangles circumscribed about convex plane
+     regions. Elemente der Mathematik, 38:57–61, 1983.
+[25] J. Latschev, D. McDuff, and F. Schlenk. The Gromov width of 4–dimensional tori. Geometry &
+     Topology, 17(5):2813–2853, 2013.
+[26] K. Mahler. Ein übertragungsprinzip für konvexe Körper. Časopis pro Pěstovánı́ Matematiky a Fysiky,
+     68(3):93–102, 1939.
+[27] H. Mallée. Translationsdeckel für geschlossene Kurven. Archiv der Mathematik, 62(6):569–576, 1994.
+[28] S. Matijević. Systolic S 1 -index and characterization of non-smooth Zoll convex bodies. arXiv preprint
+     arXiv:2501.13856, 2025.
+[29] Y. Nir. On closed characteristics and billiards in convex bodies. M.Sc. Thesis, Tel Aviv University,
+     Raymond and Beverly Sackler Faculty of Exact Sciences, Department of Pure Mathematics, Sept.
+     2013. Supervised by Prof. Shiri Artstein-Avidan and Dr. Yaron Ostrover.
+[30] Y. Ostrover, V. G. Ramos, and D. Sepe. From Lagrangian products to toric domains via the Toda
+     lattice. Compositio Mathematica, 161(2):365–384, 2025.
+[31] J. Pál. Ein minimumproblem für Ovale. Mathematische Annalen, 83(3):311–319, 1921.
+[32] P. H. Rabinowitz. Periodic solutions of Hamiltonian systems. Communications on Pure and Applied
+     Mathematics, 31(2):157–184, 1978.
+      TRIANGLE COVERING PROBLEMS AND THE VITERBO INEQUALITY IN THE PLANE                              30
+
+[33] D. Rudolf. Viterbo’s conjecture for Lagrangian products in R4 and symplectomorphisms to the
+     Euclidean ball. arXiv preprint arXiv:2203.02294, 2022.
+[34] D. Rudolf. The Minkowski billiard characterization of the EHZ-capacity of convex Lagrangian prod-
+     ucts. Journal of Dynamics and Differential Equations, 36(3):2773–2791, 2024.
+[35] F. Schlenk. Embedding problems in symplectic geometry, volume 40. Walter de Gruyter, 2005.
+[36] L. Traynor. Symplectic packing constructions. Journal of Differential Geometry, 41(3):735–751, 1995.
+[37] C. Viterbo. Metric and isoperimetric problems in symplectic geometry. Journal of the American
+     Mathematical Society, 13(2):411–431, 2000.
+[38] A. Weinstein. On the volume of manifolds all of whose geodesics are closed. Journal of Differential
+     Geometry, 9(4):513–517, 1974.
+[39] A. Weinstein. Periodic orbits for convex Hamiltonian systems. Annals of Mathematics, 108(3):507–
+     518, 1978.
+[40] J. E. Wetzel. Sectorial covers for curves of constant length. Canadian Mathematical Bulletin,
+     16(3):367–375, 1973.
+[41] J. E. Wetzel. Fits and covers. Mathematics magazine, 76(5):349–363, 2003.
+
+  University of Luxembourg, Department of Mathematics, 6 avenue de la Fonte, L-4364
+Esch-sur-Alzette, Luxembourg
+  Email address: alexey.balitskiy@uni.lu
+
+  Université de Genève, Section de mathématiques, 7-9 rue Général-Dufour, 1204 Genève,
+Switzerland
+  Email address: ivan.mitrofanov.math@gmail.com
+
+  Emory University, Department of Mathematics, Atlanta, GA 30322, US
+  Email address: apolian@emory.edu
+
