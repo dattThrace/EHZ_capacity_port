@@ -17,10 +17,12 @@ In `results/probe-environment.json`, script filenames refer to files in
 unchanged. The file's platform data describes the original run, not a requirement
 for executing the probes elsewhere.
 
-For current run instructions, see the [root README](../README.md). The old
+For current run instructions, see [development and validation](../docs/DEVELOPMENT.md). The old
 workspace paths in the memo and script docstrings document their original
 locations. `requirements.txt` pins the two numerical packages used by the LP
 probe; the other two probes require only the Python standard library.
 
 No additional code or conclusions were introduced by archiving these files.
-MATLAB execution and production-port validation remain future work.
+The original archive predates production-port validation; current checks are
+documented in [development and validation](../docs/DEVELOPMENT.md). MATLAB
+runtime comparison remains separate from those checks.

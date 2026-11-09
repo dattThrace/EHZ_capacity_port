@@ -60,4 +60,14 @@ optimality. Runtime remains factorial in facet count.
 Vertex input requires Python/SciPy; facet input runs entirely in Rust. MATLAB
 was not available, and no published-journal PDF comparison was performed; the
 review identifies and hashes the actual arXiv PDF used. Toolchain and dependency
-versions are pinned. Reproduction commands and usage are in README.md.
+versions are pinned. Reproduction commands are in [development and validation](docs/DEVELOPMENT.md);
+CLI usage is in [usage](docs/USAGE.md).
+
+## Documentation organization
+
+The root README introduces the paper, reference repository, and codebase.
+Detailed invocation and input/output notes are in `docs/USAGE.md`; the MATLAB
+function mapping, geometry adapter behavior, tolerances, and numerical differences
+are in `docs/NUMERICS.md`. Validation commands, recorded coverage, and archived
+probe instructions are in `docs/DEVELOPMENT.md`. These sections were moved from
+the README so their technical and historical details remain available.
