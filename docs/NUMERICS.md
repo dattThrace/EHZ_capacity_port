@@ -40,6 +40,10 @@ Facet merging uses componentwise `1e-8` tolerance rather than MATLAB's scaled
 decisions and tie ordering can differ from MATLAB, especially near degeneracy.
 Exhaustive floating-point enumeration is not a rigorous certificate.
 
+For subsequent optimizations, follow the [implementation guide](OPTIMIZATION.md).
+It specifies backend dispatch predicates, singular-system handling, independent
+quality checks, and the evidence needed for pruning or global-bound claims.
+
 ## Mathematical reference and review
 
 The algorithm implements Theorem 1.1 of Pazit Haim-Kislev's
@@ -51,3 +55,4 @@ the original port's numerical behavior.
 The original source is preserved in `upstream/EHZ-capacity/` at commit
 `22dd473cc8b9b2397b44cd13acbceb763dd978e9`;
 [upstream provenance](../upstream/README.md) records its repository and history.
+

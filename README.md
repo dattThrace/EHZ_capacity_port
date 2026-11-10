@@ -65,6 +65,7 @@ normal reconstruction, linear solves, and the capacity search run in Rust.
 - [Usage](docs/USAGE.md): installation, CLI examples, input/output, and Python configuration.
 - [Numerics and compatibility](docs/NUMERICS.md): algorithm, tolerances, and mapping from the MATLAB functions.
 - [Development and validation](docs/DEVELOPMENT.md): checks, fixtures, reference calculations, and research probes.
+- [Optimization implementation guide](docs/OPTIMIZATION.md): staged algorithms, numerical contracts, pruning obligations, and quality/performance acceptance criteria.
 - [Mathematical review](validation/PAPER_VALIDATION.md): correspondence with the paper and numerical limitations.
 - [Port report](PORT_REPORT.md): implementation history, corrections, and recorded validation outcomes.
 - [Research memo](research/RESEARCH.md): mathematical background and proposed algorithms beyond the exhaustive solver.
@@ -75,3 +76,4 @@ The mathematical algorithm and original MATLAB implementation are by Pazit
 Haim-Kislev. See [upstream provenance](upstream/README.md) for the preserved source
 revision and history. The preserved upstream has no blanket license notice; no
 new license is assigned to upstream code, papers, or these collected materials.
+
