@@ -17,8 +17,9 @@ python -O scripts/test_optimization.py --math-only
 
 ## Optimization quality and algorithm validity
 
-The [optimization guide](OPTIMIZATION.md) defines the implementation sequence
-and acceptance criteria for new backends. `scripts/test_optimization.py` adds
+The [rational solver guide](RATIONAL_SOLVER.md) defines the next milestone;
+the [optimization guide](OPTIMIZATION.md) retains the broader roadmap and
+acceptance criteria for later backends. `scripts/test_optimization.py` adds
 10 mathematical/checker/physical-LP test methods and 5 production integration
 test methods, with parameterized cases inside each method. These counts are
 test methods, not a benchmark instance count or a count of formal proofs.

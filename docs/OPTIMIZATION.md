@@ -7,6 +7,10 @@ optimization work. It updates the priorities in the archived
 backends. It assumes familiarity with the mathematics and numerical optimization;
 it specifies algorithms, invariants, and evidence rather than source templates.
 
+**Sequencing update:** [RATIONAL_SOLVER.md](RATIONAL_SOLVER.md) specifies the
+next milestone and takes precedence on arithmetic, verification, and delivery
+order. This document retains the broader optimization roadmap.
+
 ## 1. Baseline and priorities
 
 The current production path in `src/lib.rs` enumerates every support and anchored
@@ -20,7 +24,8 @@ means binary64 JSON numbers, not rational input with exact provenance.
 
 Preserve this path as an explicitly selectable reference backend. Change one
 reduction at a time and compare both paths on the same normalized input. The
-first milestone is trustworthy reporting and independent tests; the next is
+next milestone is the complete rational H-input reference solver and independent
+verification specified in [RATIONAL_SOLVER.md](RATIONAL_SOLVER.md), before
 verified symmetric-product dispatch and unique-weight DP. General graph pruning
 and itinerary LPs follow only after their completeness and numerical contracts
 are implemented. Parallelism comes after deterministic serial validation.
@@ -142,7 +147,8 @@ An exactly singular stationary block can be omitted because its flat feasible
 direction reaches a smaller support with unchanged objective; see the proof in
 [PAPER_VALIDATION.md](../validation/PAPER_VALIDATION.md). The same inference is
 invalid for a merely small singular value. Exact rational fallback on small
-ambiguous supports is the preferred initial correctness path. Higher precision
+ambiguous supports can reuse the rational reference backend described in the
+new guide; that complete backend is now the first milestone. Higher precision
 with stability across precisions is useful evidence, but is not automatically a
 certificate. Retain unresolved supports in any global upper bound.
 

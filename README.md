@@ -66,6 +66,7 @@ normal reconstruction, linear solves, and the capacity search run in Rust.
 - [Numerics and compatibility](docs/NUMERICS.md): algorithm, tolerances, and mapping from the MATLAB functions.
 - [Development and validation](docs/DEVELOPMENT.md): checks, fixtures, reference calculations, and research probes.
 - [Optimization implementation guide](docs/OPTIMIZATION.md): staged algorithms, numerical contracts, pruning obligations, and quality/performance acceptance criteria.
+- [Rational solver implementation guide](docs/RATIONAL_SOLVER.md): the next milestone—exact H-input, complete rational search, independent verification, and acceptance gates.
 - [Mathematical review](validation/PAPER_VALIDATION.md): correspondence with the paper and numerical limitations.
 - [Port report](PORT_REPORT.md): implementation history, corrections, and recorded validation outcomes.
 - [Research memo](research/RESEARCH.md): mathematical background and proposed algorithms beyond the exhaustive solver.
