@@ -1,7 +1,8 @@
 # Research archive
 
-Start with [RESEARCH.md](RESEARCH.md) for the mathematical and implementation
-recommendations. All 49 non-cache files from the original research directory are
+For current implementation priorities and acceptance tests, start with the
+[optimization guide](../docs/OPTIMIZATION.md). [RESEARCH.md](RESEARCH.md) retains
+the original mathematical research and recommendations. All 49 non-cache files from the original research directory are
 preserved verbatim, with this layout:
 
 - `probes/`: the three executable Python validation probes.
@@ -26,3 +27,4 @@ No additional code or conclusions were introduced by archiving these files.
 The original archive predates production-port validation; current checks are
 documented in [development and validation](../docs/DEVELOPMENT.md). MATLAB
 runtime comparison remains separate from those checks.
+
