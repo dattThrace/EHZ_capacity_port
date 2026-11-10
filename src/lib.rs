@@ -1,5 +1,6 @@
-//! Floating-point port of Pazit Haim-Kislev's exhaustive MATLAB algorithm.
+//! Numerical and exact exhaustive EHZ capacity solvers.
 //! Coordinates are (q_1,...,q_n,p_1,...,p_n); all indices are zero based.
+pub mod exact;
 use itertools::Itertools;
 use nalgebra::{DMatrix as Matrix, DVector as Vector};
 use serde::{Deserialize, Serialize};
@@ -462,7 +463,7 @@ pub fn ehz_from_facets(normals: &Vertices, heights: &[f64]) -> Result<ResultData
         supports: 0,
         orders: 0,
         singular_kkt: 0,
-        status: "floating-point exhaustive theorem-1.1 estimate; not certified",
+        status: "numerical-estimate",
         maximum: 0.,
         maximizing_order: vec![],
         maximizing_beta: vec![],

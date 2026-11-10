@@ -2,8 +2,10 @@
 
 Run the commands below from the repository root.
 
-Requires Rust (pinned to 1.85.1 by `rust-toolchain.toml`) and Python 3.12 with
-NumPy/SciPy. Use the committed Cargo lockfile.
+Requires Rust (pinned to 1.85.1 by `rust-toolchain.toml`). Numerical vertex input
+also requires Python 3.12 with NumPy/SciPy; facet input needs no Python runtime.
+The independent exact verifier uses Python's standard library. Use the committed
+Cargo lockfile.
 
 ```sh
 python -m venv .venv
@@ -31,6 +33,18 @@ Python installation. Supply a full-dimensional bounded polytope. The facet
 interface checks dimensions, finite values, positive heights, nonzero normals,
 and numerical positive spanning (boundedness). Ill-conditioned inputs can be
 rejected; this is not a certified geometry check. Redundant rows are not removed.
+These legacy input forms use the numerical backend, also available explicitly
+with `--mode numerical`.
+
+For exact rational H-polytopes, supply `"schema": "ehz-exact-h-v1"` and encode
+each scalar as a string or numerator/denominator pair of integer strings. The
+schema selects the exact backend automatically; `--mode exact` is also accepted.
+Exact mode checks boundedness and removes redundancy with rational certificates.
+It supports `--max-steps N` and `--timeout-ms N`, preserving an incumbent as an
+upper bound when the search stops. Add `--certify-interval` to also compute a
+conservative certified interval for a partial positive witness. The numerical
+backend reports `numerical-estimate`. See [the exact contract](EXACT.md) for input
+examples, status meanings, verification, and limitations.
 
 Output includes capacity, signed minimum and minimizing weights/order, the
 positive maximum and reversed maximizing weights/order in the paper's convention,
@@ -38,7 +52,9 @@ closure/normalization residuals, search counts, numerical status, and (for verte
 input) geometry and centroid.
 All output indices are zero based; beta is in the returned order. `--geometry`
 returns only geometry. Errors go to stderr with a nonzero exit code. Enumeration
-is serial and has no GUI wait bar; interrupt the process to cancel a large job.
+is serial and has no GUI wait bar. Exact invalid inputs also produce a JSON
+`invalid-input` result on stdout. Use exact-mode limits to obtain a partial
+certificate; forcibly interrupting the process can prevent JSON output.
 
 ## Qhull adapter configuration
 

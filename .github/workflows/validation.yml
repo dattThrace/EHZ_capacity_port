@@ -1,0 +1,44 @@
+name: Numerical and algorithmic validation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      RUST_BACKTRACE: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install pinned toolchain and numerical dependencies
+        run: |
+          rustup toolchain install 1.85.1 --profile minimal --component rustfmt --component clippy
+          python -m pip install -r requirements.txt
+      - name: Rust checks
+        run: |
+          cargo fmt --check
+          cargo clippy --locked --all-targets -- -D warnings
+          cargo test --locked
+          cargo build --release --locked
+      - name: Independent optimization quality and validity
+        run: python scripts/test_optimization.py --binary target/release/ehz-capacity
+      - name: Check assertions remain active under optimized Python
+        run: python -O scripts/test_optimization.py --math-only
+      - name: Exact rational solver and independent certificate verification
+        run: |
+          python scripts/validate_exact.py
+          python scripts/test_verify_exact.py
+      - name: Source-paper and compatibility regressions
+        run: |
+          python scripts/validate_paper.py
+          python scripts/validate.py

@@ -1,5 +1,9 @@
 # Numerics and MATLAB compatibility
 
+This page describes the numerical backend, which reports `numerical-estimate`.
+The [exact backend](EXACT.md) uses separate rational arithmetic, domain checks,
+and certificate semantics.
+
 | MATLAB | Port |
 | --- | --- |
 | `EHZ_perms.m`, including local routines | `src/lib.rs`: `ehz_perms`, `ehz_from_facets`, `omega` |
@@ -39,6 +43,10 @@ Facet merging uses componentwise `1e-8` tolerance rather than MATLAB's scaled
 `uniquetol`; normal orientation uses a side comparison. Qhull versions, rank
 decisions and tie ordering can differ from MATLAB, especially near degeneracy.
 Exhaustive floating-point enumeration is not a rigorous certificate.
+
+For subsequent optimizations, follow the [optimization guide](OPTIMIZATION.md)
+and the [rational solver contract](RATIONAL_SOLVER.md). They specify dispatch
+hypotheses and the evidence required for pruning and global bounds.
 
 ## Mathematical reference and review
 

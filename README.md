@@ -1,6 +1,6 @@
 # EHZ capacity
 
-A Rust library and command-line tool for computing numerical estimates of the
+A Rust library and command-line tool for computing the
 Ekeland–Hofer–Zehnder capacity of convex polytopes. It implements the exhaustive
 combinatorial formula from Pazit Haim-Kislev's
 [On the Symplectic Size of Convex Polytopes](https://doi.org/10.1007/s00039-019-00486-4)
@@ -11,8 +11,9 @@ Polytopes can be supplied as vertices or facet inequalities in
 `(q_1,...,q_n,p_1,...,p_n)` coordinates. Rust handles the numerical and
 combinatorial calculations; Python provides a Qhull geometry adapter and
 validation tools. The solver enumerates facet supports and cyclic orders, with
-factorial runtime in the number of facets. Results use floating-point arithmetic
-and are not certified capacities.
+factorial runtime in the number of facets. The numerical backend uses
+floating-point arithmetic. A separate exact backend accepts rational facet
+input and returns exact fractions with an independently verifiable certificate.
 
 ## Quick start
 
@@ -39,6 +40,9 @@ The CLI reads JSON from a file or stdin and writes JSON containing the capacity,
 objective values, facet orders, weights, and numerical diagnostics. Vertex input
 also returns the reconstructed geometry. See [usage](docs/USAGE.md) for input
 requirements, output conventions, geometry-only mode, and adapter configuration.
+For rational H-input, use the versioned `ehz-exact-h-v1` schema; see
+[exact input and verification](docs/EXACT.md) for a complete square example,
+work limits, and the independent verifier. Vertex input remains numerical.
 
 ## Codebase
 
@@ -46,6 +50,8 @@ requirements, output conventions, geometry-only mode, and adapter configuration.
 | --- | --- |
 | [src/lib.rs](src/lib.rs) | Reusable library: centroids, facet normals and heights, constraint reduction, symplectic pairings, and exhaustive capacity search |
 | [src/main.rs](src/main.rs) | JSON command-line interface for vertex and facet inputs |
+| [src/exact/](src/exact/) | Exact rational arithmetic, certified domain preprocessing, and exhaustive reference solver |
+| [scripts/verify_exact.py](scripts/verify_exact.py) | Independent rational certificate checks and global re-enumeration |
 | [scripts/qhull_adapter.py](scripts/qhull_adapter.py) | SciPy/Qhull adapter returning triangulation and hull simplex indices to Rust |
 | [scripts/run.py](scripts/run.py) | Build-and-run wrapper using the active Python interpreter |
 | [scripts/](scripts/) | Fixture generation, independent exact mathematical oracles, and a legacy MATLAB-style reference |
@@ -63,8 +69,12 @@ normal reconstruction, linear solves, and the capacity search run in Rust.
 ## Documentation
 
 - [Usage](docs/USAGE.md): installation, CLI examples, input/output, and Python configuration.
+- [Exact rational solver](docs/EXACT.md): versioned input, result semantics, limits, and independent verification.
 - [Numerics and compatibility](docs/NUMERICS.md): algorithm, tolerances, and mapping from the MATLAB functions.
 - [Development and validation](docs/DEVELOPMENT.md): checks, fixtures, reference calculations, and research probes.
+- [Rational solver implementation guide](docs/RATIONAL_SOLVER.md): mathematical contract and acceptance gates for the exact reference backend.
+- [Optimization implementation guide](docs/OPTIMIZATION.md): subsequent algorithms, pruning obligations, and quality criteria.
+- [Exact baseline benchmark](validation/RATIONAL_BENCHMARK.md): measured counts, bit lengths, time, memory, and completion status.
 - [Mathematical review](validation/PAPER_VALIDATION.md): correspondence with the paper and numerical limitations.
 - [Port report](PORT_REPORT.md): implementation history, corrections, and recorded validation outcomes.
 - [Research memo](research/RESEARCH.md): mathematical background and proposed algorithms beyond the exhaustive solver.
