@@ -2,7 +2,7 @@ name: Numerical and algorithmic validation
 
 on:
   push:
-    branches: [main, 'codex/**']
+    branches: [main]
   pull_request:
 
 permissions:

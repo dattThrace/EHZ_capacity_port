@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Independent optimization checks; run --help for the two explicit test modes.
 
-No optimization disappears under python -O. Binary calls have hard timeouts.
+No check disappears under python -O. Binary calls have hard timeouts.
 Exact formula checks deliberately use the existing independent Fraction oracle;
 area, product, and physical-itinerary checks use different characterizations.
 """
@@ -55,11 +55,14 @@ def validate_witness(data, result):
             raise ValueError("invalid witness weights")
         beta = list(map(F, weights))
         near(sum(b*h[i] for i, b in zip(order, beta)), 1)
-        for j in range(d):
-            terms = [b*a[i][j] for i, b in zip(order, beta)]
-            # Relative backward error with no unit-dependent absolute floor.
-            if abs(sum(terms)) > F("2e-8") * sum(map(abs, terms)):
-                raise ValueError("closure failure")
+        terms = [[b*a[i][j] for i, b in zip(order, beta)] for j in range(d)]
+        # Normwise backward error, with no unit-dependent absolute floor.
+        # Componentwise relative error wrongly rejects harmless positive
+        # roundoff weights in coordinates inactive at a boundary optimum.
+        residual = max(abs(sum(row)) for row in terms)
+        scale = max(sum(map(abs, row)) for row in terms)
+        if residual > F("2e-8") * scale:
+            raise ValueError(f"closure failure: residual={float(residual)}, scale={float(scale)}")
         q = sum((beta[i]*beta[j]*omega(a[order[i]], a[order[j]])
                  for i in range(len(order)) for j in range(i)), F(0))
         if (field == "minimum" and q >= 0) or (field == "maximum" and q <= 0):
@@ -151,6 +154,25 @@ class MathematicalTests(unittest.TestCase):
                 bad[field] = value
                 with self.assertRaises(ValueError):
                     validate_witness(SQUARE, bad)
+
+        # Embed the square witness in a box and add an almost-zero weight on
+        # an otherwise inactive q2 facet. The checker must resolve roundoff,
+        # while still rejecting a significant closure defect in that direction.
+        box = {"normals": [[1,0,0,0], [0,0,1,0], [-1,0,0,0], [0,0,-1,0],
+                           [0,1,0,0], [0,-1,0,0], [0,0,0,1], [0,0,0,-1]],
+               "heights": [1]*8}
+        for epsilon in (1e-16, 1e-4):
+            b = [.25-epsilon,.25,.25,.25,epsilon]
+            q = sum(b[i]*b[j]*omega(box["normals"][i],box["normals"][j])
+                    for i in range(5) for j in range(i))
+            candidate = {"capacity": -1/(2*q), "minimum": q, "maximum": -q,
+                         "order": list(range(5)), "beta": b,
+                         "maximizing_order": list(range(4,-1,-1)), "maximizing_beta": b[::-1]}
+            if epsilon < 1e-8:
+                validate_witness(box, candidate)
+            else:
+                with self.assertRaises(ValueError):
+                    validate_witness(box, candidate)
 
     def test_feasible_is_not_optimal(self):
         candidate = square_witness((.125, .375, .125, .375))

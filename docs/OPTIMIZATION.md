@@ -56,8 +56,9 @@ relabeling. A formal optimizing weight/order witness is not yet a reconstructed
 closed characteristic on the boundary.
 
 In the current dimensionless coordinates, \(t_i=\beta_i h_i\) and
-\(P_i=L a_i/h_i\), so \(\sum t_i=1\), \(\sum t_iP_i=0\), and
-\(Q=Q_P/L^2\). Every backend must document whether objectives, bounds, residuals,
+\(P_i=\ell a_i/h_i\), with \(\ell=\min_i h_i/\|a_i\|\), so
+\(\sum t_i=1\), \(\sum t_iP_i=0\), and \(Q=Q_P/\ell^2\).
+Every backend must document whether objectives, bounds, residuals,
 and tolerances refer to original or normalized coordinates. Transport both ends
 of a bound interval through the same scaling. Common scale and anisotropic
 conditioning are different test axes; normalization addresses only part of the
@@ -255,7 +256,7 @@ one elementary but weak upper bound is
 \(Q_P\le\tfrac12 C(1-1/s)\), where
 \(C=\max_{i,j}|\omega(P_i,P_j)|\). It follows from the simplex mass constraint
 and bounds every ordering; ignoring closure makes it conservative. Restore the
-factor L^-2 before comparing to original-coordinate incumbents. Implement this
+factor \(\ell^{-2}\) before comparing to original-coordinate incumbents. Implement this
 bound first as a sign/scale/pruning test, not as a promise of useful pruning.
 
 Tighter candidates include certified LP/McCormick relaxations of pair products,
