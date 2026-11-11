@@ -1,5 +1,9 @@
 # Numerics and MATLAB compatibility
 
+This page describes the numerical backend, which reports `numerical-estimate`.
+The [exact backend](EXACT.md) uses separate rational arithmetic, domain checks,
+and certificate semantics.
+
 | MATLAB | Port |
 | --- | --- |
 | `EHZ_perms.m`, including local routines | `src/lib.rs`: `ehz_perms`, `ehz_from_facets`, `omega` |
@@ -40,9 +44,9 @@ Facet merging uses componentwise `1e-8` tolerance rather than MATLAB's scaled
 decisions and tie ordering can differ from MATLAB, especially near degeneracy.
 Exhaustive floating-point enumeration is not a rigorous certificate.
 
-For subsequent optimizations, follow the [implementation guide](OPTIMIZATION.md).
-It specifies backend dispatch predicates, singular-system handling, independent
-quality checks, and the evidence needed for pruning or global-bound claims.
+For subsequent optimizations, follow the [optimization guide](OPTIMIZATION.md)
+and the [rational solver contract](RATIONAL_SOLVER.md). They specify dispatch
+hypotheses and the evidence required for pruning and global bounds.
 
 ## Mathematical reference and review
 
@@ -55,4 +59,3 @@ the original port's numerical behavior.
 The original source is preserved in `upstream/EHZ-capacity/` at commit
 `22dd473cc8b9b2397b44cd13acbceb763dd978e9`;
 [upstream provenance](../upstream/README.md) records its repository and history.
-

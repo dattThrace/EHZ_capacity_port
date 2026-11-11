@@ -1,40 +1,105 @@
-name: Numerical and algorithmic validation
+name: Numerical, exact, and algorithmic validation
 
 on:
   push:
-    branches: [main]
   pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.head.ref || github.ref_name }}
+  cancel-in-progress: true
 
 permissions:
   contents: read
 
+env:
+  RUST_BACKTRACE: '1'
+
 jobs:
-  validate:
+  rust:
+    name: Rust quality and tests
     runs-on: ubuntu-latest
-    timeout-minutes: 20
-    env:
-      RUST_BACKTRACE: '1'
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pinned Rust toolchain
+        run: rustup toolchain install 1.85.1 --profile minimal --component rustfmt --component clippy
+      - uses: Swatinem/rust-cache@v2
+      - name: Format
+        run: cargo fmt --check
+      - name: Lint
+        run: cargo clippy --locked --all-targets -- -D warnings
+      - name: Test
+        run: cargo test --locked
+      - name: Build release binary
+        run: cargo build --release --locked
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ehz-capacity-${{ github.sha }}
+          path: target/release/ehz-capacity
+          if-no-files-found: error
+          retention-days: 1
+
+  optimization:
+    name: Optimization contracts
+    needs: rust
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
           cache: pip
-      - name: Install pinned toolchain and numerical dependencies
-        run: |
-          rustup toolchain install 1.85.1 --profile minimal --component rustfmt --component clippy
-          python -m pip install -r requirements.txt
-      - name: Rust checks
-        run: |
-          cargo fmt --check
-          cargo clippy --locked --all-targets -- -D warnings
-          cargo test --locked
-          cargo build --release --locked
+      - run: python -m pip install -r requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: ehz-capacity-${{ github.sha }}
+          path: target/release
+      - run: chmod +x target/release/ehz-capacity
       - name: Independent optimization quality and validity
         run: python scripts/test_optimization.py --binary target/release/ehz-capacity
-      - name: Check assertions remain active under optimized Python
+      - name: Assertions remain active under optimized Python
         run: python -O scripts/test_optimization.py --math-only
-      - name: Source-paper and compatibility regressions
-        run: |
-          python scripts/validate_paper.py
-          python scripts/validate.py
+
+  exact:
+    name: Exact solver and certificates
+    needs: rust
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: ehz-capacity-${{ github.sha }}
+          path: target/release
+      - run: chmod +x target/release/ehz-capacity
+      - name: Exact rational acceptance gates
+        run: python scripts/validate_exact.py
+      - name: Independent certificate verification
+        run: python scripts/test_verify_exact.py
+
+  compatibility:
+    name: Paper and compatibility regressions
+    needs: rust
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: ehz-capacity-${{ github.sha }}
+          path: target/release
+      - run: chmod +x target/release/ehz-capacity
+      - name: Source-paper validation
+        run: python scripts/validate_paper.py
+      - name: Numerical compatibility
+        run: python scripts/validate.py

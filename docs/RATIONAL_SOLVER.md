@@ -1,9 +1,12 @@
 # Rational solver: implementation guide
 
-**Next milestone:** a complete exact solver for small rational H-polytopes,
-with independent verification. This guide takes precedence over the sequencing
-in [OPTIMIZATION.md](OPTIMIZATION.md). Reviewed against `88a5e15` on 2026-11-09.
-It specifies proposed work; production currently remains floating point.
+**Reference baseline implemented:** a complete exact solver for small rational
+H-polytopes, with independent verification. This guide takes precedence over
+the sequencing in [OPTIMIZATION.md](OPTIMIZATION.md). The original contract was
+reviewed against `88a5e15` on 2026-11-09. See [EXACT.md](EXACT.md) for the shipped
+input/output contract and [the baseline report](../validation/RATIONAL_BENCHMARK.md)
+for acceptance evidence. Section 5 and fraction-free/modular elimination remain
+subsequent work.
 
 ## 1. Mathematical contract
 

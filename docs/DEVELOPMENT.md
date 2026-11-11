@@ -5,46 +5,48 @@ and building the release binary as described in [usage](USAGE.md).
 
 ```sh
 cargo test --locked
+cargo build --release --locked
+python3 scripts/validate_exact.py --benchmark
+python3 scripts/test_verify_exact.py
+python scripts/test_optimization.py --binary target/release/ehz-capacity
+python -O scripts/test_optimization.py --math-only
 python scripts/generate_fixtures.py
 python scripts/validate.py
 python scripts/validate_paper.py
 python scripts/reference.py examples/triangle.json
 cargo fmt --check
 cargo clippy --locked --all-targets -- -D warnings
-python scripts/test_optimization.py --binary target/release/ehz-capacity
-python -O scripts/test_optimization.py --math-only
 ```
 
-## Optimization quality and algorithm validity
+The exact backend's acceptance suite compares canonical rational values with
+`fractions.Fraction`; it never converts an expected fraction to binary64.
+`scripts/validate_exact.py` checks independently derived planar areas, seeded
+nonsymmetric rational free-weight examples, R4 simplex truncations, symplectic
+shears, row duplicates and certified redundancies, exact decimal input,
+equivalent large row scales, and perturbations smaller than binary64 resolution.
+It also checks original-coordinate witnesses, cyclic/reversal conventions,
+independent certificate verification, interruption semantics, and malformed or
+geometrically invalid inputs. The deterministic input subset is in
+[`examples/exact/`](../examples/exact/); the parameter families and seed are
+defined in the validation script.
 
-The [rational solver guide](RATIONAL_SOLVER.md) defines the next milestone;
-the [optimization guide](OPTIMIZATION.md) retains the broader roadmap and
-acceptance criteria for later backends. `scripts/test_optimization.py` adds
-10 mathematical/checker/physical-LP test methods and 5 production integration
-test methods, with parameterized cases inside each method. These counts are
-test methods, not a benchmark instance count or a count of formal proofs.
+With `--benchmark`, the script writes a
+[baseline report](../validation/RATIONAL_BENCHMARK.md) and
+[machine-readable results](../validation/rational-results.json), recording
+dimension, original and retained row counts, input and intermediate rational
+bit lengths, support/order counts, elapsed and CPU time, per-process peak RSS,
+and completion status. Timings are measurements for the exact exhaustive
+baseline, without an acceleration threshold. Rust integration tests cover
+the public exact API and structured CLI rejection. Independent verifier tests
+deliberately corrupt witnesses, row mappings, and completion claims.
 
-Use `python scripts/test_optimization.py --math-only` to run the mathematical
-and checker tests without Rust. Use `--binary target/release/ehz-capacity` for
-the full suite; a missing binary is an error, never a silent skip. Each binary
-invocation has a 120-second timeout. Checks use unittest assertions or explicit
-exceptions, so they remain active under Python `-O`.
-
-The suite tests exact ordering against full permutations, closure-dependent
-cyclic reduction, a suboptimal but feasible square witness, the failure of a
-d+1 support cutoff, exact duplicate-row plateaus, planar area, free-weight R4
-fixtures, and physical itinerary LP solutions with independently checked
-segments. A deliberately invalid itinerary demonstrates why the experimental
-LP's normalized-closure precondition must be enforced by a future backend.
-Production checks cover exact quality, original-coordinate witnesses, facet
-relabeling, row scaling, translation, symplectic and antisymplectic transforms,
-redundancy, symmetric products, tied optima, conditioning, and domain rejection.
-
-These extend rather than replace the existing suites. They do not certify the
-floating solver or test production backends that have not been implemented.
-The workflow `.github/workflows/validation.yml` runs all suites on Python 3.12
-and the repository's pinned Rust toolchain. Compare performance separately on
-controlled hardware; CI timeouts catch hangs, not small timing regressions.
+The linked guide branch's `scripts/test_optimization.py` retains its independent
+ordering, physical-itinerary LP, and numerical production checks, extended with
+exact production comparisons. Run `--math-only` without Rust or `--binary` for
+all backends; a missing binary is an error. Checks remain active under Python
+`-O`, and each binary invocation has a timeout. These tests do not certify the
+numerical backend. The workflow `.github/workflows/validation.yml` runs the
+Rust checks and all validation suites on Python 3.12 and Rust 1.85.1.
 
 The independent source-paper suite uses exact rational maximization of
 Theorem 1.1 and the separate symmetric formula in Corollary 1.2 from the archived
@@ -58,7 +60,8 @@ symplectic invariance, and invalid theorem-domain inputs. See
 The additional 19-case port suite uses `scripts/reference.py`, a retained
 MATLAB-style NumPy/SciPy reference, and checks original fixtures and invariants.
 That legacy script intentionally retains the old cutoffs; it is not the source
-of truth for the corrected solver. Five Rust integration tests also pass.
+of truth for the corrected solver. Rust integration suites also cover the
+numerical helpers and exact public API behavior.
 There is no MATLAB/Octave runtime comparison or general numerical certification.
 
 The earlier research and probes remain unchanged in `research/`. They describe
@@ -82,4 +85,3 @@ The ordering and symmetric-product probes use only the Python standard library;
 the itinerary LP probe also requires NumPy/SciPy. Run without `-O` or
 `PYTHONOPTIMIZE`, because the probes use assertions. The
 [research archive](../research/README.md) describes the original files and results.
-

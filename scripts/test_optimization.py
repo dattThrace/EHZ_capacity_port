@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Independent optimization checks; run --help for the two explicit test modes.
+"""Independent optimization checks; run --help for the explicit test modes.
 
 No check disappears under python -O. Binary calls have hard timeouts.
 Exact formula checks deliberately use the existing independent Fraction oracle;
@@ -361,19 +361,142 @@ class ProductionTests(unittest.TestCase):
                 self.run_solver(data, reject=True)
 
 
+class ExactProductionTests(unittest.TestCase):
+    """Exercise the same optimization gates without rounding expected fractions."""
+
+    def run_exact(self, data, *limits):
+        # Fraction(float) means that float's exact binary value. Encoding it as
+        # a rational string prevents the production decoder seeing a float.
+        encoded = {"schema": "ehz-exact-h-v1",
+                   "normals": [[str(F(x)) for x in row] for row in data["normals"]],
+                   "heights": [str(F(x)) for x in data["heights"]]}
+        process = subprocess.run([str(BINARY), "--mode", "exact", *limits],
+                                 input=json.dumps(encoded), text=True,
+                                 capture_output=True, timeout=120)
+        self.assertEqual(process.returncode, 0, process.stderr)
+        result = json.loads(process.stdout)["result"]
+        # Independent domain and witness checks use original coordinates; full
+        # global comparison below uses the separately derived Fraction oracle.
+        from verify_exact import verify
+        verified = verify({"result": result}, original=encoded, witness_only=True)
+        self.assertTrue(verified["verified"])
+        self.assertFalse(verified["global_optimality_verified"])
+        return result
+
+    def check_exact(self, data, target):
+        result = self.run_exact(data)
+        self.assertEqual(result["status"], "exact-complete")
+        self.assertTrue(result["completion"]["complete"])
+        self.assertEqual(F(result["capacity"]), F(target))
+        self.assertEqual(F(result["witness"]["objective"]), 1 / (2 * F(target)))
+        self.assertEqual(F(result["witness"]["capacity_upper_bound"]), F(target))
+        return result
+
+    def test_rational_oracle_and_metamorphic_cases(self):
+        for data in (simplex(4, 11), simplex(4, 32), truncated(1), truncated(2)):
+            target = expected(data)
+            self.check_exact(data, target)
+            for kind in ("relabel", "row-scale", "translate", "shear", "antisymplectic"):
+                with self.subTest(data=data, transform=kind):
+                    self.check_exact(transform(data, kind), target)
+
+    def test_planar_area_and_boundary_supports(self):
+        for vertices in ([[-2, -1], [3, -1], [-1, 3]],
+                         [[-2, -1], [2, -2], [3, 1], [-1, 3]],
+                         [[-2, -1], [1, -2], [3, 0], [1, 3], [-2, 2]]):
+            data, area = polygon(vertices)
+            self.check_exact(data, area)
+        square = self.check_exact(SQUARE, F(4))
+        self.assertEqual(len(square["witness"]["order"]), 4)
+        self.assertEqual(square["stats"]["supports"], 11)
+        for row, height in (([2, 0], 2), ([1, 1], 2), ([1, 1], 3)):
+            data = copy.deepcopy(SQUARE)
+            data["normals"].append(row)
+            data["heights"].append(height)
+            result = self.check_exact(data, F(4))
+            self.assertEqual(result["domain"]["retained"], [0, 1, 2, 3])
+
+    def test_exact_bit_length_and_perturbation_sensitivity(self):
+        for k in (20, 60, 160):
+            for sign in (-1, 0, 1):
+                with self.subTest(bits=k, sign=sign):
+                    epsilon = F(sign, 2**k)
+                    data = copy.deepcopy(SQUARE)
+                    data["heights"][0] = 1 + epsilon
+                    # The planar rectangle has width 2+epsilon, height 2.
+                    self.check_exact(data, 4 + 2 * epsilon)
+        data = copy.deepcopy(SQUARE)
+        scales = [F(2**180, 3**70), F(5**90, 7**60), F(11**80, 13**70), F(17**50, 19**40)]
+        data["normals"] = [[scale * x for x in row]
+                           for scale, row in zip(scales, data["normals"])]
+        data["heights"] = scales
+        self.check_exact(data, F(4))
+
+    def test_exact_cyclic_and_reversal_conventions(self):
+        result = self.check_exact(truncated(1), F(21, 4))
+        data, witness = truncated(1), result["witness"]
+        order, beta = witness["order"], list(map(F, witness["weights"]))
+        def objective(route, weights):
+            return sum((weights[i] * weights[j] * omega(data["normals"][route[i]],
+                                                        data["normals"][route[j]])
+                        for i in range(len(route)) for j in range(i)), F(0))
+        value = F(witness["objective"])
+        for shift in range(len(order)):
+            self.assertEqual(objective(order[shift:] + order[:shift],
+                                       beta[shift:] + beta[:shift]), value)
+        self.assertEqual(objective(order[::-1], beta[::-1]), -value)
+
+    def test_r4_symmetric_product_pairing_formula(self):
+        # Independent inradius/pairing identity for centrally symmetric
+        # Lagrangian products, including unequal heights and tilted factors.
+        u, v, h, g = [[1, 0], [0, 1]], [[1, 2], [2, -1]], [2, 3], [3, 2]
+        reps = [row + [0, 0] for row in u] + [[0, 0] + row for row in v]
+        data = {"normals": reps + [[-x for x in row] for row in reps],
+                "heights": (h + g) * 2}
+        pairing = max(F(abs(sum(x * y for x, y in zip(a, b))), ha * gb)
+                      for a, ha in zip(u, h) for b, gb in zip(v, g))
+        self.check_exact(data, F(4) / pairing)
+
+    def test_limits_preserve_exact_witness_without_complete_claim(self):
+        empty = self.run_exact(SQUARE, "--max-steps", "0")
+        self.assertEqual(empty["status"], "incomplete")
+        self.assertIsNone(empty["capacity"])
+        self.assertFalse(empty["completion"]["complete"])
+        self.assertIsNone(empty["witness"])
+        data = truncated(1)
+        complete = self.check_exact(data, F(21, 4))
+        # Stop before the final order; this free-weight fixture already has
+        # positive witnesses. Work counts choose a stop, never prove coverage.
+        steps = str(complete["stats"]["steps"] - 1)
+        stopped = self.run_exact(data, "--max-steps", steps)
+        self.assertFalse(stopped["completion"]["complete"])
+        self.assertIsNone(stopped["capacity"])
+        self.assertIsNotNone(stopped["witness"])
+        self.assertEqual(stopped["status"], "exact-witness/incomplete")
+        interval = self.run_exact(data, "--max-steps", steps, "--certify-interval")
+        self.assertEqual(interval["status"], "certified-interval")
+        self.assertLessEqual(F(interval["interval"]["lower"]), F(21, 4))
+        self.assertGreaterEqual(F(interval["interval"]["upper"]), F(21, 4))
+        self.assertFalse(interval["completion"]["complete"])
+
+
 def main():
     global BINARY
     parser = argparse.ArgumentParser(description=__doc__)
     mode = parser.add_mutually_exclusive_group(required=True)
     mode.add_argument("--math-only", action="store_true", help="exact/checker/LP tests; explicitly excludes Rust")
     mode.add_argument("--binary", type=Path, help="required existing Rust CLI; runs all tests")
+    parser.add_argument("--exact-only", action="store_true",
+                        help="with --binary, run only the exact production comparisons")
     args = parser.parse_args()
+    if args.exact_only and not args.binary:
+        parser.error("--exact-only requires --binary")
     classes = [MathematicalTests, ItineraryTests]
     if args.binary:
         BINARY = args.binary.resolve()
         if not BINARY.is_file():
             parser.error(f"binary does not exist: {BINARY}")
-        classes.append(ProductionTests)
+        classes = [ExactProductionTests] if args.exact_only else classes + [ProductionTests, ExactProductionTests]
     suite = unittest.TestSuite(unittest.defaultTestLoader.loadTestsFromTestCase(c) for c in classes)
     result = unittest.TextTestRunner(verbosity=2).run(suite)
     return 0 if result.wasSuccessful() else 1

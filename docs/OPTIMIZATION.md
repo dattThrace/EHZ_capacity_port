@@ -7,26 +7,29 @@ optimization work. It updates the priorities in the archived
 backends. It assumes familiarity with the mathematics and numerical optimization;
 it specifies algorithms, invariants, and evidence rather than source templates.
 
-**Sequencing update:** [RATIONAL_SOLVER.md](RATIONAL_SOLVER.md) specifies the
-next milestone and takes precedence on arithmetic, verification, and delivery
-order. This document retains the broader optimization roadmap.
+**Sequencing update:** the reference baseline specified in
+[RATIONAL_SOLVER.md](RATIONAL_SOLVER.md) is implemented; see [EXACT.md](EXACT.md).
+That contract takes precedence on arithmetic, verification, and delivery order.
+This document retains the broader optimization roadmap.
 
 ## 1. Baseline and priorities
 
-The current production path in `src/lib.rs` enumerates every support and anchored
+The numerical production path in `src/lib.rs` enumerates every support and anchored
 cyclic order, with unique equality solutions or a stationary KKT solve. It has
 dimensionless weights, relative rank tests, reorthogonalized equality reduction,
 full-constraint residual checks, and a numerical positive-spanning input check.
 These are already implemented; do not schedule them again as new optimizations.
-Neither an exact production backend, ordering DP, transition graph, physical
-itinerary LP, nor symmetric-product dispatch is implemented. H-input currently
-means binary64 JSON numbers, not rational input with exact provenance.
+The separate `src/exact/` backend now supplies complete rational H-input search,
+certified domain preprocessing, and independent verification. Ordering DP,
+transition graphs, physical itinerary LP, and symmetric-product dispatch remain
+unimplemented. Legacy H-input uses binary64 numbers; versioned exact H-input
+preserves rational provenance.
 
 Preserve this path as an explicitly selectable reference backend. Change one
 reduction at a time and compare both paths on the same normalized input. The
-next milestone is the complete rational H-input reference solver and independent
-verification specified in [RATIONAL_SOLVER.md](RATIONAL_SOLVER.md), before
-verified symmetric-product dispatch and unique-weight DP. General graph pruning
+complete rational H-input reference solver and independent verification specified
+in [RATIONAL_SOLVER.md](RATIONAL_SOLVER.md) form the baseline for verified
+symmetric-product dispatch and unique-weight DP. General graph pruning
 and itinerary LPs follow only after their completeness and numerical contracts
 are implemented. Parallelism comes after deterministic serial validation.
 
@@ -90,8 +93,8 @@ can magnify optimization error. Track the objective as well as capacity.
 
 ## 3. Input, geometry, and exactness boundary
 
-Keep H-input as the mathematical validation interface. A future rational schema
-must preserve integer numerators and denominators without a detour through
+Keep H-input as the mathematical validation interface. The versioned rational
+schema preserves integer numerators and denominators without a detour through
 binary64. Reject malformed dimension, nonfinite entries, zero rows, and invalid
 interior normalization before dispatch. General H-input not centered at an
 interior origin requires a separate interior-point stage; the present positive
@@ -303,8 +306,10 @@ The existing source-paper and legacy suites remain complementary checks.
 
 Test currently unimplemented contracts as each backend lands; do not add skipped
 placeholders and describe them as coverage. In particular, the present suite
-does not verify production pruning, dispatch, DP reconstruction, interruption,
-or certification because those facilities do not yet exist.
+does not verify production pruning, dispatch, or DP reconstruction because those
+facilities do not yet exist. Exact production tests now check rational equality,
+interruption semantics, and certificates alongside the independent exact suites
+in [DEVELOPMENT.md](DEVELOPMENT.md).
 
 Build benchmark panels independently of oracle test data. Vary dimension, facet
 count, closure-polytope dimension, symmetries, product structure, graph density,
